@@ -21,6 +21,32 @@
 		DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBC9222662590078E625 /* YUBaseViewController.m */; };
 		DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBD4222667C80078E625 /* YUWelcomeViewController.m */; };
 		DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EBD5222667C80078E625 /* YUWelcomeViewController.xib */; };
+		DD21EBDC222672990078E625 /* YUServerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBDB222672990078E625 /* YUServerListView.m */; };
+		DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE6222678E00078E625 /* UITableView+YUTableView.m */; };
+		DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE7222678E00078E625 /* YUCellEntity.m */; };
+		DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE8222678E00078E625 /* UIView+YUStyle.m */; };
+		DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE9222678E00078E625 /* UITableView+YUTableViewAddition.m */; };
+		DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBF0222679230078E625 /* YUTableViewCell.m */; };
+		DD21EBF6222696070078E625 /* YUCurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBF4222696070078E625 /* YUCurrencyTableViewCell.m */; };
+		DD21EBF7222696070078E625 /* YUCurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EBF5222696070078E625 /* YUCurrencyTableViewCell.xib */; };
+		DD21EBFA222697020078E625 /* YUCurrencyTableViewCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBF9222697020078E625 /* YUCurrencyTableViewCellEntity.m */; };
+		DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBFC22269F560078E625 /* UIButton+YUButtonStyle.m */; };
+		DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC0022269FC90078E625 /* UIButton+Gradient.m */; };
+		DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC032226A1070078E625 /* UIImage+Gradient.m */; };
+		DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC092226BAD70078E625 /* YURegisterViewController.m */; };
+		DD21EC0C2226BAD70078E625 /* YURegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EC0A2226BAD70078E625 /* YURegisterViewController.xib */; };
+		DD21EC2C2226BC970078E625 /* YUDIVView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC0E2226BC970078E625 /* YUDIVView.m */; };
+		DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC0F2226BC970078E625 /* YUPhoneInformationTools.m */; };
+		DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC122226BC970078E625 /* MMNavController.m */; };
+		DD21EC2F2226BC970078E625 /* YUINavigationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC132226BC970078E625 /* YUINavigationControllerViewController.m */; };
+		DD21EC302226BC970078E625 /* YUINavigationControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EC142226BC970078E625 /* YUINavigationControllerViewController.xib */; };
+		DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC1A2226BC970078E625 /* YUSlideButtonsGroup.m */; };
+		DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC1C2226BC970078E625 /* YUStatusButtonGroupNavBarView.m */; };
+		DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC1D2226BC970078E625 /* YUCustomNavBarView.m */; };
+		DD21EC342226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC1E2226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m */; };
+		DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC1F2226BC970078E625 /* YUNormalNavBarView.m */; };
+		DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC262226BC970078E625 /* YUUnderlineButton.m */; };
+		DD21EC372226BC970078E625 /* YUHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC292226BC970078E625 /* YUHamburgerButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +97,57 @@
 		DD21EBD3222667C80078E625 /* YUWelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUWelcomeViewController.h; sourceTree = "<group>"; };
 		DD21EBD4222667C80078E625 /* YUWelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUWelcomeViewController.m; sourceTree = "<group>"; };
 		DD21EBD5222667C80078E625 /* YUWelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUWelcomeViewController.xib; sourceTree = "<group>"; };
+		DD21EBDA222672990078E625 /* YUServerListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUServerListView.h; sourceTree = "<group>"; };
+		DD21EBDB222672990078E625 /* YUServerListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUServerListView.m; sourceTree = "<group>"; };
+		DD21EBE0222675940078E625 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DD21EBE3222678DF0078E625 /* UITableView+YUTableViewAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+YUTableViewAddition.h"; sourceTree = "<group>"; };
+		DD21EBE4222678E00078E625 /* YUCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCellEntity.h; sourceTree = "<group>"; };
+		DD21EBE5222678E00078E625 /* YUCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCellDelegate.h; sourceTree = "<group>"; };
+		DD21EBE6222678E00078E625 /* UITableView+YUTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+YUTableView.m"; sourceTree = "<group>"; };
+		DD21EBE7222678E00078E625 /* YUCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCellEntity.m; sourceTree = "<group>"; };
+		DD21EBE8222678E00078E625 /* UIView+YUStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YUStyle.m"; sourceTree = "<group>"; };
+		DD21EBE9222678E00078E625 /* UITableView+YUTableViewAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+YUTableViewAddition.m"; sourceTree = "<group>"; };
+		DD21EBEA222678E00078E625 /* UITableView+YUTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+YUTableView.h"; sourceTree = "<group>"; };
+		DD21EBEB222678E00078E625 /* UIView+YUStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YUStyle.h"; sourceTree = "<group>"; };
+		DD21EBF0222679230078E625 /* YUTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTableViewCell.m; sourceTree = "<group>"; };
+		DD21EBF1222679230078E625 /* YUTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTableViewCell.h; sourceTree = "<group>"; };
+		DD21EBF3222696070078E625 /* YUCurrencyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUCurrencyTableViewCell.h; sourceTree = "<group>"; };
+		DD21EBF4222696070078E625 /* YUCurrencyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUCurrencyTableViewCell.m; sourceTree = "<group>"; };
+		DD21EBF5222696070078E625 /* YUCurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUCurrencyTableViewCell.xib; sourceTree = "<group>"; };
+		DD21EBF8222697020078E625 /* YUCurrencyTableViewCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUCurrencyTableViewCellEntity.h; sourceTree = "<group>"; };
+		DD21EBF9222697020078E625 /* YUCurrencyTableViewCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUCurrencyTableViewCellEntity.m; sourceTree = "<group>"; };
+		DD21EBFC22269F560078E625 /* UIButton+YUButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YUButtonStyle.m"; sourceTree = "<group>"; };
+		DD21EBFD22269F560078E625 /* UIButton+YUButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YUButtonStyle.h"; sourceTree = "<group>"; };
+		DD21EBFF22269FC90078E625 /* UIButton+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
+		DD21EC0022269FC90078E625 /* UIButton+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
+		DD21EC022226A1070078E625 /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
+		DD21EC032226A1070078E625 /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		DD21EC082226BAD70078E625 /* YURegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YURegisterViewController.h; sourceTree = "<group>"; };
+		DD21EC092226BAD70078E625 /* YURegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YURegisterViewController.m; sourceTree = "<group>"; };
+		DD21EC0A2226BAD70078E625 /* YURegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YURegisterViewController.xib; sourceTree = "<group>"; };
+		DD21EC0E2226BC970078E625 /* YUDIVView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUDIVView.m; sourceTree = "<group>"; };
+		DD21EC0F2226BC970078E625 /* YUPhoneInformationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUPhoneInformationTools.m; sourceTree = "<group>"; };
+		DD21EC112226BC970078E625 /* YUINavigationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUINavigationControllerViewController.h; sourceTree = "<group>"; };
+		DD21EC122226BC970078E625 /* MMNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavController.m; sourceTree = "<group>"; };
+		DD21EC132226BC970078E625 /* YUINavigationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUINavigationControllerViewController.m; sourceTree = "<group>"; };
+		DD21EC142226BC970078E625 /* YUINavigationControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUINavigationControllerViewController.xib; sourceTree = "<group>"; };
+		DD21EC152226BC970078E625 /* MMNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavController.h; sourceTree = "<group>"; };
+		DD21EC192226BC970078E625 /* YUSlideButtonsGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSlideButtonsGroup.h; sourceTree = "<group>"; };
+		DD21EC1A2226BC970078E625 /* YUSlideButtonsGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSlideButtonsGroup.m; sourceTree = "<group>"; };
+		DD21EC1C2226BC970078E625 /* YUStatusButtonGroupNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUStatusButtonGroupNavBarView.m; sourceTree = "<group>"; };
+		DD21EC1D2226BC970078E625 /* YUCustomNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCustomNavBarView.m; sourceTree = "<group>"; };
+		DD21EC1E2226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUStatusButtonGroupWithLeftRightButttonNavBarView.m; sourceTree = "<group>"; };
+		DD21EC1F2226BC970078E625 /* YUNormalNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNormalNavBarView.m; sourceTree = "<group>"; };
+		DD21EC202226BC970078E625 /* YUStatusButtonGroupNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUStatusButtonGroupNavBarView.h; sourceTree = "<group>"; };
+		DD21EC212226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUStatusButtonGroupWithLeftRightButttonNavBarView.h; sourceTree = "<group>"; };
+		DD21EC222226BC970078E625 /* YUCustomNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCustomNavBarView.h; sourceTree = "<group>"; };
+		DD21EC232226BC970078E625 /* YUNormalNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNormalNavBarView.h; sourceTree = "<group>"; };
+		DD21EC252226BC970078E625 /* YUUnderlineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUUnderlineButton.h; sourceTree = "<group>"; };
+		DD21EC262226BC970078E625 /* YUUnderlineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUUnderlineButton.m; sourceTree = "<group>"; };
+		DD21EC282226BC970078E625 /* YUHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUHamburgerButton.h; sourceTree = "<group>"; };
+		DD21EC292226BC970078E625 /* YUHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUHamburgerButton.m; sourceTree = "<group>"; };
+		DD21EC2A2226BC970078E625 /* YUDIVView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUDIVView.h; sourceTree = "<group>"; };
+		DD21EC2B2226BC970078E625 /* YUPhoneInformationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUPhoneInformationTools.h; sourceTree = "<group>"; };
 		F269B838F6F657FCAB75948A /* Pods-ToPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToPay/Pods-ToPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,13 +227,13 @@
 		DD21EB74222637110078E625 /* ToPay */ = {
 			isa = PBXGroup;
 			children = (
-				DD21EBA722263D550078E625 /* Classes */,
+				DD21EB84222637160078E625 /* main.m */,
 				DD21EB75222637110078E625 /* AppDelegate.h */,
 				DD21EB76222637110078E625 /* AppDelegate.m */,
-				DD21EB7E222637160078E625 /* Assets.xcassets */,
-				DD21EB80222637160078E625 /* LaunchScreen.storyboard */,
-				DD21EB83222637160078E625 /* Info.plist */,
-				DD21EB84222637160078E625 /* main.m */,
+				DD21EBE0222675940078E625 /* PrefixHeader.pch */,
+				DD21EBA722263D550078E625 /* Classes */,
+				DD21EBDE222674BB0078E625 /* APPResoures */,
+				DD21EBDD222674A70078E625 /* SettingPlist */,
 			);
 			path = ToPay;
 			sourceTree = "<group>";
@@ -221,7 +298,6 @@
 				DD21EBBF222661CC0078E625 /* RootView */,
 				DD21EBBA22265C680078E625 /* CommonViews */,
 				DD21EBB922265B3D0078E625 /* SpecialViews */,
-				DD21EBCB222662720078E625 /* Category */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +325,8 @@
 		DD21EBAD22263E8B0078E625 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EC2B2226BC970078E625 /* YUPhoneInformationTools.h */,
+				DD21EC0F2226BC970078E625 /* YUPhoneInformationTools.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -281,6 +359,7 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EC052226AB880078E625 /* RegisterViewController */,
 				DD21EBD22226637C0078E625 /* WelcomeViewController */,
 			);
 			path = SpecialViewController;
@@ -298,6 +377,7 @@
 		DD21EBBA22265C680078E625 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EBCB222662720078E625 /* Category */,
 				DD21EBC3222662060078E625 /* Views */,
 				DD21EBC2222662000078E625 /* Cells */,
 			);
@@ -360,6 +440,8 @@
 		DD21EBC3222662060078E625 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EC0D2226BC970078E625 /* NavigationBar */,
+				DD21EBE1222678350078E625 /* ServerListView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +456,11 @@
 		DD21EBC5222662150078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EBF3222696070078E625 /* YUCurrencyTableViewCell.h */,
+				DD21EBF4222696070078E625 /* YUCurrencyTableViewCell.m */,
+				DD21EBF5222696070078E625 /* YUCurrencyTableViewCell.xib */,
+				DD21EBF8222697020078E625 /* YUCurrencyTableViewCellEntity.h */,
+				DD21EBF9222697020078E625 /* YUCurrencyTableViewCellEntity.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,6 +482,8 @@
 		DD21EBCB222662720078E625 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EC072226B74E0078E625 /* Button+ */,
+				DD21EC062226B73D0078E625 /* TableVIew+ */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -449,6 +538,157 @@
 				DD21EBD5222667C80078E625 /* YUWelcomeViewController.xib */,
 			);
 			path = WelcomeViewController;
+			sourceTree = "<group>";
+		};
+		DD21EBDD222674A70078E625 /* SettingPlist */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EB83222637160078E625 /* Info.plist */,
+			);
+			path = SettingPlist;
+			sourceTree = "<group>";
+		};
+		DD21EBDE222674BB0078E625 /* APPResoures */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EB80222637160078E625 /* LaunchScreen.storyboard */,
+				DD21EB7E222637160078E625 /* Assets.xcassets */,
+			);
+			path = APPResoures;
+			sourceTree = "<group>";
+		};
+		DD21EBE1222678350078E625 /* ServerListView */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EBDA222672990078E625 /* YUServerListView.h */,
+				DD21EBDB222672990078E625 /* YUServerListView.m */,
+			);
+			path = ServerListView;
+			sourceTree = "<group>";
+		};
+		DD21EC052226AB880078E625 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC082226BAD70078E625 /* YURegisterViewController.h */,
+				DD21EC092226BAD70078E625 /* YURegisterViewController.m */,
+				DD21EC0A2226BAD70078E625 /* YURegisterViewController.xib */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		DD21EC062226B73D0078E625 /* TableVIew+ */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EBF1222679230078E625 /* YUTableViewCell.h */,
+				DD21EBF0222679230078E625 /* YUTableViewCell.m */,
+				DD21EBEA222678E00078E625 /* UITableView+YUTableView.h */,
+				DD21EBE6222678E00078E625 /* UITableView+YUTableView.m */,
+				DD21EBE3222678DF0078E625 /* UITableView+YUTableViewAddition.h */,
+				DD21EBE9222678E00078E625 /* UITableView+YUTableViewAddition.m */,
+				DD21EBEB222678E00078E625 /* UIView+YUStyle.h */,
+				DD21EBE8222678E00078E625 /* UIView+YUStyle.m */,
+				DD21EBE5222678E00078E625 /* YUCellDelegate.h */,
+				DD21EBE4222678E00078E625 /* YUCellEntity.h */,
+				DD21EBE7222678E00078E625 /* YUCellEntity.m */,
+			);
+			path = "TableVIew+";
+			sourceTree = "<group>";
+		};
+		DD21EC072226B74E0078E625 /* Button+ */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC022226A1070078E625 /* UIImage+Gradient.h */,
+				DD21EC032226A1070078E625 /* UIImage+Gradient.m */,
+				DD21EBFF22269FC90078E625 /* UIButton+Gradient.h */,
+				DD21EC0022269FC90078E625 /* UIButton+Gradient.m */,
+				DD21EBFD22269F560078E625 /* UIButton+YUButtonStyle.h */,
+				DD21EBFC22269F560078E625 /* UIButton+YUButtonStyle.m */,
+			);
+			path = "Button+";
+			sourceTree = "<group>";
+		};
+		DD21EC0D2226BC970078E625 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC102226BC970078E625 /* Controller */,
+				DD21EC162226BC970078E625 /* View */,
+				DD21EC2A2226BC970078E625 /* YUDIVView.h */,
+				DD21EC0E2226BC970078E625 /* YUDIVView.m */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		DD21EC102226BC970078E625 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC112226BC970078E625 /* YUINavigationControllerViewController.h */,
+				DD21EC122226BC970078E625 /* MMNavController.m */,
+				DD21EC132226BC970078E625 /* YUINavigationControllerViewController.m */,
+				DD21EC142226BC970078E625 /* YUINavigationControllerViewController.xib */,
+				DD21EC152226BC970078E625 /* MMNavController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD21EC162226BC970078E625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC172226BC970078E625 /* NavBarView | 导航头 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD21EC172226BC970078E625 /* NavBarView | 导航头 */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC182226BC970078E625 /* SlideButtonsGroup | 滑动按钮组 */,
+				DD21EC1B2226BC970078E625 /* CustomNavBar | 自定义导航头 */,
+				DD21EC242226BC970078E625 /* UnderlineButton | 下划线按钮 */,
+				DD21EC272226BC970078E625 /* HamburgerButton | 汉堡包按钮 */,
+			);
+			path = "NavBarView | 导航头";
+			sourceTree = "<group>";
+		};
+		DD21EC182226BC970078E625 /* SlideButtonsGroup | 滑动按钮组 */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC192226BC970078E625 /* YUSlideButtonsGroup.h */,
+				DD21EC1A2226BC970078E625 /* YUSlideButtonsGroup.m */,
+			);
+			path = "SlideButtonsGroup | 滑动按钮组";
+			sourceTree = "<group>";
+		};
+		DD21EC1B2226BC970078E625 /* CustomNavBar | 自定义导航头 */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC222226BC970078E625 /* YUCustomNavBarView.h */,
+				DD21EC1D2226BC970078E625 /* YUCustomNavBarView.m */,
+				DD21EC232226BC970078E625 /* YUNormalNavBarView.h */,
+				DD21EC1F2226BC970078E625 /* YUNormalNavBarView.m */,
+				DD21EC202226BC970078E625 /* YUStatusButtonGroupNavBarView.h */,
+				DD21EC1C2226BC970078E625 /* YUStatusButtonGroupNavBarView.m */,
+				DD21EC212226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.h */,
+				DD21EC1E2226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m */,
+			);
+			path = "CustomNavBar | 自定义导航头";
+			sourceTree = "<group>";
+		};
+		DD21EC242226BC970078E625 /* UnderlineButton | 下划线按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC252226BC970078E625 /* YUUnderlineButton.h */,
+				DD21EC262226BC970078E625 /* YUUnderlineButton.m */,
+			);
+			path = "UnderlineButton | 下划线按钮";
+			sourceTree = "<group>";
+		};
+		DD21EC272226BC970078E625 /* HamburgerButton | 汉堡包按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC282226BC970078E625 /* YUHamburgerButton.h */,
+				DD21EC292226BC970078E625 /* YUHamburgerButton.m */,
+			);
+			path = "HamburgerButton | 汉堡包按钮";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,8 +798,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD21EBF7222696070078E625 /* YUCurrencyTableViewCell.xib in Resources */,
+				DD21EC0C2226BAD70078E625 /* YURegisterViewController.xib in Resources */,
 				DD21EB82222637160078E625 /* LaunchScreen.storyboard in Resources */,
 				DD21EB7F222637160078E625 /* Assets.xcassets in Resources */,
+				DD21EC302226BC970078E625 /* YUINavigationControllerViewController.xib in Resources */,
 				DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,12 +923,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD21EBF6222696070078E625 /* YUCurrencyTableViewCell.m in Sources */,
+				DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */,
+				DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */,
+				DD21EC2C2226BC970078E625 /* YUDIVView.m in Sources */,
+				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
+				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
+				DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */,
+				DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */,
+				DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */,
+				DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */,
+				DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */,
+				DD21EC2F2226BC970078E625 /* YUINavigationControllerViewController.m in Sources */,
 				DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */,
+				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
+				DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */,
+				DD21EBDC222672990078E625 /* YUServerListView.m in Sources */,
 				DD21EBB6222658FF0078E625 /* YUNetworkManager.m in Sources */,
 				DD21EB85222637160078E625 /* main.m in Sources */,
+				DD21EC372226BC970078E625 /* YUHamburgerButton.m in Sources */,
+				DD21EC342226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m in Sources */,
 				DD21EBB2222658F10078E625 /* ServModel.m in Sources */,
 				DD21EB77222637110078E625 /* AppDelegate.m in Sources */,
+				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
+				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
+				DD21EBFA222697020078E625 /* YUCurrencyTableViewCellEntity.m in Sources */,
+				DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
+				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
+				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,7 +1117,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SXV4N6YG2P;
-				INFOPLIST_FILE = ToPay/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ToPay/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ToPay/SettingPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -859,7 +1127,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -870,7 +1138,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SXV4N6YG2P;
-				INFOPLIST_FILE = ToPay/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ToPay/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ToPay/SettingPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -878,7 +1148,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

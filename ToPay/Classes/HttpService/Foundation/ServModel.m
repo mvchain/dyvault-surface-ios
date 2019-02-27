@@ -26,7 +26,7 @@ requestMethod:(HTTPMethod)rquestMethod
         
     } success:^(BOOL isSuccess, id  _Nullable responseObject) {
         NSDictionary *dict = (NSDictionary*)responseObject;
-        if( [dict[@"code"] isEqualToString:@"0000"] ) {
+        if([dict[@"code"] intValue] == 200) {
             succ(dict[@"data"]);
         }else {
             err(dict[@"msg"],[dict[@"code"] integerValue]);

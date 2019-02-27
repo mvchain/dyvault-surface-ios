@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YUNetworkManager.h"
-#define SERVER_DOMAIN  @"https://jianjiaomao.com"
+#define SERVER_DOMAIN  @"http://192.168.15.21:10086"
 #define SERVER_APP_ID @"10001"
 #define SERVER_APP_VERSION @"1.0"
 /*

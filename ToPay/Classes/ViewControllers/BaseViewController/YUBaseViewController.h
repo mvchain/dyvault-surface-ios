@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QMUICommonViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
+@class YUNormalNavBarView;
 
-@interface YUBaseViewController : UIViewController
+@interface YUBaseViewController : QMUICommonViewController
+@property (strong ,nonatomic) YUNormalNavBarView * normalNavbar;
+
+- (void)addNormalNavBar:(NSString *)title;
 
 @end
 

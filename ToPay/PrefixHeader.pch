@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  ToPay
+//
+//  Created by 蒲公英 on 2019/2/27.
+//  Copyright © 2019年 MVC. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#define yudef_property_strong(type,name) @property (strong ,nonatomic) type* name;
+#define yudef_property_copy(type,name) @property (copy ,nonatomic) type* name;
+#define yudef_property_assign(type,name) @property (assign ,nonatomic) type name;
+#define yudef_lazyLoad(type,name,_name) -(type *)name {if(!_name){_name = [[type alloc] init];}return _name;}
+#define yudef_exit_func_if(condition) if(condition)return;
+#define yudef_weakSelf __weak typeof (self) weakSelf = self;
+#import "UITableView+YUTableView.h"
+#import <BlocksKit.h>
+#import "ServModel.h"
+#import "YUCellEntity.h"
+#import "UIButton+YUButtonStyle.h"
+#import "UIImage+Gradient.h"
+#import "QMUIKit.h"
+#import "YUNormalNavBarView.h"
+#endif
