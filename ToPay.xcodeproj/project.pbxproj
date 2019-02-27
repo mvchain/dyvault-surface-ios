@@ -188,7 +188,7 @@
 				DD21EBAB22263D9D0078E625 /* ViewModels */,
 				DD21EBAC22263E780078E625 /* HttpService */,
 				DD21EBAE22263FB80078E625 /* Managers */,
-				DD21EBAD22263E8B0078E625 /* Util */,
+				DD21EBAD22263E8B0078E625 /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -246,11 +246,11 @@
 			path = HttpService;
 			sourceTree = "<group>";
 		};
-		DD21EBAD22263E8B0078E625 /* Util */ = {
+		DD21EBAD22263E8B0078E625 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Util;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		DD21EBAE22263FB80078E625 /* Managers */ = {
