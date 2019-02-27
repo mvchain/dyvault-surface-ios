@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD21EB77222637110078E625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EB76222637110078E625 /* AppDelegate.m */; };
+		DD21EB7A222637110078E625 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EB79222637110078E625 /* ViewController.m */; };
+		DD21EB7D222637110078E625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21EB7B222637110078E625 /* Main.storyboard */; };
+		DD21EB7F222637160078E625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD21EB7E222637160078E625 /* Assets.xcassets */; };
+		DD21EB82222637160078E625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21EB80222637160078E625 /* LaunchScreen.storyboard */; };
+		DD21EB85222637160078E625 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EB84222637160078E625 /* main.m */; };
+		DD21EB8F222637160078E625 /* ToPayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EB8E222637160078E625 /* ToPayTests.m */; };
+		DD21EB9A222637160078E625 /* ToPayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EB99222637160078E625 /* ToPayUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD21EB8B222637160078E625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD21EB6A222637110078E625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD21EB71222637110078E625;
+			remoteInfo = ToPay;
+		};
+		DD21EB96222637160078E625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD21EB6A222637110078E625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD21EB71222637110078E625;
+			remoteInfo = ToPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD21EB72222637110078E625 /* ToPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD21EB75222637110078E625 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD21EB76222637110078E625 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD21EB78222637110078E625 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD21EB79222637110078E625 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD21EB7C222637110078E625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD21EB7E222637160078E625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD21EB81222637160078E625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD21EB83222637160078E625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD21EB84222637160078E625 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD21EB8A222637160078E625 /* ToPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD21EB8E222637160078E625 /* ToPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToPayTests.m; sourceTree = "<group>"; };
+		DD21EB90222637160078E625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD21EB95222637160078E625 /* ToPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD21EB99222637160078E625 /* ToPayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToPayUITests.m; sourceTree = "<group>"; };
+		DD21EB9B222637160078E625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD21EB6F222637110078E625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD21EB87222637160078E625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD21EB92222637160078E625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD21EB69222637110078E625 = {
+			isa = PBXGroup;
+			children = (
+				DD21EB74222637110078E625 /* ToPay */,
+				DD21EB8D222637160078E625 /* ToPayTests */,
+				DD21EB98222637160078E625 /* ToPayUITests */,
+				DD21EB73222637110078E625 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD21EB73222637110078E625 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EB72222637110078E625 /* ToPay.app */,
+				DD21EB8A222637160078E625 /* ToPayTests.xctest */,
+				DD21EB95222637160078E625 /* ToPayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD21EB74222637110078E625 /* ToPay */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EB75222637110078E625 /* AppDelegate.h */,
+				DD21EB76222637110078E625 /* AppDelegate.m */,
+				DD21EB78222637110078E625 /* ViewController.h */,
+				DD21EB79222637110078E625 /* ViewController.m */,
+				DD21EB7B222637110078E625 /* Main.storyboard */,
+				DD21EB7E222637160078E625 /* Assets.xcassets */,
+				DD21EB80222637160078E625 /* LaunchScreen.storyboard */,
+				DD21EB83222637160078E625 /* Info.plist */,
+				DD21EB84222637160078E625 /* main.m */,
+			);
+			path = ToPay;
+			sourceTree = "<group>";
+		};
+		DD21EB8D222637160078E625 /* ToPayTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EB8E222637160078E625 /* ToPayTests.m */,
+				DD21EB90222637160078E625 /* Info.plist */,
+			);
+			path = ToPayTests;
+			sourceTree = "<group>";
+		};
+		DD21EB98222637160078E625 /* ToPayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EB99222637160078E625 /* ToPayUITests.m */,
+				DD21EB9B222637160078E625 /* Info.plist */,
+			);
+			path = ToPayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD21EB71222637110078E625 /* ToPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD21EB9E222637160078E625 /* Build configuration list for PBXNativeTarget "ToPay" */;
+			buildPhases = (
+				DD21EB6E222637110078E625 /* Sources */,
+				DD21EB6F222637110078E625 /* Frameworks */,
+				DD21EB70222637110078E625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToPay;
+			productName = ToPay;
+			productReference = DD21EB72222637110078E625 /* ToPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD21EB89222637160078E625 /* ToPayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD21EBA1222637160078E625 /* Build configuration list for PBXNativeTarget "ToPayTests" */;
+			buildPhases = (
+				DD21EB86222637160078E625 /* Sources */,
+				DD21EB87222637160078E625 /* Frameworks */,
+				DD21EB88222637160078E625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD21EB8C222637160078E625 /* PBXTargetDependency */,
+			);
+			name = ToPayTests;
+			productName = ToPayTests;
+			productReference = DD21EB8A222637160078E625 /* ToPayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD21EB94222637160078E625 /* ToPayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD21EBA4222637160078E625 /* Build configuration list for PBXNativeTarget "ToPayUITests" */;
+			buildPhases = (
+				DD21EB91222637160078E625 /* Sources */,
+				DD21EB92222637160078E625 /* Frameworks */,
+				DD21EB93222637160078E625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD21EB97222637160078E625 /* PBXTargetDependency */,
+			);
+			name = ToPayUITests;
+			productName = ToPayUITests;
+			productReference = DD21EB95222637160078E625 /* ToPayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD21EB6A222637110078E625 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = MVC;
+				TargetAttributes = {
+					DD21EB71222637110078E625 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					DD21EB89222637160078E625 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DD21EB71222637110078E625;
+					};
+					DD21EB94222637160078E625 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = DD21EB71222637110078E625;
+					};
+				};
+			};
+			buildConfigurationList = DD21EB6D222637110078E625 /* Build configuration list for PBXProject "ToPay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD21EB69222637110078E625;
+			productRefGroup = DD21EB73222637110078E625 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD21EB71222637110078E625 /* ToPay */,
+				DD21EB89222637160078E625 /* ToPayTests */,
+				DD21EB94222637160078E625 /* ToPayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD21EB70222637110078E625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD21EB82222637160078E625 /* LaunchScreen.storyboard in Resources */,
+				DD21EB7F222637160078E625 /* Assets.xcassets in Resources */,
+				DD21EB7D222637110078E625 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD21EB88222637160078E625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD21EB93222637160078E625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD21EB6E222637110078E625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD21EB7A222637110078E625 /* ViewController.m in Sources */,
+				DD21EB85222637160078E625 /* main.m in Sources */,
+				DD21EB77222637110078E625 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD21EB86222637160078E625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD21EB8F222637160078E625 /* ToPayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD21EB91222637160078E625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD21EB9A222637160078E625 /* ToPayUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD21EB8C222637160078E625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD21EB71222637110078E625 /* ToPay */;
+			targetProxy = DD21EB8B222637160078E625 /* PBXContainerItemProxy */;
+		};
+		DD21EB97222637160078E625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD21EB71222637110078E625 /* ToPay */;
+			targetProxy = DD21EB96222637160078E625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD21EB7B222637110078E625 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD21EB7C222637110078E625 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD21EB80222637160078E625 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD21EB81222637160078E625 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD21EB9C222637160078E625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD21EB9D222637160078E625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD21EB9F222637160078E625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				INFOPLIST_FILE = ToPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD21EBA0222637160078E625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				INFOPLIST_FILE = ToPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD21EBA2222637160078E625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				INFOPLIST_FILE = ToPayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToPay.app/ToPay";
+			};
+			name = Debug;
+		};
+		DD21EBA3222637160078E625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				INFOPLIST_FILE = ToPayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToPay.app/ToPay";
+			};
+			name = Release;
+		};
+		DD21EBA5222637160078E625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				INFOPLIST_FILE = ToPayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToPay;
+			};
+			name = Debug;
+		};
+		DD21EBA6222637160078E625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				INFOPLIST_FILE = ToPayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToPay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD21EB6D222637110078E625 /* Build configuration list for PBXProject "ToPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD21EB9C222637160078E625 /* Debug */,
+				DD21EB9D222637160078E625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD21EB9E222637160078E625 /* Build configuration list for PBXNativeTarget "ToPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD21EB9F222637160078E625 /* Debug */,
+				DD21EBA0222637160078E625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD21EBA1222637160078E625 /* Build configuration list for PBXNativeTarget "ToPayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD21EBA2222637160078E625 /* Debug */,
+				DD21EBA3222637160078E625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD21EBA4222637160078E625 /* Build configuration list for PBXNativeTarget "ToPayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD21EBA5222637160078E625 /* Debug */,
+				DD21EBA6222637160078E625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD21EB6A222637110078E625 /* Project object */;
+}
