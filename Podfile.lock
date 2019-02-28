@@ -30,6 +30,7 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - CYLTabBarController (1.17.22)
   - FDFullscreenPopGesture (1.1)
   - IQKeyboardManager (6.2.0)
   - Masonry (1.1.0)
@@ -300,6 +301,7 @@ DEPENDENCIES:
   - AFNetworking
   - Aspects
   - BlocksKit
+  - CYLTabBarController (~> 1.17.22)
   - FDFullscreenPopGesture
   - IQKeyboardManager
   - Masonry
@@ -313,6 +315,7 @@ SPEC REPOS:
     - AFNetworking
     - Aspects
     - BlocksKit
+    - CYLTabBarController
     - FDFullscreenPopGesture
     - IQKeyboardManager
     - Masonry
@@ -325,6 +328,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -333,6 +337,6 @@ SPEC CHECKSUMS:
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 1b394db16d41e878860caf48f65b55def55d4e42
+PODFILE CHECKSUM: 53355ad7ded260396f4b244ee98ae15e067009a6
 
 COCOAPODS: 1.5.3

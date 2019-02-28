@@ -9,39 +9,53 @@
 #import "ServModel.h"
 
 @implementation ServModel
-- (id)init{
+- (id)init
+{
     self = [super init];
     if(self){
         _apiDomainUrl = SERVER_DOMAIN;
     }
     return self;
 }
-
-- (void)conn:(void(^)(NSDictionary *resData))succ
-requestMethod:(HTTPMethod)rquestMethod
-         err:(void(^)(NSString * reason , NSInteger code  ))err {
+- (void)connectWithRquestMethod:(HTTPMethod)rquestMethod
+{
+    [self updateHttpHeadToken];
     NSAssert(self.apiPath !=nil && self.apiPath.length > 0, @"  #### apiPath must not be null～@@@@@") ;
-    
+    NSAssert(self.onSuccess, @" ### onSuccess must not be null ~ @@@@");
+    NSAssert(self.onError, @" ### onError must not be null ~ @@@@");
     [[YUNetworkManager defaultManager] sendRequestMethod:rquestMethod serverUrl:self.apiDomainUrl apiPath:self.apiPath parameters:self.requestDict progress:^(NSProgress * _Nullable progress) {
-        
     } success:^(BOOL isSuccess, id  _Nullable responseObject) {
         NSDictionary *dict = (NSDictionary*)responseObject;
         if([dict[@"code"] intValue] == 200) {
-            succ(dict[@"data"]);
+            self.onSuccess(dict[@"data"]);
         }else {
-            err(dict[@"msg"],[dict[@"code"] integerValue]);
+            self.onError(dict[@"message"],[dict[@"code"] integerValue]);
         }
+        self.onEndConnection();
     } failure:^(NSString * _Nullable errorMessage) {
-        err(errorMessage,-1);
+        self.onError(errorMessage,-1);
+        self.onEndConnection();
     }];
-    
 }
-- ( NSMutableDictionary * ) requestDict{
- 
+
+/* set newst token  */
+- (void)updateHttpHeadToken
+{
+    NSString *authToken = [[YUUserManagers shareInstance] userIDCard_inDisk].token;
+    if (!authToken) return; // no token exit
+    
+    YUNetworkManager *manager = [YUNetworkManager defaultManager];
+    // token ,for every connect
+    [ manager.sessionManager.requestSerializer setValue:authToken forHTTPHeaderField:@"Authorization"];
+    // language
+    [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
+    // buildVersion
+    [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
+}
+- (NSMutableDictionary *) requestDict
+{
     if(_requestDict)return _requestDict;
     _requestDict = [[NSMutableDictionary alloc]init];
-    [_requestDict setObject:SERVER_APP_ID forKey:@"app_id"];
-    [_requestDict setObject:SERVER_APP_VERSION forKey:@"app_version"];
     return _requestDict;
 }
 @end

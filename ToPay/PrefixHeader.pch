@@ -8,6 +8,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+#define TPString(FORMAT, ...) [NSString stringWithFormat:FORMAT,##__VA_ARGS__]
 #define yudef_property_strong(type,name) @property (strong ,nonatomic) type* name;
 #define yudef_property_copy(type,name) @property (copy ,nonatomic) type* name;
 #define yudef_property_assign(type,name) @property (assign ,nonatomic) type name;
@@ -22,4 +23,12 @@
 #import "UIImage+Gradient.h"
 #import "QMUIKit.h"
 #import "YUNormalNavBarView.h"
+#import "QuickDo.h"
+#import "QuickGet.h"
+#import "QuickJudge.h"
+#import "UIView+YUStyle.h"
+#import "Masonry.h"
+#import "ModelsImport.h"
+#import "YUUserManagers.h"
+#import "YYCache.h"
 #endif

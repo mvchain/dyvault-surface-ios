@@ -16,7 +16,7 @@ target 'ToPay' do
   pod 'BlocksKit'
   pod 'Aspects'
   pod 'QMUIKit'
-
+  pod 'CYLTabBarController', '~> 1.17.22'
   target 'ToPayTests' do
     inherit! :search_paths
     # Pods for testing

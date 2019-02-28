@@ -47,6 +47,36 @@
 		DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC1F2226BC970078E625 /* YUNormalNavBarView.m */; };
 		DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC262226BC970078E625 /* YUUnderlineButton.m */; };
 		DD21EC372226BC970078E625 /* YUHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC292226BC970078E625 /* YUHamburgerButton.m */; };
+		DD21EC3E2227811F0078E625 /* YUTextViewXibContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EC3A2227811F0078E625 /* YUTextViewXibContainer.xib */; };
+		DD21EC3F2227811F0078E625 /* YUTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC3B2227811F0078E625 /* YUTextView.m */; };
+		DD21EC402227811F0078E625 /* YUTextViewXibContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC3D2227811F0078E625 /* YUTextViewXibContainer.m */; };
+		DD21EC442227819E0078E625 /* JKCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC432227819E0078E625 /* JKCountDownButton.m */; };
+		DD21EC48222784260078E625 /* QuickDo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC47222784260078E625 /* QuickDo.m */; };
+		DD21EC4C222789C00078E625 /* YUCircleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC4B222789C00078E625 /* YUCircleTextView.m */; };
+		DD21EC4F222797910078E625 /* API_POST_User.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC4E222797910078E625 /* API_POST_User.m */; };
+		DD4F0C5F2227B0CD003467CB /* YUSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C5D2227B0CD003467CB /* YUSetPasswordViewController.m */; };
+		DD4F0C602227B0CD003467CB /* YUSetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0C5E2227B0CD003467CB /* YUSetPasswordViewController.xib */; };
+		DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C622227B3C3003467CB /* API_POST_Register.m */; };
+		DD4F0C672227B6C4003467CB /* RegisterRequestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C662227B6C4003467CB /* RegisterRequestDataModel.m */; };
+		DD4F0C6C2227BCAB003467CB /* YUUserManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C6B2227BCAB003467CB /* YUUserManagers.m */; };
+		DD4F0C6F2227BD51003467CB /* QuickGet.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C6E2227BD51003467CB /* QuickGet.m */; };
+		DD4F0C722227BF5F003467CB /* QuickJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C712227BF5F003467CB /* QuickJudge.m */; };
+		DD4F0C752227C3BB003467CB /* UserIDCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C732227C3BA003467CB /* UserIDCardModel.m */; };
+		DD4F0C7B2227C9DA003467CB /* YULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C792227C9DA003467CB /* YULoginViewController.m */; };
+		DD4F0C7C2227C9DA003467CB /* YULoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0C7A2227C9DA003467CB /* YULoginViewController.xib */; };
+		DD4F0C7F2227D6A6003467CB /* API_POST_User_Login.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C7E2227D6A6003467CB /* API_POST_User_Login.m */; };
+		DD4F0C842227E5A8003467CB /* YUAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C822227E5A8003467CB /* YUAssetViewController.m */; };
+		DD4F0C852227E5A8003467CB /* YUAssetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0C832227E5A8003467CB /* YUAssetViewController.xib */; };
+		DD4F0C8A2227E5C4003467CB /* YUMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C882227E5C4003467CB /* YUMineViewController.m */; };
+		DD4F0C8B2227E5C4003467CB /* YUMineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0C892227E5C4003467CB /* YUMineViewController.xib */; };
+		DD4F0C912227E7AE003467CB /* API_GET_User_Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C902227E7AE003467CB /* API_GET_User_Valid.m */; };
+		DD4F0C942227EB6B003467CB /* API_GET_User_Email_Logout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C932227EB6B003467CB /* API_GET_User_Email_Logout.m */; };
+		DD4F0CA022280677003467CB /* YUValidEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0C9E22280677003467CB /* YUValidEmailViewController.m */; };
+		DD4F0CA122280677003467CB /* YUValidEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0C9F22280677003467CB /* YUValidEmailViewController.xib */; };
+		DD4F0CA422280C22003467CB /* API_POST_User_Reset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CA322280C22003467CB /* API_POST_User_Reset.m */; };
+		DD4F0CA7222810DC003467CB /* API_PUT_User_Forget.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */; };
+		DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */; };
+		DD4F0CAD22281241003467CB /* YUResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +178,60 @@
 		DD21EC292226BC970078E625 /* YUHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUHamburgerButton.m; sourceTree = "<group>"; };
 		DD21EC2A2226BC970078E625 /* YUDIVView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUDIVView.h; sourceTree = "<group>"; };
 		DD21EC2B2226BC970078E625 /* YUPhoneInformationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUPhoneInformationTools.h; sourceTree = "<group>"; };
+		DD21EC392227811E0078E625 /* YUTextViewXibContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTextViewXibContainer.h; sourceTree = "<group>"; };
+		DD21EC3A2227811F0078E625 /* YUTextViewXibContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUTextViewXibContainer.xib; sourceTree = "<group>"; };
+		DD21EC3B2227811F0078E625 /* YUTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTextView.m; sourceTree = "<group>"; };
+		DD21EC3C2227811F0078E625 /* YUTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTextView.h; sourceTree = "<group>"; };
+		DD21EC3D2227811F0078E625 /* YUTextViewXibContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTextViewXibContainer.m; sourceTree = "<group>"; };
+		DD21EC422227819E0078E625 /* JKCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKCountDownButton.h; sourceTree = "<group>"; };
+		DD21EC432227819E0078E625 /* JKCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKCountDownButton.m; sourceTree = "<group>"; };
+		DD21EC46222784260078E625 /* QuickDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickDo.h; sourceTree = "<group>"; };
+		DD21EC47222784260078E625 /* QuickDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickDo.m; sourceTree = "<group>"; };
+		DD21EC4A222789C00078E625 /* YUCircleTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUCircleTextView.h; sourceTree = "<group>"; };
+		DD21EC4B222789C00078E625 /* YUCircleTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUCircleTextView.m; sourceTree = "<group>"; };
+		DD21EC4D222797910078E625 /* API_POST_User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User.h; sourceTree = "<group>"; };
+		DD21EC4E222797910078E625 /* API_POST_User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_User.m; sourceTree = "<group>"; };
+		DD4F0C5C2227B0CD003467CB /* YUSetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUSetPasswordViewController.h; sourceTree = "<group>"; };
+		DD4F0C5D2227B0CD003467CB /* YUSetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUSetPasswordViewController.m; sourceTree = "<group>"; };
+		DD4F0C5E2227B0CD003467CB /* YUSetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUSetPasswordViewController.xib; sourceTree = "<group>"; };
+		DD4F0C612227B3C3003467CB /* API_POST_Register.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_Register.h; sourceTree = "<group>"; };
+		DD4F0C622227B3C3003467CB /* API_POST_Register.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_Register.m; sourceTree = "<group>"; };
+		DD4F0C652227B6C4003467CB /* RegisterRequestDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterRequestDataModel.h; sourceTree = "<group>"; };
+		DD4F0C662227B6C4003467CB /* RegisterRequestDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterRequestDataModel.m; sourceTree = "<group>"; };
+		DD4F0C682227B73C003467CB /* ModelsImport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelsImport.h; sourceTree = "<group>"; };
+		DD4F0C6A2227BCAB003467CB /* YUUserManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUUserManagers.h; sourceTree = "<group>"; };
+		DD4F0C6B2227BCAB003467CB /* YUUserManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUUserManagers.m; sourceTree = "<group>"; };
+		DD4F0C6D2227BD51003467CB /* QuickGet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickGet.h; sourceTree = "<group>"; };
+		DD4F0C6E2227BD51003467CB /* QuickGet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickGet.m; sourceTree = "<group>"; };
+		DD4F0C702227BF5F003467CB /* QuickJudge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickJudge.h; sourceTree = "<group>"; };
+		DD4F0C712227BF5F003467CB /* QuickJudge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickJudge.m; sourceTree = "<group>"; };
+		DD4F0C732227C3BA003467CB /* UserIDCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIDCardModel.m; sourceTree = "<group>"; };
+		DD4F0C742227C3BB003467CB /* UserIDCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIDCardModel.h; sourceTree = "<group>"; };
+		DD4F0C782227C9DA003467CB /* YULoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YULoginViewController.h; sourceTree = "<group>"; };
+		DD4F0C792227C9DA003467CB /* YULoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YULoginViewController.m; sourceTree = "<group>"; };
+		DD4F0C7A2227C9DA003467CB /* YULoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YULoginViewController.xib; sourceTree = "<group>"; };
+		DD4F0C7D2227D6A6003467CB /* API_POST_User_Login.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User_Login.h; sourceTree = "<group>"; };
+		DD4F0C7E2227D6A6003467CB /* API_POST_User_Login.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_User_Login.m; sourceTree = "<group>"; };
+		DD4F0C812227E5A8003467CB /* YUAssetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetViewController.h; sourceTree = "<group>"; };
+		DD4F0C822227E5A8003467CB /* YUAssetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetViewController.m; sourceTree = "<group>"; };
+		DD4F0C832227E5A8003467CB /* YUAssetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAssetViewController.xib; sourceTree = "<group>"; };
+		DD4F0C872227E5C4003467CB /* YUMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUMineViewController.h; sourceTree = "<group>"; };
+		DD4F0C882227E5C4003467CB /* YUMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUMineViewController.m; sourceTree = "<group>"; };
+		DD4F0C892227E5C4003467CB /* YUMineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUMineViewController.xib; sourceTree = "<group>"; };
+		DD4F0C8F2227E7AE003467CB /* API_GET_User_Valid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_User_Valid.h; sourceTree = "<group>"; };
+		DD4F0C902227E7AE003467CB /* API_GET_User_Valid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_User_Valid.m; sourceTree = "<group>"; };
+		DD4F0C922227EB6B003467CB /* API_GET_User_Email_Logout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_User_Email_Logout.h; sourceTree = "<group>"; };
+		DD4F0C932227EB6B003467CB /* API_GET_User_Email_Logout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_User_Email_Logout.m; sourceTree = "<group>"; };
+		DD4F0C9D22280677003467CB /* YUValidEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUValidEmailViewController.h; sourceTree = "<group>"; };
+		DD4F0C9E22280677003467CB /* YUValidEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUValidEmailViewController.m; sourceTree = "<group>"; };
+		DD4F0C9F22280677003467CB /* YUValidEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUValidEmailViewController.xib; sourceTree = "<group>"; };
+		DD4F0CA222280C22003467CB /* API_POST_User_Reset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User_Reset.h; sourceTree = "<group>"; };
+		DD4F0CA322280C22003467CB /* API_POST_User_Reset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_User_Reset.m; sourceTree = "<group>"; };
+		DD4F0CA5222810DC003467CB /* API_PUT_User_Forget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_PUT_User_Forget.h; sourceTree = "<group>"; };
+		DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_User_Forget.m; sourceTree = "<group>"; };
+		DD4F0CA922281241003467CB /* YUResetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUResetPasswordViewController.h; sourceTree = "<group>"; };
+		DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUResetPasswordViewController.m; sourceTree = "<group>"; };
+		DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUResetPasswordViewController.xib; sourceTree = "<group>"; };
 		F269B838F6F657FCAB75948A /* Pods-ToPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToPay/Pods-ToPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -273,6 +357,7 @@
 		DD21EBA822263D700078E625 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0C682227B73C003467CB /* ModelsImport.h */,
 				DD21EBC0222661D70078E625 /* RootModel */,
 				DD21EBBB22265D440078E625 /* CommonModels */,
 				DD21EBBC22265D4F0078E625 /* SpecialModels */,
@@ -327,6 +412,12 @@
 			children = (
 				DD21EC2B2226BC970078E625 /* YUPhoneInformationTools.h */,
 				DD21EC0F2226BC970078E625 /* YUPhoneInformationTools.m */,
+				DD21EC46222784260078E625 /* QuickDo.h */,
+				DD21EC47222784260078E625 /* QuickDo.m */,
+				DD4F0C6D2227BD51003467CB /* QuickGet.h */,
+				DD4F0C6E2227BD51003467CB /* QuickGet.m */,
+				DD4F0C702227BF5F003467CB /* QuickJudge.h */,
+				DD4F0C712227BF5F003467CB /* QuickJudge.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -334,6 +425,7 @@
 		DD21EBAE22263FB80078E625 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0C692227BC86003467CB /* UserManagers */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -341,6 +433,8 @@
 		DD21EBAF2226409B0078E625 /* CommonViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CA822281217003467CB /* ResetPassword */,
+				DD4F0C9C2228061C003467CB /* ValidEmailViewController */,
 			);
 			path = CommonViewController;
 			sourceTree = "<group>";
@@ -359,7 +453,11 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DD21EC052226AB880078E625 /* RegisterViewController */,
+				DD4F0C862227E5AF003467CB /* MineViewController */,
+				DD4F0C802227E54C003467CB /* AssetViewController */,
+				DD4F0C772227C9C2003467CB /* LoginViewController */,
+				DD4F0C5B2227B094003467CB /* SetPassWdViewController- Step-1 */,
+				DD21EC052226AB880078E625 /* RegisterViewController - Step-0 */,
 				DD21EBD22226637C0078E625 /* WelcomeViewController */,
 			);
 			path = SpecialViewController;
@@ -387,6 +485,7 @@
 		DD21EBBB22265D440078E625 /* CommonModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0C762227C3BD003467CB /* User */,
 			);
 			path = CommonModels;
 			sourceTree = "<group>";
@@ -394,6 +493,7 @@
 		DD21EBBC22265D4F0078E625 /* SpecialModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0C642227B663003467CB /* Register */,
 			);
 			path = SpecialModels;
 			sourceTree = "<group>";
@@ -401,6 +501,12 @@
 		DD21EBBD22265D700078E625 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0C952227EDA7003467CB /* AppUpdateRelated */,
+				DD4F0C962227EDED003467CB /* ChannelRelated */,
+				DD4F0C972227EDF9003467CB /* TokenRelated */,
+				DD4F0C982227EE02003467CB /* MessageRelated */,
+				DD4F0C992227EE0C003467CB /* UserRelated */,
+				DD4F0C9A2227EE12003467CB /* AssetRelated */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -440,6 +546,9 @@
 		DD21EBC3222662060078E625 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD21EC49222789400078E625 /* YUCircleTextView */,
+				DD21EC412227818F0078E625 /* VaildCodeButton */,
+				DD21EC382227808B0078E625 /* YUTextView */,
 				DD21EC0D2226BC970078E625 /* NavigationBar */,
 				DD21EBE1222678350078E625 /* ServerListView */,
 			);
@@ -566,14 +675,14 @@
 			path = ServerListView;
 			sourceTree = "<group>";
 		};
-		DD21EC052226AB880078E625 /* RegisterViewController */ = {
+		DD21EC052226AB880078E625 /* RegisterViewController - Step-0 */ = {
 			isa = PBXGroup;
 			children = (
 				DD21EC082226BAD70078E625 /* YURegisterViewController.h */,
 				DD21EC092226BAD70078E625 /* YURegisterViewController.m */,
 				DD21EC0A2226BAD70078E625 /* YURegisterViewController.xib */,
 			);
-			path = RegisterViewController;
+			path = "RegisterViewController - Step-0";
 			sourceTree = "<group>";
 		};
 		DD21EC062226B73D0078E625 /* TableVIew+ */ = {
@@ -621,11 +730,11 @@
 		DD21EC102226BC970078E625 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DD21EC112226BC970078E625 /* YUINavigationControllerViewController.h */,
+				DD21EC152226BC970078E625 /* MMNavController.h */,
 				DD21EC122226BC970078E625 /* MMNavController.m */,
+				DD21EC112226BC970078E625 /* YUINavigationControllerViewController.h */,
 				DD21EC132226BC970078E625 /* YUINavigationControllerViewController.m */,
 				DD21EC142226BC970078E625 /* YUINavigationControllerViewController.xib */,
-				DD21EC152226BC970078E625 /* MMNavController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -689,6 +798,179 @@
 				DD21EC292226BC970078E625 /* YUHamburgerButton.m */,
 			);
 			path = "HamburgerButton | 汉堡包按钮";
+			sourceTree = "<group>";
+		};
+		DD21EC382227808B0078E625 /* YUTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC3C2227811F0078E625 /* YUTextView.h */,
+				DD21EC3B2227811F0078E625 /* YUTextView.m */,
+				DD21EC392227811E0078E625 /* YUTextViewXibContainer.h */,
+				DD21EC3D2227811F0078E625 /* YUTextViewXibContainer.m */,
+				DD21EC3A2227811F0078E625 /* YUTextViewXibContainer.xib */,
+			);
+			path = YUTextView;
+			sourceTree = "<group>";
+		};
+		DD21EC412227818F0078E625 /* VaildCodeButton */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC422227819E0078E625 /* JKCountDownButton.h */,
+				DD21EC432227819E0078E625 /* JKCountDownButton.m */,
+			);
+			path = VaildCodeButton;
+			sourceTree = "<group>";
+		};
+		DD21EC49222789400078E625 /* YUCircleTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC4A222789C00078E625 /* YUCircleTextView.h */,
+				DD21EC4B222789C00078E625 /* YUCircleTextView.m */,
+			);
+			path = YUCircleTextView;
+			sourceTree = "<group>";
+		};
+		DD4F0C5B2227B094003467CB /* SetPassWdViewController- Step-1 */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C5C2227B0CD003467CB /* YUSetPasswordViewController.h */,
+				DD4F0C5D2227B0CD003467CB /* YUSetPasswordViewController.m */,
+				DD4F0C5E2227B0CD003467CB /* YUSetPasswordViewController.xib */,
+			);
+			path = "SetPassWdViewController- Step-1";
+			sourceTree = "<group>";
+		};
+		DD4F0C642227B663003467CB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C652227B6C4003467CB /* RegisterRequestDataModel.h */,
+				DD4F0C662227B6C4003467CB /* RegisterRequestDataModel.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		DD4F0C692227BC86003467CB /* UserManagers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C6A2227BCAB003467CB /* YUUserManagers.h */,
+				DD4F0C6B2227BCAB003467CB /* YUUserManagers.m */,
+			);
+			path = UserManagers;
+			sourceTree = "<group>";
+		};
+		DD4F0C762227C3BD003467CB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C742227C3BB003467CB /* UserIDCardModel.h */,
+				DD4F0C732227C3BA003467CB /* UserIDCardModel.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		DD4F0C772227C9C2003467CB /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C782227C9DA003467CB /* YULoginViewController.h */,
+				DD4F0C792227C9DA003467CB /* YULoginViewController.m */,
+				DD4F0C7A2227C9DA003467CB /* YULoginViewController.xib */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		DD4F0C802227E54C003467CB /* AssetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C812227E5A8003467CB /* YUAssetViewController.h */,
+				DD4F0C822227E5A8003467CB /* YUAssetViewController.m */,
+				DD4F0C832227E5A8003467CB /* YUAssetViewController.xib */,
+			);
+			path = AssetViewController;
+			sourceTree = "<group>";
+		};
+		DD4F0C862227E5AF003467CB /* MineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C872227E5C4003467CB /* YUMineViewController.h */,
+				DD4F0C882227E5C4003467CB /* YUMineViewController.m */,
+				DD4F0C892227E5C4003467CB /* YUMineViewController.xib */,
+			);
+			path = MineViewController;
+			sourceTree = "<group>";
+		};
+		DD4F0C952227EDA7003467CB /* AppUpdateRelated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppUpdateRelated;
+			sourceTree = "<group>";
+		};
+		DD4F0C962227EDED003467CB /* ChannelRelated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChannelRelated;
+			sourceTree = "<group>";
+		};
+		DD4F0C972227EDF9003467CB /* TokenRelated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TokenRelated;
+			sourceTree = "<group>";
+		};
+		DD4F0C982227EE02003467CB /* MessageRelated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MessageRelated;
+			sourceTree = "<group>";
+		};
+		DD4F0C992227EE0C003467CB /* UserRelated */ = {
+			isa = PBXGroup;
+			children = (
+				DD21EC4D222797910078E625 /* API_POST_User.h */,
+				DD21EC4E222797910078E625 /* API_POST_User.m */,
+				DD4F0C612227B3C3003467CB /* API_POST_Register.h */,
+				DD4F0C622227B3C3003467CB /* API_POST_Register.m */,
+				DD4F0C7D2227D6A6003467CB /* API_POST_User_Login.h */,
+				DD4F0C7E2227D6A6003467CB /* API_POST_User_Login.m */,
+				DD4F0C8F2227E7AE003467CB /* API_GET_User_Valid.h */,
+				DD4F0C902227E7AE003467CB /* API_GET_User_Valid.m */,
+				DD4F0C922227EB6B003467CB /* API_GET_User_Email_Logout.h */,
+				DD4F0C932227EB6B003467CB /* API_GET_User_Email_Logout.m */,
+				DD4F0CA222280C22003467CB /* API_POST_User_Reset.h */,
+				DD4F0CA322280C22003467CB /* API_POST_User_Reset.m */,
+				DD4F0CA5222810DC003467CB /* API_PUT_User_Forget.h */,
+				DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */,
+			);
+			path = UserRelated;
+			sourceTree = "<group>";
+		};
+		DD4F0C9A2227EE12003467CB /* AssetRelated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AssetRelated;
+			sourceTree = "<group>";
+		};
+		DD4F0C9C2228061C003467CB /* ValidEmailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0C9D22280677003467CB /* YUValidEmailViewController.h */,
+				DD4F0C9E22280677003467CB /* YUValidEmailViewController.m */,
+				DD4F0C9F22280677003467CB /* YUValidEmailViewController.xib */,
+			);
+			path = ValidEmailViewController;
+			sourceTree = "<group>";
+		};
+		DD4F0CA822281217003467CB /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CA922281241003467CB /* YUResetPasswordViewController.h */,
+				DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */,
+				DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -799,10 +1081,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD21EBF7222696070078E625 /* YUCurrencyTableViewCell.xib in Resources */,
+				DD4F0CAD22281241003467CB /* YUResetPasswordViewController.xib in Resources */,
 				DD21EC0C2226BAD70078E625 /* YURegisterViewController.xib in Resources */,
+				DD4F0C7C2227C9DA003467CB /* YULoginViewController.xib in Resources */,
 				DD21EB82222637160078E625 /* LaunchScreen.storyboard in Resources */,
 				DD21EB7F222637160078E625 /* Assets.xcassets in Resources */,
+				DD4F0C602227B0CD003467CB /* YUSetPasswordViewController.xib in Resources */,
 				DD21EC302226BC970078E625 /* YUINavigationControllerViewController.xib in Resources */,
+				DD4F0C8B2227E5C4003467CB /* YUMineViewController.xib in Resources */,
+				DD4F0CA122280677003467CB /* YUValidEmailViewController.xib in Resources */,
+				DD4F0C852227E5A8003467CB /* YUAssetViewController.xib in Resources */,
+				DD21EC3E2227811F0078E625 /* YUTextViewXibContainer.xib in Resources */,
 				DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -923,35 +1212,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD21EC442227819E0078E625 /* JKCountDownButton.m in Sources */,
 				DD21EBF6222696070078E625 /* YUCurrencyTableViewCell.m in Sources */,
+				DD4F0C722227BF5F003467CB /* QuickJudge.m in Sources */,
 				DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */,
 				DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */,
+				DD4F0C7B2227C9DA003467CB /* YULoginViewController.m in Sources */,
 				DD21EC2C2226BC970078E625 /* YUDIVView.m in Sources */,
+				DD21EC4C222789C00078E625 /* YUCircleTextView.m in Sources */,
+				DD4F0CA422280C22003467CB /* API_POST_User_Reset.m in Sources */,
 				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
 				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
 				DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */,
 				DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */,
 				DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */,
 				DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */,
+				DD4F0C5F2227B0CD003467CB /* YUSetPasswordViewController.m in Sources */,
 				DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */,
+				DD21EC48222784260078E625 /* QuickDo.m in Sources */,
+				DD4F0C842227E5A8003467CB /* YUAssetViewController.m in Sources */,
+				DD4F0CA022280677003467CB /* YUValidEmailViewController.m in Sources */,
 				DD21EC2F2226BC970078E625 /* YUINavigationControllerViewController.m in Sources */,
 				DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */,
 				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
 				DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */,
+				DD21EC402227811F0078E625 /* YUTextViewXibContainer.m in Sources */,
+				DD4F0C752227C3BB003467CB /* UserIDCardModel.m in Sources */,
 				DD21EBDC222672990078E625 /* YUServerListView.m in Sources */,
 				DD21EBB6222658FF0078E625 /* YUNetworkManager.m in Sources */,
 				DD21EB85222637160078E625 /* main.m in Sources */,
 				DD21EC372226BC970078E625 /* YUHamburgerButton.m in Sources */,
+				DD4F0C6C2227BCAB003467CB /* YUUserManagers.m in Sources */,
+				DD4F0C942227EB6B003467CB /* API_GET_User_Email_Logout.m in Sources */,
 				DD21EC342226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m in Sources */,
+				DD4F0C6F2227BD51003467CB /* QuickGet.m in Sources */,
+				DD4F0C8A2227E5C4003467CB /* YUMineViewController.m in Sources */,
 				DD21EBB2222658F10078E625 /* ServModel.m in Sources */,
+				DD4F0C672227B6C4003467CB /* RegisterRequestDataModel.m in Sources */,
+				DD21EC3F2227811F0078E625 /* YUTextView.m in Sources */,
+				DD21EC4F222797910078E625 /* API_POST_User.m in Sources */,
+				DD4F0CA7222810DC003467CB /* API_PUT_User_Forget.m in Sources */,
 				DD21EB77222637110078E625 /* AppDelegate.m in Sources */,
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
 				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
+				DD4F0C7F2227D6A6003467CB /* API_POST_User_Login.m in Sources */,
 				DD21EBFA222697020078E625 /* YUCurrencyTableViewCellEntity.m in Sources */,
 				DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */,
+				DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
+				DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */,
 				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
+				DD4F0C912227E7AE003467CB /* API_GET_User_Valid.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

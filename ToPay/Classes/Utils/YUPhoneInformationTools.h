@@ -32,5 +32,4 @@
 
 + (void)isMessageNotificationServiceOpen:(void(^)(BOOL isopen ))isopen ;
 + (BOOL)isFirstUseApp ;
-
 @end

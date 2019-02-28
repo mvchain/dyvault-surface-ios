@@ -12,6 +12,7 @@
 
 - (void)yu_fullPurpleCircleStyle ; // all  Purple
 - (void)yu_fullBlueCircleStyle ; // all bule
+- (void)yu_vaildButtonStyle ;
 
 
 @end

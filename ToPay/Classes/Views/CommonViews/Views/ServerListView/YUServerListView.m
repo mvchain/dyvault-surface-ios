@@ -73,11 +73,7 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
 
 - (void)nextPage
 {
-    [self.servModel conn:^(NSDictionary *resData) {
-        
-    }      requestMethod:self.httpRequstType
-                     err:^(NSString *reason, NSInteger code) {
-    }];
+    
 }
 
 // last item id

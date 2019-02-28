@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "YUNetworkManager.h"
-#define SERVER_DOMAIN  @"http://192.168.15.21:10086"
-#define SERVER_APP_ID @"10001"
-#define SERVER_APP_VERSION @"1.0"
+#define SERVER_DOMAIN  @"http://192.168.15.31:10086"
+
 /*
  * ServModelState_ConnectionError -> for example:network error,server shutdown etc
  * ServModelState_BusinessLogicError ->for example:parameter error ,login fail,register fail
@@ -22,9 +21,10 @@ typedef NS_ENUM(NSUInteger, ServModelState) {
     ServModelState_Success
 };
 
-typedef void(^succBlock)(id data );
+typedef void(^succBlock)(id responseData);
 
 typedef void(^errBlock)(NSString *reason ,NSInteger code  );
+
 @interface ServModel : NSObject
 // api domain ,for example :@"https://mvc.com",note: "https" can not lack
 @property (copy,nonatomic) NSString * apiDomainUrl ;
@@ -36,9 +36,10 @@ typedef void(^errBlock)(NSString *reason ,NSInteger code  );
 @property (copy,nonatomic) succBlock onSuccess ;
 // write code in this block when request  err
 @property (copy,nonatomic) errBlock onError ;
+// write code in this block when http conn end 
+@property (copy,nonatomic) void(^onEndConnection)(void);
 // default request
-- (void)conn:(void(^)(NSDictionary *resData))succ
-requestMethod:(HTTPMethod)rquestMethod
-         err:(void(^)(NSString * reason , NSInteger code  ))err;
+- (void)connectWithRquestMethod:(HTTPMethod)rquestMethod;
+
 
 @end

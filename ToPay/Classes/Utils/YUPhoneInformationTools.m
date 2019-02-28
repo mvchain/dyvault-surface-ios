@@ -114,7 +114,7 @@ static const CGFloat buttonWidth = 80;
     }
 }
 + (BOOL)isFirstUseApp {
-   NSString * sign =  [[NSUserDefaults standardUserDefaults]objectForKey:@"shkhkfigigfpejfejfefjeljll"];
+    NSString * sign =  [[NSUserDefaults standardUserDefaults]objectForKey:@"shkhkfigigfpejfejfefjeljll"];
     if( [sign isEqualToString:@"NOT_FIRST"] ) return NO;
     [[NSUserDefaults standardUserDefaults] setObject:@"NOT_FIRST" forKey:@"shkhkfigigfpejfejfefjeljll"];
     return YES;

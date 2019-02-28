@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YUValidEmailViewController">
+            <connections>
+                <outlet property="atlt_scrollviewTop" destination="lVg-Bi-Vd0" id="SaB-CS-44S"/>
+                <outlet property="emailAddrTextView" destination="xSr-Jq-BVv" id="PML-ii-Ryo"/>
+                <outlet property="nextStepButton" destination="c8T-oG-yLr" id="XSW-7f-k5o"/>
+                <outlet property="sendValidCodeButton" destination="pXI-Sp-8Ca" id="rAH-DG-2cF"/>
+                <outlet property="vaildCodeTextView" destination="rnG-8C-tQM" id="96M-Qs-FTk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugy-YL-hoN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSr-Jq-BVv" customClass="YUCircleTextView">
+                            <rect key="frame" x="40" y="10" width="295" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="n8Q-Wh-ERC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnG-8C-tQM" customClass="YUCircleTextView">
+                            <rect key="frame" x="40" y="76" width="295" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXI-Sp-8Ca" customClass="JKCountDownButton">
+                                    <rect key="frame" x="178" y="9" width="105" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="105" id="t44-5c-IYe"/>
+                                    </constraints>
+                                    <state key="normal" title="发送验证码">
+                                        <color key="titleColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="sendValidCodeTap:" destination="-1" eventType="touchUpInside" id="j1Z-e3-JdJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="pXI-Sp-8Ca" firstAttribute="top" secondItem="rnG-8C-tQM" secondAttribute="top" constant="9" id="6ni-xi-DbQ"/>
+                                <constraint firstAttribute="bottom" secondItem="pXI-Sp-8Ca" secondAttribute="bottom" constant="9" id="8d3-bf-06f"/>
+                                <constraint firstAttribute="trailing" secondItem="pXI-Sp-8Ca" secondAttribute="trailing" constant="12" id="JUN-oG-8ob"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8T-oG-yLr">
+                            <rect key="frame" x="115.5" y="193" width="144" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="uTy-x2-31M"/>
+                                <constraint firstAttribute="width" constant="144" id="ugl-MT-T75"/>
+                            </constraints>
+                            <state key="normal" title="下一步"/>
+                            <connections>
+                                <action selector="nextStepTap:" destination="-1" eventType="touchUpInside" id="l4m-l0-wRe"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Iy-t7-gXs">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="JNE-Ro-0eE"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xSr-Jq-BVv" firstAttribute="leading" secondItem="Ugy-YL-hoN" secondAttribute="leading" constant="40" id="4VP-tg-W7I"/>
+                        <constraint firstAttribute="trailing" secondItem="5Iy-t7-gXs" secondAttribute="trailing" id="4rW-Ct-qct"/>
+                        <constraint firstItem="5Iy-t7-gXs" firstAttribute="top" secondItem="Ugy-YL-hoN" secondAttribute="top" id="51L-yo-roQ"/>
+                        <constraint firstItem="rnG-8C-tQM" firstAttribute="height" secondItem="xSr-Jq-BVv" secondAttribute="height" id="5Xf-cL-Xzt"/>
+                        <constraint firstAttribute="trailing" secondItem="xSr-Jq-BVv" secondAttribute="trailing" constant="40" id="7bF-fU-AXa"/>
+                        <constraint firstAttribute="bottom" secondItem="c8T-oG-yLr" secondAttribute="bottom" constant="10" id="Cv5-NL-wcD"/>
+                        <constraint firstItem="xSr-Jq-BVv" firstAttribute="top" secondItem="5Iy-t7-gXs" secondAttribute="bottom" constant="10" id="HsW-Z4-07g"/>
+                        <constraint firstItem="c8T-oG-yLr" firstAttribute="centerX" secondItem="xSr-Jq-BVv" secondAttribute="centerX" id="LtM-2g-Yus"/>
+                        <constraint firstItem="5Iy-t7-gXs" firstAttribute="centerX" secondItem="Ugy-YL-hoN" secondAttribute="centerX" id="MV5-Gi-zJD"/>
+                        <constraint firstItem="5Iy-t7-gXs" firstAttribute="leading" secondItem="Ugy-YL-hoN" secondAttribute="leading" id="Tuu-98-Rzn"/>
+                        <constraint firstItem="rnG-8C-tQM" firstAttribute="top" secondItem="xSr-Jq-BVv" secondAttribute="bottom" constant="16" id="XGa-Ot-oD5"/>
+                        <constraint firstItem="c8T-oG-yLr" firstAttribute="top" secondItem="rnG-8C-tQM" secondAttribute="bottom" constant="67" id="biI-Z2-j5P"/>
+                        <constraint firstItem="rnG-8C-tQM" firstAttribute="centerX" secondItem="xSr-Jq-BVv" secondAttribute="centerX" id="fu5-qt-TdO"/>
+                        <constraint firstItem="rnG-8C-tQM" firstAttribute="width" secondItem="xSr-Jq-BVv" secondAttribute="width" id="iYX-cu-3yj"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ugy-YL-hoN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Eck-RV-BNI"/>
+                <constraint firstItem="Ugy-YL-hoN" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="bdz-v5-2O6"/>
+                <constraint firstItem="Ugy-YL-hoN" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="kRF-xe-FGj"/>
+                <constraint firstItem="Ugy-YL-hoN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lVg-Bi-Vd0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

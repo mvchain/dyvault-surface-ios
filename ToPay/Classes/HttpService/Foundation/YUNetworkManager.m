@@ -2,7 +2,7 @@
 
 
 @interface YUNetworkManager ()
-@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
+
 @end
 @implementation YUNetworkManager
 static YUNetworkManager *networkManager = nil;

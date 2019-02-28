@@ -11,8 +11,9 @@
  * PUT：更新全部属性
  * DELETE：删除资源
  */
+
+
 typedef NS_ENUM(NSUInteger, HTTPMethod) {
-    
     HTTPMethodGET,
     HTTPMethodPOST,
     HTTPMethodPUT,
@@ -21,6 +22,7 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
 };
 
 @interface YUNetworkManager : NSObject
+@property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
 /**
  *  单例
  *
