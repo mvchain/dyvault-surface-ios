@@ -32,10 +32,20 @@
 + (NSString *)getBundleIdStr {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
 }
+
 + (NSString *)getCurBuildVersion {
     //  CFBundleVersion
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *app_Version = [infoDictionary objectForKey:@"CFBundleVersion"];
     return app_Version;
+}
+
++ (CGFloat)makeFloatNumber:(CGFloat) num tailNum:(int)tailNum {
+    int sum = 10 ;
+    while (--tailNum) {
+        sum*=10;
+    }
+    int res_int =  (int)(num * sum);
+    return res_int / (CGFloat)sum;
 }
 @end

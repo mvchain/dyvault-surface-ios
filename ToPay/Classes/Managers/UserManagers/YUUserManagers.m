@@ -11,6 +11,8 @@
 #define UserInfoCacheKey_IDCard @"UserCacheKey_IDCard"
 @implementation YUUserManagers
 static YUUserManagers* _instance = nil;
+
+#pragma mark -<public method>
 +(instancetype) shareInstance
 {
     static dispatch_once_t onceToken ;
@@ -33,6 +35,9 @@ static YUUserManagers* _instance = nil;
 - (void)logout {
     YYCache *cache = [YYCache cacheWithName:UserInfoCacheKey];
     [cache removeAllObjects];
+}
+- (BOOL)isLogined {
+    return self.userIDCard_inDisk?YES:NO;
 }
 
 +(id) allocWithZone:(struct _NSZone *)zone

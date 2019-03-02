@@ -12,6 +12,8 @@
 #import "API_GET_User_Email_Logout.h"
 #import "API_POST_User.h"
 #import "API_POST_User_Reset.h"
+#import "YUResetPasswordViewController.h"
+#import "YUForget_ResetPasswordViewModel.h"
 @interface YUValidEmailViewController ();
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atlt_scrollviewTop;
 @property (weak, nonatomic) IBOutlet JKCountDownButton *sendValidCodeButton;
@@ -66,7 +68,9 @@
     API_POST_User_Reset *POST_User_Reset = [[API_POST_User_Reset alloc] init];
     POST_User_Reset.onSuccess = ^(id responseData) {
         NSString *token  = (NSString *)responseData;
-        
+        YUForget_ResetPasswordViewModel *forgetResetVM = [[YUForget_ResetPasswordViewModel alloc] initWithToken:token email:self.emailAddrTextView.text];
+        YUResetPasswordViewController *resetPwdVC = [[YUResetPasswordViewController alloc] initWithViewModel:forgetResetVM];
+        [self.navigationController pushViewController:resetPwdVC animated:YES];
     };
     POST_User_Reset.onError = ^(NSString *reason, NSInteger code) {
             [QMUITips showError:reason];

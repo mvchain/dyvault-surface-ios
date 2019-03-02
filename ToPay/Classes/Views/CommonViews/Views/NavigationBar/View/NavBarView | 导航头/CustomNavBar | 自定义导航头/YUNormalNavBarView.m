@@ -78,11 +78,11 @@
 }
 - (void)setRightButtonWithImage:(UIImage *) ima {
      [_rightButton.midView removeFromSuperview];
-    UIImageView * imaView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 17, 3)];
+    UIImageView * imaView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 17, 17)];
     [imaView setImage:ima];
     [_rightButton setMidView:imaView];
     [imaView y_setRight:20];
-    [imaView y_setBottom:18];
+    [imaView y_setBottom:12];
 }
 
 - (void)setRightButtonWithTitle:(NSString *)title{

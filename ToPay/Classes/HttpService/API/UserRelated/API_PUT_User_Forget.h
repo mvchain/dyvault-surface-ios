@@ -20,7 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)sendRequestWithPassword:(NSString *)password
                           token:(NSString *)token
                            type:(NSInteger) type
-                          email:(NSString *)email
+                          email:(NSString *)email;
+
 
 @end
 

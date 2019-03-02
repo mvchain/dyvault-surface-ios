@@ -37,7 +37,11 @@
 - (void)yu_circleStyle;
 - (void)yu_boarderStyle:(UIColor *)color;
 - (void) yu_smallCircleStyle;
--(void) yu_smallCircleStyleWithRadius:(CGFloat)radius;
+- (void) yu_smallCircleStyleWithRadius:(CGFloat)radius;
+- (void)y_setCenterX:(CGFloat)centerX;
+- (CGFloat)y_centerX;
+- (void)y_setCenterY:(CGFloat)centerY;
+- (CGFloat)y_centerY;
 - (BOOL)isDisplayedInScreen;
 + (instancetype)xib_loadUsingClassName;
 

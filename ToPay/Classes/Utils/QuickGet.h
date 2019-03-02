@@ -11,10 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QuickGet : NSObject
-+ (NSString *)encryptPwd:(NSString *)pwd email:(NSString *)m_email;
++ (NSString *) encryptPwd:(NSString *)pwd email:(NSString *)m_email;
 + (NSString *) md5:(NSString *) input;
 + (NSString *) getBundleIdStr;
 + (NSString *) getCurBuildVersion;
++ (CGFloat) makeFloatNumber:(CGFloat) num tailNum:(int)tailNum;
+
 @end
 
 NS_ASSUME_NONNULL_END

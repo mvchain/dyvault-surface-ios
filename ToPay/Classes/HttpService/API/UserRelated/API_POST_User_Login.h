@@ -7,6 +7,8 @@
 //
 
 #import "ServModel.h"
+
+
 /*
  {
  "imageToken": "string",

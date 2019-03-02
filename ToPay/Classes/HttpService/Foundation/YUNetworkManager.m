@@ -72,8 +72,10 @@ static YUNetworkManager *networkManager = nil;
                                           parameters:(nullable id)parameters
                                             progress:(nullable void (^)(NSProgress * _Nullable progress))progress
                                              success:(nullable void(^) (BOOL isSuccess, id _Nullable responseObject))success
-                                             failure:(nullable void(^) (NSString * _Nullable errorMessage))failure {
+                                             failure:(nullable void(^) (NSString * _Nullable errorMessage,NSInteger responseCode))failure {
     // 请求的地址
+    
+    
     NSString *requestPath = [serverUrl stringByAppendingPathComponent:apiPath];
     // requestPath    NSPathStore2 *    @"http:/ream.miyauu.com/api/v1/bbs/list"    0x00000001c00a7320
     NSURLSessionDataTask * task = nil;
@@ -87,7 +89,7 @@ static YUNetworkManager *networkManager = nil;
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {
-                    failure([self failHandleWithErrorResponse:error task:task]);
+                    failure([self failHandleWithErrorResponse:error task:task],[self failHandleWithErrorResponse_responseCode:error task:task]);
                 }
             }];
         }
@@ -101,7 +103,7 @@ static YUNetworkManager *networkManager = nil;
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {
-                    failure([self failHandleWithErrorResponse:error task:task]);
+                    failure([self failHandleWithErrorResponse:error task:task],[self failHandleWithErrorResponse_responseCode:error task:task]);
                 }
             }];
         }
@@ -115,7 +117,7 @@ static YUNetworkManager *networkManager = nil;
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {
-                    failure([self failHandleWithErrorResponse:error task:task]);
+                    failure([self failHandleWithErrorResponse:error task:task],[self failHandleWithErrorResponse_responseCode:error task:task]);
                 }
             }];
         }
@@ -129,7 +131,7 @@ static YUNetworkManager *networkManager = nil;
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 if (failure) {
-                    failure([self failHandleWithErrorResponse:error task:task]);
+                    failure([self failHandleWithErrorResponse:error task:task],[self failHandleWithErrorResponse_responseCode:error task:task]);
                 }
             }];
         }
@@ -142,7 +144,7 @@ static YUNetworkManager *networkManager = nil;
                     success(YES,responseObject);
                 }            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     if (failure) {
-                        failure([self failHandleWithErrorResponse:error task:task]);
+                        failure([self failHandleWithErrorResponse:error task:task],[self failHandleWithErrorResponse_responseCode:error task:task]);
                     }
                 }];
         }
@@ -234,5 +236,20 @@ static YUNetworkManager *networkManager = nil;
     return message;
 }
 
+- (NSInteger)failHandleWithErrorResponse_responseCode:( NSError * _Nullable )error task:( NSURLSessionDataTask * _Nullable )task {
+    __block NSString *message = nil;
+    // 这里可以直接设定错误反馈，也可以利用AFN 的error信息直接解析展示
+    
+    NSData *afNetworking_errorMsg = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+    NSLog(@"afNetworking_errorMsg == %@",[[NSString alloc]initWithData:afNetworking_errorMsg encoding:NSUTF8StringEncoding]);
+    
+    if (!afNetworking_errorMsg) {
+        message = @"网络连接失败";
+    }
+    
+    NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+    NSInteger responseStatue = response.statusCode;
+    return responseStatue;
+}
 
 @end

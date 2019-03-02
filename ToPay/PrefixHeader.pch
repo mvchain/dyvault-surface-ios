@@ -9,12 +9,17 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #define TPString(FORMAT, ...) [NSString stringWithFormat:FORMAT,##__VA_ARGS__]
+
+// property
 #define yudef_property_strong(type,name) @property (strong ,nonatomic) type* name;
 #define yudef_property_copy(type,name) @property (copy ,nonatomic) type* name;
 #define yudef_property_assign(type,name) @property (assign ,nonatomic) type name;
 #define yudef_lazyLoad(type,name,_name) -(type *)name {if(!_name){_name = [[type alloc] init];}return _name;}
 #define yudef_exit_func_if(condition) if(condition)return;
 #define yudef_weakSelf __weak typeof (self) weakSelf = self;
+#define yufloat_cut(num,len) [QuickGet makeFloatNumber:num tailNum:len]
+#define yufloat_token(num) [QuickGet makeFloatNumber:num tailNum:4]
+#define yufloat_lawCurrency(num) [QuickGet makeFloatNumber:num tailNum:2]
 #import "UITableView+YUTableView.h"
 #import <BlocksKit.h>
 #import "ServModel.h"
@@ -31,4 +36,9 @@
 #import "ModelsImport.h"
 #import "YUUserManagers.h"
 #import "YYCache.h"
+#import "YUViewControllerManagers.h"
+#import "UIImageView+WebCache.h"
+#import "YUHamburgerButton.h"
+#import "YUPageListView.h"
+#import "YUErrorCellEntity.h"
 #endif

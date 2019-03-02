@@ -14,6 +14,7 @@
 #import "API_GET_User_Valid.h"
 #import "API_GET_User_Email_Logout.h"
 #import "YUValidEmailViewController.h"
+
 @interface YULoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPassWdButton;
@@ -76,6 +77,8 @@
         NSDictionary *data = (NSDictionary *)responseData;
         UserIDCardModel *userIDCard = [[UserIDCardModel alloc]initWithDictionary:data];
         [[YUUserManagers shareInstance] change_userIDCard_inDisk:userIDCard];
+        UIViewController *tab =  [[YUViewControllerManagers shareInstance] getNewMainTabViewController]; // switch to main tab ..
+        [self.navigationController pushViewController:tab animated:YES];
     };
     POST_User_Login.onError = ^(NSString *reason, NSInteger code) {
         [QMUITips showError:reason];

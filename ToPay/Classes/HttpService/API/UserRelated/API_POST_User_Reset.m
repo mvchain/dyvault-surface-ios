@@ -14,6 +14,8 @@
     self.requestDict[@"email"] = email;
     self.requestDict[@"value"] = value;
     [self connectWithRquestMethod:HTTPMethodPOST];
+}
+- (void)dealloc {
     
 }
 @end

@@ -8,9 +8,8 @@
 
 #import "YUCustomNavBarView.h"
 @class YUHamburgerButton;
-#define BackImageName @"00back"
+#define BackImageName @"back_black"
 @interface YUNormalNavBarView : YUCustomNavBarView
-
 @property(strong,nonatomic) UILabel * titleLabel;
 @property (strong,nonatomic)YUHamburgerButton * leftButton;
 @property (strong,nonatomic)YUHamburgerButton * rightButton;

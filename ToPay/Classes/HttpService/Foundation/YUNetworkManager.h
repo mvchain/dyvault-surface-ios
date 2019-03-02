@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, HTTPMethod) {
                                           parameters:(nullable id)parameters
                                             progress:(nullable void (^)(NSProgress * _Nullable progress))progress
                                              success:(nullable void(^) (BOOL isSuccess, id _Nullable responseObject))success
-                                             failure:(nullable void(^) (NSString * _Nullable errorMessage))failure ;
+                                             failure:(nullable void(^) (NSString * _Nullable errorMessage,NSInteger responseCode))failure;
 #pragma mark POST 上传图片
 /**
  上传图片

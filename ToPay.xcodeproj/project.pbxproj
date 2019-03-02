@@ -21,15 +21,12 @@
 		DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBC9222662590078E625 /* YUBaseViewController.m */; };
 		DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBD4222667C80078E625 /* YUWelcomeViewController.m */; };
 		DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EBD5222667C80078E625 /* YUWelcomeViewController.xib */; };
-		DD21EBDC222672990078E625 /* YUServerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBDB222672990078E625 /* YUServerListView.m */; };
+		DD21EBDC222672990078E625 /* YUPageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBDB222672990078E625 /* YUPageListView.m */; };
 		DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE6222678E00078E625 /* UITableView+YUTableView.m */; };
 		DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE7222678E00078E625 /* YUCellEntity.m */; };
 		DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE8222678E00078E625 /* UIView+YUStyle.m */; };
 		DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBE9222678E00078E625 /* UITableView+YUTableViewAddition.m */; };
 		DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBF0222679230078E625 /* YUTableViewCell.m */; };
-		DD21EBF6222696070078E625 /* YUCurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBF4222696070078E625 /* YUCurrencyTableViewCell.m */; };
-		DD21EBF7222696070078E625 /* YUCurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD21EBF5222696070078E625 /* YUCurrencyTableViewCell.xib */; };
-		DD21EBFA222697020078E625 /* YUCurrencyTableViewCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBF9222697020078E625 /* YUCurrencyTableViewCellEntity.m */; };
 		DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EBFC22269F560078E625 /* UIButton+YUButtonStyle.m */; };
 		DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC0022269FC90078E625 /* UIButton+Gradient.m */; };
 		DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DD21EC032226A1070078E625 /* UIImage+Gradient.m */; };
@@ -77,6 +74,30 @@
 		DD4F0CA7222810DC003467CB /* API_PUT_User_Forget.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */; };
 		DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */; };
 		DD4F0CAD22281241003467CB /* YUResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */; };
+		DD4F0CB12228DA0B003467CB /* YUForget_ResetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CB02228DA0B003467CB /* YUForget_ResetPasswordViewModel.m */; };
+		DD4F0CB52228EB99003467CB /* YUViewControllerManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CB42228EB99003467CB /* YUViewControllerManagers.m */; };
+		DD4F0CCC222912CF003467CB /* YUAssetTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CCB222912CF003467CB /* YUAssetTableHeaderView.m */; };
+		DD4F0CCE222912DE003467CB /* YUAssetTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CCD222912DE003467CB /* YUAssetTableHeaderView.xib */; };
+		DD4F0CD22229212D003467CB /* YUAssetHeaderInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CD02229212D003467CB /* YUAssetHeaderInfoCell.m */; };
+		DD4F0CD32229212D003467CB /* YUAssetHeaderInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CD12229212D003467CB /* YUAssetHeaderInfoCell.xib */; };
+		DD4F0CD622292192003467CB /* YUAssetHeaderInfoCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CD522292192003467CB /* YUAssetHeaderInfoCellEntity.m */; };
+		DD4F0CD922293B1D003467CB /* API_GET_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CD822293B1D003467CB /* API_GET_Asset.m */; };
+		DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CDF22294C42003467CB /* YUAssetTokenItemCell.m */; };
+		DD4F0CE222294C42003467CB /* YUAssetTokenItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CE022294C42003467CB /* YUAssetTokenItemCell.xib */; };
+		DD4F0CE522294C53003467CB /* YUAssetTokenItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CE422294C53003467CB /* YUAssetTokenItemCellEntity.m */; };
+		DD4F0CE922295C8F003467CB /* YUAddNewTokenController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CE822295C8F003467CB /* YUAddNewTokenController.m */; };
+		DD4F0CEC22295E13003467CB /* API_GET_Token.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CEB22295E13003467CB /* API_GET_Token.m */; };
+		DD4F0CF722296087003467CB /* AssetTokenItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CF622296087003467CB /* AssetTokenItemModel.m */; };
+		DD4F0CFA22296094003467CB /* AddNewTokenItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CF922296094003467CB /* AddNewTokenItemModel.m */; };
+		DD4F0CFC222961EE003467CB /* YUAddNewTokenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CFB222961EE003467CB /* YUAddNewTokenController.xib */; };
+		DD54BBF4222A873B0009E383 /* YUAddNewTokenItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BBF2222A873B0009E383 /* YUAddNewTokenItemCell.m */; };
+		DD54BBF5222A873B0009E383 /* YUAddNewTokenItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD54BBF3222A873B0009E383 /* YUAddNewTokenItemCell.xib */; };
+		DD54BBF8222A874F0009E383 /* YUAddNewTokenItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BBF7222A874F0009E383 /* YUAddNewTokenItemCellEntity.m */; };
+		DD54BBFD222A8F650009E383 /* YUErrorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BBFB222A8F650009E383 /* YUErrorCell.m */; };
+		DD54BBFE222A8F650009E383 /* YUErrorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD54BBFC222A8F650009E383 /* YUErrorCell.xib */; };
+		DD54BC01222A8FE50009E383 /* YUErrorCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC00222A8FE50009E383 /* YUErrorCellEntity.m */; };
+		DD54BC06222AAC880009E383 /* YUSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC04222AAC880009E383 /* YUSearchBarView.m */; };
+		DD54BC07222AAC880009E383 /* YUSearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD54BC05222AAC880009E383 /* YUSearchBarView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +148,8 @@
 		DD21EBD3222667C80078E625 /* YUWelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUWelcomeViewController.h; sourceTree = "<group>"; };
 		DD21EBD4222667C80078E625 /* YUWelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUWelcomeViewController.m; sourceTree = "<group>"; };
 		DD21EBD5222667C80078E625 /* YUWelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUWelcomeViewController.xib; sourceTree = "<group>"; };
-		DD21EBDA222672990078E625 /* YUServerListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUServerListView.h; sourceTree = "<group>"; };
-		DD21EBDB222672990078E625 /* YUServerListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUServerListView.m; sourceTree = "<group>"; };
+		DD21EBDA222672990078E625 /* YUPageListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUPageListView.h; sourceTree = "<group>"; };
+		DD21EBDB222672990078E625 /* YUPageListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUPageListView.m; sourceTree = "<group>"; };
 		DD21EBE0222675940078E625 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DD21EBE3222678DF0078E625 /* UITableView+YUTableViewAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+YUTableViewAddition.h"; sourceTree = "<group>"; };
 		DD21EBE4222678E00078E625 /* YUCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCellEntity.h; sourceTree = "<group>"; };
@@ -141,11 +162,6 @@
 		DD21EBEB222678E00078E625 /* UIView+YUStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YUStyle.h"; sourceTree = "<group>"; };
 		DD21EBF0222679230078E625 /* YUTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTableViewCell.m; sourceTree = "<group>"; };
 		DD21EBF1222679230078E625 /* YUTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTableViewCell.h; sourceTree = "<group>"; };
-		DD21EBF3222696070078E625 /* YUCurrencyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUCurrencyTableViewCell.h; sourceTree = "<group>"; };
-		DD21EBF4222696070078E625 /* YUCurrencyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUCurrencyTableViewCell.m; sourceTree = "<group>"; };
-		DD21EBF5222696070078E625 /* YUCurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUCurrencyTableViewCell.xib; sourceTree = "<group>"; };
-		DD21EBF8222697020078E625 /* YUCurrencyTableViewCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUCurrencyTableViewCellEntity.h; sourceTree = "<group>"; };
-		DD21EBF9222697020078E625 /* YUCurrencyTableViewCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUCurrencyTableViewCellEntity.m; sourceTree = "<group>"; };
 		DD21EBFC22269F560078E625 /* UIButton+YUButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YUButtonStyle.m"; sourceTree = "<group>"; };
 		DD21EBFD22269F560078E625 /* UIButton+YUButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YUButtonStyle.h"; sourceTree = "<group>"; };
 		DD21EBFF22269FC90078E625 /* UIButton+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
@@ -232,6 +248,47 @@
 		DD4F0CA922281241003467CB /* YUResetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUResetPasswordViewController.h; sourceTree = "<group>"; };
 		DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUResetPasswordViewController.m; sourceTree = "<group>"; };
 		DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUResetPasswordViewController.xib; sourceTree = "<group>"; };
+		DD4F0CAF2228DA0B003467CB /* YUForget_ResetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUForget_ResetPasswordViewModel.h; sourceTree = "<group>"; };
+		DD4F0CB02228DA0B003467CB /* YUForget_ResetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUForget_ResetPasswordViewModel.m; sourceTree = "<group>"; };
+		DD4F0CB32228EB99003467CB /* YUViewControllerManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUViewControllerManagers.h; sourceTree = "<group>"; };
+		DD4F0CB42228EB99003467CB /* YUViewControllerManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUViewControllerManagers.m; sourceTree = "<group>"; };
+		DD4F0CCA222912CF003467CB /* YUAssetTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetTableHeaderView.h; sourceTree = "<group>"; };
+		DD4F0CCB222912CF003467CB /* YUAssetTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetTableHeaderView.m; sourceTree = "<group>"; };
+		DD4F0CCD222912DE003467CB /* YUAssetTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAssetTableHeaderView.xib; sourceTree = "<group>"; };
+		DD4F0CCF2229212D003467CB /* YUAssetHeaderInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetHeaderInfoCell.h; sourceTree = "<group>"; };
+		DD4F0CD02229212D003467CB /* YUAssetHeaderInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetHeaderInfoCell.m; sourceTree = "<group>"; };
+		DD4F0CD12229212D003467CB /* YUAssetHeaderInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAssetHeaderInfoCell.xib; sourceTree = "<group>"; };
+		DD4F0CD422292192003467CB /* YUAssetHeaderInfoCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetHeaderInfoCellEntity.h; sourceTree = "<group>"; };
+		DD4F0CD522292192003467CB /* YUAssetHeaderInfoCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetHeaderInfoCellEntity.m; sourceTree = "<group>"; };
+		DD4F0CD722293B1D003467CB /* API_GET_Asset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset.h; sourceTree = "<group>"; };
+		DD4F0CD822293B1D003467CB /* API_GET_Asset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset.m; sourceTree = "<group>"; };
+		DD4F0CDE22294C42003467CB /* YUAssetTokenItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetTokenItemCell.h; sourceTree = "<group>"; };
+		DD4F0CDF22294C42003467CB /* YUAssetTokenItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetTokenItemCell.m; sourceTree = "<group>"; };
+		DD4F0CE022294C42003467CB /* YUAssetTokenItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAssetTokenItemCell.xib; sourceTree = "<group>"; };
+		DD4F0CE322294C53003467CB /* YUAssetTokenItemCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetTokenItemCellEntity.h; sourceTree = "<group>"; };
+		DD4F0CE422294C53003467CB /* YUAssetTokenItemCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetTokenItemCellEntity.m; sourceTree = "<group>"; };
+		DD4F0CE722295C8F003467CB /* YUAddNewTokenController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAddNewTokenController.h; sourceTree = "<group>"; };
+		DD4F0CE822295C8F003467CB /* YUAddNewTokenController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAddNewTokenController.m; sourceTree = "<group>"; };
+		DD4F0CEA22295E13003467CB /* API_GET_Token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Token.h; sourceTree = "<group>"; };
+		DD4F0CEB22295E13003467CB /* API_GET_Token.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Token.m; sourceTree = "<group>"; };
+		DD4F0CF522296087003467CB /* AssetTokenItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetTokenItemModel.h; sourceTree = "<group>"; };
+		DD4F0CF622296087003467CB /* AssetTokenItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetTokenItemModel.m; sourceTree = "<group>"; };
+		DD4F0CF822296094003467CB /* AddNewTokenItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTokenItemModel.h; sourceTree = "<group>"; };
+		DD4F0CF922296094003467CB /* AddNewTokenItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTokenItemModel.m; sourceTree = "<group>"; };
+		DD4F0CFB222961EE003467CB /* YUAddNewTokenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAddNewTokenController.xib; sourceTree = "<group>"; };
+		DD54BBF1222A873B0009E383 /* YUAddNewTokenItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAddNewTokenItemCell.h; sourceTree = "<group>"; };
+		DD54BBF2222A873B0009E383 /* YUAddNewTokenItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAddNewTokenItemCell.m; sourceTree = "<group>"; };
+		DD54BBF3222A873B0009E383 /* YUAddNewTokenItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAddNewTokenItemCell.xib; sourceTree = "<group>"; };
+		DD54BBF6222A874F0009E383 /* YUAddNewTokenItemCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAddNewTokenItemCellEntity.h; sourceTree = "<group>"; };
+		DD54BBF7222A874F0009E383 /* YUAddNewTokenItemCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAddNewTokenItemCellEntity.m; sourceTree = "<group>"; };
+		DD54BBFA222A8F650009E383 /* YUErrorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUErrorCell.h; sourceTree = "<group>"; };
+		DD54BBFB222A8F650009E383 /* YUErrorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUErrorCell.m; sourceTree = "<group>"; };
+		DD54BBFC222A8F650009E383 /* YUErrorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUErrorCell.xib; sourceTree = "<group>"; };
+		DD54BBFF222A8FE50009E383 /* YUErrorCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUErrorCellEntity.h; sourceTree = "<group>"; };
+		DD54BC00222A8FE50009E383 /* YUErrorCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUErrorCellEntity.m; sourceTree = "<group>"; };
+		DD54BC03222AAC880009E383 /* YUSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSearchBarView.h; sourceTree = "<group>"; };
+		DD54BC04222AAC880009E383 /* YUSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSearchBarView.m; sourceTree = "<group>"; };
+		DD54BC05222AAC880009E383 /* YUSearchBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSearchBarView.xib; sourceTree = "<group>"; };
 		F269B838F6F657FCAB75948A /* Pods-ToPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToPay/Pods-ToPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -425,6 +482,7 @@
 		DD21EBAE22263FB80078E625 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CB22228EB6F003467CB /* ViewControllerManagers */,
 				DD4F0C692227BC86003467CB /* UserManagers */,
 			);
 			path = Managers;
@@ -433,7 +491,8 @@
 		DD21EBAF2226409B0078E625 /* CommonViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F0CA822281217003467CB /* ResetPassword */,
+				DD4F0CB72229057C003467CB /* YTabBarController */,
+				DD4F0CA822281217003467CB /* ResetPasswordViewController */,
 				DD4F0C9C2228061C003467CB /* ValidEmailViewController */,
 			);
 			path = CommonViewController;
@@ -453,6 +512,7 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CE622295B79003467CB /* AddNewTokenController */,
 				DD4F0C862227E5AF003467CB /* MineViewController */,
 				DD4F0C802227E54C003467CB /* AssetViewController */,
 				DD4F0C772227C9C2003467CB /* LoginViewController */,
@@ -485,6 +545,7 @@
 		DD21EBBB22265D440078E625 /* CommonModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CDA22293BBD003467CB /* Asset */,
 				DD4F0C762227C3BD003467CB /* User */,
 			);
 			path = CommonModels;
@@ -493,6 +554,8 @@
 		DD21EBBC22265D4F0078E625 /* SpecialModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CF422296072003467CB /* Asset */,
+				DD4F0CED22295F9B003467CB /* AddNewToken */,
 				DD4F0C642227B663003467CB /* Register */,
 			);
 			path = SpecialModels;
@@ -539,6 +602,7 @@
 		DD21EBC2222662000078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DD54BBF9222A8F400009E383 /* ErrorCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -546,11 +610,12 @@
 		DD21EBC3222662060078E625 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD54BC02222AAC1E0009E383 /* SearchView */,
 				DD21EC49222789400078E625 /* YUCircleTextView */,
 				DD21EC412227818F0078E625 /* VaildCodeButton */,
 				DD21EC382227808B0078E625 /* YUTextView */,
 				DD21EC0D2226BC970078E625 /* NavigationBar */,
-				DD21EBE1222678350078E625 /* ServerListView */,
+				DD21EBE1222678350078E625 /* PageListView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -558,6 +623,7 @@
 		DD21EBC42226620B0078E625 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CC9222912A8003467CB /* Asset */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -565,11 +631,8 @@
 		DD21EBC5222662150078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DD21EBF3222696070078E625 /* YUCurrencyTableViewCell.h */,
-				DD21EBF4222696070078E625 /* YUCurrencyTableViewCell.m */,
-				DD21EBF5222696070078E625 /* YUCurrencyTableViewCell.xib */,
-				DD21EBF8222697020078E625 /* YUCurrencyTableViewCellEntity.h */,
-				DD21EBF9222697020078E625 /* YUCurrencyTableViewCellEntity.m */,
+				DD54BBF0222A870D0009E383 /* AddNewToken */,
+				DD4F0CC822291206003467CB /* Asset */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -621,6 +684,7 @@
 		DD21EBCF222662B10078E625 /* CommonViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CAE2228D831003467CB /* ResetPasswordViewModel */,
 			);
 			path = CommonViewModels;
 			sourceTree = "<group>";
@@ -666,13 +730,13 @@
 			path = APPResoures;
 			sourceTree = "<group>";
 		};
-		DD21EBE1222678350078E625 /* ServerListView */ = {
+		DD21EBE1222678350078E625 /* PageListView */ = {
 			isa = PBXGroup;
 			children = (
-				DD21EBDA222672990078E625 /* YUServerListView.h */,
-				DD21EBDB222672990078E625 /* YUServerListView.m */,
+				DD21EBDA222672990078E625 /* YUPageListView.h */,
+				DD21EBDB222672990078E625 /* YUPageListView.m */,
 			);
-			path = ServerListView;
+			path = PageListView;
 			sourceTree = "<group>";
 		};
 		DD21EC052226AB880078E625 /* RegisterViewController - Step-0 */ = {
@@ -914,6 +978,8 @@
 		DD4F0C972227EDF9003467CB /* TokenRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CEA22295E13003467CB /* API_GET_Token.h */,
+				DD4F0CEB22295E13003467CB /* API_GET_Token.m */,
 			);
 			path = TokenRelated;
 			sourceTree = "<group>";
@@ -949,6 +1015,8 @@
 		DD4F0C9A2227EE12003467CB /* AssetRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DD4F0CD722293B1D003467CB /* API_GET_Asset.h */,
+				DD4F0CD822293B1D003467CB /* API_GET_Asset.m */,
 			);
 			path = AssetRelated;
 			sourceTree = "<group>";
@@ -963,14 +1031,135 @@
 			path = ValidEmailViewController;
 			sourceTree = "<group>";
 		};
-		DD4F0CA822281217003467CB /* ResetPassword */ = {
+		DD4F0CA822281217003467CB /* ResetPasswordViewController */ = {
 			isa = PBXGroup;
 			children = (
 				DD4F0CA922281241003467CB /* YUResetPasswordViewController.h */,
 				DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */,
 				DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */,
 			);
-			path = ResetPassword;
+			path = ResetPasswordViewController;
+			sourceTree = "<group>";
+		};
+		DD4F0CAE2228D831003467CB /* ResetPasswordViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CAF2228DA0B003467CB /* YUForget_ResetPasswordViewModel.h */,
+				DD4F0CB02228DA0B003467CB /* YUForget_ResetPasswordViewModel.m */,
+			);
+			path = ResetPasswordViewModel;
+			sourceTree = "<group>";
+		};
+		DD4F0CB22228EB6F003467CB /* ViewControllerManagers */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CB32228EB99003467CB /* YUViewControllerManagers.h */,
+				DD4F0CB42228EB99003467CB /* YUViewControllerManagers.m */,
+			);
+			path = ViewControllerManagers;
+			sourceTree = "<group>";
+		};
+		DD4F0CB72229057C003467CB /* YTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YTabBarController;
+			sourceTree = "<group>";
+		};
+		DD4F0CC822291206003467CB /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CCF2229212D003467CB /* YUAssetHeaderInfoCell.h */,
+				DD4F0CD02229212D003467CB /* YUAssetHeaderInfoCell.m */,
+				DD4F0CD12229212D003467CB /* YUAssetHeaderInfoCell.xib */,
+				DD4F0CD422292192003467CB /* YUAssetHeaderInfoCellEntity.h */,
+				DD4F0CD522292192003467CB /* YUAssetHeaderInfoCellEntity.m */,
+				DD4F0CDE22294C42003467CB /* YUAssetTokenItemCell.h */,
+				DD4F0CDF22294C42003467CB /* YUAssetTokenItemCell.m */,
+				DD4F0CE022294C42003467CB /* YUAssetTokenItemCell.xib */,
+				DD4F0CE322294C53003467CB /* YUAssetTokenItemCellEntity.h */,
+				DD4F0CE422294C53003467CB /* YUAssetTokenItemCellEntity.m */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		DD4F0CC9222912A8003467CB /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CCA222912CF003467CB /* YUAssetTableHeaderView.h */,
+				DD4F0CCB222912CF003467CB /* YUAssetTableHeaderView.m */,
+				DD4F0CCD222912DE003467CB /* YUAssetTableHeaderView.xib */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		DD4F0CDA22293BBD003467CB /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		DD4F0CE622295B79003467CB /* AddNewTokenController */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CE722295C8F003467CB /* YUAddNewTokenController.h */,
+				DD4F0CE822295C8F003467CB /* YUAddNewTokenController.m */,
+				DD4F0CFB222961EE003467CB /* YUAddNewTokenController.xib */,
+			);
+			path = AddNewTokenController;
+			sourceTree = "<group>";
+		};
+		DD4F0CED22295F9B003467CB /* AddNewToken */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CF822296094003467CB /* AddNewTokenItemModel.h */,
+				DD4F0CF922296094003467CB /* AddNewTokenItemModel.m */,
+			);
+			path = AddNewToken;
+			sourceTree = "<group>";
+		};
+		DD4F0CF422296072003467CB /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				DD4F0CF522296087003467CB /* AssetTokenItemModel.h */,
+				DD4F0CF622296087003467CB /* AssetTokenItemModel.m */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		DD54BBF0222A870D0009E383 /* AddNewToken */ = {
+			isa = PBXGroup;
+			children = (
+				DD54BBF1222A873B0009E383 /* YUAddNewTokenItemCell.h */,
+				DD54BBF2222A873B0009E383 /* YUAddNewTokenItemCell.m */,
+				DD54BBF3222A873B0009E383 /* YUAddNewTokenItemCell.xib */,
+				DD54BBF6222A874F0009E383 /* YUAddNewTokenItemCellEntity.h */,
+				DD54BBF7222A874F0009E383 /* YUAddNewTokenItemCellEntity.m */,
+			);
+			path = AddNewToken;
+			sourceTree = "<group>";
+		};
+		DD54BBF9222A8F400009E383 /* ErrorCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD54BBFA222A8F650009E383 /* YUErrorCell.h */,
+				DD54BBFB222A8F650009E383 /* YUErrorCell.m */,
+				DD54BBFC222A8F650009E383 /* YUErrorCell.xib */,
+				DD54BBFF222A8FE50009E383 /* YUErrorCellEntity.h */,
+				DD54BC00222A8FE50009E383 /* YUErrorCellEntity.m */,
+			);
+			path = ErrorCell;
+			sourceTree = "<group>";
+		};
+		DD54BC02222AAC1E0009E383 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				DD54BC03222AAC880009E383 /* YUSearchBarView.h */,
+				DD54BC04222AAC880009E383 /* YUSearchBarView.m */,
+				DD54BC05222AAC880009E383 /* YUSearchBarView.xib */,
+			);
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1080,8 +1269,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD21EBF7222696070078E625 /* YUCurrencyTableViewCell.xib in Resources */,
+				DD54BBFE222A8F650009E383 /* YUErrorCell.xib in Resources */,
+				DD4F0CE222294C42003467CB /* YUAssetTokenItemCell.xib in Resources */,
 				DD4F0CAD22281241003467CB /* YUResetPasswordViewController.xib in Resources */,
+				DD4F0CFC222961EE003467CB /* YUAddNewTokenController.xib in Resources */,
 				DD21EC0C2226BAD70078E625 /* YURegisterViewController.xib in Resources */,
 				DD4F0C7C2227C9DA003467CB /* YULoginViewController.xib in Resources */,
 				DD21EB82222637160078E625 /* LaunchScreen.storyboard in Resources */,
@@ -1090,9 +1281,13 @@
 				DD21EC302226BC970078E625 /* YUINavigationControllerViewController.xib in Resources */,
 				DD4F0C8B2227E5C4003467CB /* YUMineViewController.xib in Resources */,
 				DD4F0CA122280677003467CB /* YUValidEmailViewController.xib in Resources */,
+				DD54BC07222AAC880009E383 /* YUSearchBarView.xib in Resources */,
+				DD54BBF5222A873B0009E383 /* YUAddNewTokenItemCell.xib in Resources */,
 				DD4F0C852227E5A8003467CB /* YUAssetViewController.xib in Resources */,
 				DD21EC3E2227811F0078E625 /* YUTextViewXibContainer.xib in Resources */,
 				DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */,
+				DD4F0CD32229212D003467CB /* YUAssetHeaderInfoCell.xib in Resources */,
+				DD4F0CCE222912DE003467CB /* YUAssetTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,8 +1407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4F0CCC222912CF003467CB /* YUAssetTableHeaderView.m in Sources */,
 				DD21EC442227819E0078E625 /* JKCountDownButton.m in Sources */,
-				DD21EBF6222696070078E625 /* YUCurrencyTableViewCell.m in Sources */,
 				DD4F0C722227BF5F003467CB /* QuickJudge.m in Sources */,
 				DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */,
 				DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */,
@@ -1221,32 +1416,46 @@
 				DD21EC2C2226BC970078E625 /* YUDIVView.m in Sources */,
 				DD21EC4C222789C00078E625 /* YUCircleTextView.m in Sources */,
 				DD4F0CA422280C22003467CB /* API_POST_User_Reset.m in Sources */,
+				DD4F0CF722296087003467CB /* AssetTokenItemModel.m in Sources */,
 				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
 				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
+				DD4F0CD922293B1D003467CB /* API_GET_Asset.m in Sources */,
 				DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */,
 				DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */,
 				DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */,
+				DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */,
 				DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */,
 				DD4F0C5F2227B0CD003467CB /* YUSetPasswordViewController.m in Sources */,
+				DD54BC01222A8FE50009E383 /* YUErrorCellEntity.m in Sources */,
 				DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */,
 				DD21EC48222784260078E625 /* QuickDo.m in Sources */,
 				DD4F0C842227E5A8003467CB /* YUAssetViewController.m in Sources */,
 				DD4F0CA022280677003467CB /* YUValidEmailViewController.m in Sources */,
+				DD4F0CB52228EB99003467CB /* YUViewControllerManagers.m in Sources */,
+				DD4F0CE522294C53003467CB /* YUAssetTokenItemCellEntity.m in Sources */,
 				DD21EC2F2226BC970078E625 /* YUINavigationControllerViewController.m in Sources */,
+				DD4F0CE922295C8F003467CB /* YUAddNewTokenController.m in Sources */,
+				DD4F0CD622292192003467CB /* YUAssetHeaderInfoCellEntity.m in Sources */,
 				DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */,
 				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
+				DD54BC06222AAC880009E383 /* YUSearchBarView.m in Sources */,
 				DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */,
+				DD4F0CEC22295E13003467CB /* API_GET_Token.m in Sources */,
 				DD21EC402227811F0078E625 /* YUTextViewXibContainer.m in Sources */,
 				DD4F0C752227C3BB003467CB /* UserIDCardModel.m in Sources */,
-				DD21EBDC222672990078E625 /* YUServerListView.m in Sources */,
+				DD54BBFD222A8F650009E383 /* YUErrorCell.m in Sources */,
+				DD21EBDC222672990078E625 /* YUPageListView.m in Sources */,
+				DD4F0CFA22296094003467CB /* AddNewTokenItemModel.m in Sources */,
 				DD21EBB6222658FF0078E625 /* YUNetworkManager.m in Sources */,
 				DD21EB85222637160078E625 /* main.m in Sources */,
+				DD54BBF8222A874F0009E383 /* YUAddNewTokenItemCellEntity.m in Sources */,
 				DD21EC372226BC970078E625 /* YUHamburgerButton.m in Sources */,
 				DD4F0C6C2227BCAB003467CB /* YUUserManagers.m in Sources */,
 				DD4F0C942227EB6B003467CB /* API_GET_User_Email_Logout.m in Sources */,
 				DD21EC342226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m in Sources */,
 				DD4F0C6F2227BD51003467CB /* QuickGet.m in Sources */,
 				DD4F0C8A2227E5C4003467CB /* YUMineViewController.m in Sources */,
+				DD4F0CD22229212D003467CB /* YUAssetHeaderInfoCell.m in Sources */,
 				DD21EBB2222658F10078E625 /* ServModel.m in Sources */,
 				DD4F0C672227B6C4003467CB /* RegisterRequestDataModel.m in Sources */,
 				DD21EC3F2227811F0078E625 /* YUTextView.m in Sources */,
@@ -1256,11 +1465,12 @@
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
 				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
 				DD4F0C7F2227D6A6003467CB /* API_POST_User_Login.m in Sources */,
-				DD21EBFA222697020078E625 /* YUCurrencyTableViewCellEntity.m in Sources */,
 				DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */,
 				DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
+				DD4F0CB12228DA0B003467CB /* YUForget_ResetPasswordViewModel.m in Sources */,
+				DD54BBF4222A873B0009E383 /* YUAddNewTokenItemCell.m in Sources */,
 				DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */,
 				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
 				DD4F0C912227E7AE003467CB /* API_GET_User_Valid.m in Sources */,
@@ -1428,7 +1638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				DEVELOPMENT_TEAM = JLAJ9329RS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ToPay/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ToPay/SettingPlist/Info.plist";
@@ -1449,7 +1659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SXV4N6YG2P;
+				DEVELOPMENT_TEAM = JLAJ9329RS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ToPay/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ToPay/SettingPlist/Info.plist";

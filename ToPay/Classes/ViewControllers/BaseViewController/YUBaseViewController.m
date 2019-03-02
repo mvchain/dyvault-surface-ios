@@ -17,6 +17,11 @@
         // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+    
+}
 - (BOOL)shouldHideKeyboardWhenTouchInView:(UIView *)view {
     // 子类重写，默认返回 NO，也即不主动干预键盘的状态
     return YES;

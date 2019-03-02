@@ -199,6 +199,29 @@
     self.layer.borderWidth= 0.5;
     self.layer.borderColor=color.CGColor;
 }
+- (void)y_setCenterX:(CGFloat)centerX
+{
+    CGPoint center = self.center;
+    center.x = centerX;
+    self.center = center;
+}
+
+- (CGFloat)y_centerX
+{
+    return self.center.x;
+}
+
+- (void)y_setCenterY:(CGFloat)centerY
+{
+    CGPoint center = self.center;
+    center.y = centerY;
+    self.center = center;
+}
+
+- (CGFloat)y_centerY
+{
+    return self.center.y;
+}
 
 - (BOOL)isDisplayedInScreen
 {

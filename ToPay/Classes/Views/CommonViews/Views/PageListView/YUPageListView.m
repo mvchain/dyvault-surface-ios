@@ -1,0 +1,145 @@
+//
+//  YUServerListView.m
+//  ToPay
+//
+//  Created by 蒲公英 on 2019/2/27.
+//  Copyright © 2019年 MVC. All rights reserved.
+//
+
+#import "YUPageListView.h"
+#import <MJRefresh.h>
+
+@interface YUPageListView() <UITableViewDelegate,UITableViewDataSource>
+@property (strong,nonatomic) UITableView *tableView;
+@property (strong,nonatomic) NSMutableArray<YUCellEntity *> * dataArrays ;
+@property (strong,nonatomic) ServModel *servModel;
+@end
+@implementation YUPageListView
+#pragma mark lazy_load
+yudef_lazyLoad(NSMutableArray<YUCellEntity *>, dataArrays, _dataArrays);
+yudef_lazyLoad(UITableView, tableView, _tableView);
+yudef_lazyLoad(ServModel, servModel, _servModel);
+#pragma mark life cycle
+
+- (void)layoutSubviews
+{
+    self.tableView.frame = self.bounds;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setUp];
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setUp];
+    }
+    return self;
+}
+
+#pragma mark private method
+- (void)setUp
+{
+    [self addSubview:self.tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+}
+
+- (void)priavte_initData {
+    self.dataArrays = [[NSMutableArray<YUCellEntity *> alloc] init];
+   
+}
+
+- (void)addHeaderRefresh {
+    yudef_weakSelf;
+    [self.tableView addHeaderWithBlock:^(MJRefreshHeader *header) {
+        [weakSelf firstPage];
+    }];
+}
+- (void)addFooterRefresh {
+    yudef_weakSelf;
+    [self.tableView addFooterWithBlock:^(MJRefreshFooter *footer) {
+        [weakSelf nextPageBlock];
+    }];
+}
+
+// block ,code block
+- (void)firstPage
+{
+    yudef_weakSelf;
+    self.firstPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data) {
+        [weakSelf priavte_initData];
+        [weakSelf.dataArrays addObjectsFromArray:data];
+        [weakSelf.tableView reloadData];
+        [weakSelf.tableView.mj_header endRefreshing];
+        if (data.count < weakSelf.pageSize && weakSelf.tableView.mj_footer) {
+            [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
+    });
+}
+
+- (void)nextPage
+{
+    self.nextPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data) {
+        
+    });
+    
+}
+
+#pragma mark public method
+- (void)beginRefreshHeader {
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (YUCellEntity *)lastEntity {
+    if (self.dataArrays.count == 0)return nil;
+    return self.dataArrays.lastObject;
+}
+
+- (YUCellEntity *)lastEntity_KindOfClass:(Class)clss {
+    for (NSInteger i = self.dataArrays.count-1 ;i>=0; i--) {
+        if ([self.dataArrays[i] isKindOfClass:clss]) return self.dataArrays[i];
+    }
+    return nil;
+}
+
+- (void)setFirstPageBlock:(void (^)(block_complete _Nonnull))firstPageBlock {
+    _firstPageBlock = firstPageBlock;
+    if (_firstPageBlock!=nil) {
+        // need headrefresh
+        [self addHeaderRefresh];
+    }
+}
+
+- (void)setNextPageBlock:(void (^)(block_complete _Nonnull))nextPageBlock {
+    _nextPageBlock = nextPageBlock;
+    if (_nextPageBlock!=nil) {
+        [self addFooterRefresh];
+    }
+}
+#pragma mark - <tableView delegate >
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArrays.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [tableView cellByIndexPath:indexPath dataArrays:self.dataArrays];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.dataArrays[indexPath.row].yu_cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.yu_didSelectRowAtIndexPath)
+        self.yu_didSelectRowAtIndexPath(indexPath);
+}
+
+@end

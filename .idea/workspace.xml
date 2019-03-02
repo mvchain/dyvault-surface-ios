@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f562fa91-894f-4133-bb0d-92d616de6022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_selected_icon.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_selected_icon.imageset/home_wallet_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_selected_icon.imageset/home_wallet_selected@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_selected_icon.imageset/home_wallet_selected@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_unselected_icon.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_unselected_icon.imageset/home_wallet_unselected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_unselected_icon.imageset/home_wallet_unselected@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/assets_unselected_icon.imageset/home_wallet_unselected@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_black.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_black.imageset/back_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_black.imageset/back_black@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_black.imageset/back_black@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_gray.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_gray.imageset/back_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_gray.imageset/back_gray@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_gray.imageset/back_gray@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_white.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_white.imageset/back_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_white.imageset/back_white@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/back_white.imageset/back_white@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/cancel.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/cancel.imageset/cancel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/cancel.imageset/cancel@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/cancel.imageset/cancel@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_black.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_black.imageset/home_add_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_black.imageset/home_add_black@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_black.imageset/home_add_black@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_white.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_white.imageset/home_add_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_white.imageset/home_add_white@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/home_add_white.imageset/home_add_white@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_selected_icon.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_selected_icon.imageset/home_mine_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_selected_icon.imageset/home_mine_selected@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_selected_icon.imageset/home_mine_selected@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_unselected_icon.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_unselected_icon.imageset/home_wallet_unselected-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_unselected_icon.imageset/home_wallet_unselected-1@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/mine_unselected_icon.imageset/home_wallet_unselected-1@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_black.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_black.imageset/news_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_black.imageset/news_black@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_black.imageset/news_black@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_gray.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_gray.imageset/news_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_gray.imageset/news_gray@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/news_gray.imageset/news_gray@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode.imageset/scan-qrcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode.imageset/scan-qrcode@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode.imageset/scan-qrcode@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode_gray.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode_gray.imageset/scan-qrcode_gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode_gray.imageset/scan-qrcode_gray@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/scan-qrcode_gray.imageset/scan-qrcode_gray@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/search.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/search.imageset/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/search.imageset/search@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/search.imageset/search@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share.imageset/share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share.imageset/share@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share.imageset/share@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share_un.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share_un.imageset/share_un.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share_un.imageset/share_un@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/APPResoures/Assets.xcassets/UI/Tab/share_un.imageset/share_un@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/TokenRelated/API_GET_Token.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/TokenRelated/API_GET_Token.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Models/SpecialModels/AddNewToken/AddNewTokenItemModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Models/SpecialModels/Asset/AssetTokenItemModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Models/SpecialModels/Asset/AssetTokenItemModel.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AddNewTokenController/YUAddNewTokenController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AddNewTokenController/YUAddNewTokenController.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AddNewTokenController/YUAddNewTokenController.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/ViewModels/CommonViewModels/ResetPasswordViewModel/YUForget_ResetPasswordViewModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/ViewModels/CommonViewModels/ResetPasswordViewModel/YUForget_ResetPasswordViewModel.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Cells/ErrorCell/YUErrorCell.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Cells/ErrorCell/YUErrorCellEntity.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Cells/ErrorCell/YUErrorCellEntity.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/PageListView/YUPageListView.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/AddNewToken/YUAddNewTokenItemCell.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/AddNewToken/YUAddNewTokenItemCell.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/AddNewToken/YUAddNewTokenItemCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/AddNewToken/YUAddNewTokenItemCellEntity.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/AddNewToken/YUAddNewTokenItemCellEntity.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetHeaderInfoCell.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetHeaderInfoCell.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetHeaderInfoCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetHeaderInfoCellEntity.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCell.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCellEntity.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCellEntity.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Views/Asset/YUAssetTableHeaderView.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Views/Asset/YUAssetTableHeaderView.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Views/Asset/YUAssetTableHeaderView.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay.xcworkspace/xcuserdata/tanpopo.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay.xcworkspace/xcuserdata/tanpopo.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/AppDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_GET_User_Email_Logout.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_GET_User_Email_Logout.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_POST_Register.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_POST_Register.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_POST_User_Login.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_POST_User_Login.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_POST_User_Reset.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_POST_User_Reset.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_PUT_User_Forget.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/API/UserRelated/API_PUT_User_Forget.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/Foundation/YUNetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/Foundation/YUNetworkManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/HttpService/Foundation/YUNetworkManager.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/HttpService/Foundation/YUNetworkManager.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Managers/UserManagers/YUUserManagers.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Managers/UserManagers/YUUserManagers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Managers/UserManagers/YUUserManagers.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Managers/UserManagers/YUUserManagers.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Models/CommonModels/User/UserIDCardModel.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Models/CommonModels/User/UserIDCardModel.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Utils/QuickGet.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Utils/QuickGet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Utils/QuickGet.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Utils/QuickGet.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/BaseViewController/YUBaseViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/BaseViewController/YUBaseViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ResetPassword/YUResetPasswordViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ResetPasswordViewController/YUResetPasswordViewController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ResetPassword/YUResetPasswordViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ResetPasswordViewController/YUResetPasswordViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ResetPassword/YUResetPasswordViewController.xib" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ResetPasswordViewController/YUResetPasswordViewController.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ValidEmailViewController/YUValidEmailViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/CommonViewController/ValidEmailViewController/YUValidEmailViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AssetViewController/YUAssetViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AssetViewController/YUAssetViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AssetViewController/YUAssetViewController.xib" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/AssetViewController/YUAssetViewController.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/LoginViewController/YULoginViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/LoginViewController/YULoginViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/MineViewController/YUMineViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/MineViewController/YUMineViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/MineViewController/YUMineViewController.xib" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/MineViewController/YUMineViewController.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/RegisterViewController - Step-0/YURegisterViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/ViewControllers/SpecialViewController/RegisterViewController - Step-0/YURegisterViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/NavigationBar/View/NavBarView | 导航头/CustomNavBar | 自定义导航头/YUNormalNavBarView.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/NavigationBar/View/NavBarView | 导航头/CustomNavBar | 自定义导航头/YUNormalNavBarView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/NavigationBar/View/NavBarView | 导航头/CustomNavBar | 自定义导航头/YUNormalNavBarView.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/NavigationBar/View/NavBarView | 导航头/CustomNavBar | 自定义导航头/YUNormalNavBarView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/ServerListView/YUServerListView.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/ServerListView/YUServerListView.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Views/PageListView/YUPageListView.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/YUCurrencyTableViewCell.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/YUCurrencyTableViewCell.m" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Cells/ErrorCell/YUErrorCell.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/YUCurrencyTableViewCell.xib" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/CommonViews/Cells/ErrorCell/YUErrorCell.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/YUCurrencyTableViewCellEntity.h" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetHeaderInfoCellEntity.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/Classes/Views/SpecialViews/Cells/YUCurrencyTableViewCellEntity.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToPay/PrefixHeader.pch" beforeDir="false" afterPath="$PROJECT_DIR$/ToPay/PrefixHeader.pch" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToPay/Classes/Managers/UserManagers/YUUserManagers.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-173" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/TokenRelated/API_GET_Token.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/TokenRelated/API_GET_Token.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.h">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1371" />
+    <option name="height" value="837" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
+              <item name="Frameworks" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="HttpService" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="HttpService" type="fcab9f18:XcodeViewNode" />
+              <item name="API" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="HttpService" type="fcab9f18:XcodeViewNode" />
+              <item name="API" type="fcab9f18:XcodeViewNode" />
+              <item name="AssetRelated" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="HttpService" type="fcab9f18:XcodeViewNode" />
+              <item name="API" type="fcab9f18:XcodeViewNode" />
+              <item name="TokenRelated" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="Managers" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="Managers" type="fcab9f18:XcodeViewNode" />
+              <item name="UserManagers" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ToPay" type="1d218c8b:XcodeProjectNode" />
+              <item name="ToPay" type="fcab9f18:XcodeViewNode" />
+              <item name="Classes" type="fcab9f18:XcodeViewNode" />
+              <item name="Managers" type="fcab9f18:XcodeViewNode" />
+              <item name="ViewControllerManagers" type="fcab9f18:XcodeViewNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f562fa91-894f-4133-bb0d-92d616de6022" name="Default Changelist" comment="" />
+      <created>1551526129581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551526129581</updated>
+      <workItem from="1551526135052" duration="94000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="94000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1371" height="837" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981189" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ToPay/Classes/Managers/UserManagers/YUUserManagers.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/TokenRelated/API_GET_Token.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/TokenRelated/API_GET_Token.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

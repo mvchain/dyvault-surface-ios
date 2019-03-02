@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UserIDCardModel *)userIDCard_inDisk;
 
 - (void)logout;
+- (BOOL)isLogined;
 
 @end
 

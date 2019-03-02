@@ -61,7 +61,6 @@
 }
 #pragma mark - <private method>
 
-
 #pragma mark - <event response>
 - (IBAction)nextStepTap:(id)sender {
     yudef_weakSelf
@@ -105,6 +104,10 @@
                           validCode:self.vaildCodeTextView.text];
 }
 - (IBAction)sendVaildCodeTap:(id)sender {
+    if (self.emailAddrTextView.text.length == 0) {
+        [QMUITips showError:@"邮箱地址不能为空"];
+        return;
+    }
     [QMUITips showLoadingInView:self.view hideAfterDelay:5];
     API_GET_User_Email_Logout *GET_User_Email_Logout = [[API_GET_User_Email_Logout alloc] init];
     GET_User_Email_Logout.onSuccess = ^(id responseData) {
@@ -120,5 +123,8 @@
     [GET_User_Email_Logout sendRequestWithEmail:self.emailAddrTextView.text];
 }
 
-
+- (void)dealloc {
+    
+    
+}
 @end

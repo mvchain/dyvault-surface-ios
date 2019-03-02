@@ -19,12 +19,16 @@
 }
 - (void)connectWithRquestMethod:(HTTPMethod)rquestMethod
 {
-    [self updateHttpHeadToken];
+    [self updateHttpHeadTokenForEachAPI];
     NSAssert(self.apiPath !=nil && self.apiPath.length > 0, @"  #### apiPath must not be null～@@@@@") ;
     NSAssert(self.onSuccess, @" ### onSuccess must not be null ~ @@@@");
     NSAssert(self.onError, @" ### onError must not be null ~ @@@@");
-    [[YUNetworkManager defaultManager] sendRequestMethod:rquestMethod serverUrl:self.apiDomainUrl apiPath:self.apiPath parameters:self.requestDict progress:^(NSProgress * _Nullable progress) {
-    } success:^(BOOL isSuccess, id  _Nullable responseObject) {
+    [[YUNetworkManager defaultManager] sendRequestMethod:rquestMethod
+                                               serverUrl:self.apiDomainUrl
+                                                 apiPath:self.apiPath
+                                              parameters:self.requestDict progress:^(NSProgress * _Nullable progress) {
+    }
+                                                 success:^(BOOL isSuccess, id  _Nullable responseObject) {
         NSDictionary *dict = (NSDictionary*)responseObject;
         if([dict[@"code"] intValue] == 200) {
             self.onSuccess(dict[@"data"]);
@@ -32,18 +36,32 @@
             self.onError(dict[@"message"],[dict[@"code"] integerValue]);
         }
         self.onEndConnection();
-    } failure:^(NSString * _Nullable errorMessage) {
-        self.onError(errorMessage,-1);
+    } failure:^(NSString * _Nullable errorMessage, NSInteger responseCode) {
+        if (responseCode == 401) {
+            [self refreshToken:^(BOOL isRefreshSucc, BOOL isNetOK) {
+                if (!isNetOK) return ; // net err ,exit
+                if (!isRefreshSucc) {
+                    // refresh err ,exit
+                    return;
+                }
+                // refresh succ
+                [self connectWithRquestMethod:rquestMethod];
+            }];
+            
+            return ;
+        }
+        // not 401
+        self.onError(errorMessage,responseCode);
         self.onEndConnection();
+       
     }];
 }
 
 /* set newst token  */
-- (void)updateHttpHeadToken
+- (void)updateHttpHeadTokenForEachAPI
 {
     NSString *authToken = [[YUUserManagers shareInstance] userIDCard_inDisk].token;
     if (!authToken) return; // no token exit
-    
     YUNetworkManager *manager = [YUNetworkManager defaultManager];
     // token ,for every connect
     [ manager.sessionManager.requestSerializer setValue:authToken forHTTPHeaderField:@"Authorization"];
@@ -52,6 +70,34 @@
     // buildVersion
     [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
 }
+
+// when token unvalid
+- (void)refreshToken:(void(^)(BOOL isRefreshSucc ,BOOL isNetOK))complete{
+    
+    UserIDCardModel *idCardModel = [[YUUserManagers shareInstance] userIDCard_inDisk];
+    NSString *refreshTokenStr = idCardModel.refreshToken;
+    YUNetworkManager *manager = [YUNetworkManager defaultManager];
+    // token ,for every connect
+    [ manager.sessionManager.requestSerializer setValue:refreshTokenStr forHTTPHeaderField:@"Authorization"];
+    // language
+    [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
+    // buildVersion
+    [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
+    
+    [[YUNetworkManager defaultManager] sendRequestMethod:HTTPMethodPOST serverUrl:self.apiDomainUrl apiPath:self.apiPath  parameters:nil progress:^(NSProgress * _Nullable progress) {
+        
+    } success:^(BOOL isSuccess, id  _Nullable responseObject) {
+        NSDictionary *resDict = (NSDictionary *)responseObject;
+        NSString *apiToken = resDict[@"data"];
+        idCardModel.token = apiToken;
+        [[YUUserManagers shareInstance] change_userIDCard_inDisk:idCardModel]; // save ,to disk
+        complete([resDict[@"code"]intValue] == 200,YES);
+      
+    } failure:^(NSString * _Nullable errorMessage, NSInteger responseCode) {
+        complete(NO,NO); // net err
+    }];
+}
+
 - (NSMutableDictionary *) requestDict
 {
     if(_requestDict)return _requestDict;

@@ -14,4 +14,7 @@
     self.requestDict[@"email"] = email;
     [self connectWithRquestMethod:HTTPMethodGET];
 }
+- (void)dealloc {
+    
+}
 @end
