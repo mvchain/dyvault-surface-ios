@@ -14,11 +14,14 @@
 @property (strong,nonatomic)YUHamburgerButton * leftButton;
 @property (strong,nonatomic)YUHamburgerButton * rightButton;
 
+- (void)setLeftButtonWithImage:(UIImage *)ima withSize:(CGSize)size;
+
 - (void)setLeftButtonAsReturnButton;
 
 - (void)setRightButtonWithTitle:(NSString *)title;
 
 - (void)setRightButtonWithImage:(UIImage *) ima ;
+
 
 
 @end

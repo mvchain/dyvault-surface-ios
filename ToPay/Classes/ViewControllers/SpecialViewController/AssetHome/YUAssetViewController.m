@@ -13,6 +13,7 @@
 #import "AssetTokenItemModel.h"
 #import "YUAssetTokenItemCellEntity.h"
 #import "YUAddNewTokenController.h"
+#import "YUNotificationViewController.h"
 @interface YUAssetViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *servListView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
@@ -36,7 +37,7 @@
 - (void)setNav {
     [self addNormalNavBar:@"ToPay"];
     [self.normalNavbar setRightButtonWithImage:UIImageMake(@"home_add_black")];
-    
+    [self.normalNavbar setLeftButtonWithImage:UIImageMake(@"news_black") withSize:CGSizeMake(15, 20)];
 }
 #pragma mark - <private method>
 - (void)configServListView {
@@ -83,6 +84,11 @@
         [weakSelf.navigationController pushViewController:add animated:YES];
         weakSelf.hidesBottomBarWhenPushed = NO;
     };
+    self.normalNavbar.leftButton.onClick = ^(id sender) {
+        YUNotificationViewController *noti = [[YUNotificationViewController alloc] init];
+        [weakSelf.navigationController pushViewController:noti animated:YES];
+    };
+    
 }
 
 

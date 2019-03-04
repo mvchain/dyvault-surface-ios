@@ -10,15 +10,14 @@
 #import <MJRefresh.h>
 
 @interface YUPageListView() <UITableViewDelegate,UITableViewDataSource>
-@property (strong,nonatomic) UITableView *tableView;
+
 @property (strong,nonatomic) NSMutableArray<YUCellEntity *> * dataArrays ;
-@property (strong,nonatomic) ServModel *servModel;
+
 @end
 @implementation YUPageListView
 #pragma mark lazy_load
 yudef_lazyLoad(NSMutableArray<YUCellEntity *>, dataArrays, _dataArrays);
 yudef_lazyLoad(UITableView, tableView, _tableView);
-yudef_lazyLoad(ServModel, servModel, _servModel);
 #pragma mark life cycle
 
 - (void)layoutSubviews
@@ -50,6 +49,7 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
     [self addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.isUsingMJRefresh = YES; // default set
 }
 
 - (void)priavte_initData {
@@ -78,24 +78,31 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
         [weakSelf priavte_initData];
         [weakSelf.dataArrays addObjectsFromArray:data];
         [weakSelf.tableView reloadData];
-        [weakSelf.tableView.mj_header endRefreshing];
-        if (data.count < weakSelf.pageSize && weakSelf.tableView.mj_footer) {
-            [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
+        
+        if (weakSelf.isUsingMJRefresh) {
+            [weakSelf.tableView.mj_header endRefreshing];
+            if (data.count < weakSelf.pageSize && weakSelf.tableView.mj_footer ) {
+                [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
+            }
         }
     });
 }
-
 - (void)nextPage
 {
     self.nextPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data) {
         
     });
-    
 }
-
 #pragma mark public method
+- (void)reloadData {
+    [self.tableView reloadData];
+}
 - (void)beginRefreshHeader {
     [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)beginRefreshHeaderWithNoAnimate {
+    [self firstPage];
 }
 
 - (YUCellEntity *)lastEntity {
@@ -112,7 +119,7 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
 
 - (void)setFirstPageBlock:(void (^)(block_complete _Nonnull))firstPageBlock {
     _firstPageBlock = firstPageBlock;
-    if (_firstPageBlock!=nil) {
+    if (_firstPageBlock!=nil && _isUsingMJRefresh) {
         // need headrefresh
         [self addHeaderRefresh];
     }
@@ -120,7 +127,7 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
 
 - (void)setNextPageBlock:(void (^)(block_complete _Nonnull))nextPageBlock {
     _nextPageBlock = nextPageBlock;
-    if (_nextPageBlock!=nil) {
+    if (_nextPageBlock!=nil && _isUsingMJRefresh) {
         [self addFooterRefresh];
     }
 }
@@ -128,7 +135,6 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArrays.count;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [tableView cellByIndexPath:indexPath dataArrays:self.dataArrays];
 }
@@ -136,7 +142,6 @@ yudef_lazyLoad(ServModel, servModel, _servModel);
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.dataArrays[indexPath.row].yu_cellHeight;
 }
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.yu_didSelectRowAtIndexPath)
         self.yu_didSelectRowAtIndexPath(indexPath);

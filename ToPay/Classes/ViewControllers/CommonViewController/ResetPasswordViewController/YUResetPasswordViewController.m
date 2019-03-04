@@ -38,6 +38,7 @@
 - (void)setNav {
     [self addNormalNavBar:self.viewModel.navBarTitleName];
     [self.normalNavbar setLeftButtonAsReturnButton];
+    self.mnewPassWordTextView.textField.keyboardType = self.viewModel.passTextFieldkeyBoardType;
     self.atlt_scroll_top.constant = self.normalNavbar.qmui_bottom + 20;
 }
 #pragma mark - <private method>
@@ -57,14 +58,6 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

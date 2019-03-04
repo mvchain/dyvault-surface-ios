@@ -48,12 +48,8 @@
 - (NSString *)textPlaceholder {
     return @"新登录密码";
 }
-- (NSString *)token {
-    return _token;
-}
-- (NSInteger)passWdType {
-    return 1;
-}
 
-
+- (UIKeyboardType)passTextFieldkeyBoardType  {
+    return UIKeyboardTypeAlphabet;
+}
 @end

@@ -41,4 +41,6 @@
 #import "YUHamburgerButton.h"
 #import "YUPageListView.h"
 #import "YUErrorCellEntity.h"
+#import "YUBlankCellEntity.h"
+#import "YULanguageManagers.h"
 #endif

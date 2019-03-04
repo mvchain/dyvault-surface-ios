@@ -18,10 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 @protocol YUResetPasswordViewModelDelegate <NSObject>
-- (NSInteger)passWdType; // 1 login_pwd | 2 pay_pwd
-- (NSString *)token;
 - (NSString *)navBarTitleName;
 - (NSString *)textPlaceholder;
+- (UIKeyboardType)passTextFieldkeyBoardType;
+
 - (void)confirmActionWithPassword:(NSString *)password
                        onSucc:(void(^)(NSDictionary *succDict ))onSucc
                        onFail:(void(^)(NSDictionary *failDict ))onFail

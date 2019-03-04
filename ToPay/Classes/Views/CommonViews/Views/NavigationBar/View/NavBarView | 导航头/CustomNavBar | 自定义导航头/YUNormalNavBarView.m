@@ -76,6 +76,17 @@
     [imav y_setBottom:11];
 
 }
+
+- (void)setLeftButtonWithImage:(UIImage *)ima withSize:(CGSize)size {
+    
+    [_leftButton.midView removeFromSuperview];
+    UIImageView * imav = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    [imav setImage:ima];
+    [_leftButton setMidView:imav];
+    [imav y_setLeft:20];
+    [imav y_setBottom:11];
+    
+}
 - (void)setRightButtonWithImage:(UIImage *) ima {
      [_rightButton.midView removeFromSuperview];
     UIImageView * imaView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 17, 17)];

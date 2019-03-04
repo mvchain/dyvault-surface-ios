@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YUMineViewController">
+            <connections>
+                <outlet property="emialLabel" destination="h8Z-Ri-EHc" id="pwI-sL-JpA"/>
+                <outlet property="pageListView" destination="E1T-zO-UwG" id="Z7D-g4-TmD"/>
+                <outlet property="userNickNamelabel" destination="4dU-CA-y2C" id="de9-Pz-qCg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_selected_icon" translatesAutoresizingMaskIntoConstraints="NO" id="xOF-wD-wcY">
+                    <rect key="frame" x="30" y="42" width="15" height="18"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHINA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dU-CA-y2C">
+                    <rect key="frame" x="55" y="39" width="61" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123@qq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-Ri-EHc">
+                    <rect key="frame" x="55" y="69" width="90" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-zO-UwG" customClass="YUPageListView">
+                    <rect key="frame" x="0.0" y="113" width="375" height="494"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xOF-wD-wcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="2BW-Ld-uY7"/>
+                <constraint firstItem="h8Z-Ri-EHc" firstAttribute="leading" secondItem="4dU-CA-y2C" secondAttribute="leading" id="351-w3-Kxm"/>
+                <constraint firstItem="4dU-CA-y2C" firstAttribute="centerY" secondItem="xOF-wD-wcY" secondAttribute="centerY" id="Cu9-L2-COX"/>
+                <constraint firstAttribute="trailing" secondItem="E1T-zO-UwG" secondAttribute="trailing" id="Pe5-HW-luy"/>
+                <constraint firstItem="h8Z-Ri-EHc" firstAttribute="top" secondItem="4dU-CA-y2C" secondAttribute="bottom" constant="6" id="Szh-Vh-9qP"/>
+                <constraint firstItem="4dU-CA-y2C" firstAttribute="leading" secondItem="xOF-wD-wcY" secondAttribute="trailing" constant="10" id="Tnq-Fc-NSN"/>
+                <constraint firstAttribute="bottom" secondItem="E1T-zO-UwG" secondAttribute="bottom" constant="60" id="U8b-8y-aZB"/>
+                <constraint firstItem="E1T-zO-UwG" firstAttribute="top" secondItem="h8Z-Ri-EHc" secondAttribute="bottom" constant="26" id="cdB-i5-hez"/>
+                <constraint firstItem="xOF-wD-wcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="42" id="hIg-Rh-4Ww"/>
+                <constraint firstItem="E1T-zO-UwG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mn8-Eu-cpq"/>
+            </constraints>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mine_selected_icon" width="15" height="18"/>
+    </resources>
+</document>

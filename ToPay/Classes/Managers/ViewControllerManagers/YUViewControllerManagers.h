@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YUViewControllerManagers : NSObject
+@property (strong,nonatomic) NSArray<UINavigationController *> *navgations;
 + (instancetype) shareInstance;
 - (UIViewController *) getNewMainTabViewController;
 - (UIViewController *) windowsRootViewController ;
