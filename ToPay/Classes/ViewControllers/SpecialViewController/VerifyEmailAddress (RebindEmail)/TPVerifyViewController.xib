@@ -11,9 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPVerifyViewController">
             <connections>
-                <outlet property="emailLabel" destination="SNr-38-j9a" id="DTh-Rl-pwC"/>
+                <outlet property="atly_scrollrt_top" destination="Pyv-Gj-ZGc" id="YPr-2B-W77"/>
+                <outlet property="emailLabel" destination="M3P-TY-yee" id="Dvn-La-CQe"/>
                 <outlet property="nextStepButton" destination="wHd-TX-ti6" id="gYm-Sf-mVa"/>
                 <outlet property="scrollView" destination="4xY-CD-hXZ" id="B9M-KU-bnM"/>
+                <outlet property="sendVaildButton" destination="xC9-nn-ZCj" id="hnH-dw-5dA"/>
                 <outlet property="vaildCodeTextView" destination="APQ-47-cI9" id="Xg4-pg-rfi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -26,7 +28,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xY-CD-hXZ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APQ-47-cI9" customClass="YUTextView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APQ-47-cI9" customClass="YUCircleTextView">
                             <rect key="frame" x="20" y="130" width="335" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-nn-ZCj" customClass="JKCountDownButton">
@@ -36,7 +38,7 @@
                                         <constraint firstAttribute="width" constant="105" id="oII-SJ-Bvf"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <state key="normal" title="发送验证码">
+                                    <state key="normal" title="获取验证码">
                                         <color key="titleColor" red="0.33333333333333331" green="0.36470588235294116" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>

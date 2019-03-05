@@ -9,9 +9,9 @@
 #import "YUCellEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
 @interface YUAddNewTokenItemCellEntity : YUCellEntity
 @property (assign,nonatomic) BOOL isAdd; // add or delete ?
-@end
+@property (assign,nonatomic) BOOL isShowAddButton;
 
+@end
 NS_ASSUME_NONNULL_END

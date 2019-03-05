@@ -31,6 +31,12 @@ static YUViewControllerManagers* _instance = nil;
     return _instance ;
 }
 
+- (void)clearUserInfo_AndExit {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [[YUUserManagers shareInstance] logout];
+    window.rootViewController = [self auto_windowsRootViewController];
+}
+
 - (UIViewController *) getNewMainTabViewController {
     /* asset */
     YUNavigationViewController *nav0 = [[YUNavigationViewController alloc]init];
@@ -68,7 +74,7 @@ static YUViewControllerManagers* _instance = nil;
     return tabVc;
 }
 
-- (UIViewController *) windowsRootViewController {
+- (UIViewController *) auto_windowsRootViewController {
     UIViewController *isLoginVC = [self getNewMainTabViewController];
     UINavigationController *unLoginNav = [[UINavigationController alloc]init];
     UIViewController *unLoginVC = [[YULoginViewController alloc] init];

@@ -61,6 +61,9 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-xT-AoQ">
                                 <rect key="frame" x="228" y="62.5" width="86" height="52"/>
+                                <connections>
+                                    <action selector="AddOrDeleteButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gRH-y6-7hb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

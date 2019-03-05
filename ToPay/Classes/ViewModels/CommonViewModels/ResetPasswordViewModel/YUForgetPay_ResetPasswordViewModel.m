@@ -1,30 +1,28 @@
 //
-//  YUForget_ResetPasswordViewModel.m
+//  YUChangePay_ResetPasswordViewModel.m
 //  ToPay
 //
-//  Created by 蒲公英 on 2019/3/1.
+//  Created by 蒲公英 on 2019/3/4.
 //  Copyright © 2019年 MVC. All rights reserved.
 //
 
-#import "YUForget_ResetPasswordViewModel.h"
+#import "YUForgetPay_ResetPasswordViewModel.h"
 #import "API_PUT_User_Forget.h"
-@implementation YUForget_ResetPasswordViewModel
-
+@implementation YUForgetPay_ResetPasswordViewModel
 - (id)initWithToken:(NSString *)token email:(NSString *)email {
     self = [super init];
     if (self) {
         _token = token; // for change pwd
         _email = email;
-        
     }
     return self;
 }
-#pragma mark confirm protocol
-- (void)confirmActionWithPassword:(NSString *)password
-                           onSucc:(void(^)(NSDictionary *succDict ))onSucc
-                           onFail:(void(^)(NSDictionary *failDict ))onFail
-                  onEndConnection:(void(^)(void))onEndConnection {
-    
+
+- (void)action_afterResetSucc:(NSDictionary *)dict{
+    UIViewController *vc = (UIViewController *)dict[@"vc"];
+    [vc.navigationController popToRootViewControllerAnimated:YES];
+}
+- (void)confirmActionWithPassword:(nonnull NSString *)password onSucc:(nonnull void (^)(NSDictionary * _Nonnull))onSucc onFail:(nonnull void (^)(NSDictionary * _Nonnull))onFail onEndConnection:(nonnull void (^)(void))onEndConnection {
     API_PUT_User_Forget *PUT_User_Forget = [[API_PUT_User_Forget alloc] init];
     PUT_User_Forget.onSuccess = ^(id responseData) {
         onSucc(@{@"data":@"000"});
@@ -37,19 +35,21 @@
     };
     [PUT_User_Forget sendRequestWithPassword:password
                                        token:self.token
-                                        type:1
+                                        type:2
                                        email:self.email];
-    
 }
 
-- (NSString *)navBarTitleName {
-    return @"重新设置登录密码";
+- (nonnull NSString *)navBarTitleName {
+   return @"重新设置支付密码";
 }
-- (NSString *)textPlaceholder {
-    return @"新登录密码";
+
+
+- (nonnull NSString *)textPlaceholder {
+    return @"新支付密码";
 }
 
 - (UIKeyboardType)passTextFieldkeyBoardType  {
-    return UIKeyboardTypeAlphabet;
+    return UIKeyboardTypeNumberPad;
 }
+
 @end

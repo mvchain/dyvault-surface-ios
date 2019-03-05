@@ -8,9 +8,12 @@
 
 #import "YUAccountSecurityViewController.h"
 #import "YUMineItemCellEntity.h"
-#import "YUChangePay_ResetPasswordViewModel.h"
-#import "YUChangeLogin_ResetPasswordViewModel.h"
 #import "YUResetPasswordViewController.h"
+#import "YUNotificationViewController.h"
+#import "TPVerifyViewController.h"
+#import "TPChangePassWordViewController.h"
+#import "TPChangePassWordViewModel_LoginPassWd.h"
+#import "TPChangePassWordViewModel_PayPassWd.h"
 @interface YUAccountSecurityViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_pageListViewTop;
@@ -44,14 +47,15 @@
         YUMineItemCellEntity *item2 = [[YUMineItemCellEntity alloc] init];
         item2.data = @"修改支付密码";
         complete(@[item0,item1,item2]);
-
     };
     [self.pageListView beginRefreshHeaderWithNoAnimate];
 }
 - (void)setNav {
     [self addNormalNavBar:@"账户安全"];
+    [self.normalNavbar setLeftButtonAsReturnButton];
 }
 - (void)setData {
+    
     
 }
 #pragma mark - <event response>
@@ -61,22 +65,23 @@
     {
         switch (indexPath.row) {
             case 0:
-                
+            {
+                TPVerifyViewController *notiVC = [[TPVerifyViewController alloc] init];
+                [weakSelf.navigationController pushViewController:notiVC animated:YES];
+            }
                 break;
             case 1:
             {
-                YUChangeLogin_ResetPasswordViewModel *vm = [YUChangeLogin_ResetPasswordViewModel alloc];
-                YUResetPasswordViewController *resetPwdVC = [[YUResetPasswordViewController alloc] init];
-                resetPwdVC.viewModel = vm;
-                [weakSelf.navigationController pushViewController:resetPwdVC animated:YES];
+                TPChangePassWordViewModel_LoginPassWd *vm = [TPChangePassWordViewModel_LoginPassWd alloc];
+                TPChangePassWordViewController *changePwdVc = [[TPChangePassWordViewController alloc] initWithViewModel:vm];
+                [weakSelf.navigationController pushViewController:changePwdVc animated:YES];
                 break;
             }
             case 2:
             {
-                YUChangePay_ResetPasswordViewModel *vm = [YUChangePay_ResetPasswordViewModel alloc];
-                YUResetPasswordViewController *resetPwdVC = [[YUResetPasswordViewController alloc] init];
-                resetPwdVC.viewModel = vm;
-                [weakSelf.navigationController pushViewController:resetPwdVC animated:YES];
+                TPChangePassWordViewModel_PayPassWd *vm = [TPChangePassWordViewModel_PayPassWd alloc];
+                TPChangePassWordViewController *changePwdVc = [[TPChangePassWordViewController alloc] initWithViewModel:vm];
+                [weakSelf.navigationController pushViewController:changePwdVc animated:YES];
                 break;
             }
             default:

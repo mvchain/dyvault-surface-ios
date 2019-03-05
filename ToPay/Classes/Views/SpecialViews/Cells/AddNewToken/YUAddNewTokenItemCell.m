@@ -21,14 +21,11 @@
 @end
 @implementation YUAddNewTokenItemCell
 
-
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.bgView yu_smallCircleStyle];
     [self.addOrDeleteBgView yu_smallCircleStyle];
     [self.iconImageView yu_smallCircleStyle];
-    
     // Initialization code
 }
 - (void) setEntity:(YUCellEntity *)entity {
@@ -38,20 +35,39 @@
     [self.tokenNameLabel setText:model.tokenName];
     [self.tokenDescLabel setText:TPString(@"%@/%@",model.tokenCnName,model.tokenEnName)];
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.tokenImage]];
-    if (thisEntity.isAdd) {
-        [self addNew_Style];
+    if (thisEntity.isShowAddButton) {
+        [self showAddOrDeleteButton];
+        if (thisEntity.isAdd) {
+            [self addNew_Style];
+        }else {
+            [self delete_Style];
+        }
     }else {
-        [self delete_Style];
+        [self hideAddOrDeleteButton];
     }
+}
+- (IBAction)AddOrDeleteButtonTap:(id)sender {
+    [self.yu_delegate yu_cellMessageNotify:nil content:self.entity sender:sender];
 }
 - (void)addNew_Style {
     self.addOrDeleteBgView.backgroundColor = [UIColor whiteColor];
     [self.addOrDeleteTextLabel setText:@"添加"];
-    
 }
 - (void)delete_Style {
     self.addOrDeleteBgView.backgroundColor = [UIColor qmui_colorWithHexString:@"#FFD1D2DE"];
     [self.addOrDeleteTextLabel setText:@"删除"];
+}
+
+- (void)hideAddOrDeleteButton {
+    self.addOrDeleteButton.hidden = YES;
+    self.addOrDeleteTextLabel.hidden = YES;
+    self.addOrDeleteBgView.hidden = YES;
+    
+}
+- (void)showAddOrDeleteButton {
+    self.addOrDeleteButton.hidden = NO;
+    self.addOrDeleteTextLabel.hidden = NO;
+    self.addOrDeleteBgView.hidden = NO;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

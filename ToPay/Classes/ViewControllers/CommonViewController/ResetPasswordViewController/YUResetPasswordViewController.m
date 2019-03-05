@@ -32,13 +32,15 @@
     [self setNav];
     NSAssert(self.viewModel, @"### viewModel must be not null ");
     self.mnewPassWordTextView.textField.placeholder = self.viewModel.textPlaceholder;
+    self.mnewPassWordTextView.textField.secureTextEntry = YES;
+      self.mnewPassWordTextView.textField.keyboardType = self.viewModel.passTextFieldkeyBoardType;
     [self.confirmButton yu_fullBlueCircleStyle];
     
 }
 - (void)setNav {
     [self addNormalNavBar:self.viewModel.navBarTitleName];
     [self.normalNavbar setLeftButtonAsReturnButton];
-    self.mnewPassWordTextView.textField.keyboardType = self.viewModel.passTextFieldkeyBoardType;
+  
     self.atlt_scroll_top.constant = self.normalNavbar.qmui_bottom + 20;
 }
 #pragma mark - <private method>
@@ -49,6 +51,8 @@
     [self.viewModel confirmActionWithPassword:self.mnewPassWordTextView.text
                                    onSucc:^(NSDictionary * _Nonnull succDict) {
                                        [QMUITips showSucceed:@"修改成功"];
+                                       [self.viewModel action_afterResetSucc:@{@"vc":self}];
+                                       
     }
                                    onFail:^(NSDictionary * _Nonnull failDict) {
                                        [QMUITips showError:failDict[@"reason"]];

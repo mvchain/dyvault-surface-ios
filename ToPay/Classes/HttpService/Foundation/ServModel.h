@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "YUNetworkManager.h"
-
 #define SERVER_DOMAIN  @"http://47.110.144.216/api/app"
 //@"http://192.168.15.31:10086"
 /*
@@ -41,6 +40,4 @@ typedef void(^errBlock)(NSString *reason ,NSInteger code  );
 @property (copy,nonatomic) void(^onEndConnection)(void);
 // default request
 - (void)connectWithRquestMethod:(HTTPMethod)rquestMethod;
-
-
 @end

@@ -85,7 +85,8 @@
     };
     self.dataArrs.lastObject.callBackByCell = ^(NSDictionary *info)
     {
-            // button tap
+            // logout  button tap
+        [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
         
     };
     

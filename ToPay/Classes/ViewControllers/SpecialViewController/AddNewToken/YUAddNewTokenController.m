@@ -12,6 +12,8 @@
 #import "YUAddNewTokenItemCellEntity.h"
 #import "YUSearchBarView.h"
 #import "AssetTokenItemModel.h"
+#import "API_PUT_Asset.h"
+
 @interface YUAddNewTokenController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *servListView;
 @property (strong,nonatomic) YUSearchBarView *searchbar;
@@ -32,6 +34,8 @@
     [self.atly_top setConstant:self.normalNavbar.qmui_bottom];
     [self configServerListView];
     [self.servListView beginRefreshHeader];
+    [self setListViewEvent];
+    [self setSearchBarTextChangeEvent];
     
 }
 #pragma mark - <private method>
@@ -55,9 +59,12 @@
                 AddNewTokenItemModel *model = [[AddNewTokenItemModel alloc] initWithDictionary:dic];
                 YUAddNewTokenItemCellEntity *entity = [[YUAddNewTokenItemCellEntity alloc] init];
                 entity.isAdd = ![weakSelf isAlreadyAdded:model];
+                entity.isShowAddButton = YES;
                 entity.data = model;
                 [listDatas addObject:entity];
             }
+            YUAddNewTokenItemCellEntity *firstEntity = listDatas.firstObject;
+            firstEntity.isShowAddButton = NO;// baseToken ,can't be deleted
             complete(listDatas);
         };
         GET_Token.onError = ^(NSString *reason, NSInteger code) {
@@ -87,7 +94,6 @@
     {
          //[weakSelf reBackUpSearchResult] ; // 重置搜索
         UIImageView *rightImageView = (UIImageView *) weakSelf.normalNavbar.rightButton.midView;
-        
          YUSearchBarView * search  = weakSelf.searchbar;
          if( !weakSelf.isSearchState ) {
              //当前非搜索状态，点击后变成搜索状态
@@ -116,7 +122,67 @@
      };
 }
 
+- (void)setListViewEvent {
+    yudef_weakSelf;
+    self.servListView.yu_eventProduceByInnerCellView = ^(NSString * _Nonnull idf, id  _Nonnull content, id  _Nonnull sender)
+    {
+        [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];
+        YUAddNewTokenItemCellEntity *item = (YUAddNewTokenItemCellEntity *)content;
+        AddNewTokenItemModel *tokenModel = (AddNewTokenItemModel*)item.data;
+        API_PUT_Asset *PUT_Asset = [[API_PUT_Asset alloc] init];
+        NSString *addTokenIdArr = item.isAdd ?TPString(@"%ld",(long)tokenModel.tokenId):@"";
+        NSString *removeTokenIdArr = !item.isAdd?TPString(@"%ld",(long)tokenModel.tokenId):@"";
+        PUT_Asset.onSuccess = ^(id responseData) {
+            item.isAdd = !item.isAdd ;
+            [weakSelf.servListView reloadData];
+        };
+        PUT_Asset.onError = ^(NSString *reason, NSInteger code) {
+            [QMUITips showError:reason];
+        };
+        PUT_Asset.onEndConnection = ^{
+            [QMUITips hideAllTips];
+        };
+        [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
+                               removeTokenIdArr:removeTokenIdArr];
+        
+    };
+    
+}
 
+- (void)setSearchBarTextChangeEvent {
+    __weak typeof (self) wsf = self;
+//    self.searchbar.onTextChange = ^(NSString *text) {
+//        [wsf reBackUpSearchResult];
+//        NSPredicate *pre = [NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+//            CLData *data = (CLData *)evaluatedObject;
+//            NSString *key =  [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+//            key = [key uppercaseString];
+//            key = [key stringByReplacingOccurrencesOfString:@" " withString:@""]; // remove space
+//            if( [key isEqualToString:@""] ) return YES;
+//            if( [data.tokenName containsString:key] ) {
+//                return YES;
+//            }
+//            if( [data.tokenCnName containsString:key] ) {
+//                return YES;
+//            }
+//            if( [data.tokenEnName containsString:key] ) {
+//                return YES;
+//            }
+//            NSString *tkpinyin = [[data.tokenCnName transformToPinyin] uppercaseString];
+//            tkpinyin = [tkpinyin stringByReplacingOccurrencesOfString:@" " withString:@""];
+//            if( [tkpinyin  containsString:key] ) {
+//                return YES;
+//            }
+//            return  NO;
+//
+//        }];
+//        [wsf.searchResult filterUsingPredicate:pre];
+//        [wsf.baseTableView reloadData];
+//    };
+//    self.searchbar.onTextDidEndEditing = ^(id sender) {
+//        wsf.customNavBar.onClickRightButton(); // end editing , end searching ...
+//    };
+}
 #pragma mark lazy load
 - (YUSearchBarView *)searchbar {
     if( !_searchbar ) {
@@ -125,14 +191,5 @@
     }
     return _searchbar;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

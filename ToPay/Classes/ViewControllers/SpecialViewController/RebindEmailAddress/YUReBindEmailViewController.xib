@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPBindEmailViewController">
             <connections>
+                <outlet property="atly_scroll_top" destination="lh5-Pp-aqb" id="Ujt-ci-FjS"/>
                 <outlet property="confirmButton" destination="Ibc-FN-e0A" id="kwk-lb-cev"/>
                 <outlet property="emailTextView" destination="Sa1-h2-N2H" id="JD5-rG-pMs"/>
                 <outlet property="scrollView" destination="Xrl-ti-00J" id="m9z-4F-aq1"/>
@@ -34,19 +35,36 @@
                                 <constraint firstAttribute="height" id="UTA-WP-oRT"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sa1-h2-N2H" customClass="YUTextView">
-                            <rect key="frame" x="39" y="0.0" width="297" height="50"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sa1-h2-N2H" customClass="YUCircleTextView">
+                            <rect key="frame" x="20" y="0.0" width="335" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="8rS-TF-dKO"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-Fm-3gn" customClass="YUTextView">
-                            <rect key="frame" x="39" y="55" width="172" height="50"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jki-Fm-3gn" customClass="YUCircleTextView">
+                            <rect key="frame" x="20" y="55" width="335" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiN-H5-uYr" customClass="JKCountDownButton">
+                                    <rect key="frame" x="201" y="6" width="105" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="38" id="TFi-ZU-gYH"/>
+                                        <constraint firstAttribute="width" constant="105" id="jJn-D5-83V"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="获取验证码">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.36470588240000001" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onSendVaildCodeTap:" destination="-1" eventType="touchUpInside" id="dEH-df-pte"/>
+                                    </connections>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="36N-Dt-EAG"/>
-                                <constraint firstAttribute="width" constant="172" id="BgS-B0-eVB"/>
+                                <constraint firstAttribute="trailing" secondItem="fiN-H5-uYr" secondAttribute="trailing" constant="29" id="CcO-kH-IXd"/>
+                                <constraint firstItem="fiN-H5-uYr" firstAttribute="centerY" secondItem="Jki-Fm-3gn" secondAttribute="centerY" id="T2d-sO-exh"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-FN-e0A">
@@ -60,29 +78,17 @@
                                 <action selector="onNextStep:" destination="-1" eventType="touchUpInside" id="5tc-YR-2AA"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiN-H5-uYr" customClass="JKCountDownButton">
-                            <rect key="frame" x="228" y="67" width="105" height="38"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="38" id="TFi-ZU-gYH"/>
-                                <constraint firstAttribute="width" constant="105" id="jJn-D5-83V"/>
-                            </constraints>
-                            <state key="normal" title="发送验证码"/>
-                            <connections>
-                                <action selector="onSendVaildCodeTap:" destination="-1" eventType="touchUpInside" id="dEH-df-pte"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="Jki-Fm-3gn" firstAttribute="leading" secondItem="Sa1-h2-N2H" secondAttribute="leading" id="6ts-3V-FvK"/>
                         <constraint firstAttribute="bottom" secondItem="Ibc-FN-e0A" secondAttribute="bottom" constant="20" id="BAL-6a-D75"/>
                         <constraint firstItem="UF4-23-h1d" firstAttribute="top" secondItem="Xrl-ti-00J" secondAttribute="top" id="LS1-up-Guh"/>
-                        <constraint firstItem="Sa1-h2-N2H" firstAttribute="leading" secondItem="Xrl-ti-00J" secondAttribute="leading" constant="39" id="R0L-4S-S3K"/>
-                        <constraint firstItem="fiN-H5-uYr" firstAttribute="leading" secondItem="Jki-Fm-3gn" secondAttribute="trailing" constant="17" id="WQB-2y-ik2"/>
+                        <constraint firstItem="Sa1-h2-N2H" firstAttribute="leading" secondItem="Xrl-ti-00J" secondAttribute="leading" constant="20" id="R0L-4S-S3K"/>
+                        <constraint firstItem="Jki-Fm-3gn" firstAttribute="width" secondItem="Sa1-h2-N2H" secondAttribute="width" id="YBw-ND-QPo"/>
                         <constraint firstItem="Jki-Fm-3gn" firstAttribute="top" secondItem="Sa1-h2-N2H" secondAttribute="bottom" constant="5" id="aeP-3W-odX"/>
                         <constraint firstItem="Sa1-h2-N2H" firstAttribute="top" secondItem="UF4-23-h1d" secondAttribute="bottom" id="cSY-o9-ifP"/>
-                        <constraint firstAttribute="trailing" secondItem="Sa1-h2-N2H" secondAttribute="trailing" constant="39" id="eaK-dI-XG2"/>
+                        <constraint firstAttribute="trailing" secondItem="Sa1-h2-N2H" secondAttribute="trailing" constant="20" id="eaK-dI-XG2"/>
                         <constraint firstItem="Ibc-FN-e0A" firstAttribute="centerX" secondItem="Xrl-ti-00J" secondAttribute="centerX" id="eb6-5i-afS"/>
-                        <constraint firstItem="fiN-H5-uYr" firstAttribute="bottom" secondItem="Jki-Fm-3gn" secondAttribute="bottom" id="miO-VR-wCG"/>
                         <constraint firstItem="Ibc-FN-e0A" firstAttribute="top" secondItem="Jki-Fm-3gn" secondAttribute="bottom" constant="130" id="nxL-V3-pL1"/>
                         <constraint firstAttribute="trailing" secondItem="UF4-23-h1d" secondAttribute="trailing" id="qTk-b8-LDR"/>
                         <constraint firstItem="UF4-23-h1d" firstAttribute="leading" secondItem="Xrl-ti-00J" secondAttribute="leading" id="vli-r8-BPH"/>

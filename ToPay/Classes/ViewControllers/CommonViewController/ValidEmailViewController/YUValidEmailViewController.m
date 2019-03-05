@@ -13,7 +13,7 @@
 #import "API_POST_User.h"
 #import "API_POST_User_Reset.h"
 #import "YUResetPasswordViewController.h"
-#import "YUForget_ResetPasswordViewModel.h"
+#import "YUForgetLogin_ResetPasswordViewModel.h"
 @interface YUValidEmailViewController ();
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atlt_scrollviewTop;
 @property (weak, nonatomic) IBOutlet JKCountDownButton *sendValidCodeButton;
@@ -47,10 +47,12 @@
 - (void)setNav {
     [self addNormalNavBar:@"验证邮箱"];
     [self.normalNavbar setLeftButtonAsReturnButton];
-    self.atlt_scrollviewTop.constant = self.normalNavbar.qmui_bottom;
+    self.atlt_scrollviewTop.constant = self.normalNavbar.qmui_bottom+36;
 }
 #pragma mark - <private method>
 - (IBAction)nextStepTap:(id)sender {
+    
+    NSAssert(self.resetForgetPwdVM, @"### resetForgetPwdVM must be not null ");
     if (self.emailAddrTextView.text.length == 0) {
         [QMUITips showError:@"邮箱不能为空"];
         return;
@@ -68,8 +70,10 @@
     API_POST_User_Reset *POST_User_Reset = [[API_POST_User_Reset alloc] init];
     POST_User_Reset.onSuccess = ^(id responseData) {
         NSString *token  = (NSString *)responseData;
-        YUForget_ResetPasswordViewModel *forgetResetVM = [[YUForget_ResetPasswordViewModel alloc] initWithToken:token email:self.emailAddrTextView.text];
-        YUResetPasswordViewController *resetPwdVC = [[YUResetPasswordViewController alloc] initWithViewModel:forgetResetVM];
+        NSString *email = self.emailAddrTextView.text;
+        [self.resetForgetPwdVM setToken:token];
+        [self.resetForgetPwdVM setEmail:email];
+        YUResetPasswordViewController *resetPwdVC = [[YUResetPasswordViewController alloc] initWithViewModel:self.resetForgetPwdVM];
         [self.navigationController pushViewController:resetPwdVC animated:YES];
     };
     POST_User_Reset.onError = ^(NSString *reason, NSInteger code) {

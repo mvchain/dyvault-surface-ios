@@ -7,6 +7,7 @@
 //
 
 #import "YUNotificationViewController.h"
+#import "YUNotificationItemEntity.h"
 @interface YUNotificationViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
 @end
@@ -14,7 +15,6 @@
 #pragma mark - <life cycle>
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 #pragma mark - <public method>
@@ -25,10 +25,15 @@
 
 #pragma mark - <private method>
 - (void)setNav {
-    
+    [self addNormalNavBar:@"通知"];
+    [self.normalNavbar setLeftButtonAsReturnButton];
 }
+
 - (void)configPageListView {
-    
+    self.pageListView.firstPageBlock = ^(block_complete  _Nonnull complete)
+    {
+        
+    };
 }
 - (void)setData {
     

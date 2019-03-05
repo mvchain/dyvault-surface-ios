@@ -14,7 +14,7 @@
 #import "API_GET_User_Valid.h"
 #import "API_GET_User_Email_Logout.h"
 #import "YUValidEmailViewController.h"
-
+#import "YUForgetLogin_ResetPasswordViewModel.h"
 @interface YULoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPassWdButton;
@@ -93,7 +93,9 @@
                                      validCode:self.vaildCodeTextView.text];
 }
 - (IBAction)forgetButtonTap:(id)sender {
-    [QuickDo pushViewControllerFromParentVc:self childClass:YUValidEmailViewController.class];
+    YUValidEmailViewController *validVC = [[YUValidEmailViewController alloc] init];
+    validVC.resetForgetPwdVM = [[YUForgetLogin_ResetPasswordViewModel alloc]init];
+    [self.navigationController pushViewController:validVC animated:YES];
 }
 - (IBAction)sendVaildCodeButtonTap:(id)sender {
     

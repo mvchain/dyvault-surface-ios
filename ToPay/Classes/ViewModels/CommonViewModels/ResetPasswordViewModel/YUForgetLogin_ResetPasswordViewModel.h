@@ -11,12 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 // forget - reset pwd
-@interface YUForget_ResetPasswordViewModel : NSObject<YUResetPasswordViewModelDelegate>
+@interface YUForgetLogin_ResetPasswordViewModel : NSObject<YUResetPasswordViewModelDelegate>
 @property (weak,nonatomic) UIViewController *relatedView;
 @property (copy,nonatomic) NSString *token;
 @property (copy,nonatomic) NSString *email;
-- (id)initWithToken:(NSString *)token email:(NSString *)email; // for change pwd
-
+- (id)initWithToken:(NSString *)token email:(NSString *)email; 
 @end
 
 NS_ASSUME_NONNULL_END

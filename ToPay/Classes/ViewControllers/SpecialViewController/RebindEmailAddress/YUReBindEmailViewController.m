@@ -10,13 +10,14 @@
 #import "YUReBindEmailViewModel.h"
 #import "YUTextView.h"
 #import "JKCountDownButton.h"
-
+#import "YUCircleTextView.h"
 @interface YUReBindEmailViewController ()
 
-@property (weak, nonatomic) IBOutlet YUTextView *emailTextView;
-@property (weak, nonatomic) IBOutlet YUTextView *vaildCodeTextView;
+@property (weak, nonatomic) IBOutlet YUCircleTextView *emailTextView;
+@property (weak, nonatomic) IBOutlet YUCircleTextView *vaildCodeTextView;
 @property (weak, nonatomic) IBOutlet JKCountDownButton *sendVaildCodeButton;
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_scroll_top;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
@@ -39,18 +40,20 @@
 - (void)initUI {
     [self.sendVaildCodeButton yu_vaildButtonStyle];
     [self.confirmButton yu_gradualBlueChangeStyle];
-    _emailTextView.xibContainer.textField.keyboardType = UIKeyboardTypeEmailAddress;
-    _vaildCodeTextView.xibContainer.textField.keyboardType = UIKeyboardTypeNumberPad;
-    NSArray<YUTextView *> *viewArr = @[_emailTextView,_vaildCodeTextView];
+    [self setNav];
+    _emailTextView.textField.keyboardType = UIKeyboardTypeEmailAddress;
+    _vaildCodeTextView.textField.keyboardType = UIKeyboardTypeNumberPad;
+    NSArray<YUCircleTextView *> *viewArr = @[_emailTextView,_vaildCodeTextView];
     NSArray *titles = @[@"新邮箱",@"邮箱验证码"];
     NSInteger index = 0;
     for (NSString *title in titles) {
-        [viewArr[index] setHintText:title];
-        [viewArr[index] setPlaceHolder:title];
+        viewArr[index].textField.placeholder = title;
         index++;
     }
-    self.scrollView.contentInset = UIEdgeInsetsMake(self.normalNavbar.qmui_height, 0, 0, 0  );
-   
+    self.atly_scroll_top.constant = self.normalNavbar.qmui_height+36;
+    [self.vaildCodeTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(self.vaildCodeTextView).with.offset(-140);
+    }];
 }
 - (void)setNav {
     [self addNormalNavBar:@"绑定新邮箱"];
@@ -62,7 +65,6 @@
     [self.sendVaildCodeButton yu_vaildButtonStyle];
     [self.sendVaildCodeButton countDownFinished:^NSString *(JKCountDownButton *countDownButton, NSUInteger second) {
         self.sendVaildCodeButton.enabled = YES;
-//        [self.sendVaildCodeButton rectBlackBorderStyle];
         return @"发送验证码";
     }];
 }
@@ -79,8 +81,11 @@
         return;
     }
     [self startValidCodeButtonAnimate];
+    [QMUITips showLoadingInView:self.view];
     [self.viewModel sendVaildCodeByEmail:self.emailTextView.text
                                 complete:^(BOOL isSucc) {
+        [QMUITips hideAllTips];
+                                    
         if (isSucc) {
             [QMUITips showSucceed:@"发送成功"];
         }else {
@@ -90,22 +95,22 @@
 }
 
 - (IBAction)onNextStep:(id)sender {
-    
     if(self.vaildCodeTextView.text.length == 0) {
         [QMUITips showError:@"验证码不能为空"];
         return;
     }
+    [QMUITips showLoadingInView:self.view hideAfterDelay:5.0];
     [self.viewModel rebindEmail:self.emailTextView.text
                           token:self.viewModel.oneceToken
                        valiCode:self.vaildCodeTextView.text
                        complete:^(BOOL isSucc, NSString *info) {
+                           [QMUITips hideAllTips];
                            if (isSucc) {
                                [QMUITips showSucceed:@"绑定成功"];
-                               [[YUUserManagers  shareInstance] logout];
+                               [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
                            }else {
                                [QMUITips showError:@"绑定失败"];
                            }
     }];
-    
 }
 @end

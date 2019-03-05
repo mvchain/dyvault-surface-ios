@@ -9,7 +9,8 @@
 #import "YUPageListView.h"
 #import <MJRefresh.h>
 
-@interface YUPageListView() <UITableViewDelegate,UITableViewDataSource>
+@interface YUPageListView() <UITableViewDelegate,
+    UITableViewDataSource,YUCellDelegate>
 
 @property (strong,nonatomic) NSMutableArray<YUCellEntity *> * dataArrays ;
 
@@ -136,7 +137,8 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     return self.dataArrays.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView cellByIndexPath:indexPath dataArrays:self.dataArrays];
+    return [tableView cellByIndexPath:indexPath dataArrays:self.dataArrays delegate:self];
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -147,4 +149,13 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
         self.yu_didSelectRowAtIndexPath(indexPath);
 }
 
+#pragma YUCell delegate
+- (void)yu_cellMessageNotify:(NSString *)idf content:(id)content sender:(id)sender {
+    if (self.yu_eventProduceByInnerCellView) {
+        self.yu_eventProduceByInnerCellView(idf, content, sender);
+    }
+}
+- (void)dealloc {
+    
+}
 @end

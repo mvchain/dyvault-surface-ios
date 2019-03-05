@@ -23,6 +23,7 @@
     NSAssert(self.apiPath !=nil && self.apiPath.length > 0, @"  #### apiPath must not be null～@@@@@") ;
     NSAssert(self.onSuccess, @" ### onSuccess must not be null ~ @@@@");
     NSAssert(self.onError, @" ### onError must not be null ~ @@@@");
+    NSAssert(self.onEndConnection, @" ### onEndConnection must not be null ~ @@@@");
     [[YUNetworkManager defaultManager] sendRequestMethod:rquestMethod
                                                serverUrl:self.apiDomainUrl
                                                  apiPath:self.apiPath
@@ -41,19 +42,18 @@
             [self refreshToken:^(BOOL isRefreshSucc, BOOL isNetOK) {
                 if (!isNetOK) return ; // net err ,exit
                 if (!isRefreshSucc) {
-                    // refresh err ,exit
+                    // refresh error ,exit
+                    [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit] ; // exit
                     return;
                 }
                 // refresh succ
                 [self connectWithRquestMethod:rquestMethod];
             }];
-            
             return ;
         }
         // not 401
         self.onError(errorMessage,responseCode);
         self.onEndConnection();
-       
     }];
 }
 
@@ -70,7 +70,6 @@
     // buildVersion
     [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
 }
-
 // when token unvalid
 - (void)refreshToken:(void(^)(BOOL isRefreshSucc ,BOOL isNetOK))complete{
     
@@ -83,8 +82,7 @@
     [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
     // buildVersion
     [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
-    
-    [[YUNetworkManager defaultManager] sendRequestMethod:HTTPMethodPOST serverUrl:self.apiDomainUrl apiPath:self.apiPath  parameters:nil progress:^(NSProgress * _Nullable progress) {
+    [[YUNetworkManager defaultManager] sendRequestMethod:HTTPMethodPOST serverUrl:self.apiDomainUrl apiPath:@"/user/refresh"  parameters:nil progress:^(NSProgress * _Nullable progress) {
         
     } success:^(BOOL isSuccess, id  _Nullable responseObject) {
         NSDictionary *resDict = (NSDictionary *)responseObject;

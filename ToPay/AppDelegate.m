@@ -19,7 +19,7 @@
     UINavigationController *nav = [[UINavigationController alloc] init];
     nav.viewControllers = @[[[YUWelcomeViewController alloc] init]];
     nav.navigationBar.hidden = YES;
-    self.window.rootViewController = [[YUViewControllerManagers shareInstance] windowsRootViewController];
+    self.window.rootViewController = [[YUViewControllerManagers shareInstance] auto_windowsRootViewController];
     [self.window makeKeyAndVisible];
 }
 #pragma mark life cycle

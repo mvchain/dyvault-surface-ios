@@ -74,7 +74,7 @@
 		DD4F0CA7222810DC003467CB /* API_PUT_User_Forget.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */; };
 		DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */; };
 		DD4F0CAD22281241003467CB /* YUResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */; };
-		DD4F0CB12228DA0B003467CB /* YUForget_ResetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CB02228DA0B003467CB /* YUForget_ResetPasswordViewModel.m */; };
+		DD4F0CB12228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CB02228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m */; };
 		DD4F0CB52228EB99003467CB /* YUViewControllerManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CB42228EB99003467CB /* YUViewControllerManagers.m */; };
 		DD4F0CCC222912CF003467CB /* YUAssetTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CCB222912CF003467CB /* YUAssetTableHeaderView.m */; };
 		DD4F0CCE222912DE003467CB /* YUAssetTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CCD222912DE003467CB /* YUAssetTableHeaderView.xib */; };
@@ -109,12 +109,15 @@
 		DD54BC22222CD3F80009E383 /* YUBlankCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC21222CD3F80009E383 /* YUBlankCellEntity.m */; };
 		DD54BC2C222CF9B90009E383 /* YUAccountSecurityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC2A222CF9B90009E383 /* YUAccountSecurityViewController.m */; };
 		DD54BC2D222CF9B90009E383 /* YUAccountSecurityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD54BC2B222CF9B90009E383 /* YUAccountSecurityViewController.xib */; };
-		DD54BC30222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC2F222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.m */; };
-		DD54BC33222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC32222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.m */; };
+		DD54BC30222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC2F222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.m */; };
 		DD54BC37222D0F820009E383 /* YUNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC36222D0F820009E383 /* YUNavigationViewController.m */; };
 		DD54BC40222D12380009E383 /* TPVerifyEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC3D222D12380009E383 /* TPVerifyEmailViewModel.m */; };
 		DD54BC41222D12380009E383 /* TPVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54BC3E222D12380009E383 /* TPVerifyViewController.m */; };
 		DD54BC42222D12380009E383 /* TPVerifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD54BC3F222D12380009E383 /* TPVerifyViewController.xib */; };
+		DD7085C6222E4193006482FB /* API_PUT_User_Password.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085C5222E4193006482FB /* API_PUT_User_Password.m */; };
+		DD7085C9222E43A4006482FB /* API_PUT_User_TransactionPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085C8222E43A4006482FB /* API_PUT_User_TransactionPassword.m */; };
+		DD7085CD222E724D006482FB /* API_PUT_User_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085CC222E724D006482FB /* API_PUT_User_Email.m */; };
+		DD7085D0222E9651006482FB /* API_PUT_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085CF222E9651006482FB /* API_PUT_Asset.m */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -127,6 +130,15 @@
 		DDEDB829222D46C4003F648E /* YULanguageManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB828222D46C4003F648E /* YULanguageManagers.m */; };
 		DDEDB82E222D5497003F648E /* YUNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB82C222D5497003F648E /* YUNotificationViewController.m */; };
 		DDEDB82F222D5497003F648E /* YUNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB82D222D5497003F648E /* YUNotificationViewController.xib */; };
+		DDEDB834222E12D3003F648E /* YUNotificationItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB832222E12D3003F648E /* YUNotificationItemCell.m */; };
+		DDEDB835222E12D3003F648E /* YUNotificationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB833222E12D3003F648E /* YUNotificationItemCell.xib */; };
+		DDEDB838222E12E7003F648E /* YUNotificationItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB837222E12E7003F648E /* YUNotificationItemEntity.m */; };
+		DDEDB83B222E1C89003F648E /* API_GET_User_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB83A222E1C89003F648E /* API_GET_User_Email.m */; };
+		DDEDB83E222E1E3F003F648E /* API_POST_User_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB83D222E1E3F003F648E /* API_POST_User_Email.m */; };
+		DDEDB845222E25F3003F648E /* TPChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB842222E25F3003F648E /* TPChangePassWordViewController.m */; };
+		DDEDB846222E25F3003F648E /* TPChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB844222E25F3003F648E /* TPChangePassWordViewController.xib */; };
+		DDEDB84C222E260B003F648E /* TPChangePassWordViewModel_PayPassWd.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB849222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.m */; };
+		DDEDB84D222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB84B222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,8 +289,8 @@
 		DD4F0CA922281241003467CB /* YUResetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUResetPasswordViewController.h; sourceTree = "<group>"; };
 		DD4F0CAA22281241003467CB /* YUResetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUResetPasswordViewController.m; sourceTree = "<group>"; };
 		DD4F0CAB22281241003467CB /* YUResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUResetPasswordViewController.xib; sourceTree = "<group>"; };
-		DD4F0CAF2228DA0B003467CB /* YUForget_ResetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUForget_ResetPasswordViewModel.h; sourceTree = "<group>"; };
-		DD4F0CB02228DA0B003467CB /* YUForget_ResetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUForget_ResetPasswordViewModel.m; sourceTree = "<group>"; };
+		DD4F0CAF2228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUForgetLogin_ResetPasswordViewModel.h; sourceTree = "<group>"; };
+		DD4F0CB02228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUForgetLogin_ResetPasswordViewModel.m; sourceTree = "<group>"; };
 		DD4F0CB32228EB99003467CB /* YUViewControllerManagers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUViewControllerManagers.h; sourceTree = "<group>"; };
 		DD4F0CB42228EB99003467CB /* YUViewControllerManagers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUViewControllerManagers.m; sourceTree = "<group>"; };
 		DD4F0CCA222912CF003467CB /* YUAssetTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetTableHeaderView.h; sourceTree = "<group>"; };
@@ -336,10 +348,8 @@
 		DD54BC29222CF9B90009E383 /* YUAccountSecurityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAccountSecurityViewController.h; sourceTree = "<group>"; };
 		DD54BC2A222CF9B90009E383 /* YUAccountSecurityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAccountSecurityViewController.m; sourceTree = "<group>"; };
 		DD54BC2B222CF9B90009E383 /* YUAccountSecurityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAccountSecurityViewController.xib; sourceTree = "<group>"; };
-		DD54BC2E222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUChangePay_ResetPasswordViewModel.h; sourceTree = "<group>"; };
-		DD54BC2F222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUChangePay_ResetPasswordViewModel.m; sourceTree = "<group>"; };
-		DD54BC31222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUChangeLogin_ResetPasswordViewModel.h; sourceTree = "<group>"; };
-		DD54BC32222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUChangeLogin_ResetPasswordViewModel.m; sourceTree = "<group>"; };
+		DD54BC2E222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUForgetPay_ResetPasswordViewModel.h; sourceTree = "<group>"; };
+		DD54BC2F222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUForgetPay_ResetPasswordViewModel.m; sourceTree = "<group>"; };
 		DD54BC35222D0F820009E383 /* YUNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNavigationViewController.h; sourceTree = "<group>"; };
 		DD54BC36222D0F820009E383 /* YUNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNavigationViewController.m; sourceTree = "<group>"; };
 		DD54BC3B222D12370009E383 /* TPVerifyEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPVerifyEmailViewModel.h; sourceTree = "<group>"; };
@@ -347,6 +357,14 @@
 		DD54BC3D222D12380009E383 /* TPVerifyEmailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPVerifyEmailViewModel.m; sourceTree = "<group>"; };
 		DD54BC3E222D12380009E383 /* TPVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPVerifyViewController.m; sourceTree = "<group>"; };
 		DD54BC3F222D12380009E383 /* TPVerifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPVerifyViewController.xib; sourceTree = "<group>"; };
+		DD7085C4222E4193006482FB /* API_PUT_User_Password.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_PUT_User_Password.h; sourceTree = "<group>"; };
+		DD7085C5222E4193006482FB /* API_PUT_User_Password.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_User_Password.m; sourceTree = "<group>"; };
+		DD7085C7222E43A4006482FB /* API_PUT_User_TransactionPassword.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_PUT_User_TransactionPassword.h; sourceTree = "<group>"; };
+		DD7085C8222E43A4006482FB /* API_PUT_User_TransactionPassword.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_User_TransactionPassword.m; sourceTree = "<group>"; };
+		DD7085CB222E724D006482FB /* API_PUT_User_Email.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_PUT_User_Email.h; sourceTree = "<group>"; };
+		DD7085CC222E724D006482FB /* API_PUT_User_Email.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_User_Email.m; sourceTree = "<group>"; };
+		DD7085CE222E9651006482FB /* API_PUT_Asset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_PUT_Asset.h; sourceTree = "<group>"; };
+		DD7085CF222E9651006482FB /* API_PUT_Asset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_Asset.m; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -368,6 +386,22 @@
 		DDEDB82B222D5497003F648E /* YUNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNotificationViewController.h; sourceTree = "<group>"; };
 		DDEDB82C222D5497003F648E /* YUNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNotificationViewController.m; sourceTree = "<group>"; };
 		DDEDB82D222D5497003F648E /* YUNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUNotificationViewController.xib; sourceTree = "<group>"; };
+		DDEDB831222E12D3003F648E /* YUNotificationItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNotificationItemCell.h; sourceTree = "<group>"; };
+		DDEDB832222E12D3003F648E /* YUNotificationItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNotificationItemCell.m; sourceTree = "<group>"; };
+		DDEDB833222E12D3003F648E /* YUNotificationItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUNotificationItemCell.xib; sourceTree = "<group>"; };
+		DDEDB836222E12E7003F648E /* YUNotificationItemEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNotificationItemEntity.h; sourceTree = "<group>"; };
+		DDEDB837222E12E7003F648E /* YUNotificationItemEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNotificationItemEntity.m; sourceTree = "<group>"; };
+		DDEDB839222E1C89003F648E /* API_GET_User_Email.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_User_Email.h; sourceTree = "<group>"; };
+		DDEDB83A222E1C89003F648E /* API_GET_User_Email.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_User_Email.m; sourceTree = "<group>"; };
+		DDEDB83C222E1E3F003F648E /* API_POST_User_Email.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User_Email.h; sourceTree = "<group>"; };
+		DDEDB83D222E1E3F003F648E /* API_POST_User_Email.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_User_Email.m; sourceTree = "<group>"; };
+		DDEDB842222E25F3003F648E /* TPChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChangePassWordViewController.m; sourceTree = "<group>"; };
+		DDEDB843222E25F3003F648E /* TPChangePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChangePassWordViewController.h; sourceTree = "<group>"; };
+		DDEDB844222E25F3003F648E /* TPChangePassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPChangePassWordViewController.xib; sourceTree = "<group>"; };
+		DDEDB848222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChangePassWordViewModel_PayPassWd.h; sourceTree = "<group>"; };
+		DDEDB849222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChangePassWordViewModel_PayPassWd.m; sourceTree = "<group>"; };
+		DDEDB84A222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChangePassWordViewModel_LoginPassWd.h; sourceTree = "<group>"; };
+		DDEDB84B222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChangePassWordViewModel_LoginPassWd.m; sourceTree = "<group>"; };
 		F269B838F6F657FCAB75948A /* Pods-ToPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToPay/Pods-ToPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -593,18 +627,18 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DDEDB841222E25DB003F648E /* ChangePassword */,
 				DDEDB82A222D5404003F648E /* Notification */,
 				DD54BC23222CF8C20009E383 /* AccountSecurity */,
 				DD4F0CE622295B79003467CB /* AddNewToken */,
 				DD4F0C802227E54C003467CB /* AssetHome */,
-				DDEDB801222D2116003F648E /* ChangeEmailAddress */,
 				DDEDB80B222D28D2003F648E /* Language */,
 				DD4F0C772227C9C2003467CB /* Login */,
 				DD4F0C862227E5AF003467CB /* Mine */,
 				DDEDB802222D2165003F648E /* RebindEmailAddress */,
 				DD21EC052226AB880078E625 /* Register - Step-0 */,
 				DD4F0C5B2227B094003467CB /* SetPassWd- Step-1 */,
-				DD54BC38222D11440009E383 /* VerifyEmailAddress */,
+				DD54BC38222D11440009E383 /* VerifyEmailAddress (RebindEmail) */,
 				DD21EBD22226637C0078E625 /* Welcome */,
 			);
 			path = SpecialViewController;
@@ -719,6 +753,7 @@
 		DD21EBC5222662150078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DDEDB830222E12A4003F648E /* Notification */,
 				DDEDB811222D2A33003F648E /* Language */,
 				DD54BC09222CC5990009E383 /* Mine */,
 				DD54BBF0222A870D0009E383 /* AddNewToken */,
@@ -767,6 +802,9 @@
 		DD21EBCE222662A50078E625 /* SpecialViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DDEDB847222E25FC003F648E /* ChangePassword */,
+				DDEDB840222E2537003F648E /* ReBindEmail */,
+				DDEDB83F222E250D003F648E /* VerifyEmailAddress */,
 			);
 			path = SpecialViewModels;
 			sourceTree = "<group>";
@@ -1071,6 +1109,8 @@
 			children = (
 				DD4F0CEA22295E13003467CB /* API_GET_Token.h */,
 				DD4F0CEB22295E13003467CB /* API_GET_Token.m */,
+				DD7085CE222E9651006482FB /* API_PUT_Asset.h */,
+				DD7085CF222E9651006482FB /* API_PUT_Asset.m */,
 			);
 			path = TokenRelated;
 			sourceTree = "<group>";
@@ -1085,20 +1125,30 @@
 		DD4F0C992227EE0C003467CB /* UserRelated */ = {
 			isa = PBXGroup;
 			children = (
-				DD21EC4D222797910078E625 /* API_POST_User.h */,
-				DD21EC4E222797910078E625 /* API_POST_User.m */,
-				DD4F0C612227B3C3003467CB /* API_POST_Register.h */,
-				DD4F0C622227B3C3003467CB /* API_POST_Register.m */,
-				DD4F0C7D2227D6A6003467CB /* API_POST_User_Login.h */,
-				DD4F0C7E2227D6A6003467CB /* API_POST_User_Login.m */,
-				DD4F0C8F2227E7AE003467CB /* API_GET_User_Valid.h */,
-				DD4F0C902227E7AE003467CB /* API_GET_User_Valid.m */,
 				DD4F0C922227EB6B003467CB /* API_GET_User_Email_Logout.h */,
 				DD4F0C932227EB6B003467CB /* API_GET_User_Email_Logout.m */,
+				DDEDB839222E1C89003F648E /* API_GET_User_Email.h */,
+				DDEDB83A222E1C89003F648E /* API_GET_User_Email.m */,
+				DD4F0C8F2227E7AE003467CB /* API_GET_User_Valid.h */,
+				DD4F0C902227E7AE003467CB /* API_GET_User_Valid.m */,
+				DD4F0C612227B3C3003467CB /* API_POST_Register.h */,
+				DD4F0C622227B3C3003467CB /* API_POST_Register.m */,
+				DDEDB83C222E1E3F003F648E /* API_POST_User_Email.h */,
+				DDEDB83D222E1E3F003F648E /* API_POST_User_Email.m */,
+				DD4F0C7D2227D6A6003467CB /* API_POST_User_Login.h */,
+				DD4F0C7E2227D6A6003467CB /* API_POST_User_Login.m */,
 				DD4F0CA222280C22003467CB /* API_POST_User_Reset.h */,
 				DD4F0CA322280C22003467CB /* API_POST_User_Reset.m */,
+				DD21EC4D222797910078E625 /* API_POST_User.h */,
+				DD21EC4E222797910078E625 /* API_POST_User.m */,
 				DD4F0CA5222810DC003467CB /* API_PUT_User_Forget.h */,
 				DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */,
+				DD7085C4222E4193006482FB /* API_PUT_User_Password.h */,
+				DD7085C5222E4193006482FB /* API_PUT_User_Password.m */,
+				DD7085C7222E43A4006482FB /* API_PUT_User_TransactionPassword.h */,
+				DD7085C8222E43A4006482FB /* API_PUT_User_TransactionPassword.m */,
+				DD7085CB222E724D006482FB /* API_PUT_User_Email.h */,
+				DD7085CC222E724D006482FB /* API_PUT_User_Email.m */,
 			);
 			path = UserRelated;
 			sourceTree = "<group>";
@@ -1135,12 +1185,10 @@
 		DD4F0CAE2228D831003467CB /* ResetPasswordViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F0CAF2228DA0B003467CB /* YUForget_ResetPasswordViewModel.h */,
-				DD4F0CB02228DA0B003467CB /* YUForget_ResetPasswordViewModel.m */,
-				DD54BC2E222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.h */,
-				DD54BC2F222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.m */,
-				DD54BC31222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.h */,
-				DD54BC32222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.m */,
+				DD4F0CAF2228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.h */,
+				DD4F0CB02228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m */,
+				DD54BC2E222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.h */,
+				DD54BC2F222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.m */,
 			);
 			path = ResetPasswordViewModel;
 			sourceTree = "<group>";
@@ -1305,23 +1353,14 @@
 			path = YUNavgationViewController;
 			sourceTree = "<group>";
 		};
-		DD54BC38222D11440009E383 /* VerifyEmailAddress */ = {
+		DD54BC38222D11440009E383 /* VerifyEmailAddress (RebindEmail) */ = {
 			isa = PBXGroup;
 			children = (
-				DD54BC3B222D12370009E383 /* TPVerifyEmailViewModel.h */,
-				DD54BC3D222D12380009E383 /* TPVerifyEmailViewModel.m */,
 				DD54BC3C222D12380009E383 /* TPVerifyViewController.h */,
 				DD54BC3E222D12380009E383 /* TPVerifyViewController.m */,
 				DD54BC3F222D12380009E383 /* TPVerifyViewController.xib */,
 			);
-			path = VerifyEmailAddress;
-			sourceTree = "<group>";
-		};
-		DDEDB801222D2116003F648E /* ChangeEmailAddress */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ChangeEmailAddress;
+			path = "VerifyEmailAddress (RebindEmail)";
 			sourceTree = "<group>";
 		};
 		DDEDB802222D2165003F648E /* RebindEmailAddress */ = {
@@ -1330,8 +1369,6 @@
 				DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */,
 				DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */,
 				DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */,
-				DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */,
-				DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */,
 			);
 			path = RebindEmailAddress;
 			sourceTree = "<group>";
@@ -1375,6 +1412,57 @@
 				DDEDB82D222D5497003F648E /* YUNotificationViewController.xib */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		DDEDB830222E12A4003F648E /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DDEDB831222E12D3003F648E /* YUNotificationItemCell.h */,
+				DDEDB832222E12D3003F648E /* YUNotificationItemCell.m */,
+				DDEDB833222E12D3003F648E /* YUNotificationItemCell.xib */,
+				DDEDB836222E12E7003F648E /* YUNotificationItemEntity.h */,
+				DDEDB837222E12E7003F648E /* YUNotificationItemEntity.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		DDEDB83F222E250D003F648E /* VerifyEmailAddress */ = {
+			isa = PBXGroup;
+			children = (
+				DD54BC3B222D12370009E383 /* TPVerifyEmailViewModel.h */,
+				DD54BC3D222D12380009E383 /* TPVerifyEmailViewModel.m */,
+			);
+			path = VerifyEmailAddress;
+			sourceTree = "<group>";
+		};
+		DDEDB840222E2537003F648E /* ReBindEmail */ = {
+			isa = PBXGroup;
+			children = (
+				DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */,
+				DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */,
+			);
+			path = ReBindEmail;
+			sourceTree = "<group>";
+		};
+		DDEDB841222E25DB003F648E /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				DDEDB843222E25F3003F648E /* TPChangePassWordViewController.h */,
+				DDEDB842222E25F3003F648E /* TPChangePassWordViewController.m */,
+				DDEDB844222E25F3003F648E /* TPChangePassWordViewController.xib */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		DDEDB847222E25FC003F648E /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				DDEDB84A222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.h */,
+				DDEDB84B222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m */,
+				DDEDB848222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.h */,
+				DDEDB849222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.m */,
+			);
+			path = ChangePassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1510,8 +1598,10 @@
 				DD54BC07222AAC880009E383 /* YUSearchBarView.xib in Resources */,
 				DD54BBF5222A873B0009E383 /* YUAddNewTokenItemCell.xib in Resources */,
 				DD4F0C852227E5A8003467CB /* YUAssetViewController.xib in Resources */,
+				DDEDB846222E25F3003F648E /* TPChangePassWordViewController.xib in Resources */,
 				DD21EC3E2227811F0078E625 /* YUTextViewXibContainer.xib in Resources */,
 				DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */,
+				DDEDB835222E12D3003F648E /* YUNotificationItemCell.xib in Resources */,
 				DD4F0CD32229212D003467CB /* YUAssetHeaderInfoCell.xib in Resources */,
 				DD4F0CCE222912DE003467CB /* YUAssetTableHeaderView.xib in Resources */,
 			);
@@ -1639,14 +1729,17 @@
 				DD54BC11222CCB9B0009E383 /* YUMineItemCellEntity.m in Sources */,
 				DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */,
 				DD54BC19222CD1B60009E383 /* YUMineConfirmCellEntity.m in Sources */,
+				DDEDB83E222E1E3F003F648E /* API_POST_User_Email.m in Sources */,
 				DD54BC1E222CD3DF0009E383 /* YUBlankCell.m in Sources */,
 				DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */,
 				DD4F0C7B2227C9DA003467CB /* YULoginViewController.m in Sources */,
 				DD21EC2C2226BC970078E625 /* YUDIVView.m in Sources */,
+				DDEDB83B222E1C89003F648E /* API_GET_User_Email.m in Sources */,
 				DD21EC4C222789C00078E625 /* YUCircleTextView.m in Sources */,
 				DDEDB82E222D5497003F648E /* YUNotificationViewController.m in Sources */,
 				DD4F0CA422280C22003467CB /* API_POST_User_Reset.m in Sources */,
 				DD4F0CF722296087003467CB /* AssetTokenItemModel.m in Sources */,
+				DD7085C6222E4193006482FB /* API_PUT_User_Password.m in Sources */,
 				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
 				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
 				DD4F0CD922293B1D003467CB /* API_GET_Asset.m in Sources */,
@@ -1654,12 +1747,13 @@
 				DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */,
 				DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */,
 				DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */,
+				DDEDB84D222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m in Sources */,
 				DD54BC2C222CF9B90009E383 /* YUAccountSecurityViewController.m in Sources */,
 				DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */,
 				DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */,
+				DDEDB834222E12D3003F648E /* YUNotificationItemCell.m in Sources */,
 				DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */,
 				DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */,
-				DD54BC33222D07240009E383 /* YUChangeLogin_ResetPasswordViewModel.m in Sources */,
 				DD4F0C5F2227B0CD003467CB /* YUSetPasswordViewController.m in Sources */,
 				DD54BC01222A8FE50009E383 /* YUErrorCellEntity.m in Sources */,
 				DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */,
@@ -1689,15 +1783,18 @@
 				DD4F0C6C2227BCAB003467CB /* YUUserManagers.m in Sources */,
 				DD4F0C942227EB6B003467CB /* API_GET_User_Email_Logout.m in Sources */,
 				DD21EC342226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m in Sources */,
+				DD7085CD222E724D006482FB /* API_PUT_User_Email.m in Sources */,
 				DD4F0C6F2227BD51003467CB /* QuickGet.m in Sources */,
 				DD4F0C8A2227E5C4003467CB /* YUMineViewController.m in Sources */,
 				DD4F0CD22229212D003467CB /* YUAssetHeaderInfoCell.m in Sources */,
-				DD54BC30222D070A0009E383 /* YUChangePay_ResetPasswordViewModel.m in Sources */,
+				DD54BC30222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.m in Sources */,
 				DD21EBB2222658F10078E625 /* ServModel.m in Sources */,
 				DD54BC41222D12380009E383 /* TPVerifyViewController.m in Sources */,
 				DD4F0C672227B6C4003467CB /* RegisterRequestDataModel.m in Sources */,
 				DD21EC3F2227811F0078E625 /* YUTextView.m in Sources */,
 				DD21EC4F222797910078E625 /* API_POST_User.m in Sources */,
+				DDEDB84C222E260B003F648E /* TPChangePassWordViewModel_PayPassWd.m in Sources */,
+				DDEDB845222E25F3003F648E /* TPChangePassWordViewController.m in Sources */,
 				DD4F0CA7222810DC003467CB /* API_PUT_User_Forget.m in Sources */,
 				DD21EB77222637110078E625 /* AppDelegate.m in Sources */,
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
@@ -1709,12 +1806,15 @@
 				DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
-				DD4F0CB12228DA0B003467CB /* YUForget_ResetPasswordViewModel.m in Sources */,
+				DD4F0CB12228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m in Sources */,
+				DD7085C9222E43A4006482FB /* API_PUT_User_TransactionPassword.m in Sources */,
+				DDEDB838222E12E7003F648E /* YUNotificationItemEntity.m in Sources */,
 				DD54BC15222CD1A00009E383 /* YUMineConfirmCell.m in Sources */,
 				DD54BBF4222A873B0009E383 /* YUAddNewTokenItemCell.m in Sources */,
 				DD54BC37222D0F820009E383 /* YUNavigationViewController.m in Sources */,
 				DDEDB829222D46C4003F648E /* YULanguageManagers.m in Sources */,
 				DDEDB815222D2A50003F648E /* YULanguageItemCell.m in Sources */,
+				DD7085D0222E9651006482FB /* API_PUT_Asset.m in Sources */,
 				DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */,
 				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
 				DD54BC40222D12380009E383 /* TPVerifyEmailViewModel.m in Sources */,
@@ -1904,7 +2004,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1925,7 +2025,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dyvault.ToPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

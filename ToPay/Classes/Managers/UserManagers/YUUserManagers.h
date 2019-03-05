@@ -15,14 +15,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype) shareInstance;
 
-// change userIDCard 
+// important!,change userIDCard ,contain email ,userid ,token ,refreshtoken
 - (void)change_userIDCard_inDisk:(UserIDCardModel *)model;
 // get userIDCard
 - (UserIDCardModel *)userIDCard_inDisk;
 
+// logout ,clear userinfo
 - (void)logout;
+
 - (BOOL)isLogined;
 
++ (NSString *)getUUID;
 @end
 
 NS_ASSUME_NONNULL_END

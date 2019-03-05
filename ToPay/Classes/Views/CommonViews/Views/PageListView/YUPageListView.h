@@ -22,6 +22,8 @@ typedef void(^block_complete)(NSArray<YUCellEntity *> *data ) ;
 @property (copy,nonatomic) void  (^nextPageBlock)(block_complete complete);
 #pragma mark block option
 @property (strong,nonatomic) void(^yu_didSelectRowAtIndexPath)(NSIndexPath *indexPath);
+
+@property (strong,nonatomic) void(^yu_eventProduceByInnerCellView)(NSString *idf,id content ,id sender );
 #pragma mark public method
 - (void)beginRefreshHeader ;
 - (void)beginRefreshHeaderWithNoAnimate;

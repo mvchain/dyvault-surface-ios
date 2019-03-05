@@ -21,15 +21,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)navBarTitleName;
 - (NSString *)textPlaceholder;
 - (UIKeyboardType)passTextFieldkeyBoardType;
-
 - (void)confirmActionWithPassword:(NSString *)password
                        onSucc:(void(^)(NSDictionary *succDict ))onSucc
                        onFail:(void(^)(NSDictionary *failDict ))onFail
               onEndConnection:(void(^)(void))onEndConnection;
+- (void)setToken:(NSString *)token;
+- (void)setEmail:(NSString *)email;
+- (void)action_afterResetSucc:(NSDictionary *)dict;
 
-
-
-
+// for change pwd
 @end
 
 @interface YUResetPasswordViewController : YUBaseViewController

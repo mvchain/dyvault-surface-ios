@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic) NSArray<UINavigationController *> *navgations;
 + (instancetype) shareInstance;
 - (UIViewController *) getNewMainTabViewController;
-- (UIViewController *) windowsRootViewController ;
+- (UIViewController *) auto_windowsRootViewController;
+- (void)clearUserInfo_AndExit;
+
 
 @end
 

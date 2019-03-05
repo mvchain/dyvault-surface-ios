@@ -9,7 +9,8 @@
 #import "API_POST_User_Reset.h"
 
 @implementation API_POST_User_Reset
-- (void)sendRequestWithEmail:(NSString *)email value:(NSString *)value {
+- (void)sendRequestWithEmail:(NSString *)email
+                       value:(NSString *)value {
     self.apiPath = @"/user/reset";
     self.requestDict[@"email"] = email;
     self.requestDict[@"value"] = value;

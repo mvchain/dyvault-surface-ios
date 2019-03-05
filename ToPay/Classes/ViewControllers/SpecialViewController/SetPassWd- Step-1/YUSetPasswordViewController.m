@@ -51,6 +51,8 @@
         NSDictionary *data = (NSDictionary *)responseData;
         UserIDCardModel *userIDCard = [[UserIDCardModel alloc]initWithDictionary:data];
         [[YUUserManagers shareInstance] change_userIDCard_inDisk:userIDCard];
+        UIViewController *tabVc = [[YUViewControllerManagers shareInstance] getNewMainTabViewController ];
+        [self.navigationController pushViewController:tabVc animated:YES];
         [QMUITips showSucceed:@"注册成功"];
     };
     POST_Register.onError = ^(NSString *reason, NSInteger code) {
@@ -67,8 +69,6 @@
                                password:self.regRequestDataModel.password
                                   token:self.regRequestDataModel.token
                     transactionPassword:self.regRequestDataModel.transactionPassword];
-    
-    
 }
 
 @end

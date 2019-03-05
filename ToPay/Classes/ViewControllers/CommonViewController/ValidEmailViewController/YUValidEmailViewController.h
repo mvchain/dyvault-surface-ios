@@ -7,11 +7,11 @@
 //
 
 #import "YUBaseViewController.h"
-
+#import "YUResetPasswordViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YUValidEmailViewController : YUBaseViewController
-
+@property (strong ,nonatomic) id<YUResetPasswordViewModelDelegate> resetForgetPwdVM;
 @end
 
 NS_ASSUME_NONNULL_END

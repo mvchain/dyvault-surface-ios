@@ -12,7 +12,6 @@
 @interface YUWelcomeViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
-
 @end
 
 @implementation YUWelcomeViewController
@@ -37,7 +36,6 @@
 }
 - (IBAction)registerTap:(id)sender {
     [QuickDo pushViewControllerFromParentVc:self childClass:YURegisterViewController.class];
-    
 }
 
 @end

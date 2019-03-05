@@ -21,17 +21,14 @@ static YUUserManagers* _instance = nil;
     }) ;
     return _instance ;
 }
-
 - (void)change_userIDCard_inDisk:(UserIDCardModel *)model {
     YYCache *cache = [YYCache cacheWithName:UserInfoCacheKey];
     [cache setObject:model forKey:UserInfoCacheKey_IDCard];
 }
-
 - (UserIDCardModel *)userIDCard_inDisk {
     YYCache *cache = [YYCache cacheWithName:UserInfoCacheKey];
     return (UserIDCardModel*)[cache objectForKey:UserInfoCacheKey_IDCard];
 }
-
 - (void)logout {
     YYCache *cache = [YYCache cacheWithName:UserInfoCacheKey];
     [cache removeAllObjects];
@@ -40,13 +37,18 @@ static YUUserManagers* _instance = nil;
     return self.userIDCard_inDisk?YES:NO;
 }
 
-+(id) allocWithZone:(struct _NSZone *)zone
++ (id)allocWithZone:(struct _NSZone *)zone
 {
     return [YUUserManagers shareInstance] ;
 }
-
--(id) copyWithZone:(struct _NSZone *)zone
+- (id)copyWithZone:(struct _NSZone *)zone
 {
     return [YUUserManagers shareInstance] ;
+}
++ (NSString *)getUUID {
+    CFUUIDRef puuid = CFUUIDCreate( nil );
+    CFStringRef uuidString = CFUUIDCreateString(nil, puuid);
+    NSString *result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
+    return [result stringByReplacingOccurrencesOfString:@"-" withString:@""];
 }
 @end

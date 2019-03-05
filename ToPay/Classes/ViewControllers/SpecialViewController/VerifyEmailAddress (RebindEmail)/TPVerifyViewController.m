@@ -12,15 +12,17 @@
 #import "JKCountDownButton.h"
 #import "YUReBindEmailViewModel.h"
 #import "YUReBindEmailViewController.h"
-
+#import "YUCircleTextView.h"
 @interface TPVerifyViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
-@property (weak, nonatomic) IBOutlet YUTextView *vaildCodeTextView;
+@property (weak, nonatomic) IBOutlet YUCircleTextView *vaildCodeTextView;
 @property (weak, nonatomic) IBOutlet JKCountDownButton *sendVaildButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
 @property (strong, nonatomic) TPVerifyEmailViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_scrollrt_top;
+
 
 @end
 @implementation TPVerifyViewController
@@ -40,13 +42,15 @@
     [self.nextStepButton yu_gradualBlueChangeStyle];
     [self.sendVaildButton yu_vaildButtonStyle];
     [self.vaildCodeTextView setPlaceHolder:@"邮箱验证码"];
-    [self.vaildCodeTextView setHintText:@"邮箱验证码"];
-    self.vaildCodeTextView.xibContainer.textField.keyboardType = UIKeyboardTypeNumberPad;
-    self.emailLabel.text = TPString(@"验证当前邮箱：%@",self.viewModel.currentEmail);
-    self.scrollView.contentInset = UIEdgeInsetsMake(self.normalNavbar.qmui_height, 0, 0, 0  );
+    self.vaildCodeTextView.textField.keyboardType = UIKeyboardTypeNumberPad;
+    self.emailLabel.text = self.viewModel.currentEmail;
+    self.atly_scrollrt_top.constant = self.normalNavbar.qmui_height;
+    [self.vaildCodeTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(self.vaildCodeTextView).with.offset(-140);
+    }];
 }
 - (void)setUpNav {
-    [self addNormalNavBar:@"账户安全验证"];
+    [self addNormalNavBar:@"修改邮箱"];
     [self.normalNavbar setLeftButtonAsReturnButton];
 }
 #pragma mark local method
@@ -64,20 +68,19 @@
 
 - (IBAction)onNextStepTap:(id)sender {
     if (self.vaildCodeTextView.text.length ==0 ){
- 
         [QMUITips showError:@"验证码不能为空"];
         return;
     }
+    [QMUITips showLoadingInView:self.view];
     [self.viewModel checkoutWithVaildCode:self.vaildCodeTextView.text
                                  complete:^(BOOL isVaild, NSString *token) {
+        [QMUITips hideAllTips];
         if (isVaild){
             YUReBindEmailViewController *newBind = [[YUReBindEmailViewController alloc] init];
             newBind.viewModel.oneceToken = token;
-            
             [self.navigationController pushViewController:newBind animated:YES];
         }else {
-           
-            [QMUITips showSucceed:@"验证失败"];
+            [QMUITips showError:@"验证失败"];
         }
     }];
 }
@@ -85,7 +88,10 @@
 - (IBAction)onSendVaildCodeTap:(id)sender {
    
     [self startValidCodeButtonAnimate];
+    [QMUITips showLoadingInView:self.view];
+    
     [self.viewModel sendVaildCodeWithcomplete:^(BOOL isSucc) {
+        [QMUITips hideAllTips];
         if (isSucc) {
             [QMUITips showSucceed:@"发送成功"];
         }else {

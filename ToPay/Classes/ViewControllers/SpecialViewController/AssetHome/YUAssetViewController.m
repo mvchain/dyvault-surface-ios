@@ -19,12 +19,25 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atlt_bottom;
 @property (strong,nonatomic) NSMutableArray <AssetTokenItemModel *> *assetItems;
+@property (assign,nonatomic) BOOL isFirstDisplayThisVC;
+
 @end
 @implementation YUAssetViewController
 #pragma mark - <life cycle>
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isFirstDisplayThisVC = YES;
     // Do any additional setup after loading the view from its nib.
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!self.isFirstDisplayThisVC) {
+        [self.servListView beginRefreshHeaderWithNoAnimate];
+    }
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.isFirstDisplayThisVC = NO;
 }
 #pragma mark - <public method>
 - (void)initSubviews {
@@ -41,7 +54,6 @@
 }
 #pragma mark - <private method>
 - (void)configServListView {
-    
     // firstPage
     yudef_weakSelf;
     self.servListView.firstPageBlock = ^(block_complete  _Nonnull complete)
@@ -88,8 +100,5 @@
         YUNotificationViewController *noti = [[YUNotificationViewController alloc] init];
         [weakSelf.navigationController pushViewController:noti animated:YES];
     };
-    
 }
-
-
 @end
