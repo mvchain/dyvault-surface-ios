@@ -28,8 +28,10 @@ typedef void(^block_complete)(NSArray<YUCellEntity *> *data ) ;
 - (void)beginRefreshHeader ;
 - (void)beginRefreshHeaderWithNoAnimate;
 - (void)reloadData;
-
-
+- (void)entoSearchingStatus;
+- (void)searchUsingKeyWord:(NSString *)keyword
+                matchBlock:(BOOL(^)(id obj))matchBlock;
+- (void)exitSearchingStatus;
 - (YUCellEntity *)lastEntity;
 - (YUCellEntity *)lastEntity_KindOfClass:(Class)clss;
 

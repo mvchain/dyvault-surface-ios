@@ -13,7 +13,8 @@
     UITableViewDataSource,YUCellDelegate>
 
 @property (strong,nonatomic) NSMutableArray<YUCellEntity *> * dataArrays ;
-
+@property (strong,nonatomic) NSMutableArray<YUCellEntity *> * backUpDataArrays;
+@property (strong,nonatomic) NSMutableArray<YUCellEntity *> * searchResultDataArrays;
 @end
 @implementation YUPageListView
 #pragma mark lazy_load
@@ -99,7 +100,11 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     [self.tableView reloadData];
 }
 - (void)beginRefreshHeader {
-    [self.tableView.mj_header beginRefreshing];
+    if (self.isUsingMJRefresh) {
+        [self.tableView.mj_header beginRefreshing];
+    }else {
+        [self beginRefreshHeaderWithNoAnimate];
+    }
 }
 
 - (void)beginRefreshHeaderWithNoAnimate {
@@ -131,6 +136,29 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     if (_nextPageBlock!=nil && _isUsingMJRefresh) {
         [self addFooterRefresh];
     }
+}
+- (void)entoSearchingStatus {
+    if (self.dataArrays == nil) return;
+    self.backUpDataArrays = [[NSMutableArray<YUCellEntity *> alloc] init];
+    [self.backUpDataArrays addObjectsFromArray:self.dataArrays];
+}
+- (void)searchUsingKeyWord:(NSString *)keyword
+                matchBlock:(BOOL(^)(id obj))matchBlock {
+ 
+    if (self.backUpDataArrays == nil) return;
+    self.dataArrays = [[NSMutableArray<YUCellEntity *> alloc] init];
+    [self.dataArrays addObjectsFromArray:self.backUpDataArrays];
+    NSPredicate *pre = [NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        return matchBlock(evaluatedObject);
+    }];
+    [self.dataArrays filterUsingPredicate:pre];
+    [self reloadData];
+}
+- (void)exitSearchingStatus {
+    if (self.backUpDataArrays == nil) return;
+    self.dataArrays = self.backUpDataArrays;
+    self.backUpDataArrays = nil; 
+    [self reloadData];
 }
 #pragma mark - <tableView delegate >
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

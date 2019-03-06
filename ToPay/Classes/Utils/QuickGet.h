@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *) getBundleIdStr;
 + (NSString *) getCurBuildVersion;
 + (CGFloat) makeFloatNumber:(CGFloat) num tailNum:(int)tailNum;
-
++ (NSString *)getUUID;
 @end
 
 NS_ASSUME_NONNULL_END

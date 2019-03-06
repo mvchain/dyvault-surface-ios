@@ -118,6 +118,11 @@
 		DD7085C9222E43A4006482FB /* API_PUT_User_TransactionPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085C8222E43A4006482FB /* API_PUT_User_TransactionPassword.m */; };
 		DD7085CD222E724D006482FB /* API_PUT_User_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085CC222E724D006482FB /* API_PUT_User_Email.m */; };
 		DD7085D0222E9651006482FB /* API_PUT_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085CF222E9651006482FB /* API_PUT_Asset.m */; };
+		DD7085DA222F7938006482FB /* NSString+Pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085D9222F7938006482FB /* NSString+Pinyin.m */; };
+		DD7085DF222F98B1006482FB /* YUCurrencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085DE222F98B1006482FB /* YUCurrencyManager.m */; };
+		DD7085E7222F99E7006482FB /* TPExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085E2222F99E4006482FB /* TPExchangeRate.m */; };
+		DD7085E8222F99E7006482FB /* TPCurrencyList.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085E5222F99E5006482FB /* TPCurrencyList.m */; };
+		DD7085E9222F99E7006482FB /* TPCurrencyRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085E6222F99E6006482FB /* TPCurrencyRatio.m */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -365,6 +370,16 @@
 		DD7085CC222E724D006482FB /* API_PUT_User_Email.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_User_Email.m; sourceTree = "<group>"; };
 		DD7085CE222E9651006482FB /* API_PUT_Asset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_PUT_Asset.h; sourceTree = "<group>"; };
 		DD7085CF222E9651006482FB /* API_PUT_Asset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_PUT_Asset.m; sourceTree = "<group>"; };
+		DD7085D8222F7938006482FB /* NSString+Pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Pinyin.h"; sourceTree = "<group>"; };
+		DD7085D9222F7938006482FB /* NSString+Pinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Pinyin.m"; sourceTree = "<group>"; };
+		DD7085DD222F98B1006482FB /* YUCurrencyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUCurrencyManager.h; sourceTree = "<group>"; };
+		DD7085DE222F98B1006482FB /* YUCurrencyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUCurrencyManager.m; sourceTree = "<group>"; };
+		DD7085E1222F99E4006482FB /* TPExchangeRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPExchangeRate.h; sourceTree = "<group>"; };
+		DD7085E2222F99E4006482FB /* TPExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPExchangeRate.m; sourceTree = "<group>"; };
+		DD7085E3222F99E4006482FB /* TPCurrencyRatio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCurrencyRatio.h; sourceTree = "<group>"; };
+		DD7085E4222F99E5006482FB /* TPCurrencyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCurrencyList.h; sourceTree = "<group>"; };
+		DD7085E5222F99E5006482FB /* TPCurrencyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrencyList.m; sourceTree = "<group>"; };
+		DD7085E6222F99E6006482FB /* TPCurrencyRatio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrencyRatio.m; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -595,6 +610,7 @@
 		DD21EBAE22263FB80078E625 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DD7085DC222F9894006482FB /* YUCurrencyManager */,
 				DDEDB826222D46A8003F648E /* LanguageManagers */,
 				DD4F0CB22228EB6F003467CB /* ViewControllerManagers */,
 				DD4F0C692227BC86003467CB /* UserManagers */,
@@ -666,6 +682,7 @@
 		DD21EBBB22265D440078E625 /* CommonModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD7085E0222F99D7006482FB /* Currency */,
 				DD4F0CDA22293BBD003467CB /* Asset */,
 				DD4F0C762227C3BD003467CB /* User */,
 			);
@@ -795,6 +812,8 @@
 		DD21EBCD222662970078E625 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DD7085D8222F7938006482FB /* NSString+Pinyin.h */,
+				DD7085D9222F7938006482FB /* NSString+Pinyin.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1363,6 +1382,28 @@
 			path = "VerifyEmailAddress (RebindEmail)";
 			sourceTree = "<group>";
 		};
+		DD7085DC222F9894006482FB /* YUCurrencyManager */ = {
+			isa = PBXGroup;
+			children = (
+				DD7085DD222F98B1006482FB /* YUCurrencyManager.h */,
+				DD7085DE222F98B1006482FB /* YUCurrencyManager.m */,
+			);
+			path = YUCurrencyManager;
+			sourceTree = "<group>";
+		};
+		DD7085E0222F99D7006482FB /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				DD7085E4222F99E5006482FB /* TPCurrencyList.h */,
+				DD7085E5222F99E5006482FB /* TPCurrencyList.m */,
+				DD7085E3222F99E4006482FB /* TPCurrencyRatio.h */,
+				DD7085E6222F99E6006482FB /* TPCurrencyRatio.m */,
+				DD7085E1222F99E4006482FB /* TPExchangeRate.h */,
+				DD7085E2222F99E4006482FB /* TPExchangeRate.m */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
 		DDEDB802222D2165003F648E /* RebindEmailAddress */ = {
 			isa = PBXGroup;
 			children = (
@@ -1738,6 +1779,7 @@
 				DD21EC4C222789C00078E625 /* YUCircleTextView.m in Sources */,
 				DDEDB82E222D5497003F648E /* YUNotificationViewController.m in Sources */,
 				DD4F0CA422280C22003467CB /* API_POST_User_Reset.m in Sources */,
+				DD7085E9222F99E7006482FB /* TPCurrencyRatio.m in Sources */,
 				DD4F0CF722296087003467CB /* AssetTokenItemModel.m in Sources */,
 				DD7085C6222E4193006482FB /* API_PUT_User_Password.m in Sources */,
 				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
@@ -1765,6 +1807,7 @@
 				DD21EC2F2226BC970078E625 /* YUINavigationControllerViewController.m in Sources */,
 				DDEDB819222D2BA7003F648E /* YULanguageItemCellEntity.m in Sources */,
 				DD4F0CE922295C8F003467CB /* YUAddNewTokenController.m in Sources */,
+				DD7085E8222F99E7006482FB /* TPCurrencyList.m in Sources */,
 				DD4F0CD622292192003467CB /* YUAssetHeaderInfoCellEntity.m in Sources */,
 				DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */,
 				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
@@ -1800,14 +1843,17 @@
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
 				DDEDB80F222D2922003F648E /* YULanguageViewController.m in Sources */,
 				DD54BC22222CD3F80009E383 /* YUBlankCellEntity.m in Sources */,
+				DD7085DA222F7938006482FB /* NSString+Pinyin.m in Sources */,
 				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
 				DD4F0C7F2227D6A6003467CB /* API_POST_User_Login.m in Sources */,
 				DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */,
 				DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
+				DD7085E7222F99E7006482FB /* TPExchangeRate.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
 				DD4F0CB12228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m in Sources */,
 				DD7085C9222E43A4006482FB /* API_PUT_User_TransactionPassword.m in Sources */,
+				DD7085DF222F98B1006482FB /* YUCurrencyManager.m in Sources */,
 				DDEDB838222E12E7003F648E /* YUNotificationItemEntity.m in Sources */,
 				DD54BC15222CD1A00009E383 /* YUMineConfirmCell.m in Sources */,
 				DD54BBF4222A873B0009E383 /* YUAddNewTokenItemCell.m in Sources */,

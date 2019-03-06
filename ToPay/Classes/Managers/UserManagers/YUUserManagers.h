@@ -14,15 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (instancetype) shareInstance;
-
+#pragma mark IDCard
 // important!,change userIDCard ,contain email ,userid ,token ,refreshtoken
 - (void)change_userIDCard_inDisk:(UserIDCardModel *)model;
 // get userIDCard
 - (UserIDCardModel *)userIDCard_inDisk;
 
 // logout ,clear userinfo
+#pragma mark action
 - (void)logout;
 
+#pragma mark judge
 - (BOOL)isLogined;
 
 + (NSString *)getUUID;

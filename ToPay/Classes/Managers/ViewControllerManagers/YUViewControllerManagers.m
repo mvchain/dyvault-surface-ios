@@ -30,7 +30,14 @@ static YUViewControllerManagers* _instance = nil;
     }) ;
     return _instance ;
 }
-
++ (id)allocWithZone:(struct _NSZone *)zone
+{
+    return [YUViewControllerManagers shareInstance] ;
+}
+- (id)copyWithZone:(struct _NSZone *)zone
+{
+    return [YUViewControllerManagers shareInstance] ;
+}
 - (void)clearUserInfo_AndExit {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     [[YUUserManagers shareInstance] logout];

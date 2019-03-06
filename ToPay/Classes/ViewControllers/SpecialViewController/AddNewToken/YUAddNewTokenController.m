@@ -13,12 +13,13 @@
 #import "YUSearchBarView.h"
 #import "AssetTokenItemModel.h"
 #import "API_PUT_Asset.h"
-
+#import "NSString+Pinyin.h"
 @interface YUAddNewTokenController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *servListView;
 @property (strong,nonatomic) YUSearchBarView *searchbar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
 @property (assign,nonatomic) BOOL isSearchState;
+
 @end
 
 @implementation YUAddNewTokenController
@@ -48,7 +49,7 @@
 }
 - (void)configServerListView {
     yudef_weakSelf;
-    
+    self.servListView.isUsingMJRefresh = NO;
     self.servListView.firstPageBlock = ^(block_complete  _Nonnull complete)
     {
         API_GET_Token *GET_Token = [[API_GET_Token alloc] init];
@@ -92,11 +93,11 @@
     yudef_weakSelf
     self.normalNavbar.rightButton.onClick = ^(id sender)
     {
-         //[weakSelf reBackUpSearchResult] ; // 重置搜索
         UIImageView *rightImageView = (UIImageView *) weakSelf.normalNavbar.rightButton.midView;
          YUSearchBarView * search  = weakSelf.searchbar;
          if( !weakSelf.isSearchState ) {
              //当前非搜索状态，点击后变成搜索状态
+             [weakSelf.servListView entoSearchingStatus];
              [rightImageView setImage:UIImageMake(@"cancel")];
              [weakSelf.normalNavbar addSubview:search];
              search.searchTextfield.text = @"";
@@ -111,15 +112,51 @@
              }];
          }else{
              // 当前搜索状态，点击后变非搜索状态
-             [search.searchTextfield resignFirstResponder];
+             [weakSelf.servListView exitSearchingStatus];
+             if (!(sender == weakSelf.searchbar)) {
+                 // not searchbar
+                 [search.searchTextfield resignFirstResponder];
+             }
              [search fadeOut:^{
                  [rightImageView setImage:UIImageMake(@"search")];
                  [weakSelf.searchbar removeFromSuperview];
              }];
          }
-         weakSelf.isSearchState = !weakSelf.isSearchState; // 切换状态
-         //[weakSelf.baseTableView reloadData];
+         weakSelf.isSearchState = !weakSelf.isSearchState; // 切换状
      };
+}
+
+- (void)setSearchBarTextChangeEvent {
+    __weak typeof (self) wsf = self;
+    self.searchbar.onTextChange = ^(NSString *text) {
+        [wsf.servListView searchUsingKeyWord:text matchBlock:^BOOL(id  _Nonnull obj)
+         {
+             YUAddNewTokenItemCellEntity *entity = (YUAddNewTokenItemCellEntity *)obj;
+             AddNewTokenItemModel *item = (AddNewTokenItemModel*)entity.data;
+             NSString *key =  [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+             key = [key uppercaseString];
+             key = [key stringByReplacingOccurrencesOfString:@" " withString:@""]; // remove space
+             if( [key isEqualToString:@""] ) return YES;
+             if( [item.tokenName containsString:key] ) {
+                 return YES;
+             }
+             if( [item.tokenCnName containsString:key] ) {
+                 return YES;
+             }
+             if( [item.tokenEnName containsString:key] ) {
+                 return YES;
+             }
+             NSString *tkpinyin = [[item.tokenCnName transformToPinyin] uppercaseString];
+             tkpinyin = [tkpinyin stringByReplacingOccurrencesOfString:@" " withString:@""];
+             if( [tkpinyin  containsString:key] ) {
+                 return YES;
+             }
+             return NO;
+         }];
+    };
+    self.searchbar.onTextDidEndEditing = ^(id sender) {
+        wsf.normalNavbar.rightButton.onClick(wsf.searchbar);// end editing , end searching ...
+    };
 }
 
 - (void)setListViewEvent {
@@ -142,47 +179,35 @@
         PUT_Asset.onEndConnection = ^{
             [QMUITips hideAllTips];
         };
-        [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
-                               removeTokenIdArr:removeTokenIdArr];
+        if (item.isAdd) {
+            [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
+                                   removeTokenIdArr:removeTokenIdArr];
+            
+        }else {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
+                                                                                     message:TPString(@"确定移除%@?",tokenModel.tokenName)
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+                                          
+            {
+                [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
+                                       removeTokenIdArr:removeTokenIdArr];
+            }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:nil];
+            
+            [alertController addAction:cancelAction];
+            [alertController addAction:resetAction];
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
         
+        }
     };
-    
 }
 
-- (void)setSearchBarTextChangeEvent {
-    __weak typeof (self) wsf = self;
-//    self.searchbar.onTextChange = ^(NSString *text) {
-//        [wsf reBackUpSearchResult];
-//        NSPredicate *pre = [NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
-//            CLData *data = (CLData *)evaluatedObject;
-//            NSString *key =  [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-//            key = [key uppercaseString];
-//            key = [key stringByReplacingOccurrencesOfString:@" " withString:@""]; // remove space
-//            if( [key isEqualToString:@""] ) return YES;
-//            if( [data.tokenName containsString:key] ) {
-//                return YES;
-//            }
-//            if( [data.tokenCnName containsString:key] ) {
-//                return YES;
-//            }
-//            if( [data.tokenEnName containsString:key] ) {
-//                return YES;
-//            }
-//            NSString *tkpinyin = [[data.tokenCnName transformToPinyin] uppercaseString];
-//            tkpinyin = [tkpinyin stringByReplacingOccurrencesOfString:@" " withString:@""];
-//            if( [tkpinyin  containsString:key] ) {
-//                return YES;
-//            }
-//            return  NO;
-//
-//        }];
-//        [wsf.searchResult filterUsingPredicate:pre];
-//        [wsf.baseTableView reloadData];
-//    };
-//    self.searchbar.onTextDidEndEditing = ^(id sender) {
-//        wsf.customNavBar.onClickRightButton(); // end editing , end searching ...
-//    };
-}
+
 #pragma mark lazy load
 - (YUSearchBarView *)searchbar {
     if( !_searchbar ) {

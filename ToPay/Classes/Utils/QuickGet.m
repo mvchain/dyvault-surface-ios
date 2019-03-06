@@ -48,4 +48,11 @@
     int res_int =  (int)(num * sum);
     return res_int / (CGFloat)sum;
 }
+
++ (NSString *)getUUID {
+    CFUUIDRef puuid = CFUUIDCreate( nil );
+    CFStringRef uuidString = CFUUIDCreateString(nil, puuid);
+    NSString *result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
+    return [result stringByReplacingOccurrencesOfString:@"-" withString:@""];
+}
 @end
