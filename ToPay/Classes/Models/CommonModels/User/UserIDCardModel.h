@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSString * refreshToken;
 @property (nonatomic, strong) NSString * token;
 @property (nonatomic, assign) NSInteger userId;
-
+@property (nonatomic, strong) NSString * salt;
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 -(NSDictionary *)toDictionary;

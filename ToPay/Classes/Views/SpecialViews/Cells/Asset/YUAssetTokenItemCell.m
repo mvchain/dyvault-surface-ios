@@ -23,8 +23,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.iconImageView yu_circleStyle];
-    
-    // Initialization code
+
 }
 
 - (void)setEntity:(YUCellEntity *)entity {
@@ -32,8 +31,11 @@
     AssetTokenItemModel *itemModel = (AssetTokenItemModel*)entity.data;
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:itemModel.tokenImage]];
     [self.tokenLabel setText:itemModel.tokenName];
-   
     [self.tokenCurrencyLabel setText:TPString(@"%.4f", yufloat_token(itemModel.value))];
+    NSString *moneyFlag = [[YUCurrencyManager shareInstance] nowLegalCurrencyFlag];
+    CGFloat nowLawCurrencyRatio = [[YUCurrencyManager shareInstance] nowLegalCurrencyRatio];
+    CGFloat lawCureencyValue = yufloat_lawCurrency(itemModel.value * itemModel.ratio / nowLawCurrencyRatio);
+    self.lawCurrencyLabel.text = TPString(@"%@ %.2f",moneyFlag,lawCureencyValue );
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

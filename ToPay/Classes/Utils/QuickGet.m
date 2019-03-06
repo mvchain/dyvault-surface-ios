@@ -9,14 +9,12 @@
 #import "QuickGet.h"
 #import <CommonCrypto/CommonDigest.h>
 @implementation QuickGet
-+ (NSString *)encryptPwd:(NSString *)pwd email:(NSString *)m_email  {
-    //Md5(“邮箱” + Md5(“密码/交易密码”))
-//    NSString *email =   m_email?m_email:TPLoginUtil.userInfo.email;
-    NSString *email = m_email;
++ (NSString *) encryptPwd:(NSString *)pwd salt:(NSString *)m_salt {
+
+    NSString *salt = m_salt;
     NSString *inMd5 = [self md5:pwd];
-    NSString *finalMd5 = [[self md5:TPString(@"%@%@",email,[inMd5 uppercaseString])] uppercaseString];
+    NSString *finalMd5 = [[self md5:TPString(@"%@%@",salt,[inMd5 uppercaseString])] uppercaseString];
     return finalMd5;
-    
 }
 
 + (NSString *) md5:(NSString *) input {

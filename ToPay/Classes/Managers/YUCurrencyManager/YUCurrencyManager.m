@@ -7,6 +7,9 @@
 //
 
 #import "YUCurrencyManager.h"
+#import "API_GET_Token_Base.h"
+#import "API_GET_Token_Exchange_Rate.h"
+#import "TPCurrencyRatio.h"
 
 @implementation YUCurrencyManager
 static YUCurrencyManager* _instance = nil;
@@ -26,95 +29,75 @@ static YUCurrencyManager* _instance = nil;
 {
     return [YUCurrencyManager shareInstance] ;
 }
+#pragma mark - <public method>
 
-+(void)setRequestToken
-{
-    [[WYNetworkManager sharedManager] sendGetRequest:WYJSONRequestSerializer url:@"token" success:^(id responseObject, BOOL isCacheObject)
-     {
-         TPCurrencyList *currencyList = [TPCurrencyList mj_objectWithKeyValues:responseObject];
-         
-         YYCache *listCache = [YYCache cacheWithName:TPCacheName];
-         
-         [listCache setObject:currencyList forKey:TPCurrencyListKey];
-         for (int i = 0 ; i <currencyList.data.count ; i++)
-         {
-             CLData *clData = currencyList.data[i];
-             
-             [listCache setObject:clData forKey:currencyList.data[i].tokenId];
-         }
-     }
-                                             failure:^(NSURLSessionTask *task, NSError *error, NSInteger statusCode)
-     {
-         NSLog(@"请求币种列表失败：error = %@", error);
-     }];
+- (NSArray <TPExchangeRate *>*)legalCurrencyListArrays {
+    YYCache *listCache = [YYCache cacheWithName:TPCacheName];
+    NSArray <TPExchangeRate *>*listArr = (NSArray<TPExchangeRate *> *)[listCache objectForKey:TPLegalCurrencyListKey];
+    return listArr;
+}
+- (void)setNowLegalCurrency:(TPExchangeRate *)ratioM {
+    [USER_DEFAULT setObject:ratioM.value forKey:TPNowLegalCurrencyKey];
+    [USER_DEFAULT setObject:[ratioM.name substringToIndex:1] forKey:TPNowLegalSymbolKey];
+    [USER_DEFAULT setObject:ratioM.name forKey:TPNowLegalNameKey];
+    [TPNotificationCenter postNotificationName:TPLegalSwitchNotification object:nil];
+}
+- (NSString *)nowLegalCurrencyName {
+    return [USER_DEFAULT objectForKey:TPNowLegalNameKey];
+    
+}
+- (CGFloat)nowLegalCurrencyRatio {
+    return [[USER_DEFAULT objectForKey:TPNowLegalCurrencyKey] doubleValue];
+}
+- (NSString *)nowLegalCurrencyFlag {
+     return [USER_DEFAULT objectForKey:TPNowLegalSymbolKey];
+}
+/* dont use */
+- (void)updateRequestTokenBase:(void(^)(BOOL isSucc))complete {
+    API_GET_Token_Base *GET_Token_Base = [[API_GET_Token_Base alloc] init];
+    GET_Token_Base.onSuccess = ^(id responseData) {
+        NSDictionary *data = (NSDictionary *)responseData;
+        NSArray<TPCurrencyRatio *> *currencyRatios = [TPCurrencyRatio mj_objectArrayWithKeyValuesArray:data];
+        YYCache *listCache = [YYCache cacheWithName:TPCacheName];
+        [listCache setObject:currencyRatios forKey:TPCurrencyRatioKey];
+        complete(YES);
+    };
+    GET_Token_Base.onError = ^(NSString *reason, NSInteger code) {
+        complete(NO);
+    };
+    GET_Token_Base.onEndConnection = ^{
+        
+    };
+    [GET_Token_Base sendRequest];
 }
 
-+(void)setRequestTokenBase
-{
-    [[WYNetworkManager sharedManager] sendGetRequest:WYJSONRequestSerializer url:@"token/base" success:^(id responseObject, BOOL isCacheObject)
-     {
-         NSLog(@"responseObject = %@", responseObject);
-         
-         NSArray<TPCurrencyRatio *> *currencyRatio = [TPCurrencyRatio mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-         
-         YYCache *listCache = [YYCache cacheWithName:TPCacheName];
-         [listCache setObject:currencyRatio forKey:TPCurrencyRatioKey];
-     }
-                                             failure:^(NSURLSessionTask *task, NSError *error, NSInteger statusCode)
-     {
-         NSLog(@"error = %@", error);
-     }];
-}
-
-+(void)setRequestInfo
-{
-    [[WYNetworkManager sharedManager] sendGetRequest:WYJSONRequestSerializer url:@"user/info" success:^(id responseObject, BOOL isCacheObject)
-     {
-         NSLog(@"data:%@",responseObject[@"data"]);
-         TPUserInfo *TPInfo = [TPUserInfo mj_objectWithKeyValues:responseObject[@"data"]];
-         
-         YYCache *listCache = [YYCache cacheWithName:TPCacheName];
-         [listCache setObject:TPInfo forKey:TPUserInfoKey];
-     }
-                                             failure:^(NSURLSessionTask *task, NSError *error, NSInteger statusCode)
-     {
-         NSLog(@"获取用户信息失败：error = %@", error);
-     }];
-}
-
-+(void)requestExchangeRate
-{
-    [[WYNetworkManager  sharedManager] sendGetRequest:WYJSONRequestSerializer url:@"token/exchange/rate" success:^(id responseObject, BOOL isCacheObject)
-     {
-         if ([responseObject[@"code"] isEqual:@200])
-         {
-             NSDictionary *dic = responseObject[@"data"];
-             
-             NSLog(@"%@",responseObject[@"data"]);
-             NSArray<TPExchangeRate *> *exchanges = [TPExchangeRate mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-             NSLog(@"%@",responseObject[@"data"]);
-             
-             YYCache *listCache = [YYCache cacheWithName:TPCacheName];
-             [listCache setObject:exchanges forKey:TPLegalCurrencyListKey];
-             
-             for (int i = 0 ; i <exchanges.count ; i++)
-             {
-                 TPExchangeRate *exRate = exchanges[i];
-                 [listCache setObject:exRate.value forKey:exRate.name];
-             }
-             *ratioM = exchanges[0];TPExchangeRate
-             [USER_DEFAULT setObject:ratioM.value forKey:TPNowLegalCurrencyKey];
-             [USER_DEFAULT setObject:[ratioM.name substringToIndex:1] forKey:TPNowLegalSymbolKey];
-             [USER_DEFAULT setObject:ratioM.name forKey:TPNowLegalNameKey];
-             
-             [TPNotificationCenter postNotificationName:TPLegalSwitchNotification object:nil];
-             
-         }
-     }
-                                              failure:^(NSURLSessionTask *task, NSError *error, NSInteger statusCode)
-     {
-         NSLog(@"获取法币汇率失败 %@",error);
-     }];
+/* law currency  */
+- (void)updateExchangeRate:(void(^)(BOOL isSucc))complete {
+    API_GET_Token_Exchange_Rate *GET_Token_Exchange_Rate = [[API_GET_Token_Exchange_Rate alloc] init];
+    GET_Token_Exchange_Rate.onSuccess = ^(id responseData) {
+        NSDictionary *data = (NSDictionary *)responseData;
+        NSArray<TPExchangeRate *> *exchanges = [TPExchangeRate mj_objectArrayWithKeyValuesArray:data];
+        YYCache *listCache = [YYCache cacheWithName:TPCacheName];
+        [listCache setObject:exchanges forKey:TPLegalCurrencyListKey];
+        for (int i = 0 ; i <exchanges.count ; i++)
+        {
+            TPExchangeRate *exRate = exchanges[i];
+            [listCache setObject:exRate.value forKey:exRate.name];
+        }
+        TPExchangeRate *firstRatioM = exchanges[0];
+        [USER_DEFAULT setObject:firstRatioM.value forKey:TPNowLegalCurrencyKey];
+        [USER_DEFAULT setObject:[firstRatioM.name substringToIndex:1] forKey:TPNowLegalSymbolKey];
+        [USER_DEFAULT setObject:firstRatioM.name forKey:TPNowLegalNameKey];
+        [TPNotificationCenter postNotificationName:TPLegalSwitchNotification object:nil];
+        complete(YES);
+    };
+    GET_Token_Exchange_Rate.onError = ^(NSString *reason, NSInteger code) {
+        complete(NO);
+    };
+    GET_Token_Exchange_Rate.onEndConnection = ^{
+        
+    };
+    [GET_Token_Exchange_Rate sendRequest];
 }
 
 @end

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QuickGet : NSObject
-+ (NSString *) encryptPwd:(NSString *)pwd email:(NSString *)m_email;
++ (NSString *) encryptPwd:(NSString *)pwd salt:(NSString *)m_salt;
 + (NSString *) md5:(NSString *) input;
 + (NSString *) getBundleIdStr;
 + (NSString *) getCurBuildVersion;

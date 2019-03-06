@@ -52,8 +52,12 @@
         UserIDCardModel *userIDCard = [[UserIDCardModel alloc]initWithDictionary:data];
         [[YUUserManagers shareInstance] change_userIDCard_inDisk:userIDCard];
         UIViewController *tabVc = [[YUViewControllerManagers shareInstance] getNewMainTabViewController ];
-        [self.navigationController pushViewController:tabVc animated:YES];
-        [QMUITips showSucceed:@"注册成功"];
+        
+        [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
+            [QMUITips showSucceed:@"注册成功"];
+            [self.navigationController pushViewController:tabVc animated:YES];
+        }];
+        
     };
     POST_Register.onError = ^(NSString *reason, NSInteger code) {
         [QMUITips showError:reason];
@@ -67,6 +71,7 @@
                              inviteCode:@""
                                nickname:self.regRequestDataModel.nickname
                                password:self.regRequestDataModel.password
+                                   salt:[QuickGet getUUID]
                                   token:self.regRequestDataModel.token
                     transactionPassword:self.regRequestDataModel.transactionPassword];
 }

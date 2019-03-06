@@ -8,8 +8,11 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#define TPString(FORMAT, ...) [NSString stringWithFormat:FORMAT,##__VA_ARGS__]
 
+#define TPString(FORMAT, ...) [NSString stringWithFormat:FORMAT,##__VA_ARGS__]
+//USER-DEFAULT
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+#define TPNotificationCenter [NSNotificationCenter defaultCenter]
 // property
 #define yudef_property_strong(type,name) @property (strong ,nonatomic) type* name;
 #define yudef_property_copy(type,name) @property (copy ,nonatomic) type* name;
@@ -43,4 +46,9 @@
 #import "YUErrorCellEntity.h"
 #import "YUBlankCellEntity.h"
 #import "YULanguageManagers.h"
+#import "MJExtension.h"
+#import "KeyFile.h"
+#import "YUCurrencyManager.h"
+#import "TPExchangeRate.h"
+#import "TPUserInfo.h"
 #endif

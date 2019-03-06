@@ -13,6 +13,7 @@
                   inviteCode:(NSString *)inviteCode
                     nickname:(NSString *)nickname
                     password:(NSString *)password
+                        salt:(NSString *)salt
                        token:(NSString *)token
          transactionPassword:(NSString *)transactionPassword {
     self.apiPath = @"/user/register";
@@ -20,8 +21,9 @@
     self.requestDict[@"inviteCode"] = inviteCode;
     self.requestDict[@"nickname"] = nickname;
     self.requestDict[@"token"] = token;
-    self.requestDict[@"password"] = [QuickGet encryptPwd:password email:email];
-    self.requestDict[@"transactionPassword"] = [QuickGet encryptPwd:transactionPassword email:email];;
+    self.requestDict[@"salt"] = salt;
+    self.requestDict[@"password"] = [QuickGet encryptPwd:password salt:salt];
+    self.requestDict[@"transactionPassword"] = [QuickGet encryptPwd:transactionPassword salt:salt];
     [self connectWithRquestMethod:HTTPMethodPOST];
 }
 @end

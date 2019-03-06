@@ -19,15 +19,23 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atlt_bottom;
 @property (strong,nonatomic) NSMutableArray <AssetTokenItemModel *> *assetItems;
+@property (strong,nonatomic) NSArray <TPExchangeRate *>* exchangeRates;
 @property (assign,nonatomic) BOOL isFirstDisplayThisVC;
 
 @end
 @implementation YUAssetViewController
 #pragma mark - <life cycle>
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.exchangeRates = [YUCurrencyManager shareInstance].legalCurrencyListArrays;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.isFirstDisplayThisVC = YES;
-    // Do any additional setup after loading the view from its nib.
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -42,10 +50,12 @@
 #pragma mark - <public method>
 - (void)initSubviews {
     [super initSubviews];
+    
     [self setNav];
     [self setNavEvent];
     [self configServListView];
     self.atly_top.constant = self.normalNavbar.qmui_bottom;
+    [self setListViewEvent];
 }
 - (void)setNav {
     [self addNormalNavBar:@"ToPay"];
@@ -85,7 +95,27 @@
     };
     [self.servListView beginRefreshHeader];
 }
-
+- (void)showCurrencySelectionDialogViewController {
+    QMUIDialogSelectionViewController *dialogViewController = [[QMUIDialogSelectionViewController alloc] init];
+    dialogViewController.title = @"更改货币";
+    NSMutableArray *currencysTitles = [[NSMutableArray alloc] init];
+    for (TPExchangeRate *exchangeRate in self.exchangeRates) {
+        [currencysTitles addObject:exchangeRate.name];
+    }
+    dialogViewController.items = currencysTitles;
+    dialogViewController.cellForItemBlock = ^(QMUIDialogSelectionViewController *aDialogViewController, QMUITableViewCell *cell, NSUInteger itemIndex) {
+        cell.accessoryType = UITableViewCellAccessoryNone;// 移除点击时默认加上右边的checkbox
+    };
+    dialogViewController.heightForItemBlock = ^CGFloat (QMUIDialogSelectionViewController *aDialogViewController, NSUInteger itemIndex) {
+        return 54;
+    };
+    dialogViewController.didSelectItemBlock = ^(QMUIDialogSelectionViewController *aDialogViewController, NSUInteger itemIndex) {
+        [aDialogViewController hide];
+        [[YUCurrencyManager shareInstance] setNowLegalCurrency:self.exchangeRates[itemIndex]];
+        [self.servListView reloadData];
+    };
+    [dialogViewController show];
+}
 #pragma mark - <event response>
 - (void)setNavEvent {
     yudef_weakSelf;
@@ -101,4 +131,18 @@
         [weakSelf.navigationController pushViewController:noti animated:YES];
     };
 }
+- (void)setListViewEvent {
+    yudef_weakSelf
+    self.servListView.yu_eventProduceByInnerCellView = ^(NSString * _Nonnull idf, id  _Nonnull content, id  _Nonnull sender)
+    {
+        if ([idf isEqualToString:EVENT_ChangeLegalCurrency]) {
+            [weakSelf showCurrencySelectionDialogViewController];
+            return ;
+        }
+        if ([idf isEqualToString:EVENT_BuyCurrency]) {
+            return ;
+        }
+    };
+}
+
 @end

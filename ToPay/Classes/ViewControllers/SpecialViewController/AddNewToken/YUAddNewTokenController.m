@@ -163,7 +163,7 @@
     yudef_weakSelf;
     self.servListView.yu_eventProduceByInnerCellView = ^(NSString * _Nonnull idf, id  _Nonnull content, id  _Nonnull sender)
     {
-        [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];
+        
         YUAddNewTokenItemCellEntity *item = (YUAddNewTokenItemCellEntity *)content;
         AddNewTokenItemModel *tokenModel = (AddNewTokenItemModel*)item.data;
         API_PUT_Asset *PUT_Asset = [[API_PUT_Asset alloc] init];
@@ -180,6 +180,7 @@
             [QMUITips hideAllTips];
         };
         if (item.isAdd) {
+            [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];
             [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
                                    removeTokenIdArr:removeTokenIdArr];
             
@@ -190,6 +191,7 @@
             UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
                                           
             {
+                [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];
                 [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
                                        removeTokenIdArr:removeTokenIdArr];
             }];

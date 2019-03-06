@@ -78,8 +78,12 @@
         UserIDCardModel *userIDCard = [[UserIDCardModel alloc]initWithDictionary:data];
         [[YUUserManagers shareInstance] change_userIDCard_inDisk:userIDCard];
         UIViewController *tab =  [[YUViewControllerManagers shareInstance] getNewMainTabViewController]; // switch to main tab ..
-        [self.navigationController pushViewController:tab animated:YES];
-    };
+        [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
+                //fetch exchange
+            [self.navigationController pushViewController:tab animated:YES];
+            
+        }];
+            };
     POST_User_Login.onError = ^(NSString *reason, NSInteger code) {
         [QMUITips showError:reason];
     };

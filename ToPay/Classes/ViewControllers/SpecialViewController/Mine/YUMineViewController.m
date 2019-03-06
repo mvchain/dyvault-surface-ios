@@ -21,7 +21,10 @@
 #pragma mark - <life cycle>
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[YUUserManagers shareInstance] updateUserInfo:^(BOOL isSucc) {
+        [self.userNickNamelabel setText:[YUUserManagers shareInstance].nowUserInfo.nickname];
+        [self.emialLabel setText:[YUUserManagers shareInstance].nowUserInfo.username];
+    }];
 }
 #pragma mark - <public method>
 - (void)initSubviews {
@@ -29,6 +32,7 @@
     [self setUpData];
     [self configPageListView];
     [self configPageListViewEvent];
+   
 }
 #pragma mark - <private method>
 - (void)setUpData {
@@ -87,9 +91,7 @@
     {
             // logout  button tap
         [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
-        
     };
-    
 }
 #pragma mark - <lazy load>
 yudef_lazyLoad(NSMutableArray <YUCellEntity *>, dataArrs, _dataArrs);

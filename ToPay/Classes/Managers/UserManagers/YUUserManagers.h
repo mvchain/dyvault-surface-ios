@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class TPUserInfo;
 
 @interface YUUserManagers : NSObject
 
@@ -26,8 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark judge
 - (BOOL)isLogined;
-
-+ (NSString *)getUUID;
+- (void)updateUserInfo:(void(^)(BOOL isSucc))complete;
+- (TPUserInfo *)nowUserInfo;
 @end
 
 NS_ASSUME_NONNULL_END

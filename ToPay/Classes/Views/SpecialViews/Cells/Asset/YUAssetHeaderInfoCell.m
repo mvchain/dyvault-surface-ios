@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIView *currencyBg;
 @property (weak, nonatomic) IBOutlet UIView *buyCurrencyBg;
 @property (weak, nonatomic) IBOutlet UILabel *currencyLabel;
+@property (weak, nonatomic) IBOutlet UIButton *changeLegalCurrencyButton;
+
+
 @end
 
 @implementation YUAssetHeaderInfoCell
@@ -29,6 +32,29 @@
     [self.bgView yu_smallCircleStyle];
     
 }
+
+- (void)setEntity:(YUCellEntity *)entity {
+    [super setEntity:entity];
+    [self.currencyLabel setText:[YUCurrencyManager shareInstance].nowLegalCurrencyName];
+    
+}
+- (IBAction)changeLegalCurrencyTap:(id)sender {
+    if (self.yu_delegate) {
+        [self.yu_delegate yu_cellMessageNotify:EVENT_ChangeLegalCurrency
+                                       content:nil
+                                        sender:nil];
+        
+    }
+}
+- (IBAction)buyCurrencyTap:(id)sender {
+    if (self.yu_delegate) {
+        [self.yu_delegate yu_cellMessageNotify:EVENT_BuyCurrency
+                                       content:nil
+                                        sender:nil];
+        
+    }
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "YUWelcomeViewController.h"
+#import "API_POST_User_Salt.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +24,7 @@
     self.window.rootViewController = [[YUViewControllerManagers shareInstance] auto_windowsRootViewController];
     [self.window makeKeyAndVisible];
 }
+
 #pragma mark life cycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

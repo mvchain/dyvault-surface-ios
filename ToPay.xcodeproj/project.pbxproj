@@ -123,6 +123,12 @@
 		DD7085E7222F99E7006482FB /* TPExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085E2222F99E4006482FB /* TPExchangeRate.m */; };
 		DD7085E8222F99E7006482FB /* TPCurrencyList.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085E5222F99E5006482FB /* TPCurrencyList.m */; };
 		DD7085E9222F99E7006482FB /* TPCurrencyRatio.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085E6222F99E6006482FB /* TPCurrencyRatio.m */; };
+		DD7085EC222F9CB5006482FB /* API_GET_Token_Base.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085EB222F9CB5006482FB /* API_GET_Token_Base.m */; };
+		DD7085EF222FA1BC006482FB /* API_GET_Token_Exchange_Rate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085EE222FA1BC006482FB /* API_GET_Token_Exchange_Rate.m */; };
+		DD7085F2222FA879006482FB /* TPUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085F0222FA879006482FB /* TPUserInfo.m */; };
+		DD7085F5222FA8BB006482FB /* API_GET_User_Info.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085F4222FA8BB006482FB /* API_GET_User_Info.m */; };
+		DD7085FA222FBD2B006482FB /* API_POST_User_Salt.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085F9222FBD2B006482FB /* API_POST_User_Salt.m */; };
+		DD7085FD222FF8DD006482FB /* API_GET_Assest_Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085FC222FF8DD006482FB /* API_GET_Assest_Balance.m */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -380,6 +386,19 @@
 		DD7085E4222F99E5006482FB /* TPCurrencyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCurrencyList.h; sourceTree = "<group>"; };
 		DD7085E5222F99E5006482FB /* TPCurrencyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrencyList.m; sourceTree = "<group>"; };
 		DD7085E6222F99E6006482FB /* TPCurrencyRatio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrencyRatio.m; sourceTree = "<group>"; };
+		DD7085EA222F9CB5006482FB /* API_GET_Token_Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Token_Base.h; sourceTree = "<group>"; };
+		DD7085EB222F9CB5006482FB /* API_GET_Token_Base.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Token_Base.m; sourceTree = "<group>"; };
+		DD7085ED222FA1BC006482FB /* API_GET_Token_Exchange_Rate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Token_Exchange_Rate.h; sourceTree = "<group>"; };
+		DD7085EE222FA1BC006482FB /* API_GET_Token_Exchange_Rate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Token_Exchange_Rate.m; sourceTree = "<group>"; };
+		DD7085F0222FA879006482FB /* TPUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPUserInfo.m; sourceTree = "<group>"; };
+		DD7085F1222FA879006482FB /* TPUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPUserInfo.h; sourceTree = "<group>"; };
+		DD7085F3222FA8BB006482FB /* API_GET_User_Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_User_Info.h; sourceTree = "<group>"; };
+		DD7085F4222FA8BB006482FB /* API_GET_User_Info.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_User_Info.m; sourceTree = "<group>"; };
+		DD7085F6222FAB9C006482FB /* KeyFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyFile.h; sourceTree = "<group>"; };
+		DD7085F8222FBD2B006482FB /* API_POST_User_Salt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User_Salt.h; sourceTree = "<group>"; };
+		DD7085F9222FBD2B006482FB /* API_POST_User_Salt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_User_Salt.m; sourceTree = "<group>"; };
+		DD7085FB222FF8DD006482FB /* API_GET_Assest_Balance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Assest_Balance.h; sourceTree = "<group>"; };
+		DD7085FC222FF8DD006482FB /* API_GET_Assest_Balance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Assest_Balance.m; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -499,6 +518,7 @@
 				DD21EB84222637160078E625 /* main.m */,
 				DD21EB75222637110078E625 /* AppDelegate.h */,
 				DD21EB76222637110078E625 /* AppDelegate.m */,
+				DD7085F6222FAB9C006482FB /* KeyFile.h */,
 				DD21EBE0222675940078E625 /* PrefixHeader.pch */,
 				DD21EBA722263D550078E625 /* Classes */,
 				DD21EBDE222674BB0078E625 /* APPResoures */,
@@ -1073,6 +1093,8 @@
 		DD4F0C762227C3BD003467CB /* User */ = {
 			isa = PBXGroup;
 			children = (
+				DD7085F1222FA879006482FB /* TPUserInfo.h */,
+				DD7085F0222FA879006482FB /* TPUserInfo.m */,
 				DD4F0C742227C3BB003467CB /* UserIDCardModel.h */,
 				DD4F0C732227C3BA003467CB /* UserIDCardModel.m */,
 			);
@@ -1128,8 +1150,10 @@
 			children = (
 				DD4F0CEA22295E13003467CB /* API_GET_Token.h */,
 				DD4F0CEB22295E13003467CB /* API_GET_Token.m */,
-				DD7085CE222E9651006482FB /* API_PUT_Asset.h */,
-				DD7085CF222E9651006482FB /* API_PUT_Asset.m */,
+				DD7085EA222F9CB5006482FB /* API_GET_Token_Base.h */,
+				DD7085EB222F9CB5006482FB /* API_GET_Token_Base.m */,
+				DD7085ED222FA1BC006482FB /* API_GET_Token_Exchange_Rate.h */,
+				DD7085EE222FA1BC006482FB /* API_GET_Token_Exchange_Rate.m */,
 			);
 			path = TokenRelated;
 			sourceTree = "<group>";
@@ -1148,6 +1172,8 @@
 				DD4F0C932227EB6B003467CB /* API_GET_User_Email_Logout.m */,
 				DDEDB839222E1C89003F648E /* API_GET_User_Email.h */,
 				DDEDB83A222E1C89003F648E /* API_GET_User_Email.m */,
+				DD7085F3222FA8BB006482FB /* API_GET_User_Info.h */,
+				DD7085F4222FA8BB006482FB /* API_GET_User_Info.m */,
 				DD4F0C8F2227E7AE003467CB /* API_GET_User_Valid.h */,
 				DD4F0C902227E7AE003467CB /* API_GET_User_Valid.m */,
 				DD4F0C612227B3C3003467CB /* API_POST_Register.h */,
@@ -1158,16 +1184,18 @@
 				DD4F0C7E2227D6A6003467CB /* API_POST_User_Login.m */,
 				DD4F0CA222280C22003467CB /* API_POST_User_Reset.h */,
 				DD4F0CA322280C22003467CB /* API_POST_User_Reset.m */,
+				DD7085F8222FBD2B006482FB /* API_POST_User_Salt.h */,
+				DD7085F9222FBD2B006482FB /* API_POST_User_Salt.m */,
 				DD21EC4D222797910078E625 /* API_POST_User.h */,
 				DD21EC4E222797910078E625 /* API_POST_User.m */,
+				DD7085CB222E724D006482FB /* API_PUT_User_Email.h */,
+				DD7085CC222E724D006482FB /* API_PUT_User_Email.m */,
 				DD4F0CA5222810DC003467CB /* API_PUT_User_Forget.h */,
 				DD4F0CA6222810DC003467CB /* API_PUT_User_Forget.m */,
 				DD7085C4222E4193006482FB /* API_PUT_User_Password.h */,
 				DD7085C5222E4193006482FB /* API_PUT_User_Password.m */,
 				DD7085C7222E43A4006482FB /* API_PUT_User_TransactionPassword.h */,
 				DD7085C8222E43A4006482FB /* API_PUT_User_TransactionPassword.m */,
-				DD7085CB222E724D006482FB /* API_PUT_User_Email.h */,
-				DD7085CC222E724D006482FB /* API_PUT_User_Email.m */,
 			);
 			path = UserRelated;
 			sourceTree = "<group>";
@@ -1175,8 +1203,12 @@
 		DD4F0C9A2227EE12003467CB /* AssetRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DD7085CE222E9651006482FB /* API_PUT_Asset.h */,
+				DD7085CF222E9651006482FB /* API_PUT_Asset.m */,
 				DD4F0CD722293B1D003467CB /* API_GET_Asset.h */,
 				DD4F0CD822293B1D003467CB /* API_GET_Asset.m */,
+				DD7085FB222FF8DD006482FB /* API_GET_Assest_Balance.h */,
+				DD7085FC222FF8DD006482FB /* API_GET_Assest_Balance.m */,
 			);
 			path = AssetRelated;
 			sourceTree = "<group>";
@@ -1774,6 +1806,7 @@
 				DD54BC1E222CD3DF0009E383 /* YUBlankCell.m in Sources */,
 				DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */,
 				DD4F0C7B2227C9DA003467CB /* YULoginViewController.m in Sources */,
+				DD7085F5222FA8BB006482FB /* API_GET_User_Info.m in Sources */,
 				DD21EC2C2226BC970078E625 /* YUDIVView.m in Sources */,
 				DDEDB83B222E1C89003F648E /* API_GET_User_Email.m in Sources */,
 				DD21EC4C222789C00078E625 /* YUCircleTextView.m in Sources */,
@@ -1786,7 +1819,10 @@
 				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
 				DD4F0CD922293B1D003467CB /* API_GET_Asset.m in Sources */,
 				DD54BC0D222CC9390009E383 /* YUMineItemCell.m in Sources */,
+				DD7085F2222FA879006482FB /* TPUserInfo.m in Sources */,
+				DD7085FD222FF8DD006482FB /* API_GET_Assest_Balance.m in Sources */,
 				DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */,
+				DD7085FA222FBD2B006482FB /* API_POST_User_Salt.m in Sources */,
 				DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */,
 				DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */,
 				DDEDB84D222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m in Sources */,
@@ -1840,6 +1876,7 @@
 				DDEDB845222E25F3003F648E /* TPChangePassWordViewController.m in Sources */,
 				DD4F0CA7222810DC003467CB /* API_PUT_User_Forget.m in Sources */,
 				DD21EB77222637110078E625 /* AppDelegate.m in Sources */,
+				DD7085EF222FA1BC006482FB /* API_GET_Token_Exchange_Rate.m in Sources */,
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
 				DDEDB80F222D2922003F648E /* YULanguageViewController.m in Sources */,
 				DD54BC22222CD3F80009E383 /* YUBlankCellEntity.m in Sources */,
@@ -1850,6 +1887,7 @@
 				DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
 				DD7085E7222F99E7006482FB /* TPExchangeRate.m in Sources */,
+				DD7085EC222F9CB5006482FB /* API_GET_Token_Base.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
 				DD4F0CB12228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m in Sources */,
 				DD7085C9222E43A4006482FB /* API_PUT_User_TransactionPassword.m in Sources */,

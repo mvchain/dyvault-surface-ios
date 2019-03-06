@@ -35,8 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)sendRequestWithEmail:(NSString *)email
                   inviteCode:(NSString *)inviteCode
-                    nickname:(NSString*)nickname
-                    password:(NSString*)password
+                    nickname:(NSString *)nickname
+                    password:(NSString *)password
+                        salt:(NSString *)salt
                        token:(NSString *)token
          transactionPassword:(NSString *)transactionPassword;
 

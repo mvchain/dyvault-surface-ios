@@ -7,8 +7,9 @@
 //
 
 #import "YUUserManagers.h"
-#define UserInfoCacheKey @"UserCacheKey"
-#define UserInfoCacheKey_IDCard @"UserCacheKey_IDCard"
+#import "API_GET_User_Info.h"
+#import "TPUserInfo.h"
+
 @implementation YUUserManagers
 static YUUserManagers* _instance = nil;
 
@@ -44,6 +45,27 @@ static YUUserManagers* _instance = nil;
 - (BOOL)isLogined {
     return self.userIDCard_inDisk?YES:NO;
 }
+- (void)updateUserInfo:(void(^)(BOOL isSucc))complete {
+    API_GET_User_Info *GET_User_Info = [[API_GET_User_Info alloc] init];
+    GET_User_Info.onSuccess = ^(id responseData) {
+        NSDictionary *data = (NSDictionary *)responseData;
+        TPUserInfo *TPInfo = [TPUserInfo mj_objectWithKeyValues:data];
+        YYCache *listCache = [YYCache cacheWithName:TPCacheName];
+        [listCache setObject:TPInfo forKey:TPUserInfoKey];
+        complete(YES);
+    };
+    GET_User_Info.onError = ^(NSString *reason, NSInteger code) {
+        complete(NO);
+    };
+    GET_User_Info.onEndConnection = ^{
+        complete(NO);
+    };
+    [GET_User_Info sendRequest];
+}
 
-
+- (TPUserInfo *)nowUserInfo {
+    YYCache *listCache = [YYCache cacheWithName:TPCacheName];
+    TPUserInfo *info = (TPUserInfo *)[listCache objectForKey:TPUserInfoKey];
+    return info;
+}
 @end

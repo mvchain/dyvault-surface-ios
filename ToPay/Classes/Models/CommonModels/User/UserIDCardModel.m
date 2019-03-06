@@ -1,9 +1,9 @@
 //
-//	UserIDCardModel.m
+//    UserIDCardModel.m
 //
-//	Create by 蒲公英 on 28/2/2019
-//	Copyright © 2019. All rights reserved.
-//	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+//    Create by 蒲公英 on 6/3/2019
+//    Copyright © 2019. All rights reserved.
+//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 
 
@@ -11,6 +11,7 @@
 
 NSString *const kUserIDCardModelEmail = @"email";
 NSString *const kUserIDCardModelRefreshToken = @"refreshToken";
+NSString *const kUserIDCardModelSalt = @"salt";
 NSString *const kUserIDCardModelToken = @"token";
 NSString *const kUserIDCardModelUserId = @"userId";
 
@@ -19,29 +20,30 @@ NSString *const kUserIDCardModelUserId = @"userId";
 @implementation UserIDCardModel
 
 
-
-
 /**
  * Instantiate the instance using the passed dictionary values to set the properties values
  */
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-	self = [super init];
-	if(![dictionary[kUserIDCardModelEmail] isKindOfClass:[NSNull class]]){
-		self.email = dictionary[kUserIDCardModelEmail];
-	}	
-	if(![dictionary[kUserIDCardModelRefreshToken] isKindOfClass:[NSNull class]]){
-		self.refreshToken = dictionary[kUserIDCardModelRefreshToken];
-	}	
-	if(![dictionary[kUserIDCardModelToken] isKindOfClass:[NSNull class]]){
-		self.token = dictionary[kUserIDCardModelToken];
-	}	
-	if(![dictionary[kUserIDCardModelUserId] isKindOfClass:[NSNull class]]){
-		self.userId = [dictionary[kUserIDCardModelUserId] integerValue];
-	}
-
-	return self;
+    self = [super init];
+    if(![dictionary[kUserIDCardModelEmail] isKindOfClass:[NSNull class]]){
+        self.email = dictionary[kUserIDCardModelEmail];
+    }
+    if(![dictionary[kUserIDCardModelRefreshToken] isKindOfClass:[NSNull class]]){
+        self.refreshToken = dictionary[kUserIDCardModelRefreshToken];
+    }
+    if(![dictionary[kUserIDCardModelSalt] isKindOfClass:[NSNull class]]){
+        self.salt = dictionary[kUserIDCardModelSalt];
+    }
+    if(![dictionary[kUserIDCardModelToken] isKindOfClass:[NSNull class]]){
+        self.token = dictionary[kUserIDCardModelToken];
+    }
+    if(![dictionary[kUserIDCardModelUserId] isKindOfClass:[NSNull class]]){
+        self.userId = [dictionary[kUserIDCardModelUserId] integerValue];
+    }
+    
+    return self;
 }
 
 
@@ -50,19 +52,22 @@ NSString *const kUserIDCardModelUserId = @"userId";
  */
 -(NSDictionary *)toDictionary
 {
-	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.email != nil){
-		dictionary[kUserIDCardModelEmail] = self.email;
-	}
-	if(self.refreshToken != nil){
-		dictionary[kUserIDCardModelRefreshToken] = self.refreshToken;
-	}
-	if(self.token != nil){
-		dictionary[kUserIDCardModelToken] = self.token;
-	}
-	dictionary[kUserIDCardModelUserId] = @(self.userId);
-	return dictionary;
-
+    NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
+    if(self.email != nil){
+        dictionary[kUserIDCardModelEmail] = self.email;
+    }
+    if(self.refreshToken != nil){
+        dictionary[kUserIDCardModelRefreshToken] = self.refreshToken;
+    }
+    if(self.salt != nil){
+        dictionary[kUserIDCardModelSalt] = self.salt;
+    }
+    if(self.token != nil){
+        dictionary[kUserIDCardModelToken] = self.token;
+    }
+    dictionary[kUserIDCardModelUserId] = @(self.userId);
+    return dictionary;
+    
 }
 
 /**
@@ -73,16 +78,19 @@ NSString *const kUserIDCardModelUserId = @"userId";
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	if(self.email != nil){
-		[aCoder encodeObject:self.email forKey:kUserIDCardModelEmail];
-	}
-	if(self.refreshToken != nil){
-		[aCoder encodeObject:self.refreshToken forKey:kUserIDCardModelRefreshToken];
-	}
-	if(self.token != nil){
-		[aCoder encodeObject:self.token forKey:kUserIDCardModelToken];
-	}
-	[aCoder encodeObject:@(self.userId) forKey:kUserIDCardModelUserId];
+    if(self.email != nil){
+        [aCoder encodeObject:self.email forKey:kUserIDCardModelEmail];
+    }
+    if(self.refreshToken != nil){
+        [aCoder encodeObject:self.refreshToken forKey:kUserIDCardModelRefreshToken];
+    }
+    if(self.salt != nil){
+        [aCoder encodeObject:self.salt forKey:kUserIDCardModelSalt];
+    }
+    if(self.token != nil){
+        [aCoder encodeObject:self.token forKey:kUserIDCardModelToken];
+    }
+    [aCoder encodeObject:@(self.userId) forKey:kUserIDCardModelUserId];
 }
 
 /**
@@ -90,13 +98,13 @@ NSString *const kUserIDCardModelUserId = @"userId";
  */
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-	self = [super init];
-	self.email = [aDecoder decodeObjectForKey:kUserIDCardModelEmail];
-	self.refreshToken = [aDecoder decodeObjectForKey:kUserIDCardModelRefreshToken];
-	self.token = [aDecoder decodeObjectForKey:kUserIDCardModelToken];
-	self.userId = [[aDecoder decodeObjectForKey:kUserIDCardModelUserId] integerValue];
-	return self;
-
+    self = [super init];
+    self.email = [aDecoder decodeObjectForKey:kUserIDCardModelEmail];
+    self.refreshToken = [aDecoder decodeObjectForKey:kUserIDCardModelRefreshToken];
+    self.salt = [aDecoder decodeObjectForKey:kUserIDCardModelSalt];
+    self.token = [aDecoder decodeObjectForKey:kUserIDCardModelToken];
+    self.userId = [[aDecoder decodeObjectForKey:kUserIDCardModelUserId] integerValue];
+    return self;
 }
 
 /**
@@ -104,13 +112,12 @@ NSString *const kUserIDCardModelUserId = @"userId";
  */
 - (instancetype)copyWithZone:(NSZone *)zone
 {
-	UserIDCardModel *copy = [UserIDCardModel new];
-
-	copy.email = [self.email copy];
-	copy.refreshToken = [self.refreshToken copy];
-	copy.token = [self.token copy];
-	copy.userId = self.userId;
-
-	return copy;
+    UserIDCardModel *copy = [UserIDCardModel new];
+    copy.email = [self.email copy];
+    copy.refreshToken = [self.refreshToken copy];
+    copy.salt = [self.salt copy];
+    copy.token = [self.token copy];
+    copy.userId = self.userId;
+    return copy;
 }
 @end
