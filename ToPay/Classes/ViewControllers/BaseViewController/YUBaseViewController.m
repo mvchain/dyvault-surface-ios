@@ -20,7 +20,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
-    NSLog(@"------***----- enter into: \n\n %@  \n\n ----------***-------",NSStringFromClass(self.class));
+    NSLog(@"\n\n------***----- enter into: \n\n %@  \n\n ----------***-------",NSStringFromClass(self.class));
     
 }
 

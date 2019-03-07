@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface API_GET_Assest_Balance : ServModel
-- (void)setRequest;
+@interface API_GET_Asset_Balance : ServModel
+- (void)sendRequest;
 
 @end
 

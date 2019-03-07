@@ -23,6 +23,8 @@
 #define yufloat_cut(num,len) [QuickGet makeFloatNumber:num tailNum:len]
 #define yufloat_token(num) [QuickGet makeFloatNumber:num tailNum:4]
 #define yufloat_lawCurrency(num) [QuickGet makeFloatNumber:num tailNum:2]
+#define PAGE_COMPLETE_ERROR complete(@[[YUErrorCellEntity quickInit:reason]]);
+#define PAGE_LIST_SIZE 10
 #import "UITableView+YUTableView.h"
 #import <BlocksKit.h>
 #import "ServModel.h"

@@ -39,11 +39,11 @@
 }
 
 + (CGFloat)makeFloatNumber:(CGFloat) num tailNum:(int)tailNum {
-    int sum = 10 ;
+    NSInteger sum = 10 ;
     while (--tailNum) {
         sum*=10;
     }
-    int res_int =  (int)(num * sum);
+    NSInteger res_int =  (NSInteger)(num * sum);
     return res_int / (CGFloat)sum;
 }
 
@@ -52,5 +52,84 @@
     CFStringRef uuidString = CFUUIDCreateString(nil, puuid);
     NSString *result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
     return [result stringByReplacingOccurrencesOfString:@"-" withString:@""];
+}
+
++ (NSString *)timeWithTimeIntervalString:( NSInteger)time
+{
+    // 格式化时间
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"shanghai"];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"yyyy年MM月dd日"];
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:time / 1000];
+    NSString* dateString = [formatter stringFromDate:date];
+    return dateString;
+}
+
++ (NSString *)timeWithTimeInterval_allNumberStyleString:( NSInteger)time
+{
+    // 格式化时间
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"shanghai"];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:time / 1000];
+    NSString* dateString = [formatter stringFromDate:date];
+    return dateString;
+}
++ (NSString *)timeWithFormat:(NSString *)formt time:(NSInteger)time  {
+    // 格式化时间
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"shanghai"];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:formt];
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:time / 1000];
+    NSString* dateString = [formatter stringFromDate:date];
+    return dateString;
+}
++ (NSString *)makeCnDayHourMinuteSecWithTimeCuo:(long long )time {
+    
+    long long day = time / ( 24 * 60 * 60 );
+    long long rest_sec = time % ( 24 * 60 * 60 ) ;
+    long long hour = rest_sec / (60 * 60);
+    rest_sec = rest_sec % (60 * 60);
+    long long mintue =  rest_sec / 60;
+    rest_sec = rest_sec % 60 ;
+    NSString *res ;
+    if( day > 0 ) {
+        res = TPString(@"%lld天%lld小时%lld分钟%lld秒",day,hour,mintue,rest_sec);
+    }else if( hour > 0  ) {
+        res = TPString(@"%lld小时%lld分钟%lld秒",hour,mintue,rest_sec);
+    }else if ( mintue >0  ) {
+        res = TPString(@"%lld分钟%lld秒",mintue,rest_sec);
+    }else {
+        res = TPString(@"%lld秒",rest_sec);
+    }
+    return res;
+}
+
++ (NSString *)getNowTimeTimestamp
+{
+    NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[date timeIntervalSince1970];
+    NSString*timeString = [NSString stringWithFormat:@"%0.f",a];
+    return timeString;
+}
+
++ (UIImage*)getImageByColor:(UIColor*)color
+{
+    CGSize imageSize = CGSizeMake(1, 1);
+    UIGraphicsBeginImageContextWithOptions(imageSize, 0, [UIScreen mainScreen].scale);
+    [color set];
+    UIRectFill(CGRectMake(0, 0, imageSize.width, imageSize.height));
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
 }
 @end

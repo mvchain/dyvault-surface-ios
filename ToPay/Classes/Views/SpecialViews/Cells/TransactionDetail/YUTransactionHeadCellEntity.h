@@ -1,8 +1,8 @@
 //
-//  YUNotificationItemEntity.h
+//  YUTransactionHeadCellEntity.h
 //  ToPay
 //
-//  Created by 蒲公英 on 2019/3/5.
+//  Created by 蒲公英 on 2019/3/7.
 //  Copyright © 2019年 MVC. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YUNotificationItemEntity : YUCellEntity
+@interface YUTransactionHeadCellEntity : YUCellEntity
 
 @end
 

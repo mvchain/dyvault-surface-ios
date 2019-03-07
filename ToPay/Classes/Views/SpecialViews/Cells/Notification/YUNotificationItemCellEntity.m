@@ -6,8 +6,8 @@
 //  Copyright © 2019年 MVC. All rights reserved.
 //
 
-#import "YUNotificationItemEntity.h"
-
-@implementation YUNotificationItemEntity
+#import "YUNotificationItemCellEntity.h"
+#import "MessageItemModel.h"
+@implementation YUNotificationItemCellEntity
 
 @end

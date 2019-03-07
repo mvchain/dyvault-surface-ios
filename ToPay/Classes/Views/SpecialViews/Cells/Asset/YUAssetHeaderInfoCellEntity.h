@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YUAssetHeaderInfoCellEntity : YUCellEntity
+@property (assign,nonatomic) CGFloat balance;
 
 @end
 

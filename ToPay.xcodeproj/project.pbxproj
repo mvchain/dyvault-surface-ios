@@ -81,7 +81,6 @@
 		DD4F0CD22229212D003467CB /* YUAssetHeaderInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CD02229212D003467CB /* YUAssetHeaderInfoCell.m */; };
 		DD4F0CD32229212D003467CB /* YUAssetHeaderInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CD12229212D003467CB /* YUAssetHeaderInfoCell.xib */; };
 		DD4F0CD622292192003467CB /* YUAssetHeaderInfoCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CD522292192003467CB /* YUAssetHeaderInfoCellEntity.m */; };
-		DD4F0CD922293B1D003467CB /* API_GET_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CD822293B1D003467CB /* API_GET_Asset.m */; };
 		DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CDF22294C42003467CB /* YUAssetTokenItemCell.m */; };
 		DD4F0CE222294C42003467CB /* YUAssetTokenItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD4F0CE022294C42003467CB /* YUAssetTokenItemCell.xib */; };
 		DD4F0CE522294C53003467CB /* YUAssetTokenItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4F0CE422294C53003467CB /* YUAssetTokenItemCellEntity.m */; };
@@ -128,7 +127,41 @@
 		DD7085F2222FA879006482FB /* TPUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085F0222FA879006482FB /* TPUserInfo.m */; };
 		DD7085F5222FA8BB006482FB /* API_GET_User_Info.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085F4222FA8BB006482FB /* API_GET_User_Info.m */; };
 		DD7085FA222FBD2B006482FB /* API_POST_User_Salt.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085F9222FBD2B006482FB /* API_POST_User_Salt.m */; };
-		DD7085FD222FF8DD006482FB /* API_GET_Assest_Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085FC222FF8DD006482FB /* API_GET_Assest_Balance.m */; };
+		DD7086102230C622006482FB /* API_GET_Asset_Transaction_id.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7085FF2230C620006482FB /* API_GET_Asset_Transaction_id.m */; };
+		DD7086112230C622006482FB /* API_GET_Asset_Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086002230C620006482FB /* API_GET_Asset_Transaction.m */; };
+		DD7086122230C622006482FB /* API_GET_Asset_tokenId.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086012230C620006482FB /* API_GET_Asset_tokenId.m */; };
+		DD7086132230C622006482FB /* API_POST_Asset_Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086052230C621006482FB /* API_POST_Asset_Transaction.m */; };
+		DD7086142230C622006482FB /* API_GET_Asset_Address.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086082230C621006482FB /* API_GET_Asset_Address.m */; };
+		DD7086162230C622006482FB /* API_GET_Asset_Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70860A2230C621006482FB /* API_GET_Asset_Balance.m */; };
+		DD7086172230C622006482FB /* API_GET_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70860D2230C622006482FB /* API_GET_Asset.m */; };
+		DD7086182230C622006482FB /* API_GET_Asset_Transactions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70860E2230C622006482FB /* API_GET_Asset_Transactions.m */; };
+		DD70861B2230C68F006482FB /* API_GET_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70861A2230C68F006482FB /* API_GET_Message.m */; };
+		DD7086222230CE05006482FB /* YUNoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70861E2230CE04006482FB /* YUNoDataCell.xib */; };
+		DD7086232230CE05006482FB /* YUNoDataCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086202230CE05006482FB /* YUNoDataCellEntity.m */; };
+		DD7086242230CE05006482FB /* YUNoDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086212230CE05006482FB /* YUNoDataCell.m */; };
+		DD7086282230DB64006482FB /* MessageItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086272230DB64006482FB /* MessageItemModel.m */; };
+		DD70862D2230F93C006482FB /* YUTransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70862B2230F93C006482FB /* YUTransactionDetailViewController.m */; };
+		DD70862E2230F93C006482FB /* YUTransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70862C2230F93C006482FB /* YUTransactionDetailViewController.xib */; };
+		DD7086332230FA6A006482FB /* YUTransactionHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086312230FA6A006482FB /* YUTransactionHeadCell.m */; };
+		DD7086342230FA6A006482FB /* YUTransactionHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7086322230FA6A006482FB /* YUTransactionHeadCell.xib */; };
+		DD7086372230FA7B006482FB /* YUTransactionHeadCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086362230FA7B006482FB /* YUTransactionHeadCellEntity.m */; };
+		DD70865122310964006482FB /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864122310964006482FB /* UIButton+SGPagingView.m */; };
+		DD70865222310964006482FB /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864222310964006482FB /* UIView+SGPagingView.m */; };
+		DD70865322310964006482FB /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864422310964006482FB /* SGPageContentScrollView.m */; };
+		DD70865422310964006482FB /* SGPageContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864722310964006482FB /* SGPageContentCollectionView.m */; };
+		DD70865522310964006482FB /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864922310964006482FB /* SGPageTitleView.m */; };
+		DD70865622310964006482FB /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864A22310964006482FB /* SGPageTitleViewConfigure.m */; };
+		DD70865722310964006482FB /* SGPagingViewPopGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864E22310964006482FB /* SGPagingViewPopGestureVC.m */; };
+		DD70865B2231123F006482FB /* TPTokenBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086592231123E006482FB /* TPTokenBottomView.m */; };
+		DD70865F22312202006482FB /* TransactionHeadInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70865E22312202006482FB /* TransactionHeadInfoModel.m */; };
+		DD70866422313245006482FB /* YUTransactionRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70866222313245006482FB /* YUTransactionRecordCell.m */; };
+		DD70866522313245006482FB /* YUTransactionRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70866322313245006482FB /* YUTransactionRecordCell.xib */; };
+		DD7086682231325E006482FB /* YUTransactionRecordCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086672231325E006482FB /* YUTransactionRecordCellEntity.m */; };
+		DD70866C223137FE006482FB /* YUTransactionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70866A223137FE006482FB /* YUTransactionListViewController.m */; };
+		DD70866D223137FE006482FB /* YUTransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70866B223137FE006482FB /* YUTransactionListViewController.xib */; };
+		DD70867022313CF8006482FB /* TransactionRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70866F22313CF8006482FB /* TransactionRecordModel.m */; };
+		DD70867522315035006482FB /* YUTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70867322315035006482FB /* YUTransferViewController.m */; };
+		DD70867622315035006482FB /* YUTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70867422315035006482FB /* YUTransferViewController.xib */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -143,7 +176,7 @@
 		DDEDB82F222D5497003F648E /* YUNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB82D222D5497003F648E /* YUNotificationViewController.xib */; };
 		DDEDB834222E12D3003F648E /* YUNotificationItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB832222E12D3003F648E /* YUNotificationItemCell.m */; };
 		DDEDB835222E12D3003F648E /* YUNotificationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB833222E12D3003F648E /* YUNotificationItemCell.xib */; };
-		DDEDB838222E12E7003F648E /* YUNotificationItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB837222E12E7003F648E /* YUNotificationItemEntity.m */; };
+		DDEDB838222E12E7003F648E /* YUNotificationItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB837222E12E7003F648E /* YUNotificationItemCellEntity.m */; };
 		DDEDB83B222E1C89003F648E /* API_GET_User_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB83A222E1C89003F648E /* API_GET_User_Email.m */; };
 		DDEDB83E222E1E3F003F648E /* API_POST_User_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB83D222E1E3F003F648E /* API_POST_User_Email.m */; };
 		DDEDB845222E25F3003F648E /* TPChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB842222E25F3003F648E /* TPChangePassWordViewController.m */; };
@@ -313,7 +346,6 @@
 		DD4F0CD422292192003467CB /* YUAssetHeaderInfoCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetHeaderInfoCellEntity.h; sourceTree = "<group>"; };
 		DD4F0CD522292192003467CB /* YUAssetHeaderInfoCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetHeaderInfoCellEntity.m; sourceTree = "<group>"; };
 		DD4F0CD722293B1D003467CB /* API_GET_Asset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset.h; sourceTree = "<group>"; };
-		DD4F0CD822293B1D003467CB /* API_GET_Asset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset.m; sourceTree = "<group>"; };
 		DD4F0CDE22294C42003467CB /* YUAssetTokenItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAssetTokenItemCell.h; sourceTree = "<group>"; };
 		DD4F0CDF22294C42003467CB /* YUAssetTokenItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAssetTokenItemCell.m; sourceTree = "<group>"; };
 		DD4F0CE022294C42003467CB /* YUAssetTokenItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUAssetTokenItemCell.xib; sourceTree = "<group>"; };
@@ -397,8 +429,70 @@
 		DD7085F6222FAB9C006482FB /* KeyFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyFile.h; sourceTree = "<group>"; };
 		DD7085F8222FBD2B006482FB /* API_POST_User_Salt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User_Salt.h; sourceTree = "<group>"; };
 		DD7085F9222FBD2B006482FB /* API_POST_User_Salt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_POST_User_Salt.m; sourceTree = "<group>"; };
-		DD7085FB222FF8DD006482FB /* API_GET_Assest_Balance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Assest_Balance.h; sourceTree = "<group>"; };
-		DD7085FC222FF8DD006482FB /* API_GET_Assest_Balance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Assest_Balance.m; sourceTree = "<group>"; };
+		DD7085FF2230C620006482FB /* API_GET_Asset_Transaction_id.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Transaction_id.m; sourceTree = "<group>"; };
+		DD7086002230C620006482FB /* API_GET_Asset_Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Transaction.m; sourceTree = "<group>"; };
+		DD7086012230C620006482FB /* API_GET_Asset_tokenId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_tokenId.m; sourceTree = "<group>"; };
+		DD7086022230C620006482FB /* API_GET_Asset_Transaction_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_Transaction_id.h; sourceTree = "<group>"; };
+		DD7086032230C621006482FB /* API_GET_Asset_Balance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_Balance.h; sourceTree = "<group>"; };
+		DD7086042230C621006482FB /* API_GET_Asset_Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_Address.h; sourceTree = "<group>"; };
+		DD7086052230C621006482FB /* API_POST_Asset_Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_POST_Asset_Transaction.m; sourceTree = "<group>"; };
+		DD7086062230C621006482FB /* API_POST_Asset_Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_POST_Asset_Transaction.h; sourceTree = "<group>"; };
+		DD7086072230C621006482FB /* API_GET_Asset_Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_Transaction.h; sourceTree = "<group>"; };
+		DD7086082230C621006482FB /* API_GET_Asset_Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Address.m; sourceTree = "<group>"; };
+		DD70860A2230C621006482FB /* API_GET_Asset_Balance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Balance.m; sourceTree = "<group>"; };
+		DD70860B2230C622006482FB /* API_GET_Asset_tokenId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_tokenId.h; sourceTree = "<group>"; };
+		DD70860D2230C622006482FB /* API_GET_Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API_GET_Asset.m; path = "../../../../../../../dyvault-surface-ios/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.m"; sourceTree = "<group>"; };
+		DD70860E2230C622006482FB /* API_GET_Asset_Transactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Transactions.m; sourceTree = "<group>"; };
+		DD70860F2230C622006482FB /* API_GET_Asset_Transactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_Transactions.h; sourceTree = "<group>"; };
+		DD7086192230C68F006482FB /* API_GET_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Message.h; sourceTree = "<group>"; };
+		DD70861A2230C68F006482FB /* API_GET_Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Message.m; sourceTree = "<group>"; };
+		DD70861D2230CE04006482FB /* YUNoDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNoDataCell.h; sourceTree = "<group>"; };
+		DD70861E2230CE04006482FB /* YUNoDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUNoDataCell.xib; sourceTree = "<group>"; };
+		DD70861F2230CE04006482FB /* YUNoDataCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNoDataCellEntity.h; sourceTree = "<group>"; };
+		DD7086202230CE05006482FB /* YUNoDataCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNoDataCellEntity.m; sourceTree = "<group>"; };
+		DD7086212230CE05006482FB /* YUNoDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNoDataCell.m; sourceTree = "<group>"; };
+		DD7086262230DB64006482FB /* MessageItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageItemModel.h; sourceTree = "<group>"; };
+		DD7086272230DB64006482FB /* MessageItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageItemModel.m; sourceTree = "<group>"; };
+		DD70862A2230F93C006482FB /* YUTransactionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionDetailViewController.h; sourceTree = "<group>"; };
+		DD70862B2230F93C006482FB /* YUTransactionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionDetailViewController.m; sourceTree = "<group>"; };
+		DD70862C2230F93C006482FB /* YUTransactionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionDetailViewController.xib; sourceTree = "<group>"; };
+		DD7086302230FA6A006482FB /* YUTransactionHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionHeadCell.h; sourceTree = "<group>"; };
+		DD7086312230FA6A006482FB /* YUTransactionHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionHeadCell.m; sourceTree = "<group>"; };
+		DD7086322230FA6A006482FB /* YUTransactionHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionHeadCell.xib; sourceTree = "<group>"; };
+		DD7086352230FA7B006482FB /* YUTransactionHeadCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionHeadCellEntity.h; sourceTree = "<group>"; };
+		DD7086362230FA7B006482FB /* YUTransactionHeadCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionHeadCellEntity.m; sourceTree = "<group>"; };
+		DD70863F22310964006482FB /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
+		DD70864022310964006482FB /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
+		DD70864122310964006482FB /* UIButton+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGPagingView.m"; sourceTree = "<group>"; };
+		DD70864222310964006482FB /* UIView+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGPagingView.m"; sourceTree = "<group>"; };
+		DD70864422310964006482FB /* SGPageContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentScrollView.m; sourceTree = "<group>"; };
+		DD70864522310964006482FB /* SGPageContentCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentCollectionView.h; sourceTree = "<group>"; };
+		DD70864622310964006482FB /* SGPageContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentScrollView.h; sourceTree = "<group>"; };
+		DD70864722310964006482FB /* SGPageContentCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentCollectionView.m; sourceTree = "<group>"; };
+		DD70864922310964006482FB /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		DD70864A22310964006482FB /* SGPageTitleViewConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleViewConfigure.m; sourceTree = "<group>"; };
+		DD70864B22310964006482FB /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
+		DD70864C22310964006482FB /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		DD70864E22310964006482FB /* SGPagingViewPopGestureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPagingViewPopGestureVC.m; sourceTree = "<group>"; };
+		DD70864F22310964006482FB /* SGPagingViewPopGestureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingViewPopGestureVC.h; sourceTree = "<group>"; };
+		DD70865022310964006482FB /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
+		DD7086592231123E006482FB /* TPTokenBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTokenBottomView.m; sourceTree = "<group>"; };
+		DD70865A2231123F006482FB /* TPTokenBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTokenBottomView.h; sourceTree = "<group>"; };
+		DD70865D22312202006482FB /* TransactionHeadInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionHeadInfoModel.h; sourceTree = "<group>"; };
+		DD70865E22312202006482FB /* TransactionHeadInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionHeadInfoModel.m; sourceTree = "<group>"; };
+		DD70866122313245006482FB /* YUTransactionRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionRecordCell.h; sourceTree = "<group>"; };
+		DD70866222313245006482FB /* YUTransactionRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionRecordCell.m; sourceTree = "<group>"; };
+		DD70866322313245006482FB /* YUTransactionRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionRecordCell.xib; sourceTree = "<group>"; };
+		DD7086662231325E006482FB /* YUTransactionRecordCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionRecordCellEntity.h; sourceTree = "<group>"; };
+		DD7086672231325E006482FB /* YUTransactionRecordCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionRecordCellEntity.m; sourceTree = "<group>"; };
+		DD708669223137FE006482FB /* YUTransactionListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionListViewController.h; sourceTree = "<group>"; };
+		DD70866A223137FE006482FB /* YUTransactionListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionListViewController.m; sourceTree = "<group>"; };
+		DD70866B223137FE006482FB /* YUTransactionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionListViewController.xib; sourceTree = "<group>"; };
+		DD70866E22313CF8006482FB /* TransactionRecordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordModel.h; sourceTree = "<group>"; };
+		DD70866F22313CF8006482FB /* TransactionRecordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionRecordModel.m; sourceTree = "<group>"; };
+		DD70867222315035006482FB /* YUTransferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransferViewController.h; sourceTree = "<group>"; };
+		DD70867322315035006482FB /* YUTransferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransferViewController.m; sourceTree = "<group>"; };
+		DD70867422315035006482FB /* YUTransferViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransferViewController.xib; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -423,8 +517,8 @@
 		DDEDB831222E12D3003F648E /* YUNotificationItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNotificationItemCell.h; sourceTree = "<group>"; };
 		DDEDB832222E12D3003F648E /* YUNotificationItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNotificationItemCell.m; sourceTree = "<group>"; };
 		DDEDB833222E12D3003F648E /* YUNotificationItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUNotificationItemCell.xib; sourceTree = "<group>"; };
-		DDEDB836222E12E7003F648E /* YUNotificationItemEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNotificationItemEntity.h; sourceTree = "<group>"; };
-		DDEDB837222E12E7003F648E /* YUNotificationItemEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNotificationItemEntity.m; sourceTree = "<group>"; };
+		DDEDB836222E12E7003F648E /* YUNotificationItemCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUNotificationItemCellEntity.h; sourceTree = "<group>"; };
+		DDEDB837222E12E7003F648E /* YUNotificationItemCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUNotificationItemCellEntity.m; sourceTree = "<group>"; };
 		DDEDB839222E1C89003F648E /* API_GET_User_Email.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_User_Email.h; sourceTree = "<group>"; };
 		DDEDB83A222E1C89003F648E /* API_GET_User_Email.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_User_Email.m; sourceTree = "<group>"; };
 		DDEDB83C222E1E3F003F648E /* API_POST_User_Email.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_POST_User_Email.h; sourceTree = "<group>"; };
@@ -548,6 +642,7 @@
 		DD21EBA722263D550078E625 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DD70863C2231094D006482FB /* Extenion */,
 				DD21EBA822263D700078E625 /* Models */,
 				DD21EBAA22263D930078E625 /* Views */,
 				DD21EBA922263D780078E625 /* ViewControllers */,
@@ -663,6 +758,8 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DD70867122315007006482FB /* Transfer */,
+				DD7086292230F82C006482FB /* TransactionDetail */,
 				DDEDB841222E25DB003F648E /* ChangePassword */,
 				DDEDB82A222D5404003F648E /* Notification */,
 				DD54BC23222CF8C20009E383 /* AccountSecurity */,
@@ -712,6 +809,8 @@
 		DD21EBBC22265D4F0078E625 /* SpecialModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD70865C223121EC006482FB /* Transaction */,
+				DD7086252230DB52006482FB /* Notification */,
 				DD4F0CF422296072003467CB /* Asset */,
 				DD4F0CED22295F9B003467CB /* AddNewToken */,
 				DD4F0C642227B663003467CB /* Register */,
@@ -760,6 +859,7 @@
 		DD21EBC2222662000078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DD70861C2230CDCB006482FB /* NoDataCell */,
 				DD54BC1A222CD3B60009E383 /* BlankCell */,
 				DD54BBF9222A8F400009E383 /* ErrorCell */,
 			);
@@ -782,6 +882,7 @@
 		DD21EBC42226620B0078E625 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD7086582231122F006482FB /* TransactionDetail */,
 				DD4F0CC9222912A8003467CB /* AssetHome */,
 			);
 			path = Views;
@@ -790,6 +891,7 @@
 		DD21EBC5222662150078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DD70862F2230FA3F006482FB /* TransactionDetail */,
 				DDEDB830222E12A4003F648E /* Notification */,
 				DDEDB811222D2A33003F648E /* Language */,
 				DD54BC09222CC5990009E383 /* Mine */,
@@ -1161,6 +1263,8 @@
 		DD4F0C982227EE02003467CB /* MessageRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DD7086192230C68F006482FB /* API_GET_Message.h */,
+				DD70861A2230C68F006482FB /* API_GET_Message.m */,
 			);
 			path = MessageRelated;
 			sourceTree = "<group>";
@@ -1203,12 +1307,24 @@
 		DD4F0C9A2227EE12003467CB /* AssetRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DD7086042230C621006482FB /* API_GET_Asset_Address.h */,
+				DD7086082230C621006482FB /* API_GET_Asset_Address.m */,
+				DD7086032230C621006482FB /* API_GET_Asset_Balance.h */,
+				DD70860A2230C621006482FB /* API_GET_Asset_Balance.m */,
+				DD70860B2230C622006482FB /* API_GET_Asset_tokenId.h */,
+				DD7086012230C620006482FB /* API_GET_Asset_tokenId.m */,
+				DD7086022230C620006482FB /* API_GET_Asset_Transaction_id.h */,
+				DD7085FF2230C620006482FB /* API_GET_Asset_Transaction_id.m */,
+				DD7086072230C621006482FB /* API_GET_Asset_Transaction.h */,
+				DD7086002230C620006482FB /* API_GET_Asset_Transaction.m */,
+				DD70860F2230C622006482FB /* API_GET_Asset_Transactions.h */,
+				DD70860E2230C622006482FB /* API_GET_Asset_Transactions.m */,
+				DD4F0CD722293B1D003467CB /* API_GET_Asset.h */,
+				DD70860D2230C622006482FB /* API_GET_Asset.m */,
+				DD7086062230C621006482FB /* API_POST_Asset_Transaction.h */,
+				DD7086052230C621006482FB /* API_POST_Asset_Transaction.m */,
 				DD7085CE222E9651006482FB /* API_PUT_Asset.h */,
 				DD7085CF222E9651006482FB /* API_PUT_Asset.m */,
-				DD4F0CD722293B1D003467CB /* API_GET_Asset.h */,
-				DD4F0CD822293B1D003467CB /* API_GET_Asset.m */,
-				DD7085FB222FF8DD006482FB /* API_GET_Assest_Balance.h */,
-				DD7085FC222FF8DD006482FB /* API_GET_Assest_Balance.m */,
 			);
 			path = AssetRelated;
 			sourceTree = "<group>";
@@ -1436,6 +1552,157 @@
 			path = Currency;
 			sourceTree = "<group>";
 		};
+		DD70861C2230CDCB006482FB /* NoDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				DD70861D2230CE04006482FB /* YUNoDataCell.h */,
+				DD7086212230CE05006482FB /* YUNoDataCell.m */,
+				DD70861E2230CE04006482FB /* YUNoDataCell.xib */,
+				DD70861F2230CE04006482FB /* YUNoDataCellEntity.h */,
+				DD7086202230CE05006482FB /* YUNoDataCellEntity.m */,
+			);
+			path = NoDataCell;
+			sourceTree = "<group>";
+		};
+		DD7086252230DB52006482FB /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DD7086262230DB64006482FB /* MessageItemModel.h */,
+				DD7086272230DB64006482FB /* MessageItemModel.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		DD7086292230F82C006482FB /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DD70866022313205006482FB /* ChildTableVC */,
+				DD70862A2230F93C006482FB /* YUTransactionDetailViewController.h */,
+				DD70862B2230F93C006482FB /* YUTransactionDetailViewController.m */,
+				DD70862C2230F93C006482FB /* YUTransactionDetailViewController.xib */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		DD70862F2230FA3F006482FB /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DD7086302230FA6A006482FB /* YUTransactionHeadCell.h */,
+				DD7086312230FA6A006482FB /* YUTransactionHeadCell.m */,
+				DD7086322230FA6A006482FB /* YUTransactionHeadCell.xib */,
+				DD7086352230FA7B006482FB /* YUTransactionHeadCellEntity.h */,
+				DD7086362230FA7B006482FB /* YUTransactionHeadCellEntity.m */,
+				DD70866122313245006482FB /* YUTransactionRecordCell.h */,
+				DD70866222313245006482FB /* YUTransactionRecordCell.m */,
+				DD70866322313245006482FB /* YUTransactionRecordCell.xib */,
+				DD7086662231325E006482FB /* YUTransactionRecordCellEntity.h */,
+				DD7086672231325E006482FB /* YUTransactionRecordCellEntity.m */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		DD70863C2231094D006482FB /* Extenion */ = {
+			isa = PBXGroup;
+			children = (
+				DD70863D22310964006482FB /* SGPagingView */,
+			);
+			path = Extenion;
+			sourceTree = "<group>";
+		};
+		DD70863D22310964006482FB /* SGPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				DD70863E22310964006482FB /* Category */,
+				DD70864322310964006482FB /* SGPageContent */,
+				DD70864822310964006482FB /* SGPageTitle */,
+				DD70864D22310964006482FB /* Controller */,
+				DD70865022310964006482FB /* SGPagingView.h */,
+			);
+			path = SGPagingView;
+			sourceTree = "<group>";
+		};
+		DD70863E22310964006482FB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DD70863F22310964006482FB /* UIButton+SGPagingView.h */,
+				DD70864022310964006482FB /* UIView+SGPagingView.h */,
+				DD70864122310964006482FB /* UIButton+SGPagingView.m */,
+				DD70864222310964006482FB /* UIView+SGPagingView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DD70864322310964006482FB /* SGPageContent */ = {
+			isa = PBXGroup;
+			children = (
+				DD70864422310964006482FB /* SGPageContentScrollView.m */,
+				DD70864522310964006482FB /* SGPageContentCollectionView.h */,
+				DD70864622310964006482FB /* SGPageContentScrollView.h */,
+				DD70864722310964006482FB /* SGPageContentCollectionView.m */,
+			);
+			path = SGPageContent;
+			sourceTree = "<group>";
+		};
+		DD70864822310964006482FB /* SGPageTitle */ = {
+			isa = PBXGroup;
+			children = (
+				DD70864922310964006482FB /* SGPageTitleView.m */,
+				DD70864A22310964006482FB /* SGPageTitleViewConfigure.m */,
+				DD70864B22310964006482FB /* SGPageTitleViewConfigure.h */,
+				DD70864C22310964006482FB /* SGPageTitleView.h */,
+			);
+			path = SGPageTitle;
+			sourceTree = "<group>";
+		};
+		DD70864D22310964006482FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD70864E22310964006482FB /* SGPagingViewPopGestureVC.m */,
+				DD70864F22310964006482FB /* SGPagingViewPopGestureVC.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD7086582231122F006482FB /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DD70865A2231123F006482FB /* TPTokenBottomView.h */,
+				DD7086592231123E006482FB /* TPTokenBottomView.m */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		DD70865C223121EC006482FB /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				DD70865D22312202006482FB /* TransactionHeadInfoModel.h */,
+				DD70865E22312202006482FB /* TransactionHeadInfoModel.m */,
+				DD70866E22313CF8006482FB /* TransactionRecordModel.h */,
+				DD70866F22313CF8006482FB /* TransactionRecordModel.m */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		DD70866022313205006482FB /* ChildTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				DD708669223137FE006482FB /* YUTransactionListViewController.h */,
+				DD70866A223137FE006482FB /* YUTransactionListViewController.m */,
+				DD70866B223137FE006482FB /* YUTransactionListViewController.xib */,
+			);
+			path = ChildTableVC;
+			sourceTree = "<group>";
+		};
+		DD70867122315007006482FB /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				DD70867222315035006482FB /* YUTransferViewController.h */,
+				DD70867322315035006482FB /* YUTransferViewController.m */,
+				DD70867422315035006482FB /* YUTransferViewController.xib */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
 		DDEDB802222D2165003F648E /* RebindEmailAddress */ = {
 			isa = PBXGroup;
 			children = (
@@ -1493,8 +1760,8 @@
 				DDEDB831222E12D3003F648E /* YUNotificationItemCell.h */,
 				DDEDB832222E12D3003F648E /* YUNotificationItemCell.m */,
 				DDEDB833222E12D3003F648E /* YUNotificationItemCell.xib */,
-				DDEDB836222E12E7003F648E /* YUNotificationItemEntity.h */,
-				DDEDB837222E12E7003F648E /* YUNotificationItemEntity.m */,
+				DDEDB836222E12E7003F648E /* YUNotificationItemCellEntity.h */,
+				DDEDB837222E12E7003F648E /* YUNotificationItemCellEntity.m */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1653,9 +1920,12 @@
 				DD4F0CFC222961EE003467CB /* YUAddNewTokenController.xib in Resources */,
 				DD21EC0C2226BAD70078E625 /* YURegisterViewController.xib in Resources */,
 				DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */,
+				DD70866522313245006482FB /* YUTransactionRecordCell.xib in Resources */,
 				DD54BC2D222CF9B90009E383 /* YUAccountSecurityViewController.xib in Resources */,
 				DD54BC0E222CC9390009E383 /* YUMineItemCell.xib in Resources */,
+				DD70867622315035006482FB /* YUTransferViewController.xib in Resources */,
 				DD54BC16222CD1A00009E383 /* YUMineConfirmCell.xib in Resources */,
+				DD70866D223137FE006482FB /* YUTransactionListViewController.xib in Resources */,
 				DD4F0C7C2227C9DA003467CB /* YULoginViewController.xib in Resources */,
 				DDEDB82F222D5497003F648E /* YUNotificationViewController.xib in Resources */,
 				DD21EB82222637160078E625 /* LaunchScreen.storyboard in Resources */,
@@ -1670,12 +1940,15 @@
 				DDEDB822222D45E4003F648E /* Language.strings in Resources */,
 				DD54BC07222AAC880009E383 /* YUSearchBarView.xib in Resources */,
 				DD54BBF5222A873B0009E383 /* YUAddNewTokenItemCell.xib in Resources */,
+				DD7086222230CE05006482FB /* YUNoDataCell.xib in Resources */,
+				DD70862E2230F93C006482FB /* YUTransactionDetailViewController.xib in Resources */,
 				DD4F0C852227E5A8003467CB /* YUAssetViewController.xib in Resources */,
 				DDEDB846222E25F3003F648E /* TPChangePassWordViewController.xib in Resources */,
 				DD21EC3E2227811F0078E625 /* YUTextViewXibContainer.xib in Resources */,
 				DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */,
 				DDEDB835222E12D3003F648E /* YUNotificationItemCell.xib in Resources */,
 				DD4F0CD32229212D003467CB /* YUAssetHeaderInfoCell.xib in Resources */,
+				DD7086342230FA6A006482FB /* YUTransactionHeadCell.xib in Resources */,
 				DD4F0CCE222912DE003467CB /* YUAssetTableHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1817,23 +2090,25 @@
 				DD7085C6222E4193006482FB /* API_PUT_User_Password.m in Sources */,
 				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
 				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
-				DD4F0CD922293B1D003467CB /* API_GET_Asset.m in Sources */,
 				DD54BC0D222CC9390009E383 /* YUMineItemCell.m in Sources */,
 				DD7085F2222FA879006482FB /* TPUserInfo.m in Sources */,
-				DD7085FD222FF8DD006482FB /* API_GET_Assest_Balance.m in Sources */,
 				DD21EC2D2226BC970078E625 /* YUPhoneInformationTools.m in Sources */,
 				DD7085FA222FBD2B006482FB /* API_POST_User_Salt.m in Sources */,
+				DD70865622310964006482FB /* SGPageTitleViewConfigure.m in Sources */,
 				DD21EC312226BC970078E625 /* YUSlideButtonsGroup.m in Sources */,
 				DD21EC042226A1070078E625 /* UIImage+Gradient.m in Sources */,
 				DDEDB84D222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m in Sources */,
 				DD54BC2C222CF9B90009E383 /* YUAccountSecurityViewController.m in Sources */,
+				DD7086142230C622006482FB /* API_GET_Asset_Address.m in Sources */,
 				DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */,
+				DD7086232230CE05006482FB /* YUNoDataCellEntity.m in Sources */,
 				DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */,
 				DDEDB834222E12D3003F648E /* YUNotificationItemCell.m in Sources */,
 				DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */,
 				DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */,
 				DD4F0C5F2227B0CD003467CB /* YUSetPasswordViewController.m in Sources */,
 				DD54BC01222A8FE50009E383 /* YUErrorCellEntity.m in Sources */,
+				DD7086162230C622006482FB /* API_GET_Asset_Balance.m in Sources */,
 				DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */,
 				DD21EC48222784260078E625 /* QuickDo.m in Sources */,
 				DD4F0C842227E5A8003467CB /* YUAssetViewController.m in Sources */,
@@ -1849,22 +2124,31 @@
 				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
 				DD54BC06222AAC880009E383 /* YUSearchBarView.m in Sources */,
 				DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */,
+				DD70866422313245006482FB /* YUTransactionRecordCell.m in Sources */,
+				DD70862D2230F93C006482FB /* YUTransactionDetailViewController.m in Sources */,
 				DD4F0CEC22295E13003467CB /* API_GET_Token.m in Sources */,
 				DD21EC402227811F0078E625 /* YUTextViewXibContainer.m in Sources */,
 				DD4F0C752227C3BB003467CB /* UserIDCardModel.m in Sources */,
 				DD54BBFD222A8F650009E383 /* YUErrorCell.m in Sources */,
 				DD21EBDC222672990078E625 /* YUPageListView.m in Sources */,
 				DD4F0CFA22296094003467CB /* AddNewTokenItemModel.m in Sources */,
+				DD7086242230CE05006482FB /* YUNoDataCell.m in Sources */,
 				DD21EBB6222658FF0078E625 /* YUNetworkManager.m in Sources */,
 				DD21EB85222637160078E625 /* main.m in Sources */,
 				DD54BBF8222A874F0009E383 /* YUAddNewTokenItemCellEntity.m in Sources */,
+				DD7086332230FA6A006482FB /* YUTransactionHeadCell.m in Sources */,
+				DD70865722310964006482FB /* SGPagingViewPopGestureVC.m in Sources */,
+				DD7086102230C622006482FB /* API_GET_Asset_Transaction_id.m in Sources */,
 				DD21EC372226BC970078E625 /* YUHamburgerButton.m in Sources */,
+				DD7086682231325E006482FB /* YUTransactionRecordCellEntity.m in Sources */,
 				DD4F0C6C2227BCAB003467CB /* YUUserManagers.m in Sources */,
+				DD70865522310964006482FB /* SGPageTitleView.m in Sources */,
 				DD4F0C942227EB6B003467CB /* API_GET_User_Email_Logout.m in Sources */,
 				DD21EC342226BC970078E625 /* YUStatusButtonGroupWithLeftRightButttonNavBarView.m in Sources */,
 				DD7085CD222E724D006482FB /* API_PUT_User_Email.m in Sources */,
 				DD4F0C6F2227BD51003467CB /* QuickGet.m in Sources */,
 				DD4F0C8A2227E5C4003467CB /* YUMineViewController.m in Sources */,
+				DD70865322310964006482FB /* SGPageContentScrollView.m in Sources */,
 				DD4F0CD22229212D003467CB /* YUAssetHeaderInfoCell.m in Sources */,
 				DD54BC30222D070A0009E383 /* YUForgetPay_ResetPasswordViewModel.m in Sources */,
 				DD21EBB2222658F10078E625 /* ServModel.m in Sources */,
@@ -1879,28 +2163,44 @@
 				DD7085EF222FA1BC006482FB /* API_GET_Token_Exchange_Rate.m in Sources */,
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
 				DDEDB80F222D2922003F648E /* YULanguageViewController.m in Sources */,
+				DD70861B2230C68F006482FB /* API_GET_Message.m in Sources */,
 				DD54BC22222CD3F80009E383 /* YUBlankCellEntity.m in Sources */,
 				DD7085DA222F7938006482FB /* NSString+Pinyin.m in Sources */,
 				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
 				DD4F0C7F2227D6A6003467CB /* API_POST_User_Login.m in Sources */,
+				DD70867522315035006482FB /* YUTransferViewController.m in Sources */,
 				DD21EBED222678E00078E625 /* YUCellEntity.m in Sources */,
 				DD4F0C632227B3C3003467CB /* API_POST_Register.m in Sources */,
+				DD70865B2231123F006482FB /* TPTokenBottomView.m in Sources */,
 				DD21EBD6222667C80078E625 /* YUWelcomeViewController.m in Sources */,
+				DD7086132230C622006482FB /* API_POST_Asset_Transaction.m in Sources */,
 				DD7085E7222F99E7006482FB /* TPExchangeRate.m in Sources */,
 				DD7085EC222F9CB5006482FB /* API_GET_Token_Base.m in Sources */,
+				DD7086372230FA7B006482FB /* YUTransactionHeadCellEntity.m in Sources */,
+				DD70865422310964006482FB /* SGPageContentCollectionView.m in Sources */,
+				DD7086122230C622006482FB /* API_GET_Asset_tokenId.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
 				DD4F0CB12228DA0B003467CB /* YUForgetLogin_ResetPasswordViewModel.m in Sources */,
 				DD7085C9222E43A4006482FB /* API_PUT_User_TransactionPassword.m in Sources */,
 				DD7085DF222F98B1006482FB /* YUCurrencyManager.m in Sources */,
-				DDEDB838222E12E7003F648E /* YUNotificationItemEntity.m in Sources */,
+				DD7086282230DB64006482FB /* MessageItemModel.m in Sources */,
+				DDEDB838222E12E7003F648E /* YUNotificationItemCellEntity.m in Sources */,
+				DD70867022313CF8006482FB /* TransactionRecordModel.m in Sources */,
+				DD7086112230C622006482FB /* API_GET_Asset_Transaction.m in Sources */,
 				DD54BC15222CD1A00009E383 /* YUMineConfirmCell.m in Sources */,
 				DD54BBF4222A873B0009E383 /* YUAddNewTokenItemCell.m in Sources */,
+				DD70865122310964006482FB /* UIButton+SGPagingView.m in Sources */,
 				DD54BC37222D0F820009E383 /* YUNavigationViewController.m in Sources */,
 				DDEDB829222D46C4003F648E /* YULanguageManagers.m in Sources */,
+				DD7086182230C622006482FB /* API_GET_Asset_Transactions.m in Sources */,
 				DDEDB815222D2A50003F648E /* YULanguageItemCell.m in Sources */,
 				DD7085D0222E9651006482FB /* API_PUT_Asset.m in Sources */,
 				DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */,
+				DD70866C223137FE006482FB /* YUTransactionListViewController.m in Sources */,
+				DD70865F22312202006482FB /* TransactionHeadInfoModel.m in Sources */,
 				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
+				DD7086172230C622006482FB /* API_GET_Asset.m in Sources */,
+				DD70865222310964006482FB /* UIView+SGPagingView.m in Sources */,
 				DD54BC40222D12380009E383 /* TPVerifyEmailViewModel.m in Sources */,
 				DD4F0C912227E7AE003467CB /* API_GET_User_Valid.m in Sources */,
 			);

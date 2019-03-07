@@ -8,6 +8,9 @@
 
 #import "YUPageListView.h"
 #import <MJRefresh.h>
+#import "YUNoDataCellEntity.h"
+
+#define DEFAULT_PAGE_SIZE 10
 
 @interface YUPageListView() <UITableViewDelegate,
     UITableViewDataSource,YUCellDelegate>
@@ -52,6 +55,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.isUsingMJRefresh = YES; // default set
+    self.pageSize = DEFAULT_PAGE_SIZE; // default
 }
 
 - (void)priavte_initData {
@@ -68,7 +72,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 - (void)addFooterRefresh {
     yudef_weakSelf;
     [self.tableView addFooterWithBlock:^(MJRefreshFooter *footer) {
-        [weakSelf nextPageBlock];
+        [weakSelf nextPage];
     }];
 }
 
@@ -76,11 +80,21 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 - (void)firstPage
 {
     yudef_weakSelf;
+    [self.tableView.mj_footer endRefreshing];
+    [self.tableView.mj_header endRefreshing];
     self.firstPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data) {
         [weakSelf priavte_initData];
-        [weakSelf.dataArrays addObjectsFromArray:data];
+        if (data==nil || data.count ==0) {
+            YUCellEntity *noDataEntity = [YUNoDataCellEntity quickInit:@"暂无数据"];
+            if (self.noDataEntity){
+                noDataEntity = self.noDataEntity();
+            }
+            [weakSelf.dataArrays addObject:noDataEntity];
+            self.tableView.mj_footer = nil;
+        }else {
+            [weakSelf.dataArrays addObjectsFromArray:data];
+        }
         [weakSelf.tableView reloadData];
-        
         if (weakSelf.isUsingMJRefresh) {
             [weakSelf.tableView.mj_header endRefreshing];
             if (data.count < weakSelf.pageSize && weakSelf.tableView.mj_footer ) {
@@ -91,9 +105,18 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 }
 - (void)nextPage
 {
-    self.nextPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data) {
+    yudef_weakSelf;
+    self.nextPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data)
+    {
+        [weakSelf.dataArrays addObjectsFromArray:data];
+        [weakSelf reloadData];
+        if (data == nil || data.count < weakSelf.pageSize) {
+            [weakSelf.tableView.mj_footer endRefreshingWithNoMoreData];
+        }else {
+            [weakSelf.tableView.mj_footer endRefreshing];
+        }
         
-    });
+    }, self);
 }
 #pragma mark public method
 - (void)reloadData {
@@ -102,6 +125,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 - (void)beginRefreshHeader {
     if (self.isUsingMJRefresh) {
         [self.tableView.mj_header beginRefreshing];
+        
     }else {
         [self beginRefreshHeaderWithNoAnimate];
     }
@@ -123,7 +147,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     return nil;
 }
 
-- (void)setFirstPageBlock:(void (^)(block_complete _Nonnull))firstPageBlock {
+- (void)setFirstPageBlock:(void (^)(block_page_complete _Nonnull))firstPageBlock {
     _firstPageBlock = firstPageBlock;
     if (_firstPageBlock!=nil && _isUsingMJRefresh) {
         // need headrefresh
@@ -131,7 +155,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     }
 }
 
-- (void)setNextPageBlock:(void (^)(block_complete _Nonnull))nextPageBlock {
+- (void)setNextPageBlock:(void (^)(block_page_complete _Nonnull, YUPageListView * _Nonnull))nextPageBlock {
     _nextPageBlock = nextPageBlock;
     if (_nextPageBlock!=nil && _isUsingMJRefresh) {
         [self addFooterRefresh];

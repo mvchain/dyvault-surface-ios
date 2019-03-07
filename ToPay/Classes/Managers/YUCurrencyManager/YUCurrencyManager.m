@@ -39,7 +39,7 @@ static YUCurrencyManager* _instance = nil;
 - (void)setNowLegalCurrency:(TPExchangeRate *)ratioM {
     [USER_DEFAULT setObject:ratioM.value forKey:TPNowLegalCurrencyKey];
     [USER_DEFAULT setObject:[ratioM.name substringToIndex:1] forKey:TPNowLegalSymbolKey];
-    [USER_DEFAULT setObject:ratioM.name forKey:TPNowLegalNameKey];
+    [USER_DEFAULT setObject:[ratioM.name substringFromIndex:1] forKey:TPNowLegalNameKey];
     [TPNotificationCenter postNotificationName:TPLegalSwitchNotification object:nil];
 }
 - (NSString *)nowLegalCurrencyName {

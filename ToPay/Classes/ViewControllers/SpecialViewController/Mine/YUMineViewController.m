@@ -55,7 +55,7 @@
 - (void)configPageListView {
     yudef_weakSelf;
     self.pageListView.isUsingMJRefresh = NO; // not use MJRefresh
-    self.pageListView.firstPageBlock = ^(block_complete  _Nonnull complete)
+    self.pageListView.firstPageBlock = ^(block_page_complete  _Nonnull complete)
     {
         complete(weakSelf.dataArrs);
     };

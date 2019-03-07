@@ -7,7 +7,10 @@
 //
 
 #import "YUNotificationItemCell.h"
+#import "MessageItemModel.h"
 @interface YUNotificationItemCell()
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @end
 @implementation YUNotificationItemCell
@@ -15,7 +18,13 @@
     [super awakeFromNib];
     [self.bgView yu_smallCircleStyle];
 }
+- (void)setEntity:(YUCellEntity *)entity {
+    [super setEntity:entity];
+    MessageItemModel *model = (MessageItemModel *)entity.data ;
+    self.contentLabel.text = model.message;
+    self.timeLabel.text = [QuickGet timeWithTimeInterval_allNumberStyleString:model.createdAt];
 
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

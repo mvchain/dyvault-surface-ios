@@ -38,7 +38,7 @@
 #pragma mark - <private method>
 - (void)configPageListView {
     self.pageListView.isUsingMJRefresh = NO;
-    self.pageListView.firstPageBlock = ^(block_complete  _Nonnull complete)
+    self.pageListView.firstPageBlock = ^(block_page_complete  _Nonnull complete)
     {
         YUMineItemCellEntity *item0 = [[YUMineItemCellEntity alloc] init];
         item0.data = @"修改邮箱";

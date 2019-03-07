@@ -7,7 +7,7 @@
 //
 
 #import "YUAssetHeaderInfoCell.h"
-
+#import "YUAssetHeaderInfoCellEntity.h"
 @interface YUAssetHeaderInfoCell()
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
@@ -30,13 +30,14 @@
     [self.currencyBg yu_circleStyle];
     [self.buyCurrencyBg yu_circleStyle];
     [self.bgView yu_smallCircleStyle];
-    
 }
-
 - (void)setEntity:(YUCellEntity *)entity {
     [super setEntity:entity];
+    YUAssetHeaderInfoCellEntity *headerEntity = (YUAssetHeaderInfoCellEntity *)entity;
     [self.currencyLabel setText:[YUCurrencyManager shareInstance].nowLegalCurrencyName];
-    
+    CGFloat ratio = [[YUCurrencyManager shareInstance] nowLegalCurrencyRatio];
+    CGFloat balance = yufloat_lawCurrency(headerEntity.balance / ratio);
+    [self.balanceLabel setText:TPString(@"%.2f",balance)];
 }
 - (IBAction)changeLegalCurrencyTap:(id)sender {
     if (self.yu_delegate) {

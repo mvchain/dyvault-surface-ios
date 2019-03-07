@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YUNotificationViewController">
             <connections>
+                <outlet property="atly_pageList_top" destination="Vre-95-wLl" id="7hI-yB-br2"/>
                 <outlet property="pageListView" destination="whO-bt-cW1" id="HuB-rh-V12"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

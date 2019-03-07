@@ -50,7 +50,7 @@
 - (void)configServerListView {
     yudef_weakSelf;
     self.servListView.isUsingMJRefresh = NO;
-    self.servListView.firstPageBlock = ^(block_complete  _Nonnull complete)
+    self.servListView.firstPageBlock = ^(block_page_complete  _Nonnull complete)
     {
         API_GET_Token *GET_Token = [[API_GET_Token alloc] init];
         GET_Token.onSuccess = ^(id responseData) {

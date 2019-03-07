@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *) getCurBuildVersion;
 + (CGFloat) makeFloatNumber:(CGFloat) num tailNum:(int)tailNum;
 + (NSString *)getUUID;
++ (NSString *)timeWithTimeIntervalString:(NSInteger)time;
++ (NSString *)timeWithTimeInterval_allNumberStyleString:( NSInteger)time;
++ (NSString *)timeWithFormat:(NSString *)formt time:(NSInteger)time ;
++ (NSString *)makeCnDayHourMinuteSecWithTimeCuo:(long long )time;
++ (NSString *)getNowTimeTimestamp;
++ (UIImage*)getImageByColor:(UIColor*)color;
 @end
 
 NS_ASSUME_NONNULL_END

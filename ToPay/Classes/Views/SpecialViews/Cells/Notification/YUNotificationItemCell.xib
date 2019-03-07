@@ -57,6 +57,8 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="bgView" destination="MQl-VX-AXf" id="JUw-Qj-yku"/>
+                <outlet property="contentLabel" destination="8bG-cb-eou" id="myN-wK-hpv"/>
+                <outlet property="timeLabel" destination="QmH-xi-laJ" id="ERV-DT-iH9"/>
             </connections>
             <point key="canvasLocation" x="160.80000000000001" y="96.251874062968525"/>
         </tableViewCell>
