@@ -9,7 +9,7 @@
 #import "YUTransactionRecordCell.h"
 #import "AssetTokenItemModel.h"
 #import "TransactionRecordModel.h"
-typedef void(^void_block)(void);
+
 
 @interface YUTransactionRecordCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;

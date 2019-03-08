@@ -49,7 +49,7 @@
     [transferBtn setBackgroundImage:ima forState:UIControlStateNormal];
     [transferBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [transferBtn.titleLabel setTextColor:[UIColor whiteColor]];
-    [transferBtn addTarget:self action:@selector(transferBtn) forControlEvents:UIControlEventTouchUpInside];
+    [transferBtn addTarget:self action:@selector(transferClcik) forControlEvents:UIControlEventTouchUpInside];
     [transferBtn setTitle:@"转账" forState:UIControlStateNormal];
     [self addSubview:transferBtn];
     self.transferBtn = transferBtn;

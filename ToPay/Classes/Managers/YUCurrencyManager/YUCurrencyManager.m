@@ -87,7 +87,7 @@ static YUCurrencyManager* _instance = nil;
         TPExchangeRate *firstRatioM = exchanges[0];
         [USER_DEFAULT setObject:firstRatioM.value forKey:TPNowLegalCurrencyKey];
         [USER_DEFAULT setObject:[firstRatioM.name substringToIndex:1] forKey:TPNowLegalSymbolKey];
-        [USER_DEFAULT setObject:firstRatioM.name forKey:TPNowLegalNameKey];
+        [USER_DEFAULT setObject:[firstRatioM.name substringFromIndex:1] forKey:TPNowLegalNameKey];
         [TPNotificationCenter postNotificationName:TPLegalSwitchNotification object:nil];
         complete(YES);
     };

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YUMineViewController">
             <connections>
+                <outlet property="atly_top" destination="hIg-Rh-4Ww" id="3CS-Cr-acX"/>
                 <outlet property="emialLabel" destination="h8Z-Ri-EHc" id="pwI-sL-JpA"/>
                 <outlet property="pageListView" destination="E1T-zO-UwG" id="Z7D-g4-TmD"/>
                 <outlet property="userNickNamelabel" destination="4dU-CA-y2C" id="de9-Pz-qCg"/>

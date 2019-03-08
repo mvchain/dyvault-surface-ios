@@ -15,7 +15,7 @@
 @interface YUPageListView() <UITableViewDelegate,
     UITableViewDataSource,YUCellDelegate>
 
-@property (strong,nonatomic) NSMutableArray<YUCellEntity *> * dataArrays ;
+
 @property (strong,nonatomic) NSMutableArray<YUCellEntity *> * backUpDataArrays;
 @property (strong,nonatomic) NSMutableArray<YUCellEntity *> * searchResultDataArrays;
 @end

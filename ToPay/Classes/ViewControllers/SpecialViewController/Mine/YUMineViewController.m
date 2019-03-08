@@ -12,6 +12,7 @@
 #import "YUAccountSecurityViewController.h"
 #import "YULanguageViewController.h"
 @interface YUMineViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
 @property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
 @property (weak, nonatomic) IBOutlet UILabel *userNickNamelabel;
 @property (weak, nonatomic) IBOutlet UILabel *emialLabel;
@@ -32,6 +33,9 @@
     [self setUpData];
     [self configPageListView];
     [self configPageListViewEvent];
+    CGFloat mostTop = [QuickJudge is_iPhoneX] ?62:42;
+    self.atly_top.constant =mostTop;
+    
    
 }
 #pragma mark - <private method>

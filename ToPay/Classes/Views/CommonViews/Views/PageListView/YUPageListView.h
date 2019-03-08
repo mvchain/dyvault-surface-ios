@@ -15,6 +15,7 @@ typedef void(^block_page_complete)(NSArray<YUCellEntity *> *data ) ;
 @property (assign,nonatomic) NSInteger pageSize;
 @property (assign,nonatomic) BOOL isUsingMJRefresh;
 @property (strong,nonatomic) UITableView *tableView;
+@property (strong,nonatomic) NSMutableArray<YUCellEntity *> * dataArrays ;
 #pragma mark block must set
 @property (copy,nonatomic) void (^firstPageBlock)(block_page_complete complete);
 @property (copy,nonatomic) void (^nextPageBlock)(block_page_complete complete,YUPageListView *thisPageView);

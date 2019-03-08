@@ -11,7 +11,11 @@
 #import "UIButton+Gradient.h"
 #import <QMUIKit.h>
 @implementation UIButton (YUButtonStyle)
-
+/*
+ 
+ #import "UIButton+Gradient.h"
+ @[[UIColor qmui_colorWithHexString:@"#007AFF"],[UIColor qmui_colorWithHexString:@"#5856D6"]] percentageArray:@[@0,@1] gradientType:GradientFromLeftToRight];
+ */
 
 - (void)yu_fullPurpleCircleStyle {
     [self yu_circleStyle];
@@ -31,9 +35,8 @@
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 - (void)yu_vaildButtonStyle {
-    [self yu_circleStyle];
+    
     self.titleLabel.font = [UIFont systemFontOfSize:13.0];
-    [self setBackgroundColor:[UIColor qmui_colorWithHexString:@"#949494"]];
-    [self setTitleColor:[UIColor qmui_colorWithHexString:@"#555555"] forState:UIControlStateNormal];
+    [self setTitleColor:[UIColor qmui_colorWithHexString:@"#5A5DDF"] forState:UIControlStateNormal];
 }
 @end

@@ -95,6 +95,19 @@
     [imaView y_setRight:20];
     [imaView y_setBottom:12];
 }
+- (void)setRightButtonWithImage:(UIImage *)ima
+                       withSize:(CGSize)size
+                      withRight:(CGFloat)right
+                     withBottom:(CGFloat)bottom {
+    
+    [_rightButton.midView removeFromSuperview];
+    UIImageView * imaView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    [imaView setImage:ima];
+    [_rightButton setMidView:imaView];
+    [imaView y_setRight:right];
+    [imaView y_setBottom:bottom];
+    
+}
 
 - (void)setRightButtonWithTitle:(NSString *)title{
     

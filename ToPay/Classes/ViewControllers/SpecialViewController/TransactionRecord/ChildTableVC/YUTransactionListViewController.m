@@ -65,7 +65,11 @@
                                   transactionType:self.transactionType];
     };
     
-    
+    self.pageListView.yu_didSelectRowAtIndexPath = ^(NSIndexPath * _Nonnull indexPath) {
+        TransactionRecordModel *model = (TransactionRecordModel *)weakSelf.pageListView.dataArrays[indexPath.row].data;
+        weakSelf.selectedCallBack(model);
+    };
+
 }
 
 - (NSArray *)packageByresArray:(NSArray *)resArr {

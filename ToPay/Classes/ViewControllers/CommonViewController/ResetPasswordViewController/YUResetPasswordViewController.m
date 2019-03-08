@@ -34,7 +34,7 @@
     self.mnewPassWordTextView.textField.placeholder = self.viewModel.textPlaceholder;
     self.mnewPassWordTextView.textField.secureTextEntry = YES;
       self.mnewPassWordTextView.textField.keyboardType = self.viewModel.passTextFieldkeyBoardType;
-    [self.confirmButton yu_fullBlueCircleStyle];
+    [self.confirmButton yu_gradualBlueChangeStyle];
     
 }
 - (void)setNav {
@@ -50,15 +50,17 @@
     [QMUITips showLoadingInView:self.view];
     [self.viewModel confirmActionWithPassword:self.mnewPassWordTextView.text
                                    onSucc:^(NSDictionary * _Nonnull succDict) {
+                                       
                                        [QMUITips showSucceed:@"修改成功"];
                                        [self.viewModel action_afterResetSucc:@{@"vc":self}];
                                        
-    }
+    } 
                                    onFail:^(NSDictionary * _Nonnull failDict) {
+                                       
                                        [QMUITips showError:failDict[@"reason"]];
     }
                           onEndConnection:^{
-                                       [QMUITips hideAllTipsInView:self.view];
+                                        [QMUITips hideAllTipsInView:self.view];
     }];
 }
 

@@ -2,165 +2,196 @@
 //  YUTransactionDetailViewController.m
 //  ToPay
 //
-//  Created by 蒲公英 on 2019/3/7.
+//  Created by 蒲公英 on 2019/3/8.
 //  Copyright © 2019年 MVC. All rights reserved.
 //
 
 #import "YUTransactionDetailViewController.h"
-#import "SGPagingView.h"
-#import "TPTokenBottomView.h"
-#import "AssetTokenItemModel.h"
-#import "API_GET_Asset_Transaction.h"
-#import "TransactionHeadInfoModel.h"
+#import "YUPageListView.h"
 #import "API_GET_Asset_Transaction_id.h"
-#import "API_GET_Asset_tokenId.h"
-#import "YUTransactionListViewController.h"
-#import "YUTransferViewController.h"
-@interface YUTransactionDetailViewController ()<SGPageTitleViewDelegate,SGPageContentScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UIView *cureencyBgView;
-@property (weak, nonatomic) IBOutlet UIView *tokenBgView;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *currencyBalanceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tokenBalanceLabel;
-@property (weak, nonatomic) IBOutlet UIView *transactionHeaderView;
-@property (weak, nonatomic) IBOutlet TPTokenBottomView *bottomView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_headerTop;
-@property (strong, nonatomic) SGPageTitleView *pageTitleView;
-@property (nonatomic, strong) SGPageContentScrollView *pageContentScrollView;
+#import "YUTransactionDetailItemCellEntity.h"
+#import "TransactionDetailModel.h"
+@interface YUTransactionDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *atlt_icon_top;
+@property (strong, nonatomic)  TransactionDetailModel *transactionDetailModel;
 @end
 
 @implementation YUTransactionDetailViewController
+
 #pragma mark - <life cycle>
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self updateHeaderViewInfo];
-}
+
 #pragma mark - <public method>
 - (void)initSubviews {
     [super initSubviews];
     [self setNav];
-    [self setHeaderView];
-    [self.atly_headerTop setConstant:self.normalNavbar.qmui_height +20];
-    [self setSwitchTitleView];
-    [self setSwitchPage];
-    // complete view setup
-    [self setUpData];
+    [self configPageListView];
+    [self setData];
 }
-
 
 #pragma mark - <private method>
-- (void)setUpData {
-    NSAssert(self.assetTokenModel, @"### assetTokenModel must not be null ");
-    [self.currencyNameLabel setText:[YUCurrencyManager shareInstance].nowLegalCurrencyName];
+- (void)setNav {
+    yudef_weakSelf
+    [self addNormalNavBar:@"订单详情"];
+    [self.normalNavbar setLeftButtonAsReturnButton];
+    [self.normalNavbar setRightButtonWithImage:UIImageMake(@"share")];
+    self.atlt_icon_top.constant = self.normalNavbar.qmui_bottom + 20;
+    self.normalNavbar.rightButton.onClick = ^(id sender ) {
+        UIImage *shot = [QuickGet makeImageWithView:weakSelf.view withSize:weakSelf.view.bounds.size];
+        UIImage *imageToShare = shot;
+        NSArray *items = @[imageToShare];
+        [QuickDo shareToSystem:items target:weakSelf  success:^(bool isok) {
+            
+        }];
+    };
     
 }
 
-- (void)updateHeaderViewInfo {
-    API_GET_Asset_tokenId *GET_Asset_tokenId = [[API_GET_Asset_tokenId alloc] init];
-    [QMUITips showLoadingInView:self.view hideAfterDelay:5.0];
-    GET_Asset_tokenId.onSuccess = ^(id responseData)
-    {
-        AssetTokenItemModel *itemModel = [[AssetTokenItemModel alloc]initWithDictionary:(NSDictionary *)responseData];
-        self.assetTokenModel = itemModel;
-        CGFloat lawRatio = [[YUCurrencyManager shareInstance] nowLegalCurrencyRatio];
-        CGFloat lawBalance = itemModel.value * itemModel.ratio / lawRatio;
-        CGFloat tokenBalance = itemModel.value;
-        [self.currencyBalanceLabel setText:TPString(@"%.2f",yufloat_lawCurrency(lawBalance))];
-        [self.tokenBalanceLabel setText:TPString(@"%.4f %@",yufloat_token(tokenBalance) ,itemModel.tokenName)];
+- (void)configPageListView {
+    yudef_weakSelf;
+    self.pageListView.isUsingMJRefresh = NO;
+    
+    self.pageListView.firstPageBlock = ^(block_page_complete  _Nonnull complete) {
+        TransactionDetailModel *model =  weakSelf.transactionDetailModel ;
+        YUTransactionDetailItemCellEntity *entity0 =[[YUTransactionDetailItemCellEntity alloc] init];
+        entity0.leftTitleStr = @"金额";
+        entity0.rightTitleStr = TPString(@"%.4f %@",yufloat_token(model.value),model.tokenName);
+        entity0.rightFont = [UIFont systemFontOfSize:16];
+        entity0.rightTextColor = [UIColor qmui_colorWithHexString:@"#666666"];
+        
+        NSArray<void_block> *classify_mapTo_Block = @[^(void){
+            // classify 0
+           
+            YUTransactionDetailItemCellEntity *entity1 =[[YUTransactionDetailItemCellEntity alloc] init];
+            entity1.leftTitleStr = @"交易手续费";
+            entity1.rightTitleStr = TPString(@"%.4f %@",yufloat_token(model.fee),model.feeTokenType );
+            entity1.rightFont = [UIFont systemFontOfSize:13.0];
+            entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
+            
+            YUTransactionDetailItemCellEntity *entity2 =[[YUTransactionDetailItemCellEntity alloc] init];
+            entity2.leftTitleStr = @"地址";
+            entity2.rightFont = [UIFont systemFontOfSize:13.0];
+            entity2.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
+            if (model.transactionType == 1) {
+                // in
+                entity2.rightTitleStr = model.fromAddress;
+            }else {
+                // out
+                entity2.rightTitleStr = model.toAddress;
+            }
+            
+            YUTransactionDetailItemCellEntity *entity3 =[[YUTransactionDetailItemCellEntity alloc] init];
+            entity3.leftTitleStr = @"交易哈希";
+            entity3.rightTitleStr = model.hashLink;
+            entity3.rightFont = [UIFont systemFontOfSize:13.0];
+            entity3.rightTextColor = [UIColor qmui_colorWithHexString:@"#7F95CF"];
+            
+            complete(@[entity0,entity1,entity2,entity3]);
+            
+        },^(void){
+            // classify 1
+        },^(void){
+            // classify 2
+        },^(void){
+           // classify3
+        },^(void){
+           // classify4
+        },^(void){
+            // classify5
+            YUTransactionDetailItemCellEntity *entity1 =[[YUTransactionDetailItemCellEntity alloc] init];
+            entity1.leftTitleStr = @"订单号";
+            entity1.rightTitleStr = model.orderNumber;
+            entity1.rightFont = [UIFont systemFontOfSize:13.0];
+            entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
+            complete(@[entity0,entity1]);
+        }];
+        classify_mapTo_Block[self.transactionRecordModel.classify]();
     };
-    GET_Asset_tokenId.onError = ^(NSString *reason, NSInteger code)
-    {
+}
+- (void)setData {
+    [QMUITips showLoadingInView:self.view];
+  
+    API_GET_Asset_Transaction_id *GET_Asset_Transaction_id = [[API_GET_Asset_Transaction_id alloc] init];
+    GET_Asset_Transaction_id.onSuccess = ^(id responseData) {
+        TransactionDetailModel *detaiModel = [[TransactionDetailModel alloc] initWithDictionary:(NSDictionary *)responseData];
+        self.transactionDetailModel = detaiModel;
+        [self updateUI];
+    };
+    GET_Asset_Transaction_id.onError = ^(NSString *reason, NSInteger code) {
         [QMUITips showError:reason];
     };
-    GET_Asset_tokenId.onEndConnection = ^{
-        [QMUITips hideAllTips];
+    GET_Asset_Transaction_id.onEndConnection = ^{
+        [QMUITips hideAllTipsInView:self.view];
     };
-    [GET_Asset_tokenId sendRequestWithTokenId:self.assetTokenModel.tokenId];
-    
+    [GET_Asset_Transaction_id sendRequestWithID:self.transactionRecordModel.idField];
 }
-- (void)setNav {
-    [self addNormalNavBar:self.assetTokenModel.tokenName];
-    [self.normalNavbar setLeftButtonAsReturnButton];
-    [self.normalNavbar setRightButtonWithImage:UIImageMake(@"scan-qrcode")];
-}
-
-
-- (void)setSwitchTitleView
-{
-    NSArray *titleArr = @[@"全部", @"支出",@"收入"];
-    SGPageTitleViewConfigure *configure = [SGPageTitleViewConfigure pageTitleViewConfigure];
-    configure.indicatorStyle =  SGIndicatorStyleDefault;
-    configure.indicatorColor = [UIColor qmui_colorWithHexString:@"#FF3E4751"];
-    configure.titleColor = [UIColor qmui_colorWithHexString:@"#FFB8C1D2"];
-    [configure setTitleSelectedColor:[UIColor qmui_colorWithHexString:@"#FF3E4751"]];
-    configure.titleFont = [UIFont systemFontOfSize:15];
-    configure.showBottomSeparator = NO;
-    configure.needBounces = NO;
-    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, self.normalNavbar.qmui_height, SCREEN_WIDTH, 44) delegate:self titleNames:titleArr configure:configure];
-    [self.view addSubview:_pageTitleView];
-    yudef_weakSelf;
-    [self.pageTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(@(SCREEN_WIDTH));
-        make.height.equalTo(@(44));
-        make.top.equalTo(weakSelf.transactionHeaderView.mas_bottom).with.offset(24);
-        make.left.equalTo(@0);
-    }];
-}
-- (void)setSwitchPage {
-    YUTransactionListViewController *tableVc0 = [[YUTransactionListViewController alloc]init];
-    tableVc0.transactionType  = 0;
-    tableVc0.assetTokenModel = self.assetTokenModel;
-    YUTransactionListViewController *tableVc1 =  [[YUTransactionListViewController alloc]init];
-    tableVc1.transactionType  = 2;
-    tableVc1.assetTokenModel = self.assetTokenModel;
-    YUTransactionListViewController *tableVc2 =  [[YUTransactionListViewController alloc]init];
-    tableVc2.transactionType  = 1;
-    tableVc2.assetTokenModel = self.assetTokenModel;
-    NSArray *childArr = @[tableVc0, tableVc1,tableVc2];
-    self.pageContentScrollView = [[SGPageContentScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0) parentVC:self childVCs:childArr];
-    self.pageContentScrollView.delegatePageContentScrollView = self;
-    [self.view addSubview:_pageContentScrollView];
-    [self.pageContentScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.pageTitleView.mas_bottom).with.offset(10);
-        make.leading.equalTo(@0);
-        make.trailing.equalTo(@0);
-        make.bottom.equalTo(self.bottomView.mas_top);
-    }];
-}
-
-- (void)setHeaderView {
-    [self.tokenBgView yu_circleStyle];
-    [self.cureencyBgView yu_circleStyle];
-    [self.transactionHeaderView yu_smallCircleStyle];
-}
-
-#pragma mark - <event response>
-- (void)setBottomEvent {
-    yudef_weakSelf;
-    self.bottomView.chainTransferBlock = ^{
-        YUTransferViewController *transferVC = [[YUTransferViewController alloc] init];
-        [weakSelf.navigationController pushViewController:transferVC animated:YES];
-    };
-    self.bottomView.chainReceiptBlock = ^{
+- (void)updateUI {
+    TransactionDetailModel *itemModel = self.transactionDetailModel;
+    self.timeLabel.text = [QuickGet timeWithTimeInterval_allNumberStyleString:itemModel.createdAt];
+    NSArray<void_block> *classify_mapTo_Block = @[^(void){
+        // classify equal 0,block transaction
         
-    };
-   
+        NSArray *status_mapTo_Str = @[@"",@"等待中",@"成功",@"",@"",@"",@"",@"",@"",@"失败"];
+        NSArray *status_mapTo_Image = @[@"",@"waiting",@"success",@"",@"",@"",@"",@"",@"",@"failure"];
+        NSString *statusStr = status_mapTo_Str[itemModel.status];
+        NSString *statusImage = status_mapTo_Image[itemModel.status];
+        [self.iconImageView setImage:[UIImage imageNamed:statusImage]];
+        NSArray<void_block> *transtype_mapTo_Block = @[^(void){
+            // transType eq to 0
+        },^(void){
+            // !!! classify equal 0,transType eq to 1
+            [self.statusLabel setText:TPString(@"充值%@",statusStr)];
+            
+        },^(void){
+            // !!! classify equal 0,transType eq to 2
+            [self.statusLabel setText:TPString(@"提现%@",statusStr)];
+        }];
+        if ([statusStr isEqualToString:@"等待中"]) {
+            [self.statusLabel setText:@"等待中..."];
+        }
+        transtype_mapTo_Block[itemModel.transactionType]();
+    },^(void){
+        // classify equal 1
+    },^(void){
+        // classify equal 2
+    },^(void){
+        // classify equal 3
+    },^(void){
+        // classify equal 4
+    },^(void){
+        // classify equal 5
+        
+        [self.iconImageView setImage:[UIImage imageNamed:@"success"]];
+       
+        NSArray<void_block> *transtype_mapTo_Block = @[^(void){
+            // transType eq to 0
+        },^(void){
+            // classify equal 5,transType eq to 1
+
+            NSString *titleInfo = TPString(@"收款：来自%@",itemModel.fromAddress);
+            self.statusLabel.text = titleInfo;
+        },^(void){
+            // classify equal 5,transType eq to 2
+         
+            NSString *titleInfo = TPString(@"转账：转到%@",itemModel.toAddress);
+            self.statusLabel.text = titleInfo;
+        }];
+        transtype_mapTo_Block[itemModel.transactionType]();
+    }];
+    classify_mapTo_Block[itemModel.classify]();
+    [self.pageListView beginRefreshHeaderWithNoAnimate];
     
+
 }
+#pragma mark - <event response>
+
 #pragma mark - <lazy load>
 
-#pragma mark - <delegate>
-- (void)pageTitleView:(SGPageTitleView *)pageTitleView selectedIndex:(NSInteger)selectedIndex
-{
-    [self.pageContentScrollView setPageContentScrollViewCurrentIndex:selectedIndex];
-}
-
-- (void)pageContentScrollView:(SGPageContentScrollView *)pageContentScrollView progress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex
-{
-    [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
-}
 @end

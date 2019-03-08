@@ -2,16 +2,16 @@
 //  YUTransactionDetailViewController.h
 //  ToPay
 //
-//  Created by 蒲公英 on 2019/3/7.
+//  Created by 蒲公英 on 2019/3/8.
 //  Copyright © 2019年 MVC. All rights reserved.
 //
 
 #import "YUBaseViewController.h"
-
+#import "TransactionRecordModel.h"
 NS_ASSUME_NONNULL_BEGIN
-@class AssetTokenItemModel;
+
 @interface YUTransactionDetailViewController : YUBaseViewController
-@property (strong,nonatomic) AssetTokenItemModel *assetTokenModel;
+@property (strong,nonatomic) TransactionRecordModel *transactionRecordModel ;
 
 @end
 

@@ -32,7 +32,7 @@
 #pragma mark - <public method>
 - (void)initSubviews {
     [super initSubviews];
-    [self.nextStepButton yu_fullBlueCircleStyle];
+    [self.nextStepButton yu_gradualBlueChangeStyle];
     [self.emailAddrTextView yu_emailStyle];
     [self.vaildCodeTextView yu_vaildCodeStyle];
     [self.sendValidCodeButton yu_vaildButtonStyle];

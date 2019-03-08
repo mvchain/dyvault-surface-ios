@@ -25,6 +25,8 @@
 #define yufloat_lawCurrency(num) [QuickGet makeFloatNumber:num tailNum:2]
 #define PAGE_COMPLETE_ERROR complete(@[[YUErrorCellEntity quickInit:reason]]);
 #define PAGE_LIST_SIZE 10
+typedef void(^void_block)(void);
+
 #import "UITableView+YUTableView.h"
 #import <BlocksKit.h>
 #import "ServModel.h"
@@ -53,4 +55,5 @@
 #import "YUCurrencyManager.h"
 #import "TPExchangeRate.h"
 #import "TPUserInfo.h"
+#import "YUPhoneInformationTools.h"
 #endif

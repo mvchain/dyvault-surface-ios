@@ -140,8 +140,8 @@
 		DD7086232230CE05006482FB /* YUNoDataCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086202230CE05006482FB /* YUNoDataCellEntity.m */; };
 		DD7086242230CE05006482FB /* YUNoDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086212230CE05006482FB /* YUNoDataCell.m */; };
 		DD7086282230DB64006482FB /* MessageItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086272230DB64006482FB /* MessageItemModel.m */; };
-		DD70862D2230F93C006482FB /* YUTransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70862B2230F93C006482FB /* YUTransactionDetailViewController.m */; };
-		DD70862E2230F93C006482FB /* YUTransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70862C2230F93C006482FB /* YUTransactionDetailViewController.xib */; };
+		DD70862D2230F93C006482FB /* YUTransactionRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70862B2230F93C006482FB /* YUTransactionRecordViewController.m */; };
+		DD70862E2230F93C006482FB /* YUTransactionRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70862C2230F93C006482FB /* YUTransactionRecordViewController.xib */; };
 		DD7086332230FA6A006482FB /* YUTransactionHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086312230FA6A006482FB /* YUTransactionHeadCell.m */; };
 		DD7086342230FA6A006482FB /* YUTransactionHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7086322230FA6A006482FB /* YUTransactionHeadCell.xib */; };
 		DD7086372230FA7B006482FB /* YUTransactionHeadCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086362230FA7B006482FB /* YUTransactionHeadCellEntity.m */; };
@@ -153,7 +153,6 @@
 		DD70865622310964006482FB /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864A22310964006482FB /* SGPageTitleViewConfigure.m */; };
 		DD70865722310964006482FB /* SGPagingViewPopGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70864E22310964006482FB /* SGPagingViewPopGestureVC.m */; };
 		DD70865B2231123F006482FB /* TPTokenBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086592231123E006482FB /* TPTokenBottomView.m */; };
-		DD70865F22312202006482FB /* TransactionHeadInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70865E22312202006482FB /* TransactionHeadInfoModel.m */; };
 		DD70866422313245006482FB /* YUTransactionRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70866222313245006482FB /* YUTransactionRecordCell.m */; };
 		DD70866522313245006482FB /* YUTransactionRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70866322313245006482FB /* YUTransactionRecordCell.xib */; };
 		DD7086682231325E006482FB /* YUTransactionRecordCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086672231325E006482FB /* YUTransactionRecordCellEntity.m */; };
@@ -162,6 +161,29 @@
 		DD70867022313CF8006482FB /* TransactionRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70866F22313CF8006482FB /* TransactionRecordModel.m */; };
 		DD70867522315035006482FB /* YUTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70867322315035006482FB /* YUTransferViewController.m */; };
 		DD70867622315035006482FB /* YUTransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70867422315035006482FB /* YUTransferViewController.xib */; };
+		DD70867A223216EA006482FB /* TransferBaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD708679223216EA006482FB /* TransferBaseInfo.m */; };
+		DD70867E2232334D006482FB /* TPTransView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70867C2232334D006482FB /* TPTransView.m */; };
+		DD70868122323379006482FB /* SYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70867F22323378006482FB /* SYPasswordView.m */; };
+		DD708684223233C2006482FB /* YFactoryUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD708683223233C2006482FB /* YFactoryUI.m */; };
+		DD708688223246ED006482FB /* TPChainReceiptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD708687223246ED006482FB /* TPChainReceiptViewController.m */; };
+		DD70869222324809006482FB /* NIMScannerBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70868A22324808006482FB /* NIMScannerBorder.m */; };
+		DD70869322324809006482FB /* NIMScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70868D22324809006482FB /* NIMScannerViewController.m */; };
+		DD70869422324809006482FB /* NIMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70868E22324809006482FB /* NIMScanner.m */; };
+		DD70869522324809006482FB /* NIMScannerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70869122324809006482FB /* NIMScannerMaskView.m */; };
+		DD708698223249F2006482FB /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = DD708697223249F2006482FB /* UIViewExt.m */; };
+		DDDDC2FD22326671008BB491 /* YUTransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC2FB22326671008BB491 /* YUTransactionDetailViewController.m */; };
+		DDDDC2FE22326671008BB491 /* YUTransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDDC2FC22326671008BB491 /* YUTransactionDetailViewController.xib */; };
+		DDDDC3032232678C008BB491 /* YUTransactionDetailItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC3012232678C008BB491 /* YUTransactionDetailItemCell.m */; };
+		DDDDC3042232678C008BB491 /* YUTransactionDetailItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDDC3022232678C008BB491 /* YUTransactionDetailItemCell.xib */; };
+		DDDDC307223267AD008BB491 /* YUTransactionDetailItemCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC306223267AD008BB491 /* YUTransactionDetailItemCellEntity.m */; };
+		DDDDC30B22327A35008BB491 /* TransactionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC30A22327A35008BB491 /* TransactionDetailModel.m */; };
+		DDDDC31022327FDE008BB491 /* YUBuyTokenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC30E22327FDE008BB491 /* YUBuyTokenViewController.m */; };
+		DDDDC31122327FDE008BB491 /* YUBuyTokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDDC30F22327FDE008BB491 /* YUBuyTokenViewController.xib */; };
+		DDDDC31422328280008BB491 /* API_GET_Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC31322328280008BB491 /* API_GET_Channel.m */; };
+		DDDDC319223283C9008BB491 /* YUBuyTokenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC317223283C9008BB491 /* YUBuyTokenCell.m */; };
+		DDDDC31A223283C9008BB491 /* YUBuyTokenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDDC318223283C9008BB491 /* YUBuyTokenCell.xib */; };
+		DDDDC31D223283D7008BB491 /* YUBuyTokenCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC31C223283D7008BB491 /* YUBuyTokenCellEntity.m */; };
+		DDDDC321223287C8008BB491 /* BuyTokenItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -453,9 +475,9 @@
 		DD7086212230CE05006482FB /* YUNoDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUNoDataCell.m; sourceTree = "<group>"; };
 		DD7086262230DB64006482FB /* MessageItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageItemModel.h; sourceTree = "<group>"; };
 		DD7086272230DB64006482FB /* MessageItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageItemModel.m; sourceTree = "<group>"; };
-		DD70862A2230F93C006482FB /* YUTransactionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionDetailViewController.h; sourceTree = "<group>"; };
-		DD70862B2230F93C006482FB /* YUTransactionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionDetailViewController.m; sourceTree = "<group>"; };
-		DD70862C2230F93C006482FB /* YUTransactionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionDetailViewController.xib; sourceTree = "<group>"; };
+		DD70862A2230F93C006482FB /* YUTransactionRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionRecordViewController.h; sourceTree = "<group>"; };
+		DD70862B2230F93C006482FB /* YUTransactionRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionRecordViewController.m; sourceTree = "<group>"; };
+		DD70862C2230F93C006482FB /* YUTransactionRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionRecordViewController.xib; sourceTree = "<group>"; };
 		DD7086302230FA6A006482FB /* YUTransactionHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionHeadCell.h; sourceTree = "<group>"; };
 		DD7086312230FA6A006482FB /* YUTransactionHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionHeadCell.m; sourceTree = "<group>"; };
 		DD7086322230FA6A006482FB /* YUTransactionHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionHeadCell.xib; sourceTree = "<group>"; };
@@ -478,8 +500,6 @@
 		DD70865022310964006482FB /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
 		DD7086592231123E006482FB /* TPTokenBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTokenBottomView.m; sourceTree = "<group>"; };
 		DD70865A2231123F006482FB /* TPTokenBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTokenBottomView.h; sourceTree = "<group>"; };
-		DD70865D22312202006482FB /* TransactionHeadInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionHeadInfoModel.h; sourceTree = "<group>"; };
-		DD70865E22312202006482FB /* TransactionHeadInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionHeadInfoModel.m; sourceTree = "<group>"; };
 		DD70866122313245006482FB /* YUTransactionRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionRecordCell.h; sourceTree = "<group>"; };
 		DD70866222313245006482FB /* YUTransactionRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionRecordCell.m; sourceTree = "<group>"; };
 		DD70866322313245006482FB /* YUTransactionRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionRecordCell.xib; sourceTree = "<group>"; };
@@ -493,6 +513,48 @@
 		DD70867222315035006482FB /* YUTransferViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransferViewController.h; sourceTree = "<group>"; };
 		DD70867322315035006482FB /* YUTransferViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransferViewController.m; sourceTree = "<group>"; };
 		DD70867422315035006482FB /* YUTransferViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransferViewController.xib; sourceTree = "<group>"; };
+		DD708678223216EA006482FB /* TransferBaseInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferBaseInfo.h; sourceTree = "<group>"; };
+		DD708679223216EA006482FB /* TransferBaseInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransferBaseInfo.m; sourceTree = "<group>"; };
+		DD70867C2232334D006482FB /* TPTransView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTransView.m; sourceTree = "<group>"; };
+		DD70867D2232334D006482FB /* TPTransView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPTransView.h; sourceTree = "<group>"; };
+		DD70867F22323378006482FB /* SYPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPasswordView.m; sourceTree = "<group>"; };
+		DD70868022323378006482FB /* SYPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPasswordView.h; sourceTree = "<group>"; };
+		DD708682223233C2006482FB /* YFactoryUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFactoryUI.h; sourceTree = "<group>"; };
+		DD708683223233C2006482FB /* YFactoryUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFactoryUI.m; sourceTree = "<group>"; };
+		DD708686223246ED006482FB /* TPChainReceiptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChainReceiptViewController.h; sourceTree = "<group>"; };
+		DD708687223246ED006482FB /* TPChainReceiptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChainReceiptViewController.m; sourceTree = "<group>"; };
+		DD70868A22324808006482FB /* NIMScannerBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMScannerBorder.m; sourceTree = "<group>"; };
+		DD70868B22324808006482FB /* NIMScannerMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMScannerMaskView.h; sourceTree = "<group>"; };
+		DD70868C22324809006482FB /* NIMScannerBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMScannerBorder.h; sourceTree = "<group>"; };
+		DD70868D22324809006482FB /* NIMScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMScannerViewController.m; sourceTree = "<group>"; };
+		DD70868E22324809006482FB /* NIMScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMScanner.m; sourceTree = "<group>"; };
+		DD70868F22324809006482FB /* NIMScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMScanner.h; sourceTree = "<group>"; };
+		DD70869022324809006482FB /* NIMScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMScannerViewController.h; sourceTree = "<group>"; };
+		DD70869122324809006482FB /* NIMScannerMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMScannerMaskView.m; sourceTree = "<group>"; };
+		DD708696223249F1006482FB /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		DD708697223249F2006482FB /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		DDDDC2FA22326671008BB491 /* YUTransactionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionDetailViewController.h; sourceTree = "<group>"; };
+		DDDDC2FB22326671008BB491 /* YUTransactionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionDetailViewController.m; sourceTree = "<group>"; };
+		DDDDC2FC22326671008BB491 /* YUTransactionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionDetailViewController.xib; sourceTree = "<group>"; };
+		DDDDC3002232678C008BB491 /* YUTransactionDetailItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionDetailItemCell.h; sourceTree = "<group>"; };
+		DDDDC3012232678C008BB491 /* YUTransactionDetailItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionDetailItemCell.m; sourceTree = "<group>"; };
+		DDDDC3022232678C008BB491 /* YUTransactionDetailItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUTransactionDetailItemCell.xib; sourceTree = "<group>"; };
+		DDDDC305223267AD008BB491 /* YUTransactionDetailItemCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUTransactionDetailItemCellEntity.h; sourceTree = "<group>"; };
+		DDDDC306223267AD008BB491 /* YUTransactionDetailItemCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUTransactionDetailItemCellEntity.m; sourceTree = "<group>"; };
+		DDDDC30922327A35008BB491 /* TransactionDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionDetailModel.h; sourceTree = "<group>"; };
+		DDDDC30A22327A35008BB491 /* TransactionDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionDetailModel.m; sourceTree = "<group>"; };
+		DDDDC30D22327FDE008BB491 /* YUBuyTokenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUBuyTokenViewController.h; sourceTree = "<group>"; };
+		DDDDC30E22327FDE008BB491 /* YUBuyTokenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUBuyTokenViewController.m; sourceTree = "<group>"; };
+		DDDDC30F22327FDE008BB491 /* YUBuyTokenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUBuyTokenViewController.xib; sourceTree = "<group>"; };
+		DDDDC31222328280008BB491 /* API_GET_Channel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Channel.h; sourceTree = "<group>"; };
+		DDDDC31322328280008BB491 /* API_GET_Channel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Channel.m; sourceTree = "<group>"; };
+		DDDDC316223283C9008BB491 /* YUBuyTokenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUBuyTokenCell.h; sourceTree = "<group>"; };
+		DDDDC317223283C9008BB491 /* YUBuyTokenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUBuyTokenCell.m; sourceTree = "<group>"; };
+		DDDDC318223283C9008BB491 /* YUBuyTokenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YUBuyTokenCell.xib; sourceTree = "<group>"; };
+		DDDDC31B223283D7008BB491 /* YUBuyTokenCellEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUBuyTokenCellEntity.h; sourceTree = "<group>"; };
+		DDDDC31C223283D7008BB491 /* YUBuyTokenCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUBuyTokenCellEntity.m; sourceTree = "<group>"; };
+		DDDDC31F223287C8008BB491 /* BuyTokenItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyTokenItemModel.h; sourceTree = "<group>"; };
+		DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyTokenItemModel.m; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -758,8 +820,11 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDC30C22327FAE008BB491 /* BuyToken */,
+				DDDDC2F92232652D008BB491 /* TransactionDetail */,
+				DD708685223246D5006482FB /* Receipt */,
 				DD70867122315007006482FB /* Transfer */,
-				DD7086292230F82C006482FB /* TransactionDetail */,
+				DD7086292230F82C006482FB /* TransactionRecord */,
 				DDEDB841222E25DB003F648E /* ChangePassword */,
 				DDEDB82A222D5404003F648E /* Notification */,
 				DD54BC23222CF8C20009E383 /* AccountSecurity */,
@@ -809,7 +874,10 @@
 		DD21EBBC22265D4F0078E625 /* SpecialModels */ = {
 			isa = PBXGroup;
 			children = (
-				DD70865C223121EC006482FB /* Transaction */,
+				DDDDC31E223287B4008BB491 /* BuyToken */,
+				DDDDC30822327A1C008BB491 /* TransactionDetail */,
+				DD708677223216A6006482FB /* Transfer */,
+				DD70865C223121EC006482FB /* TransactionRecord */,
 				DD7086252230DB52006482FB /* Notification */,
 				DD4F0CF422296072003467CB /* Asset */,
 				DD4F0CED22295F9B003467CB /* AddNewToken */,
@@ -869,6 +937,7 @@
 		DD21EBC3222662060078E625 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD70867B2232333D006482FB /* PayPassword */,
 				DD54BC02222AAC1E0009E383 /* SearchView */,
 				DD21EC49222789400078E625 /* YUCircleTextView */,
 				DD21EC412227818F0078E625 /* VaildCodeButton */,
@@ -891,7 +960,9 @@
 		DD21EBC5222662150078E625 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DD70862F2230FA3F006482FB /* TransactionDetail */,
+				DDDDC315223283A8008BB491 /* BuyToken */,
+				DDDDC2FF2232670B008BB491 /* TransactionDetail */,
+				DD70862F2230FA3F006482FB /* TransactionRecord */,
 				DDEDB830222E12A4003F648E /* Notification */,
 				DDEDB811222D2A33003F648E /* Language */,
 				DD54BC09222CC5990009E383 /* Mine */,
@@ -1243,6 +1314,8 @@
 		DD4F0C962227EDED003467CB /* ChannelRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDC31222328280008BB491 /* API_GET_Channel.h */,
+				DDDDC31322328280008BB491 /* API_GET_Channel.m */,
 			);
 			path = ChannelRelated;
 			sourceTree = "<group>";
@@ -1573,18 +1646,18 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
-		DD7086292230F82C006482FB /* TransactionDetail */ = {
+		DD7086292230F82C006482FB /* TransactionRecord */ = {
 			isa = PBXGroup;
 			children = (
 				DD70866022313205006482FB /* ChildTableVC */,
-				DD70862A2230F93C006482FB /* YUTransactionDetailViewController.h */,
-				DD70862B2230F93C006482FB /* YUTransactionDetailViewController.m */,
-				DD70862C2230F93C006482FB /* YUTransactionDetailViewController.xib */,
+				DD70862A2230F93C006482FB /* YUTransactionRecordViewController.h */,
+				DD70862B2230F93C006482FB /* YUTransactionRecordViewController.m */,
+				DD70862C2230F93C006482FB /* YUTransactionRecordViewController.xib */,
 			);
-			path = TransactionDetail;
+			path = TransactionRecord;
 			sourceTree = "<group>";
 		};
-		DD70862F2230FA3F006482FB /* TransactionDetail */ = {
+		DD70862F2230FA3F006482FB /* TransactionRecord */ = {
 			isa = PBXGroup;
 			children = (
 				DD7086302230FA6A006482FB /* YUTransactionHeadCell.h */,
@@ -1598,12 +1671,13 @@
 				DD7086662231325E006482FB /* YUTransactionRecordCellEntity.h */,
 				DD7086672231325E006482FB /* YUTransactionRecordCellEntity.m */,
 			);
-			path = TransactionDetail;
+			path = TransactionRecord;
 			sourceTree = "<group>";
 		};
 		DD70863C2231094D006482FB /* Extenion */ = {
 			isa = PBXGroup;
 			children = (
+				DD708689223247FC006482FB /* QRCode */,
 				DD70863D22310964006482FB /* SGPagingView */,
 			);
 			path = Extenion;
@@ -1672,15 +1746,13 @@
 			path = TransactionDetail;
 			sourceTree = "<group>";
 		};
-		DD70865C223121EC006482FB /* Transaction */ = {
+		DD70865C223121EC006482FB /* TransactionRecord */ = {
 			isa = PBXGroup;
 			children = (
-				DD70865D22312202006482FB /* TransactionHeadInfoModel.h */,
-				DD70865E22312202006482FB /* TransactionHeadInfoModel.m */,
 				DD70866E22313CF8006482FB /* TransactionRecordModel.h */,
 				DD70866F22313CF8006482FB /* TransactionRecordModel.m */,
 			);
-			path = Transaction;
+			path = TransactionRecord;
 			sourceTree = "<group>";
 		};
 		DD70866022313205006482FB /* ChildTableVC */ = {
@@ -1701,6 +1773,116 @@
 				DD70867422315035006482FB /* YUTransferViewController.xib */,
 			);
 			path = Transfer;
+			sourceTree = "<group>";
+		};
+		DD708677223216A6006482FB /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				DD708678223216EA006482FB /* TransferBaseInfo.h */,
+				DD708679223216EA006482FB /* TransferBaseInfo.m */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		DD70867B2232333D006482FB /* PayPassword */ = {
+			isa = PBXGroup;
+			children = (
+				DD708682223233C2006482FB /* YFactoryUI.h */,
+				DD708683223233C2006482FB /* YFactoryUI.m */,
+				DD70868022323378006482FB /* SYPasswordView.h */,
+				DD70867F22323378006482FB /* SYPasswordView.m */,
+				DD70867D2232334D006482FB /* TPTransView.h */,
+				DD70867C2232334D006482FB /* TPTransView.m */,
+			);
+			path = PayPassword;
+			sourceTree = "<group>";
+		};
+		DD708685223246D5006482FB /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				DD708686223246ED006482FB /* TPChainReceiptViewController.h */,
+				DD708687223246ED006482FB /* TPChainReceiptViewController.m */,
+			);
+			path = Receipt;
+			sourceTree = "<group>";
+		};
+		DD708689223247FC006482FB /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				DD708696223249F1006482FB /* UIViewExt.h */,
+				DD708697223249F2006482FB /* UIViewExt.m */,
+				DD70868F22324809006482FB /* NIMScanner.h */,
+				DD70868E22324809006482FB /* NIMScanner.m */,
+				DD70868C22324809006482FB /* NIMScannerBorder.h */,
+				DD70868A22324808006482FB /* NIMScannerBorder.m */,
+				DD70868B22324808006482FB /* NIMScannerMaskView.h */,
+				DD70869122324809006482FB /* NIMScannerMaskView.m */,
+				DD70869022324809006482FB /* NIMScannerViewController.h */,
+				DD70868D22324809006482FB /* NIMScannerViewController.m */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		DDDDC2F92232652D008BB491 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC2FA22326671008BB491 /* YUTransactionDetailViewController.h */,
+				DDDDC2FB22326671008BB491 /* YUTransactionDetailViewController.m */,
+				DDDDC2FC22326671008BB491 /* YUTransactionDetailViewController.xib */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		DDDDC2FF2232670B008BB491 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC3002232678C008BB491 /* YUTransactionDetailItemCell.h */,
+				DDDDC3012232678C008BB491 /* YUTransactionDetailItemCell.m */,
+				DDDDC3022232678C008BB491 /* YUTransactionDetailItemCell.xib */,
+				DDDDC305223267AD008BB491 /* YUTransactionDetailItemCellEntity.h */,
+				DDDDC306223267AD008BB491 /* YUTransactionDetailItemCellEntity.m */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		DDDDC30822327A1C008BB491 /* TransactionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC30922327A35008BB491 /* TransactionDetailModel.h */,
+				DDDDC30A22327A35008BB491 /* TransactionDetailModel.m */,
+			);
+			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		DDDDC30C22327FAE008BB491 /* BuyToken */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC30D22327FDE008BB491 /* YUBuyTokenViewController.h */,
+				DDDDC30E22327FDE008BB491 /* YUBuyTokenViewController.m */,
+				DDDDC30F22327FDE008BB491 /* YUBuyTokenViewController.xib */,
+			);
+			path = BuyToken;
+			sourceTree = "<group>";
+		};
+		DDDDC315223283A8008BB491 /* BuyToken */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC316223283C9008BB491 /* YUBuyTokenCell.h */,
+				DDDDC317223283C9008BB491 /* YUBuyTokenCell.m */,
+				DDDDC318223283C9008BB491 /* YUBuyTokenCell.xib */,
+				DDDDC31B223283D7008BB491 /* YUBuyTokenCellEntity.h */,
+				DDDDC31C223283D7008BB491 /* YUBuyTokenCellEntity.m */,
+			);
+			path = BuyToken;
+			sourceTree = "<group>";
+		};
+		DDDDC31E223287B4008BB491 /* BuyToken */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC31F223287C8008BB491 /* BuyTokenItemModel.h */,
+				DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */,
+			);
+			path = BuyToken;
 			sourceTree = "<group>";
 		};
 		DDEDB802222D2165003F648E /* RebindEmailAddress */ = {
@@ -1921,8 +2103,10 @@
 				DD21EC0C2226BAD70078E625 /* YURegisterViewController.xib in Resources */,
 				DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */,
 				DD70866522313245006482FB /* YUTransactionRecordCell.xib in Resources */,
+				DDDDC3042232678C008BB491 /* YUTransactionDetailItemCell.xib in Resources */,
 				DD54BC2D222CF9B90009E383 /* YUAccountSecurityViewController.xib in Resources */,
 				DD54BC0E222CC9390009E383 /* YUMineItemCell.xib in Resources */,
+				DDDDC2FE22326671008BB491 /* YUTransactionDetailViewController.xib in Resources */,
 				DD70867622315035006482FB /* YUTransferViewController.xib in Resources */,
 				DD54BC16222CD1A00009E383 /* YUMineConfirmCell.xib in Resources */,
 				DD70866D223137FE006482FB /* YUTransactionListViewController.xib in Resources */,
@@ -1939,13 +2123,15 @@
 				DDEDB816222D2A50003F648E /* YULanguageItemCell.xib in Resources */,
 				DDEDB822222D45E4003F648E /* Language.strings in Resources */,
 				DD54BC07222AAC880009E383 /* YUSearchBarView.xib in Resources */,
+				DDDDC31A223283C9008BB491 /* YUBuyTokenCell.xib in Resources */,
 				DD54BBF5222A873B0009E383 /* YUAddNewTokenItemCell.xib in Resources */,
 				DD7086222230CE05006482FB /* YUNoDataCell.xib in Resources */,
-				DD70862E2230F93C006482FB /* YUTransactionDetailViewController.xib in Resources */,
+				DD70862E2230F93C006482FB /* YUTransactionRecordViewController.xib in Resources */,
 				DD4F0C852227E5A8003467CB /* YUAssetViewController.xib in Resources */,
 				DDEDB846222E25F3003F648E /* TPChangePassWordViewController.xib in Resources */,
 				DD21EC3E2227811F0078E625 /* YUTextViewXibContainer.xib in Resources */,
 				DD21EBD7222667C80078E625 /* YUWelcomeViewController.xib in Resources */,
+				DDDDC31122327FDE008BB491 /* YUBuyTokenViewController.xib in Resources */,
 				DDEDB835222E12D3003F648E /* YUNotificationItemCell.xib in Resources */,
 				DD4F0CD32229212D003467CB /* YUAssetHeaderInfoCell.xib in Resources */,
 				DD7086342230FA6A006482FB /* YUTransactionHeadCell.xib in Resources */,
@@ -2072,10 +2258,13 @@
 				DD4F0CCC222912CF003467CB /* YUAssetTableHeaderView.m in Sources */,
 				DD21EC442227819E0078E625 /* JKCountDownButton.m in Sources */,
 				DD4F0C722227BF5F003467CB /* QuickJudge.m in Sources */,
+				DDDDC31022327FDE008BB491 /* YUBuyTokenViewController.m in Sources */,
 				DD54BC11222CCB9B0009E383 /* YUMineItemCellEntity.m in Sources */,
+				DDDDC2FD22326671008BB491 /* YUTransactionDetailViewController.m in Sources */,
 				DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */,
 				DD54BC19222CD1B60009E383 /* YUMineConfirmCellEntity.m in Sources */,
 				DDEDB83E222E1E3F003F648E /* API_POST_User_Email.m in Sources */,
+				DD708688223246ED006482FB /* TPChainReceiptViewController.m in Sources */,
 				DD54BC1E222CD3DF0009E383 /* YUBlankCell.m in Sources */,
 				DD21EC332226BC970078E625 /* YUCustomNavBarView.m in Sources */,
 				DD4F0C7B2227C9DA003467CB /* YULoginViewController.m in Sources */,
@@ -2086,8 +2275,10 @@
 				DDEDB82E222D5497003F648E /* YUNotificationViewController.m in Sources */,
 				DD4F0CA422280C22003467CB /* API_POST_User_Reset.m in Sources */,
 				DD7085E9222F99E7006482FB /* TPCurrencyRatio.m in Sources */,
+				DDDDC3032232678C008BB491 /* YUTransactionDetailItemCell.m in Sources */,
 				DD4F0CF722296087003467CB /* AssetTokenItemModel.m in Sources */,
 				DD7085C6222E4193006482FB /* API_PUT_User_Password.m in Sources */,
+				DDDDC321223287C8008BB491 /* BuyTokenItemModel.m in Sources */,
 				DD21EC352226BC970078E625 /* YUNormalNavBarView.m in Sources */,
 				DD21EC2E2226BC970078E625 /* MMNavController.m in Sources */,
 				DD54BC0D222CC9390009E383 /* YUMineItemCell.m in Sources */,
@@ -2103,16 +2294,22 @@
 				DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */,
 				DD7086232230CE05006482FB /* YUNoDataCellEntity.m in Sources */,
 				DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */,
+				DD708698223249F2006482FB /* UIViewExt.m in Sources */,
 				DDEDB834222E12D3003F648E /* YUNotificationItemCell.m in Sources */,
 				DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */,
 				DD21EBEE222678E00078E625 /* UIView+YUStyle.m in Sources */,
+				DDDDC30B22327A35008BB491 /* TransactionDetailModel.m in Sources */,
 				DD4F0C5F2227B0CD003467CB /* YUSetPasswordViewController.m in Sources */,
 				DD54BC01222A8FE50009E383 /* YUErrorCellEntity.m in Sources */,
 				DD7086162230C622006482FB /* API_GET_Asset_Balance.m in Sources */,
 				DD21EBFE22269F570078E625 /* UIButton+YUButtonStyle.m in Sources */,
 				DD21EC48222784260078E625 /* QuickDo.m in Sources */,
 				DD4F0C842227E5A8003467CB /* YUAssetViewController.m in Sources */,
+				DD70867A223216EA006482FB /* TransferBaseInfo.m in Sources */,
+				DD70869422324809006482FB /* NIMScanner.m in Sources */,
+				DD70869522324809006482FB /* NIMScannerMaskView.m in Sources */,
 				DD4F0CA022280677003467CB /* YUValidEmailViewController.m in Sources */,
+				DDDDC31422328280008BB491 /* API_GET_Channel.m in Sources */,
 				DD4F0CB52228EB99003467CB /* YUViewControllerManagers.m in Sources */,
 				DD4F0CE522294C53003467CB /* YUAssetTokenItemCellEntity.m in Sources */,
 				DD21EC2F2226BC970078E625 /* YUINavigationControllerViewController.m in Sources */,
@@ -2121,11 +2318,14 @@
 				DD7085E8222F99E7006482FB /* TPCurrencyList.m in Sources */,
 				DD4F0CD622292192003467CB /* YUAssetHeaderInfoCellEntity.m in Sources */,
 				DD21EBCA222662590078E625 /* YUBaseViewController.m in Sources */,
+				DD70868122323379006482FB /* SYPasswordView.m in Sources */,
+				DD708684223233C2006482FB /* YFactoryUI.m in Sources */,
 				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
 				DD54BC06222AAC880009E383 /* YUSearchBarView.m in Sources */,
 				DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */,
 				DD70866422313245006482FB /* YUTransactionRecordCell.m in Sources */,
-				DD70862D2230F93C006482FB /* YUTransactionDetailViewController.m in Sources */,
+				DDDDC307223267AD008BB491 /* YUTransactionDetailItemCellEntity.m in Sources */,
+				DD70862D2230F93C006482FB /* YUTransactionRecordViewController.m in Sources */,
 				DD4F0CEC22295E13003467CB /* API_GET_Token.m in Sources */,
 				DD21EC402227811F0078E625 /* YUTextViewXibContainer.m in Sources */,
 				DD4F0C752227C3BB003467CB /* UserIDCardModel.m in Sources */,
@@ -2135,6 +2335,7 @@
 				DD7086242230CE05006482FB /* YUNoDataCell.m in Sources */,
 				DD21EBB6222658FF0078E625 /* YUNetworkManager.m in Sources */,
 				DD21EB85222637160078E625 /* main.m in Sources */,
+				DD70869222324809006482FB /* NIMScannerBorder.m in Sources */,
 				DD54BBF8222A874F0009E383 /* YUAddNewTokenItemCellEntity.m in Sources */,
 				DD7086332230FA6A006482FB /* YUTransactionHeadCell.m in Sources */,
 				DD70865722310964006482FB /* SGPagingViewPopGestureVC.m in Sources */,
@@ -2164,8 +2365,10 @@
 				DD21EC322226BC970078E625 /* YUStatusButtonGroupNavBarView.m in Sources */,
 				DDEDB80F222D2922003F648E /* YULanguageViewController.m in Sources */,
 				DD70861B2230C68F006482FB /* API_GET_Message.m in Sources */,
+				DD70867E2232334D006482FB /* TPTransView.m in Sources */,
 				DD54BC22222CD3F80009E383 /* YUBlankCellEntity.m in Sources */,
 				DD7085DA222F7938006482FB /* NSString+Pinyin.m in Sources */,
+				DDDDC319223283C9008BB491 /* YUBuyTokenCell.m in Sources */,
 				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
 				DD4F0C7F2227D6A6003467CB /* API_POST_User_Login.m in Sources */,
 				DD70867522315035006482FB /* YUTransferViewController.m in Sources */,
@@ -2177,6 +2380,7 @@
 				DD7085E7222F99E7006482FB /* TPExchangeRate.m in Sources */,
 				DD7085EC222F9CB5006482FB /* API_GET_Token_Base.m in Sources */,
 				DD7086372230FA7B006482FB /* YUTransactionHeadCellEntity.m in Sources */,
+				DD70869322324809006482FB /* NIMScannerViewController.m in Sources */,
 				DD70865422310964006482FB /* SGPageContentCollectionView.m in Sources */,
 				DD7086122230C622006482FB /* API_GET_Asset_tokenId.m in Sources */,
 				DD21EC362226BC970078E625 /* YUUnderlineButton.m in Sources */,
@@ -2193,11 +2397,11 @@
 				DD54BC37222D0F820009E383 /* YUNavigationViewController.m in Sources */,
 				DDEDB829222D46C4003F648E /* YULanguageManagers.m in Sources */,
 				DD7086182230C622006482FB /* API_GET_Asset_Transactions.m in Sources */,
+				DDDDC31D223283D7008BB491 /* YUBuyTokenCellEntity.m in Sources */,
 				DDEDB815222D2A50003F648E /* YULanguageItemCell.m in Sources */,
 				DD7085D0222E9651006482FB /* API_PUT_Asset.m in Sources */,
 				DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */,
 				DD70866C223137FE006482FB /* YUTransactionListViewController.m in Sources */,
-				DD70865F22312202006482FB /* TransactionHeadInfoModel.m in Sources */,
 				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
 				DD7086172230C622006482FB /* API_GET_Asset.m in Sources */,
 				DD70865222310964006482FB /* UIView+SGPagingView.m in Sources */,

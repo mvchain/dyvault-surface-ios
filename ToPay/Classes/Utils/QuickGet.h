@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)makeCnDayHourMinuteSecWithTimeCuo:(long long )time;
 + (NSString *)getNowTimeTimestamp;
 + (UIImage*)getImageByColor:(UIColor*)color;
++ (UIImage *)makeImageWithView:(UIView *)view withSize:(CGSize)size;
 @end
 
 NS_ASSUME_NONNULL_END

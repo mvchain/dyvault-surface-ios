@@ -65,6 +65,8 @@
     YUNetworkManager *manager = [YUNetworkManager defaultManager];
     // token ,for every connect
     [ manager.sessionManager.requestSerializer setValue:authToken forHTTPHeaderField:@"Authorization"];
+    NSLog(@"%@",authToken);
+    
     // language
     [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
     // buildVersion

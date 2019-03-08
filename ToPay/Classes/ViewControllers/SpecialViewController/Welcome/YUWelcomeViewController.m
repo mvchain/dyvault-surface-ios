@@ -26,7 +26,7 @@
 - (void)initSubviews {
     [super initSubviews];
     [self.loginButton yu_fullPurpleCircleStyle];
-    [self.registerButton yu_fullBlueCircleStyle];
+    [self.registerButton yu_gradualBlueChangeStyle];
     [self addNormalNavBar:@"开始"];
 }
 

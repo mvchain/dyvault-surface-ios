@@ -21,7 +21,10 @@
 - (void)setRightButtonWithTitle:(NSString *)title;
 
 - (void)setRightButtonWithImage:(UIImage *) ima ;
-
+- (void)setRightButtonWithImage:(UIImage *)ima
+                       withSize:(CGSize)size
+                      withRight:(CGFloat)right
+                     withBottom:(CGFloat)bottom ;
 
 
 @end

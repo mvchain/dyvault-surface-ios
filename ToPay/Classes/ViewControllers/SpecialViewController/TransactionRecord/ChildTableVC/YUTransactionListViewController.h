@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class AssetTokenItemModel;
+@class TransactionRecordModel;
 @interface YUTransactionListViewController : UIViewController
 @property (assign,nonatomic) NSInteger transactionType;
 @property (weak, nonatomic) AssetTokenItemModel *assetTokenModel;
+@property (copy,nonatomic) void(^selectedCallBack) (TransactionRecordModel *recordItemModel);
 
 @end
 

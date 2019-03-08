@@ -174,10 +174,11 @@
             [weakSelf.servListView reloadData];
         };
         PUT_Asset.onError = ^(NSString *reason, NSInteger code) {
+           
             [QMUITips showError:reason];
         };
         PUT_Asset.onEndConnection = ^{
-            [QMUITips hideAllTips];
+            [QMUITips hideAllTipsInView:weakSelf.view];
         };
         if (item.isAdd) {
             [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];

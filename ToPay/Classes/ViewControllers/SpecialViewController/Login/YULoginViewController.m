@@ -33,7 +33,7 @@
 }
 - (void)initSubviews {
     [super initSubviews];
-    [self.loginButton yu_fullBlueCircleStyle];
+    [self.loginButton yu_gradualBlueChangeStyle];
     [self.vaildCodeTextView yu_vaildCodeStyle];
     [self.emailAddrTextView setPlaceHolder:@"邮箱地址"];
     [self.passWordTextView setPlaceHolder:@"登录密码"];
@@ -107,13 +107,15 @@
     API_GET_User_Email_Logout *GET_User_Email_Logout = [[API_GET_User_Email_Logout alloc] init];
     GET_User_Email_Logout.onSuccess = ^(id responseData) {
         [self.sendVaildButton startCountDownWithSecond:60];
+       
         [QMUITips showSucceed:@"发送成功"];
     };
     GET_User_Email_Logout.onError = ^(NSString *reason, NSInteger code) {
+       
         [QMUITips showError:reason];
     };
     GET_User_Email_Logout.onEndConnection = ^{
-        [QMUITips hideAllTipsInView:self.view];
+         [QMUITips hideAllTipsInView:self.view];
     };
     [GET_User_Email_Logout sendRequestWithEmail:self.emailAddrTextView.text];
 }

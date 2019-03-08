@@ -37,9 +37,15 @@ yudef_lazyLoad(UITextField, textField, _textField);
         make.centerY.equalTo(weakSelf);
         make.trailing.equalTo(weakSelf).with.offset(-20);
     }];
+    [self.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
     
 }
-
+- (void)textFieldDidChange:(UITextField *)textfield {
+    if( _onTextChange ) {
+        _onTextChange(textfield.text);
+    }
+}
 
 - (NSString *)text {
     return self.textField.text;

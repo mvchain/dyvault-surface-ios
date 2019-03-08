@@ -13,9 +13,10 @@
                       password:(NSString *)password
                        tokenId:(NSInteger)tokenId
                          value:(CGFloat)value {
+    NSString *salt = [YUUserManagers shareInstance].userIDCard_inDisk.salt;
     self.apiPath = @"/asset/transaction";
     self.requestDict[@"address"] = address;
-    self.requestDict[@"password"] = password;
+    self.requestDict[@"password"] = [QuickGet encryptPwd:password salt:salt];
     self.requestDict[@"tokenId"] = @(tokenId);
     self.requestDict[@"value"] = @(value);
     [self connectWithRquestMethod:HTTPMethodPOST];

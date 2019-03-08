@@ -26,7 +26,7 @@
 #pragma mark - <public method>
 - (void)initSubviews {
     [super initSubviews];
-    [self.confirmButton yu_fullBlueCircleStyle];
+    [self.confirmButton yu_gradualBlueChangeStyle];
     [self.loginPasswordTextView yu_loginPassWordStyle];
     [self.payPasswordTextView yu_payPasswordStyle];
     [self.loginPasswordTextView setPlaceHolder:@"登录密码"];
@@ -54,16 +54,18 @@
         UIViewController *tabVc = [[YUViewControllerManagers shareInstance] getNewMainTabViewController ];
         
         [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
+            
             [QMUITips showSucceed:@"注册成功"];
             [self.navigationController pushViewController:tabVc animated:YES];
         }];
         
     };
     POST_Register.onError = ^(NSString *reason, NSInteger code) {
+         
         [QMUITips showError:reason];
     };
     POST_Register.onEndConnection = ^{
-        [QMUITips hideAllTipsInView:self.view];
+       [QMUITips hideAllTipsInView:self.view];
     };
     self.regRequestDataModel.password = self.loginPasswordTextView.text;
     self.regRequestDataModel.transactionPassword = self.payPasswordTextView.text;

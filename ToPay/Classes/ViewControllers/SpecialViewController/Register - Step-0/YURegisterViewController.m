@@ -47,7 +47,7 @@
 - (void)initSubviews {
     [super initSubviews];
     [self.normalNavbar setLeftButtonAsReturnButton];
-    [self.nextStepButton yu_fullBlueCircleStyle];
+    [self.nextStepButton yu_gradualBlueChangeStyle];
     [self.sendVaildButton yu_vaildButtonStyle];
     [self.userNameTextView setPlaceHolder:@"用户名"];
     [self.emailAddrTextView setPlaceHolder:@"邮箱地址"];
@@ -94,10 +94,11 @@
         [weakSelf.navigationController pushViewController:setPasswdVc animated:YES];
     };
     POST_User.onError = ^(NSString *reason, NSInteger code) {
+        
         [QMUITips showError:reason];
     };
     POST_User.onEndConnection = ^{
-        [QMUITips hideAllTipsInView:self.view];
+       [QMUITips hideAllTipsInView:self.view];
     };
     [POST_User sendRequestWithEmail:self.emailAddrTextView.text
                          inviteCode:@""
@@ -115,12 +116,17 @@
         [QMUITips showSucceed:@"发送成功"];
     };
     GET_User_Email_Logout.onError = ^(NSString *reason, NSInteger code) {
+        
         [QMUITips showError:reason];
     };
     GET_User_Email_Logout.onEndConnection = ^{
         [QMUITips hideAllTipsInView:self.view];
     };
     [GET_User_Email_Logout sendRequestWithEmail:self.emailAddrTextView.text];
+}
+- (IBAction)alreadyHaveAccountTap:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)dealloc {

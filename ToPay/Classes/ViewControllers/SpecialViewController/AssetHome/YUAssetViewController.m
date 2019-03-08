@@ -15,7 +15,8 @@
 #import "YUAddNewTokenController.h"
 #import "YUNotificationViewController.h"
 #import "API_GET_Asset_Balance.h"
-#import "YUTransactionDetailViewController.h"
+#import "YUTransactionRecordViewController.h"
+#import "YUBuyTokenViewController.h"
 @interface YUAssetViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *servListView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
@@ -32,12 +33,13 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.exchangeRates = [YUCurrencyManager shareInstance].legalCurrencyListArrays;
+        
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     self.isFirstDisplayThisVC = YES;
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,8 +64,8 @@
 }
 - (void)setNav {
     [self addNormalNavBar:@"ToPay"];
-    [self.normalNavbar setRightButtonWithImage:UIImageMake(@"home_add_black")];
-    [self.normalNavbar setLeftButtonWithImage:UIImageMake(@"news_black") withSize:CGSizeMake(15, 20)];
+    [self.normalNavbar setRightButtonWithImage:UIImageMake(@"home_add_black") withSize:CGSizeMake(17, 17) withRight:20 withBottom:15];
+    [self.normalNavbar setLeftButtonWithImage:UIImageMake(@"news_black") withSize:CGSizeMake(24, 24)];
 }
 #pragma mark - <private method>
 - (void)configServListView {
@@ -151,7 +153,7 @@
     self.servListView.yu_didSelectRowAtIndexPath = ^(NSIndexPath * _Nonnull indexPath)
     {
         if (indexPath.row == 0) return;
-        YUTransactionDetailViewController *transAcationDetail = [[YUTransactionDetailViewController alloc] init];
+        YUTransactionRecordViewController *transAcationDetail = [[YUTransactionRecordViewController alloc] init];
         transAcationDetail.assetTokenModel = weakSelf.assetItems[indexPath.row-1];
         [weakSelf.navigationController pushViewController:transAcationDetail animated:YES];
     };
@@ -163,9 +165,20 @@
             return ;
         }
         if ([idf isEqualToString:EVENT_BuyCurrency]) {
+            YUBuyTokenViewController *buyTokenVC = [[YUBuyTokenViewController alloc]init];
+            [weakSelf.navigationController pushViewController:buyTokenVC animated:YES];
+            
             return ;
         }
     };
 }
 
+#pragma mark lazy load
+- (NSArray <TPExchangeRate *> *)exchangeRates {
+    if(!_exchangeRates) {
+        _exchangeRates = [YUCurrencyManager shareInstance].legalCurrencyListArrays;
+    }
+    return _exchangeRates;
+    
+}
 @end
