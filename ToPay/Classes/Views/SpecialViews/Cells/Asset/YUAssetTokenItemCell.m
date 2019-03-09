@@ -36,6 +36,9 @@
     CGFloat nowLawCurrencyRatio = [[YUCurrencyManager shareInstance] nowLegalCurrencyRatio];
     CGFloat lawCureencyValue = yufloat_lawCurrency(itemModel.value * itemModel.ratio / nowLawCurrencyRatio);
     self.lawCurrencyLabel.text = TPString(@"%@ %.2f",moneyFlag,lawCureencyValue );
+    NSString *tokenName_language = [[YULanguageManagers shareInstance] tokenFullNameByTokenName:itemModel.tokenName];
+    [self.descLabel setText:tokenName_language];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

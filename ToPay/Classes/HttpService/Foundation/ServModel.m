@@ -46,6 +46,9 @@
                     [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit] ; // exit
                     return;
                 }
+                if (![[YUUserManagers shareInstance] isLogined]) {
+                    return;
+                }
                 // refresh succ
                 [self connectWithRquestMethod:rquestMethod];
             }];
@@ -61,12 +64,11 @@
 - (void)updateHttpHeadTokenForEachAPI
 {
     NSString *authToken = [[YUUserManagers shareInstance] userIDCard_inDisk].token;
+    NSLog(@"%@",authToken);
     if (!authToken) return; // no token exit
     YUNetworkManager *manager = [YUNetworkManager defaultManager];
     // token ,for every connect
     [ manager.sessionManager.requestSerializer setValue:authToken forHTTPHeaderField:@"Authorization"];
-    NSLog(@"%@",authToken);
-    
     // language
     [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
     // buildVersion

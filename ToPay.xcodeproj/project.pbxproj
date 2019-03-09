@@ -184,6 +184,7 @@
 		DDDDC31A223283C9008BB491 /* YUBuyTokenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDDC318223283C9008BB491 /* YUBuyTokenCell.xib */; };
 		DDDDC31D223283D7008BB491 /* YUBuyTokenCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC31C223283D7008BB491 /* YUBuyTokenCellEntity.m */; };
 		DDDDC321223287C8008BB491 /* BuyTokenItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */; };
+		DDDDC3252233A39F008BB491 /* TPAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC3242233A39F008BB491 /* TPAboutViewController.m */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -555,6 +556,8 @@
 		DDDDC31C223283D7008BB491 /* YUBuyTokenCellEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUBuyTokenCellEntity.m; sourceTree = "<group>"; };
 		DDDDC31F223287C8008BB491 /* BuyTokenItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyTokenItemModel.h; sourceTree = "<group>"; };
 		DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyTokenItemModel.m; sourceTree = "<group>"; };
+		DDDDC3232233A39F008BB491 /* TPAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAboutViewController.h; sourceTree = "<group>"; };
+		DDDDC3242233A39F008BB491 /* TPAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAboutViewController.m; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -820,6 +823,7 @@
 		DD21EBB72226591D0078E625 /* SpecialViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDC3222233A396008BB491 /* About */,
 				DDDDC30C22327FAE008BB491 /* BuyToken */,
 				DDDDC2F92232652D008BB491 /* TransactionDetail */,
 				DD708685223246D5006482FB /* Receipt */,
@@ -1885,6 +1889,15 @@
 			path = BuyToken;
 			sourceTree = "<group>";
 		};
+		DDDDC3222233A396008BB491 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC3232233A39F008BB491 /* TPAboutViewController.h */,
+				DDDDC3242233A39F008BB491 /* TPAboutViewController.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		DDEDB802222D2165003F648E /* RebindEmailAddress */ = {
 			isa = PBXGroup;
 			children = (
@@ -2262,6 +2275,7 @@
 				DD54BC11222CCB9B0009E383 /* YUMineItemCellEntity.m in Sources */,
 				DDDDC2FD22326671008BB491 /* YUTransactionDetailViewController.m in Sources */,
 				DD21EC0122269FC90078E625 /* UIButton+Gradient.m in Sources */,
+				DDDDC3252233A39F008BB491 /* TPAboutViewController.m in Sources */,
 				DD54BC19222CD1B60009E383 /* YUMineConfirmCellEntity.m in Sources */,
 				DDEDB83E222E1E3F003F648E /* API_POST_User_Email.m in Sources */,
 				DD708688223246ED006482FB /* TPChainReceiptViewController.m in Sources */,
@@ -2582,6 +2596,7 @@
 			baseConfigurationReference = D65A7CA52319B34E76B97852 /* Pods-ToPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLAJ9329RS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2603,6 +2618,7 @@
 			baseConfigurationReference = F269B838F6F657FCAB75948A /* Pods-ToPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JLAJ9329RS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

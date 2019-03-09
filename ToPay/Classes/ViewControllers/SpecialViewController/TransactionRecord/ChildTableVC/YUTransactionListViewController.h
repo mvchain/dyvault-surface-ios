@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign,nonatomic) NSInteger transactionType;
 @property (weak, nonatomic) AssetTokenItemModel *assetTokenModel;
 @property (copy,nonatomic) void(^selectedCallBack) (TransactionRecordModel *recordItemModel);
+- (void)refreshData;
 
 @end
 

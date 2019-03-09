@@ -23,7 +23,7 @@
 //    CGFloat locations[capacity];
     CGFloat locations[5];
     for (int i = 0; i < percents.count; i++) {
-        locations[i] = [percents[i] floatValue];
+        locations[i] = [percents[i] doubleValue];
     }
     
     

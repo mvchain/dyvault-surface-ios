@@ -29,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_headerTop;
 @property (strong, nonatomic) SGPageTitleView *pageTitleView;
 @property (nonatomic, strong) SGPageContentScrollView *pageContentScrollView;
+@property (strong,nonatomic) NSArray <YUTransactionListViewController *> *subTableviews;
+
 @end
 
 @implementation YUTransactionRecordViewController
@@ -40,6 +42,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self updateHeaderViewInfo];
+    [_subTableviews[0] refreshData];
+    [_subTableviews[1] refreshData];
+    [_subTableviews[2] refreshData];
 }
 #pragma mark - <public method>
 - (void)initSubviews {
@@ -135,6 +140,7 @@
     tableVc2.transactionType  = 1;
     tableVc2.assetTokenModel = self.assetTokenModel;
     NSArray *childArr = @[tableVc0, tableVc1,tableVc2];
+    _subTableviews = childArr;
     self.pageContentScrollView = [[SGPageContentScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0) parentVC:self childVCs:childArr];
     self.pageContentScrollView.delegatePageContentScrollView = self;
     [self.view addSubview:_pageContentScrollView];

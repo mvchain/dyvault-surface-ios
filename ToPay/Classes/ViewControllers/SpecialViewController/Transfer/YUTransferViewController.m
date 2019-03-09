@@ -77,6 +77,7 @@
 - (void)setBaseInfoToView:(TransferBaseInfo *)info {
     self.canUsingCashNumberLabel.text = TPString(@"%.4f %@",yufloat_token(info.balance),self.assetTokenModel.tokenName);
     self.totalNumberTipLabel.text = self.assetTokenModel.tokenName;
+ 
     self.feeLabel.text = TPString(@"%.4f %@",yufloat_token(info.fee) ,info.feeTokenName);
 }
 
@@ -138,7 +139,7 @@
     transView.desc = @"转账金额";
     transView.Total = TPString(@"%.4f %@",yufloat_token(self.totalNumberTextView.textField.text.doubleValue) ,self.assetTokenModel.tokenName);
     transView.con1 = self.addressTextView.textField.text;
-    transView.con2 = TPString(@"%.4f %@",self.transferBaseInfo.fee,self.transferBaseInfo.feeTokenName);
+    transView.con2 = TPString(@"%.4f %@",  yufloat_token(self.transferBaseInfo.fee),self.transferBaseInfo.feeTokenName);
     [transView showMenuWithAlpha:YES];
     transView.pvc = self;
     __block TPTransView *TPTransV = transView;
@@ -169,8 +170,6 @@
                                                    password:pwd
                                                     tokenId:tokenId
                                                       value:value];
-             
-             
          }
      }];
 }

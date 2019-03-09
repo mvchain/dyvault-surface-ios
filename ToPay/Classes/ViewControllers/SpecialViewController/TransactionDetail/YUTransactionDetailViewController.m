@@ -53,7 +53,23 @@
     };
     
 }
-
+- (void)setData {
+    [QMUITips showLoadingInView:self.view];
+    
+    API_GET_Asset_Transaction_id *GET_Asset_Transaction_id = [[API_GET_Asset_Transaction_id alloc] init];
+    GET_Asset_Transaction_id.onSuccess = ^(id responseData) {
+        TransactionDetailModel *detaiModel = [[TransactionDetailModel alloc] initWithDictionary:(NSDictionary *)responseData];
+        self.transactionDetailModel = detaiModel;
+        [self updateUI];
+    };
+    GET_Asset_Transaction_id.onError = ^(NSString *reason, NSInteger code) {
+        [QMUITips showError:reason];
+    };
+    GET_Asset_Transaction_id.onEndConnection = ^{
+        [QMUITips hideAllTipsInView:self.view];
+    };
+    [GET_Asset_Transaction_id sendRequestWithID:self.transactionRecordModel.idField];
+}
 - (void)configPageListView {
     yudef_weakSelf;
     self.pageListView.isUsingMJRefresh = NO;
@@ -76,23 +92,25 @@
             entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
             
             YUTransactionDetailItemCellEntity *entity2 =[[YUTransactionDetailItemCellEntity alloc] init];
-            entity2.leftTitleStr = @"地址";
+            
             entity2.rightFont = [UIFont systemFontOfSize:13.0];
             entity2.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
+            
             if (model.transactionType == 1) {
                 // in
+                entity2.leftTitleStr = @"来源地址";
                 entity2.rightTitleStr = model.fromAddress;
             }else {
                 // out
+                entity2.leftTitleStr = @"目的地址";
                 entity2.rightTitleStr = model.toAddress;
             }
-            
+    
             YUTransactionDetailItemCellEntity *entity3 =[[YUTransactionDetailItemCellEntity alloc] init];
             entity3.leftTitleStr = @"交易哈希";
-            entity3.rightTitleStr = model.hashLink;
+            entity3.rightTitleStr = model.blockHash;
             entity3.rightFont = [UIFont systemFontOfSize:13.0];
             entity3.rightTextColor = [UIColor qmui_colorWithHexString:@"#7F95CF"];
-            
             complete(@[entity0,entity1,entity2,entity3]);
             
         },^(void){
@@ -115,31 +133,15 @@
         classify_mapTo_Block[self.transactionRecordModel.classify]();
     };
 }
-- (void)setData {
-    [QMUITips showLoadingInView:self.view];
-  
-    API_GET_Asset_Transaction_id *GET_Asset_Transaction_id = [[API_GET_Asset_Transaction_id alloc] init];
-    GET_Asset_Transaction_id.onSuccess = ^(id responseData) {
-        TransactionDetailModel *detaiModel = [[TransactionDetailModel alloc] initWithDictionary:(NSDictionary *)responseData];
-        self.transactionDetailModel = detaiModel;
-        [self updateUI];
-    };
-    GET_Asset_Transaction_id.onError = ^(NSString *reason, NSInteger code) {
-        [QMUITips showError:reason];
-    };
-    GET_Asset_Transaction_id.onEndConnection = ^{
-        [QMUITips hideAllTipsInView:self.view];
-    };
-    [GET_Asset_Transaction_id sendRequestWithID:self.transactionRecordModel.idField];
-}
+
 - (void)updateUI {
     TransactionDetailModel *itemModel = self.transactionDetailModel;
     self.timeLabel.text = [QuickGet timeWithTimeInterval_allNumberStyleString:itemModel.createdAt];
     NSArray<void_block> *classify_mapTo_Block = @[^(void){
         // classify equal 0,block transaction
         
-        NSArray *status_mapTo_Str = @[@"",@"等待中",@"成功",@"",@"",@"",@"",@"",@"",@"失败"];
-        NSArray *status_mapTo_Image = @[@"",@"waiting",@"success",@"",@"",@"",@"",@"",@"",@"failure"];
+        NSArray *status_mapTo_Str = @[@"等待中",@"等待中",@"成功",@"",@"",@"",@"",@"",@"",@"失败"];
+        NSArray *status_mapTo_Image = @[@"waiting",@"waiting",@"success",@"",@"",@"",@"",@"",@"",@"failure"];
         NSString *statusStr = status_mapTo_Str[itemModel.status];
         NSString *statusImage = status_mapTo_Image[itemModel.status];
         [self.iconImageView setImage:[UIImage imageNamed:statusImage]];
@@ -148,15 +150,14 @@
         },^(void){
             // !!! classify equal 0,transType eq to 1
             [self.statusLabel setText:TPString(@"充值%@",statusStr)];
-            
         },^(void){
             // !!! classify equal 0,transType eq to 2
             [self.statusLabel setText:TPString(@"提现%@",statusStr)];
         }];
+        transtype_mapTo_Block[itemModel.transactionType]();
         if ([statusStr isEqualToString:@"等待中"]) {
             [self.statusLabel setText:@"等待中..."];
         }
-        transtype_mapTo_Block[itemModel.transactionType]();
     },^(void){
         // classify equal 1
     },^(void){

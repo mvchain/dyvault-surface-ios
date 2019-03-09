@@ -56,7 +56,7 @@ NSString *const kTransactionRecordModelValue = @"value";
         self.orderRemark = dictionary[kTransactionRecordModelOrderRemark];
     }
     if(![dictionary[kTransactionRecordModelRatio] isKindOfClass:[NSNull class]]){
-        self.ratio = [dictionary[kTransactionRecordModelRatio] floatValue];
+        self.ratio = [dictionary[kTransactionRecordModelRatio] doubleValue];
     }
     
     if(![dictionary[kTransactionRecordModelStatus] isKindOfClass:[NSNull class]]){
@@ -82,7 +82,7 @@ NSString *const kTransactionRecordModelValue = @"value";
     }
     
     if(![dictionary[kTransactionRecordModelValue] isKindOfClass:[NSNull class]]){
-        self.value = [dictionary[kTransactionRecordModelValue] floatValue];
+        self.value = [dictionary[kTransactionRecordModelValue] doubleValue];
     }
     
     return self;
@@ -154,14 +154,14 @@ NSString *const kTransactionRecordModelValue = @"value";
     self.fromAddress = [aDecoder decodeObjectForKey:kTransactionRecordModelFromAddress];
     self.idField = [[aDecoder decodeObjectForKey:kTransactionRecordModelIdField] integerValue];
     self.orderRemark = [aDecoder decodeObjectForKey:kTransactionRecordModelOrderRemark];
-    self.ratio = [[aDecoder decodeObjectForKey:kTransactionRecordModelRatio] floatValue];
+    self.ratio = [[aDecoder decodeObjectForKey:kTransactionRecordModelRatio] doubleValue];
     self.status = [[aDecoder decodeObjectForKey:kTransactionRecordModelStatus] integerValue];
     self.toAddress = [aDecoder decodeObjectForKey:kTransactionRecordModelToAddress];
     self.tokenId = [[aDecoder decodeObjectForKey:kTransactionRecordModelTokenId] integerValue];
     self.tokenName = [aDecoder decodeObjectForKey:kTransactionRecordModelTokenName];
     self.transactionType = [[aDecoder decodeObjectForKey:kTransactionRecordModelTransactionType] integerValue];
     self.updatedAt = [[aDecoder decodeObjectForKey:kTransactionRecordModelUpdatedAt] integerValue];
-    self.value = [[aDecoder decodeObjectForKey:kTransactionRecordModelValue] floatValue];
+    self.value = [[aDecoder decodeObjectForKey:kTransactionRecordModelValue] doubleValue];
     return self;
     
 }

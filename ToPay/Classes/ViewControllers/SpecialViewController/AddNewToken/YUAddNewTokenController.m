@@ -58,14 +58,17 @@
             NSMutableArray *listDatas = [[NSMutableArray alloc] init];
             for (NSDictionary *dic in resArr) {
                 AddNewTokenItemModel *model = [[AddNewTokenItemModel alloc] initWithDictionary:dic];
-                YUAddNewTokenItemCellEntity *entity = [[YUAddNewTokenItemCellEntity alloc] init];
-                entity.isAdd = ![weakSelf isAlreadyAdded:model];
-                entity.isShowAddButton = YES;
-                entity.data = model;
-                [listDatas addObject:entity];
+                [[YULanguageManagers shareInstance] setTokenFullNameByTokenName:model.tokenName
+                                                                    fullName_en:model.tokenEnName
+                                                                    fullName_cn:model.tokenCnName];
+                if ( model.visible != 0) {
+                    YUAddNewTokenItemCellEntity *entity = [[YUAddNewTokenItemCellEntity alloc] init];
+                    entity.isAdd = ![weakSelf isAlreadyAdded:model];
+                    entity.isShowAddButton = YES;
+                    entity.data = model;
+                    [listDatas addObject:entity];
+                }
             }
-            YUAddNewTokenItemCellEntity *firstEntity = listDatas.firstObject;
-            firstEntity.isShowAddButton = NO;// baseToken ,can't be deleted
             complete(listDatas);
         };
         GET_Token.onError = ^(NSString *reason, NSInteger code) {
@@ -199,13 +202,11 @@
             UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
                                                                    style:UIAlertActionStyleCancel
                                                                  handler:nil];
-            
             [alertController addAction:cancelAction];
             [alertController addAction:resetAction];
             [self presentViewController:alertController
                                animated:YES
                              completion:nil];
-        
         }
     };
 }

@@ -35,7 +35,6 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	if(![dictionary[kAddNewTokenItemModelTimestamp] isKindOfClass:[NSNull class]]){
 		self.timestamp = [dictionary[kAddNewTokenItemModelTimestamp] integerValue];
 	}
-
 	if(![dictionary[kAddNewTokenItemModelTokenCnName] isKindOfClass:[NSNull class]]){
 		self.tokenCnName = dictionary[kAddNewTokenItemModelTokenCnName];
 	}	
@@ -45,7 +44,6 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	if(![dictionary[kAddNewTokenItemModelTokenId] isKindOfClass:[NSNull class]]){
 		self.tokenId = [dictionary[kAddNewTokenItemModelTokenId] integerValue];
 	}
-
 	if(![dictionary[kAddNewTokenItemModelTokenImage] isKindOfClass:[NSNull class]]){
 		self.tokenImage = dictionary[kAddNewTokenItemModelTokenImage];
 	}	

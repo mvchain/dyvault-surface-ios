@@ -8,6 +8,7 @@
 
 #import "YULanguageViewController.h"
 #import "YULanguageItemCellEntity.h"
+
 @interface YULanguageViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
 
@@ -40,10 +41,13 @@
     self.pageListView.isUsingMJRefresh = NO;
     self.pageListView.firstPageBlock = ^(block_page_complete  _Nonnull complete)
     {
+        BOOL isCN = [[YULanguageManagers shareInstance] isCN_Language];
         YULanguageItemCellEntity *item0 = [[YULanguageItemCellEntity alloc] init];
         item0.data = @"中文";
+        item0.isSelected = isCN;
         YULanguageItemCellEntity *item1 = [[YULanguageItemCellEntity alloc] init];
         item1.data = @"English";
+        item1.isSelected = !isCN;
         complete(@[item0,item1]);
     };
     [self.pageListView beginRefreshHeaderWithNoAnimate];
@@ -63,8 +67,9 @@
             [[YULanguageManagers shareInstance] setCurrentLanguage_English];
             [QMUITips showInfo:@"Current Language:English" inView:weakSelf.view hideAfterDelay:1.5];
         }
+        [weakSelf.pageListView beginRefreshHeaderWithNoAnimate];
+        
     };
-    
 }
 #pragma mark - <lazy load>
 

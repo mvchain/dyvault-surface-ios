@@ -7,9 +7,11 @@
 //
 
 #import "YULanguageItemCell.h"
+#import "YULanguageItemCellEntity.h"
 @interface YULanguageItemCell()
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
 
 @end
 
@@ -26,6 +28,8 @@
     if (entity.data) {
         [self.infoLabel setText:(NSString *)entity.data];
     }
+    YULanguageItemCellEntity *language_entity = (YULanguageItemCellEntity *)entity;
+    self.selectedImageView.hidden = !language_entity.isSelected;
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

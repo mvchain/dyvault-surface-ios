@@ -56,6 +56,7 @@
         [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
             
             [QMUITips showSucceed:@"注册成功"];
+            [tabVc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
             [self.navigationController pushViewController:tabVc animated:YES];
         }];
         

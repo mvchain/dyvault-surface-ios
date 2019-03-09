@@ -110,8 +110,15 @@
         };
         [GET_Asset sendRequest];
     };
-    [self.servListView beginRefreshHeader];
+    [QMUITips showLoadingInView:self.view];
+ 
+    [[YUCurrencyManager shareInstance] requestTokenListInfo:^(NSArray<AddNewTokenItemModel *> * _Nonnull models, BOOL isSucc) {
+        [self.servListView beginRefreshHeader];
+        [QMUITips hideAllTips];
+    }];
+    
 }
+
 - (void)showCurrencySelectionDialogViewController {
     QMUIDialogSelectionViewController *dialogViewController = [[QMUIDialogSelectionViewController alloc] init];
     dialogViewController.title = @"更改货币";

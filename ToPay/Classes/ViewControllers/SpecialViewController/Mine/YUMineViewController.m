@@ -11,6 +11,7 @@
 #import "YUMineConfirmCellEntity.h"
 #import "YUAccountSecurityViewController.h"
 #import "YULanguageViewController.h"
+#import "TPAboutViewController.h"
 @interface YUMineViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
 @property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
@@ -85,7 +86,12 @@
             }
                 break;
             case 2:
+            {
+                TPAboutViewController *aboutVC = [[TPAboutViewController alloc] init];
+                [weakSelf.navigationController pushViewController:aboutVC animated:YES];
                 
+            }
+          
                 break;
             default:
                 break;
@@ -94,7 +100,24 @@
     self.dataArrs.lastObject.callBackByCell = ^(NSDictionary *info)
     {
             // logout  button tap
-        [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
+                                                                                 message:@"现在就退出吗？"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+                                      
+                                      {
+                                          [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
+                                          
+                                      }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:nil];
+        [alertController addAction:cancelAction];
+        [alertController addAction:resetAction];
+        [self presentViewController:alertController
+                           animated:YES
+                         completion:nil];
+        
     };
 }
 #pragma mark - <lazy load>

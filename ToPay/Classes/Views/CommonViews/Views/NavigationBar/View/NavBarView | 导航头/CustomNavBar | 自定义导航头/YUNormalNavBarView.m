@@ -40,25 +40,20 @@
 - (void)setUp{
     
     self.backgroundColor= [UIColor whiteColor];
-    _titleLabel =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, [self y_Width], 16.5)];
-   
+    _titleLabel =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, [self y_Width], 20)];
     if (@available(iOS 8.2, *)) {
-        
         [_titleLabel setFont:[UIFont systemFontOfSize:18 weight:UIFontWeightLight]];
-        
     } else {
-      
         [_titleLabel setFont:[UIFont systemFontOfSize:18]];
     }
     [_titleLabel setTextAlignment:NSTextAlignmentCenter];
     [_titleLabel setTextColor:[UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]];
     _leftButton = [[YUHamburgerButton alloc]initWithFrame:[YUPhoneInformationTools llnavButtonFrame]];
-
     _rightButton =[[YUHamburgerButton alloc]initWithFrame:[YUPhoneInformationTools rrnavButtonFrame]];
     [self addSubview:_rightButton];
     [self addSubview:_leftButton];
     [self addSubview:_titleLabel];
-     [_titleLabel y_setBottom:12];
+     [_titleLabel y_setBottom:14];
 }
 
 - (void)setLeftButtonAsReturnButton{

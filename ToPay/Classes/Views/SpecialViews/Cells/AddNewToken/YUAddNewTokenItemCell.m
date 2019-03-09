@@ -33,7 +33,8 @@
     YUAddNewTokenItemCellEntity *thisEntity = (YUAddNewTokenItemCellEntity *)entity;
     AddNewTokenItemModel *model = (AddNewTokenItemModel *)entity.data;
     [self.tokenNameLabel setText:model.tokenName];
-    [self.tokenDescLabel setText:TPString(@"%@/%@",model.tokenCnName,model.tokenEnName)];
+    NSString *tokenName_language = [[YULanguageManagers shareInstance] tokenFullNameByTokenName:model.tokenName];
+    [self.tokenDescLabel setText:tokenName_language];
     [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.tokenImage]];
     if (thisEntity.isShowAddButton) {
         [self showAddOrDeleteButton];

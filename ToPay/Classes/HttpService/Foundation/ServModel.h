@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YUNetworkManager.h"
-#define SERVER_DOMAIN  @"http://47.110.144.216/api/app"
+#define SERVER_DOMAIN  @"http://54.238.152.0/api/app"
 
 //@"http://192.168.15.21:10086"
 // #define SERVER_DOMAIN  @"http://47.110.144.216/api/app"

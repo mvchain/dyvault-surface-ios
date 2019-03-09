@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class TPExchangeRate;
+@class AddNewTokenItemModel;
 @interface YUCurrencyManager : NSObject
 + (instancetype) shareInstance;
 - (void)updateRequestTokenBase:(void(^)(BOOL isSucc))complete;
@@ -20,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)nowLegalCurrencyName;
 - (CGFloat)nowLegalCurrencyRatio;
 - (NSString *)nowLegalCurrencyFlag;
+// tokenList ,
+- (void)requestTokenListInfo:(void(^)(NSArray<AddNewTokenItemModel *> * models , BOOL isSucc))complete;
+
 @end
 
 NS_ASSUME_NONNULL_END

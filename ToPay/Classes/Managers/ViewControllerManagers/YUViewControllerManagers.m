@@ -82,11 +82,15 @@ static YUViewControllerManagers* _instance = nil;
 }
 
 - (UIViewController *) auto_windowsRootViewController {
-    UIViewController *isLoginVC = [self getNewMainTabViewController];
-    UINavigationController *unLoginNav = [[UINavigationController alloc]init];
-    UIViewController *unLoginVC = [[YULoginViewController alloc] init];
-    unLoginNav.viewControllers = @[unLoginVC];
-    return [YUUserManagers shareInstance].isLogined?isLoginVC:unLoginNav;
+    if ([YUUserManagers shareInstance].isLogined) {
+        UIViewController *isLoginVC = [self getNewMainTabViewController];
+        return isLoginVC;
+    }else {
+        UINavigationController *unLoginNav = [[UINavigationController alloc]init];
+        UIViewController *unLoginVC = [[YULoginViewController alloc] init];
+        unLoginNav.viewControllers = @[unLoginVC];
+        return unLoginNav;
+    }
 }
 #pragma mark - <private method >
 - (UITabBarItem *)tabBarItemWithTitle:(NSString *)title

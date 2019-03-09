@@ -24,6 +24,10 @@
     [self.pageListView beginRefreshHeader];
     
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
 - (void)configPageListView {
     self.pageListView.pageSize = PAGE_LIST_SIZE;
     yudef_weakSelf;
@@ -71,7 +75,11 @@
     };
 
 }
-
+- (void)refreshData {
+    
+    [self.pageListView beginRefreshHeaderWithNoAnimate];
+    
+}
 - (NSArray *)packageByresArray:(NSArray *)resArr {
     NSMutableArray *listDatas = [[NSMutableArray alloc] init];
     for (NSDictionary *dic in resArr) {
@@ -81,10 +89,6 @@
         [listDatas addObject:entity];
     }
     return listDatas;
-    
-}
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
 }
 

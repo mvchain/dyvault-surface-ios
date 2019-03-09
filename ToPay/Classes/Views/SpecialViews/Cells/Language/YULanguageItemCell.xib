@@ -27,11 +27,11 @@
                                 <color key="textColor" red="0.34901960780000002" green="0.35294117650000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next_icon_black" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-SI-FYN">
-                                <rect key="frame" x="520" y="52" width="24" height="24"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selected_language" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-SI-FYN">
+                                <rect key="frame" x="524" y="57" width="20" height="14"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="sDJ-BM-C3y"/>
-                                    <constraint firstAttribute="height" constant="24" id="zhE-TM-L0X"/>
+                                    <constraint firstAttribute="width" constant="20" id="sDJ-BM-C3y"/>
+                                    <constraint firstAttribute="height" constant="14" id="zhE-TM-L0X"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -55,11 +55,12 @@
             <connections>
                 <outlet property="bgView" destination="9CV-jW-xnx" id="RHS-Cw-heX"/>
                 <outlet property="infoLabel" destination="8Hx-kO-Tpj" id="hpG-3r-7JL"/>
+                <outlet property="selectedImageView" destination="UMV-SI-FYN" id="I6O-0a-Bl0"/>
             </connections>
             <point key="canvasLocation" x="24" y="180.80959520239881"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="next_icon_black" width="24" height="24"/>
+        <image name="selected_language" width="19" height="14"/>
     </resources>
 </document>

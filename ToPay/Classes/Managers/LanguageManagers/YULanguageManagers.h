@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype) shareInstance;
 - (void)setCurrentLanguage_English;
 - (void)setCurrentLanguage_Chinese;
+- (BOOL)isCN_Language;
+- (void)setTokenFullNameByTokenName:(NSString *)tokenName
+                       fullName_en :(NSString *)fullName_en
+                        fullName_cn:(NSString *)fullName_cn;
+- (NSString *)tokenFullNameByTokenName:(NSString *)tokenName;
 
 @end
 

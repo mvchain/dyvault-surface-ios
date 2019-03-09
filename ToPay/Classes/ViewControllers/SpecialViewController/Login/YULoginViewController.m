@@ -80,8 +80,8 @@
         UIViewController *tab =  [[YUViewControllerManagers shareInstance] getNewMainTabViewController]; // switch to main tab ..
         [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
                 //fetch exchange
+            [tab setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
             [self.navigationController pushViewController:tab animated:YES];
-            
         }];
             };
     POST_User_Login.onError = ^(NSString *reason, NSInteger code) {

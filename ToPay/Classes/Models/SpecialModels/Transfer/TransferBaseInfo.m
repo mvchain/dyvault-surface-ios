@@ -28,11 +28,11 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
 {
     self = [super init];
     if(![dictionary[kTransferBaseInfoBalance] isKindOfClass:[NSNull class]]){
-        self.balance = [dictionary[kTransferBaseInfoBalance] floatValue];
+        self.balance = [dictionary[kTransferBaseInfoBalance] doubleValue];
     }
     
     if(![dictionary[kTransferBaseInfoFee] isKindOfClass:[NSNull class]]){
-        self.fee = [dictionary[kTransferBaseInfoFee] floatValue];
+        self.fee = [dictionary[kTransferBaseInfoFee] doubleValue];
     }
     
     if(![dictionary[kTransferBaseInfoFeeTokenName] isKindOfClass:[NSNull class]]){
@@ -77,8 +77,8 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
-    self.balance = [[aDecoder decodeObjectForKey:kTransferBaseInfoBalance] floatValue];
-    self.fee = [[aDecoder decodeObjectForKey:kTransferBaseInfoFee] floatValue];
+    self.balance = [[aDecoder decodeObjectForKey:kTransferBaseInfoBalance] doubleValue];
+    self.fee = [[aDecoder decodeObjectForKey:kTransferBaseInfoFee] doubleValue];
     self.feeTokenName = [aDecoder decodeObjectForKey:kTransferBaseInfoFeeTokenName];
     return self;
     

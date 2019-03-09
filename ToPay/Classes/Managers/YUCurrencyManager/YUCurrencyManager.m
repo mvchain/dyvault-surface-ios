@@ -10,7 +10,8 @@
 #import "API_GET_Token_Base.h"
 #import "API_GET_Token_Exchange_Rate.h"
 #import "TPCurrencyRatio.h"
-
+#import "API_GET_Token.h"
+#import "AddNewTokenItemModel.h"
 @implementation YUCurrencyManager
 static YUCurrencyManager* _instance = nil;
 +(instancetype) shareInstance
@@ -70,7 +71,30 @@ static YUCurrencyManager* _instance = nil;
     };
     [GET_Token_Base sendRequest];
 }
-
+- (void)requestTokenListInfo:(void(^)(NSArray<AddNewTokenItemModel *> * models , BOOL isSucc))complete {
+    API_GET_Token *GET_Token = [[API_GET_Token alloc] init];
+    GET_Token.onSuccess = ^(id responseData) {
+        NSArray *resArr = (NSArray *)responseData;
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        for (NSDictionary *dic in resArr) {
+            AddNewTokenItemModel *model = [[AddNewTokenItemModel alloc] initWithDictionary:dic];
+            [[YULanguageManagers shareInstance] setTokenFullNameByTokenName:model.tokenName
+                                                                fullName_en:model.tokenEnName
+                                                                fullName_cn:model.tokenCnName];
+            [items addObject:model];
+        }
+        complete(items,YES);
+    };
+    GET_Token.onError = ^(NSString *reason, NSInteger code) {
+        
+        complete(nil,NO);
+    };
+    GET_Token.onEndConnection = ^{
+        
+    };
+    [GET_Token sendRequest];
+    
+}
 /* law currency  */
 - (void)updateExchangeRate:(void(^)(BOOL isSucc))complete {
     API_GET_Token_Exchange_Rate *GET_Token_Exchange_Rate = [[API_GET_Token_Exchange_Rate alloc] init];
