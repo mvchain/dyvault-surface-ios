@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.480693"
+            timestampString = "573990336.75528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.481115"
+            timestampString = "573990336.7559659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -490,13 +490,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.m"
-            timestampString = "573824843.481689"
+            timestampString = "573990336.756548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-updateLanguage"
-            landmarkType = "7">
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "YUViewControllerManagers"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -650,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCell.m"
-            timestampString = "573824843.482146"
+            timestampString = "573990336.757027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -682,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.482259"
+            timestampString = "573990336.757226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -698,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.48232"
+            timestampString = "573990336.7573791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -761,7 +761,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.482363"
+            timestampString = "573990336.757571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -825,7 +825,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.482478"
+            timestampString = "573990336.757836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -1001,7 +1001,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Mine/YUMineViewController.m"
-            timestampString = "573824843.482753"
+            timestampString = "573990336.758352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -1017,11 +1017,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.m"
-            timestampString = "573824843.482801"
+            timestampString = "573990336.758636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "-tabBarItemWithTitle:image:selectedImage:tag:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1049,7 +1049,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.4828711"
+            timestampString = "573990336.758971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -1081,7 +1081,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.4829431"
+            timestampString = "573990336.7592781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -1097,7 +1097,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.482987"
+            timestampString = "573990336.759483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -1113,7 +1113,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.483029"
+            timestampString = "573990336.7596231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -1129,7 +1129,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.48307"
+            timestampString = "573990336.759882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -1145,7 +1145,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.483111"
+            timestampString = "573990336.7602969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -1417,7 +1417,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.483496"
+            timestampString = "573990336.761304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -1433,7 +1433,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.483544"
+            timestampString = "573990336.761435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -1545,7 +1545,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.483726"
+            timestampString = "573990336.761834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
@@ -1608,7 +1608,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.483781"
+            timestampString = "573990336.762054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
@@ -1624,7 +1624,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.483822"
+            timestampString = "573990336.7622809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "177"
@@ -1640,11 +1640,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.483866"
+            timestampString = "573990336.762418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-configServListView"
             landmarkType = "7">
          </BreakpointContent>
@@ -1656,7 +1656,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Views/SpecialViews/Cells/AddNewToken/YUAddNewTokenItemCell.m"
-            timestampString = "573824843.4842581"
+            timestampString = "573990336.763021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -1688,7 +1688,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.484334"
+            timestampString = "573990336.763181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "161"
@@ -1704,7 +1704,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.484381"
+            timestampString = "573990336.763306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -1720,7 +1720,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.484424"
+            timestampString = "573990336.763451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
@@ -1784,7 +1784,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.484539"
+            timestampString = "573990336.763736"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
@@ -1800,7 +1800,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
-            timestampString = "573824843.484583"
+            timestampString = "573990336.763887"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"
@@ -1960,7 +1960,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/SetPassWd- Step-1/YUSetPasswordViewController.m"
-            timestampString = "573824843.484782"
+            timestampString = "573990336.76428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -2024,7 +2024,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.484894"
+            timestampString = "573990336.7645299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -2040,7 +2040,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.484955"
+            timestampString = "573990336.764704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -2167,7 +2167,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.4850889"
+            timestampString = "573990336.764944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -2183,11 +2183,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.485147"
+            timestampString = "573990336.765094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
@@ -2199,11 +2199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.485521"
+            timestampString = "573990336.766596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
@@ -2215,28 +2215,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.48587"
+            timestampString = "573990336.7687351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-configServListView"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Notification/YUNotificationViewController.m"
-            timestampString = "573632819.310509"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "-configPageListView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2269,22 +2253,6 @@
             startingLineNumber = "75"
             endingLineNumber = "75"
             landmarkName = "-addFooterRefresh"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Notification/YUNotificationViewController.m"
-            timestampString = "573632819.311291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-configPageListView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2373,22 +2341,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Notification/YUNotificationViewController.m"
-            timestampString = "573632819.311746"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "-configPageListView"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Models/SpecialModels/Notification/MessageItemModel.h"
             timestampString = "573632819.312036"
             startingColumnNumber = "9223372036854775807"
@@ -2422,11 +2374,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/YUCurrencyManager/YUCurrencyManager.m"
-            timestampString = "573824843.486583"
+            timestampString = "573990336.769623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-setNowLegalCurrency:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2437,28 +2389,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.486666"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-showCurrencySelectionDialogViewController"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/YUCurrencyManager/YUCurrencyManager.m"
-            timestampString = "573824843.487021"
+            timestampString = "573990336.769871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-setNowLegalCurrency:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2486,7 +2422,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487139"
+            timestampString = "573990336.770251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2500,7 +2436,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.4872071"
+            timestampString = "573990336.770564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2514,7 +2450,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487265"
+            timestampString = "573990336.770705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2560,7 +2496,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487403"
+            timestampString = "573990336.770926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2574,7 +2510,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487468"
+            timestampString = "573990336.7710789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2588,7 +2524,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487529"
+            timestampString = "573990336.7711999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2602,7 +2538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487579"
+            timestampString = "573990336.7713799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2632,7 +2568,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.487649"
+            timestampString = "573990336.7716449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2662,7 +2598,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
-            timestampString = "573824843.487747"
+            timestampString = "573990336.771903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -2678,7 +2614,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.48781"
+            timestampString = "573990336.772096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -2740,11 +2676,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
-            timestampString = "573824843.487987"
+            timestampString = "573990336.772413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "-confirmTap:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2756,11 +2692,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
-            timestampString = "573824843.488059"
+            timestampString = "573990336.7725641"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "-confirmTap:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2772,7 +2708,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionRecord/YUTransactionRecordViewController.m"
-            timestampString = "573824843.488129"
+            timestampString = "573990336.772715"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -2803,24 +2739,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
-            timestampString = "573824843.488229"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-setBaseInfoToView:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionRecord/YUTransactionRecordViewController.m"
-            timestampString = "573824843.488294"
+            timestampString = "573990336.772921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -2836,11 +2756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/YUCurrencyManager/YUCurrencyManager.m"
-            timestampString = "573824843.488354"
+            timestampString = "573990336.773075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-updateExchangeRate:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2852,11 +2772,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/YUCurrencyManager/YUCurrencyManager.m"
-            timestampString = "573824843.488426"
+            timestampString = "573990336.773317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-updateExchangeRate:"
             landmarkType = "7">
          </BreakpointContent>
@@ -2867,120 +2787,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.488502"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "-showCurrencySelectionDialogViewController"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[YUAssetViewController showCurrencySelectionDialogViewController]"
-                  moduleName = "ToPay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanpopo/Desktop/New/ToPay/ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-                  timestampString = "573723232.692428"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[YUAssetViewController showCurrencySelectionDialogViewController]"
-                  moduleName = "ToPay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanpopo/Desktop/New/ToPay/ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-                  timestampString = "573723232.694298"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "118"
-                  endingLineNumber = "118"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.488906"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-showCurrencySelectionDialogViewController"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.489262"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-showCurrencySelectionDialogViewController"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[YUAssetViewController showCurrencySelectionDialogViewController]"
-                  moduleName = "ToPay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanpopo/Desktop/New/ToPay/ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-                  timestampString = "573723232.704244"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "692">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__66-[YUAssetViewController showCurrencySelectionDialogViewController]_block_invoke_2"
-                  moduleName = "ToPay"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tanpopo/Desktop/New/ToPay/ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-                  timestampString = "573723232.70628"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.489611"
+            timestampString = "573990336.773653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -3012,7 +2820,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.489727"
+            timestampString = "573990336.77393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -3028,7 +2836,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.489802"
+            timestampString = "573990336.774073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -3044,7 +2852,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/HttpService/Foundation/ServModel.m"
-            timestampString = "573824843.489858"
+            timestampString = "573990336.7742389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -3060,11 +2868,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.489916"
+            timestampString = "573990336.774444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-configServListView"
             landmarkType = "7">
          </BreakpointContent>
@@ -3076,7 +2884,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Views/SpecialViews/Cells/Asset/YUAssetTokenItemCell.m"
-            timestampString = "573824843.4902869"
+            timestampString = "573990336.775268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -3092,11 +2900,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.490366"
+            timestampString = "573990336.775421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-configServListView"
             landmarkType = "7">
          </BreakpointContent>
@@ -3108,23 +2916,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.490769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-configServListView"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.491161"
+            timestampString = "573990336.7762311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -3139,12 +2931,28 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
-            timestampString = "573824843.49166"
+            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
+            timestampString = "573990336.776824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "-configServListView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
+            timestampString = "573990336.7773"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-setBaseInfoToView:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3156,7 +2964,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
-            timestampString = "573824843.4917279"
+            timestampString = "573990336.777391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -3172,7 +2980,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.491793"
+            timestampString = "573990336.7774709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -3188,7 +2996,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.491878"
+            timestampString = "573990336.777644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -3204,7 +3012,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionDetail/YUTransactionDetailViewController.m"
-            timestampString = "573824843.491941"
+            timestampString = "573990336.7777539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
@@ -3220,7 +3028,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/TransactionRecord/ChildTableVC/YUTransactionListViewController.m"
-            timestampString = "573824843.492022"
+            timestampString = "573990336.7778749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -3236,11 +3044,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.4920959"
+            timestampString = "573990336.77808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-configServListView"
             landmarkType = "7">
             <Locations>
@@ -3299,11 +3107,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.492514"
+            timestampString = "573990336.778598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-initSubviews"
             landmarkType = "7">
          </BreakpointContent>
@@ -3315,7 +3123,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Login/YULoginViewController.m"
-            timestampString = "573824843.492893"
+            timestampString = "573990336.779067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -3331,11 +3139,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.492956"
+            timestampString = "573990336.779384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-initSubviews"
             landmarkType = "7">
          </BreakpointContent>
@@ -3347,11 +3155,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AssetHome/YUAssetViewController.m"
-            timestampString = "573824843.493325"
+            timestampString = "573990336.779775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -3363,12 +3171,156 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToPay/Classes/Managers/ViewControllerManagers/YUViewControllerManagers.m"
-            timestampString = "573824843.493713"
+            timestampString = "573990336.7802581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-getNewMainTabViewController"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/AddNewToken/YUAddNewTokenController.m"
+            timestampString = "573990336.780437"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "-setListViewEvent"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/Managers/AppManager/YUAppManager.m"
+            timestampString = "573990336.78058"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-refreshServerAppVersion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/About/TPAboutViewController.m"
+            timestampString = "573990336.780805"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-updateNew:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TPAboutViewController updateNew:]"
+                  moduleName = "ToPay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanpopo/Desktop/New/ToPay/ToPay/Classes/ViewControllers/SpecialViewController/About/TPAboutViewController.m"
+                  timestampString = "573981494.517073"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35-[TPAboutViewController updateNew:]_block_invoke"
+                  moduleName = "ToPay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tanpopo/Desktop/New/ToPay/ToPay/Classes/ViewControllers/SpecialViewController/About/TPAboutViewController.m"
+                  timestampString = "573981494.518985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/Managers/AppManager/YUAppManager.m"
+            timestampString = "573990336.780933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-refreshServerAppVersion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
+            timestampString = "573990336.781008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-setTextEvent"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/ViewControllers/SpecialViewController/Transfer/YUTransferViewController.m"
+            timestampString = "573990336.7811511"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-setTextEvent"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset_inner.m"
+            timestampString = "573990336.781306"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "-sendRequestWithAddress:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

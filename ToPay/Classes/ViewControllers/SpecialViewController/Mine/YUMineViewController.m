@@ -91,7 +91,6 @@
                 [weakSelf.navigationController pushViewController:aboutVC animated:YES];
                 
             }
-          
                 break;
             default:
                 break;

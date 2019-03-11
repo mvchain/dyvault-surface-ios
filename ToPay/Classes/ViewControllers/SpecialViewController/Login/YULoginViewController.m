@@ -81,7 +81,10 @@
         [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
                 //fetch exchange
             [tab setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
-            [self.navigationController pushViewController:tab animated:YES];
+            
+            [self presentViewController:tab animated:YES completion:^{
+                
+            }];;
         }];
             };
     POST_User_Login.onError = ^(NSString *reason, NSInteger code) {

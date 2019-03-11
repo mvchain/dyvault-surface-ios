@@ -137,8 +137,15 @@
                                 <action selector="confirmTap:" destination="-1" eventType="touchUpInside" id="R4m-PZ-xOq"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToPay 用户之间转账/收款无需手续费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9B-Yq-tJa">
+                            <rect key="frame" x="79.5" y="293" width="216.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="T9B-Yq-tJa" firstAttribute="top" secondItem="FZq-U0-vqm" secondAttribute="bottom" constant="22" id="52l-GA-SeW"/>
                         <constraint firstItem="daH-DA-bzI" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" constant="20" id="6r4-N0-Bbe"/>
                         <constraint firstAttribute="trailing" secondItem="FZq-U0-vqm" secondAttribute="trailing" constant="20" id="88v-Au-Xv6"/>
                         <constraint firstItem="FZq-U0-vqm" firstAttribute="top" secondItem="uoP-iZ-H2T" secondAttribute="bottom" constant="31" id="8aW-A1-AwB"/>
@@ -150,6 +157,7 @@
                         <constraint firstItem="uoP-iZ-H2T" firstAttribute="top" secondItem="daH-DA-bzI" secondAttribute="bottom" constant="31" id="QfW-DQ-av0"/>
                         <constraint firstItem="zXQ-Hl-M4g" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" id="RBe-8y-No0"/>
                         <constraint firstItem="FZq-U0-vqm" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" constant="20" id="RlN-6K-mTI"/>
+                        <constraint firstItem="T9B-Yq-tJa" firstAttribute="centerX" secondItem="QoC-Fe-IYx" secondAttribute="centerX" id="WBW-zC-Voc"/>
                         <constraint firstAttribute="trailing" secondItem="daH-DA-bzI" secondAttribute="trailing" constant="20" id="hWe-cu-U3a"/>
                         <constraint firstItem="10N-Be-J1i" firstAttribute="top" secondItem="FZq-U0-vqm" secondAttribute="bottom" constant="126" id="ijB-mo-z2N"/>
                         <constraint firstItem="uoP-iZ-H2T" firstAttribute="width" secondItem="daH-DA-bzI" secondAttribute="width" id="mAp-Ik-d8s"/>

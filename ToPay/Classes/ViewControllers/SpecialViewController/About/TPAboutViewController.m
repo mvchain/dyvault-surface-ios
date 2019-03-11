@@ -9,6 +9,7 @@
 #import "TPAboutViewController.h"
 #import "YFactoryUI.h"
 #import "UIViewExt.h"
+#import "YUAppManager.h"
 // #import "YUAlertViewController.h"
 
 @interface TPAboutViewController ()
@@ -21,7 +22,8 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = TPF6Color;
-    [self addNormalNavBar:@"关于"];
+    NSString *title = [[YUAppManager shareInstance] isReleaseVersion]?@"关于":@"关于（Beta）";
+    [self addNormalNavBar:title];
     [self.normalNavbar setLeftButtonAsReturnButton];
     
     [self setUpViews];
@@ -63,8 +65,32 @@
 
 - (void)updateNew:(id)sender {
    
-    
-    
+    [[YUAppManager shareInstance] isShouldUpdate:^(BOOL shouldUpdae, BOOL isNetOk) {
+        if (!isNetOk) {
+            [QMUITips showError:@"网络错误"];
+            return ;
+        }
+        if (shouldUpdae) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
+                                                                                     message:@"发现有新版本，是否去更新？"
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+                                          
+                                          {
+                                             
+                                          }];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:nil];
+            [alertController addAction:cancelAction];
+            [alertController addAction:resetAction];
+            [self presentViewController:alertController
+                               animated:YES
+                             completion:nil];
+        }else {
+            [QMUITips showSucceed:@"已经是最新版本"];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning

@@ -87,7 +87,7 @@
            
             YUTransactionDetailItemCellEntity *entity1 =[[YUTransactionDetailItemCellEntity alloc] init];
             entity1.leftTitleStr = @"交易手续费";
-            entity1.rightTitleStr = TPString(@"%.4f %@",yufloat_token(model.fee),model.feeTokenType );
+            entity1.rightTitleStr = TPString(@"%.4f %@",yufloat_fee(model.fee),model.feeTokenType );
             entity1.rightFont = [UIFont systemFontOfSize:13.0];
             entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
             

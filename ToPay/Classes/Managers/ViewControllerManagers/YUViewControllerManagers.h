@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIViewController *) getNewMainTabViewController;
 - (UIViewController *) auto_windowsRootViewController;
 - (void)clearUserInfo_AndExit;
-
-
 @end
 
 NS_ASSUME_NONNULL_END

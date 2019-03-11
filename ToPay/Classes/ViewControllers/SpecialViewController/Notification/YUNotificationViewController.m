@@ -44,7 +44,10 @@
     {
         API_GET_Message *GET_Message = [[API_GET_Message alloc] init];
         GET_Message.onSuccess = ^(id responseData) {
-            complete([weakSelf packageListDatasByArray:(NSArray*)responseData]);
+            NSArray<YUNotificationItemCellEntity *> *listarr = [weakSelf packageListDatasByArray:(NSArray*)responseData];
+            MessageItemModel *firstModel = (MessageItemModel*)listarr.firstObject.data;
+            [[YUAppManager shareInstance] setMostRecentNewsInLocalWithTime:firstModel.createdAt];
+            complete(listarr);
         };
         GET_Message.onError = ^(NSString *reason, NSInteger code) {
             PAGE_COMPLETE_ERROR
@@ -75,7 +78,7 @@
         
     };
 }
-- (NSMutableArray *)packageListDatasByArray:(NSArray* )responseData {
+- (NSMutableArray<YUNotificationItemCellEntity *> *)packageListDatasByArray:(NSArray* )responseData {
     NSMutableArray *listDatas = [[NSMutableArray alloc] init];
     NSArray *msgArrays = responseData;
     for (NSDictionary *dic in msgArrays) {

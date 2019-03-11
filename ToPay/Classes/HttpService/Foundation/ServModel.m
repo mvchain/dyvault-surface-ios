@@ -13,7 +13,7 @@
 {
     self = [super init];
     if(self){
-        _apiDomainUrl = SERVER_DOMAIN;
+        _apiDomainUrl = [[YUAppManager shareInstance] appDomainUrl];
     }
     return self;
 }
@@ -72,7 +72,7 @@
     // language
     [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
     // buildVersion
-    [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
+    [ manager.sessionManager.requestSerializer setValue:@([QuickGet getCurBuildVersion]).stringValue forHTTPHeaderField:@"versionCode"];
 }
 // when token unvalid
 - (void)refreshToken:(void(^)(BOOL isRefreshSucc ,BOOL isNetOK))complete{
@@ -85,7 +85,7 @@
     // language
     [ manager.sessionManager.requestSerializer setValue:@"zh-cn" forHTTPHeaderField:@"Accept-Language"];
     // buildVersion
-    [ manager.sessionManager.requestSerializer setValue:[QuickGet getCurBuildVersion] forHTTPHeaderField:@"versionCode"];
+    [ manager.sessionManager.requestSerializer setValue:@([QuickGet getCurBuildVersion]).stringValue forHTTPHeaderField:@"versionCode"];
     [[YUNetworkManager defaultManager] sendRequestMethod:HTTPMethodPOST serverUrl:self.apiDomainUrl apiPath:@"/user/refresh"  parameters:nil progress:^(NSProgress * _Nullable progress) {
         
     } success:^(BOOL isSuccess, id  _Nullable responseObject) {

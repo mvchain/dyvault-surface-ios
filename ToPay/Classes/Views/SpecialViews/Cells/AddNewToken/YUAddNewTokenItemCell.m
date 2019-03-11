@@ -35,7 +35,7 @@
     [self.tokenNameLabel setText:model.tokenName];
     NSString *tokenName_language = [[YULanguageManagers shareInstance] tokenFullNameByTokenName:model.tokenName];
     [self.tokenDescLabel setText:tokenName_language];
-    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.tokenImage]];
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:model.tokenImage] placeholderImage:[UIImage imageNamed:@"head"]];
     if (thisEntity.isShowAddButton) {
         [self showAddOrDeleteButton];
         if (thisEntity.isAdd) {

@@ -40,14 +40,13 @@ static YULanguageManagers* _instance = nil;
     [[NSUserDefaults standardUserDefaults] setObject:fullName_en forKey:TPString(@"%@_en",tokenName)];
      [[NSUserDefaults standardUserDefaults] setObject:fullName_cn forKey:TPString(@"%@_cn",tokenName)];
 }
+
 - (NSString *)tokenFullNameByTokenName:(NSString *)tokenName {
     if ([self isCN_Language]) {
         return [[NSUserDefaults standardUserDefaults] objectForKey:TPString(@"%@_cn",tokenName)];
     }else {
         return [[NSUserDefaults standardUserDefaults] objectForKey:TPString(@"%@_en",tokenName)];
     }
-  
-    
 }
 - (void)setCurrentLanguage_English {
     [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:@"appLanguage"];

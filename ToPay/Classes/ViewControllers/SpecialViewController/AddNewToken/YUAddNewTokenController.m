@@ -184,11 +184,14 @@
             [QMUITips hideAllTipsInView:weakSelf.view];
         };
         if (item.isAdd) {
+            // when tap add btn
             [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];
             [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
                                    removeTokenIdArr:removeTokenIdArr];
             
         }else {
+            // when add delete btn
+            
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
                                                                                      message:TPString(@"确定移除%@?",tokenModel.tokenName)
                                                                               preferredStyle:UIAlertControllerStyleAlert];
@@ -210,8 +213,6 @@
         }
     };
 }
-
-
 #pragma mark lazy load
 - (YUSearchBarView *)searchbar {
     if( !_searchbar ) {

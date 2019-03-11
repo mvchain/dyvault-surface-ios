@@ -7,7 +7,7 @@
 //
 #define TPCacheName @"TPCacheName"
 #define TPUserInfoKey @"TPUserInfoKey"
-#define TPCurrencyListKey @"TPCurrencyListKey"
+#define TPTokenCurrencyListKey @"TPTokenCurrencyListKey"
 #define TPCurrencyNameKey @"TPCurrencyNameKey"
 #define TPLegalCurrencyListKey @"TPLegalCurrencyListKey"
 #define TPNowLegalCurrencyKey @"TPNowLegalCurrencyKey"
@@ -22,4 +22,6 @@
 #define EVENT_ChangeLegalCurrency @"change-legal-currency"
 #define EVENT_BuyCurrency @"buy-currency"
 #define NotiChangeLanguage @"NotiChangeLanguage"
+
+#define APP_SERVER_VERSION_KEY @"APP_SERVER_VERSION_KEY"
 

@@ -8,23 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "YUNetworkManager.h"
-#define SERVER_DOMAIN  @"http://54.238.152.0/api/app"
 
-//@"http://192.168.15.21:10086"
-// #define SERVER_DOMAIN  @"http://47.110.144.216/api/app"
-// #define SERVER_DOMAIN  @"http://192.168.15.21:10086/api/app"
-// http://47.110.144.216:10086/swagger-ui.html#/
-/*
- * ServModelState_ConnectionError -> for example:network error,server shutdown etc
- * ServModelState_BusinessLogicError ->for example:parameter error ,login fail,register fail
- * ServModelState_Success - > success 
- */
 typedef NS_ENUM(NSUInteger, ServModelState) {
     ServModelState_ConnectionError,
     ServModelState_BusinessLogicError,
     ServModelState_Success
 };
-
 typedef void(^succBlock)(id responseData);
 
 typedef void(^errBlock)(NSString *reason ,NSInteger code  );

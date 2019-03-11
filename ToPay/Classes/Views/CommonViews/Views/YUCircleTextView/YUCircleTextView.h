@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YUCircleTextView : UIView
 @property (strong,nonatomic) UITextField *textField;
 @property (strong,nonatomic) void (^onTextChange)(NSString *text);
+@property (strong,nonatomic) void (^onTextDidEndEditing)(UITextField * sender);
+
 - (NSString *)text;
 - (void)setText:(NSString *)text;
 - (void)setPlaceHolder:(NSString *)text;

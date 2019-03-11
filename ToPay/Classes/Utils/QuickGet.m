@@ -31,11 +31,11 @@
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
 }
 
-+ (NSString *)getCurBuildVersion {
++ (NSInteger)getCurBuildVersion {
     //  CFBundleVersion
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *app_Version = [infoDictionary objectForKey:@"CFBundleVersion"];
-    return app_Version;
+    return [app_Version integerValue];
 }
 
 + (CGFloat)makeFloatNumber:(CGFloat) num tailNum:(int)tailNum {
@@ -140,4 +140,6 @@
     UIGraphicsEndImageContext();
     return image;
 }
+
+
 @end

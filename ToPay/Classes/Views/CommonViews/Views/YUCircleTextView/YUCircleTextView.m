@@ -7,6 +7,8 @@
 //
 
 #import "YUCircleTextView.h"
+@interface YUCircleTextView() <UITextFieldDelegate>
+@end
 
 @implementation YUCircleTextView
 yudef_lazyLoad(UITextField, textField, _textField);
@@ -32,13 +34,14 @@ yudef_lazyLoad(UITextField, textField, _textField);
     self.backgroundColor = [UIColor qmui_colorWithHexString:@"#F1F1F1"];
     self.textField.textColor = [UIColor qmui_colorWithHexString:@"#999999"];
     self.textField.font = [UIFont systemFontOfSize:16.0];
+    self.textField.delegate = self ;
+    
     [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(weakSelf).with.offset(20);
         make.centerY.equalTo(weakSelf);
         make.trailing.equalTo(weakSelf).with.offset(-20);
     }];
     [self.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    
     
 }
 - (void)textFieldDidChange:(UITextField *)textfield {
@@ -47,6 +50,11 @@ yudef_lazyLoad(UITextField, textField, _textField);
     }
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if( _onTextDidEndEditing ) {
+        _onTextDidEndEditing( textField );
+    }
+}
 - (NSString *)text {
     return self.textField.text;
 }

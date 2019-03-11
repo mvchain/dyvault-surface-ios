@@ -171,10 +171,8 @@
         NIMScannerViewController * scannerVC = [[NIMScannerViewController alloc] initWithCardName:@"hahaha" avatar:nil completion:^(NSString *stringValue)
                                                 {
                                                     [weakSelf pushTransferClick:stringValue];
-                                                    
                                                 }];
         scannerVC.tokenid = @(weakSelf.assetTokenModel.tokenId).stringValue;
-        
         [weakSelf presentViewController:scannerVC animated:YES completion:^{
             
         }];

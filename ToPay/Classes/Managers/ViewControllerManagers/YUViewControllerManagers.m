@@ -19,8 +19,6 @@
 @end
 @implementation YUViewControllerManagers
 static YUViewControllerManagers* _instance = nil;
-
-
 #pragma mark - <public method >
 + (instancetype) shareInstance
 {

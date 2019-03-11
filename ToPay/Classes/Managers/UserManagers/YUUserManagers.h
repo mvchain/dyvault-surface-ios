@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype) shareInstance;
 #pragma mark IDCard
+// nickname etc
+- (TPUserInfo *)nowUserInfo;
+
 // important!,change userIDCard ,contain email ,userid ,token ,refreshtoken
 - (void)change_userIDCard_inDisk:(UserIDCardModel *)model;
 // get userIDCard
@@ -27,8 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark judge
 - (BOOL)isLogined;
+
 - (void)updateUserInfo:(void(^)(BOOL isSucc))complete;
-- (TPUserInfo *)nowUserInfo;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

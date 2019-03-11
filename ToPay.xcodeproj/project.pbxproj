@@ -185,6 +185,9 @@
 		DDDDC31D223283D7008BB491 /* YUBuyTokenCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC31C223283D7008BB491 /* YUBuyTokenCellEntity.m */; };
 		DDDDC321223287C8008BB491 /* BuyTokenItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */; };
 		DDDDC3252233A39F008BB491 /* TPAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC3242233A39F008BB491 /* TPAboutViewController.m */; };
+		DDDDC32B22363BB2008BB491 /* API_GET_App.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC32A22363BB2008BB491 /* API_GET_App.m */; };
+		DDDDC32F22363D3E008BB491 /* YUAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC32E22363D3E008BB491 /* YUAppManager.m */; };
+		DDDDC333223648E8008BB491 /* API_GET_Asset_inner.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDDC332223648E8008BB491 /* API_GET_Asset_inner.m */; };
 		DDEDB808222D217C003F648E /* YUReBindEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */; };
 		DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB806222D217C003F648E /* YUReBindEmailViewModel.m */; };
 		DDEDB80A222D217C003F648E /* YUReBindEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB807222D217C003F648E /* YUReBindEmailViewController.m */; };
@@ -558,6 +561,12 @@
 		DDDDC320223287C8008BB491 /* BuyTokenItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyTokenItemModel.m; sourceTree = "<group>"; };
 		DDDDC3232233A39F008BB491 /* TPAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAboutViewController.h; sourceTree = "<group>"; };
 		DDDDC3242233A39F008BB491 /* TPAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAboutViewController.m; sourceTree = "<group>"; };
+		DDDDC32922363BB2008BB491 /* API_GET_App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_App.h; sourceTree = "<group>"; };
+		DDDDC32A22363BB2008BB491 /* API_GET_App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_App.m; sourceTree = "<group>"; };
+		DDDDC32D22363D3E008BB491 /* YUAppManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YUAppManager.h; sourceTree = "<group>"; };
+		DDDDC32E22363D3E008BB491 /* YUAppManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YUAppManager.m; sourceTree = "<group>"; };
+		DDDDC331223648E8008BB491 /* API_GET_Asset_inner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_inner.h; sourceTree = "<group>"; };
+		DDDDC332223648E8008BB491 /* API_GET_Asset_inner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_inner.m; sourceTree = "<group>"; };
 		DDEDB803222D217C003F648E /* YUReBindEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUReBindEmailViewController.xib; sourceTree = "<group>"; };
 		DDEDB804222D217C003F648E /* YUReBindEmailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewModel.h; sourceTree = "<group>"; };
 		DDEDB805222D217C003F648E /* YUReBindEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUReBindEmailViewController.h; sourceTree = "<group>"; };
@@ -790,6 +799,7 @@
 		DD21EBAE22263FB80078E625 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDC32C22363D28008BB491 /* AppManager */,
 				DD7085DC222F9894006482FB /* YUCurrencyManager */,
 				DDEDB826222D46A8003F648E /* LanguageManagers */,
 				DD4F0CB22228EB6F003467CB /* ViewControllerManagers */,
@@ -801,6 +811,7 @@
 		DD21EBAF2226409B0078E625 /* CommonViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDC3302236405D008BB491 /* FirstViewController */,
 				DD54BC34222D0F500009E383 /* YUNavgationViewController */,
 				DD4F0CB72229057C003467CB /* YTabBarController */,
 				DD4F0CA822281217003467CB /* ResetPasswordViewController */,
@@ -1311,6 +1322,8 @@
 		DD4F0C952227EDA7003467CB /* AppUpdateRelated */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDC32922363BB2008BB491 /* API_GET_App.h */,
+				DDDDC32A22363BB2008BB491 /* API_GET_App.m */,
 			);
 			path = AppUpdateRelated;
 			sourceTree = "<group>";
@@ -1402,6 +1415,8 @@
 				DD7086052230C621006482FB /* API_POST_Asset_Transaction.m */,
 				DD7085CE222E9651006482FB /* API_PUT_Asset.h */,
 				DD7085CF222E9651006482FB /* API_PUT_Asset.m */,
+				DDDDC331223648E8008BB491 /* API_GET_Asset_inner.h */,
+				DDDDC332223648E8008BB491 /* API_GET_Asset_inner.m */,
 			);
 			path = AssetRelated;
 			sourceTree = "<group>";
@@ -1898,6 +1913,22 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		DDDDC32C22363D28008BB491 /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDC32D22363D3E008BB491 /* YUAppManager.h */,
+				DDDDC32E22363D3E008BB491 /* YUAppManager.m */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		DDDDC3302236405D008BB491 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FirstViewController;
+			sourceTree = "<group>";
+		};
 		DDEDB802222D2165003F648E /* RebindEmailAddress */ = {
 			isa = PBXGroup;
 			children = (
@@ -2307,6 +2338,7 @@
 				DD7086142230C622006482FB /* API_GET_Asset_Address.m in Sources */,
 				DD4F0CE122294C42003467CB /* YUAssetTokenItemCell.m in Sources */,
 				DD7086232230CE05006482FB /* YUNoDataCellEntity.m in Sources */,
+				DDDDC333223648E8008BB491 /* API_GET_Asset_inner.m in Sources */,
 				DDEDB809222D217C003F648E /* YUReBindEmailViewModel.m in Sources */,
 				DD708698223249F2006482FB /* UIViewExt.m in Sources */,
 				DDEDB834222E12D3003F648E /* YUNotificationItemCell.m in Sources */,
@@ -2335,6 +2367,7 @@
 				DD70868122323379006482FB /* SYPasswordView.m in Sources */,
 				DD708684223233C2006482FB /* YFactoryUI.m in Sources */,
 				DD21EBEC222678E00078E625 /* UITableView+YUTableView.m in Sources */,
+				DDDDC32B22363BB2008BB491 /* API_GET_App.m in Sources */,
 				DD54BC06222AAC880009E383 /* YUSearchBarView.m in Sources */,
 				DD21EBEF222678E00078E625 /* UITableView+YUTableViewAddition.m in Sources */,
 				DD70866422313245006482FB /* YUTransactionRecordCell.m in Sources */,
@@ -2381,6 +2414,7 @@
 				DD70861B2230C68F006482FB /* API_GET_Message.m in Sources */,
 				DD70867E2232334D006482FB /* TPTransView.m in Sources */,
 				DD54BC22222CD3F80009E383 /* YUBlankCellEntity.m in Sources */,
+				DDDDC32F22363D3E008BB491 /* YUAppManager.m in Sources */,
 				DD7085DA222F7938006482FB /* NSString+Pinyin.m in Sources */,
 				DDDDC319223283C9008BB491 /* YUBuyTokenCell.m in Sources */,
 				DD21EBF2222679230078E625 /* YUTableViewCell.m in Sources */,
@@ -2598,7 +2632,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JLAJ9329RS;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ToPay/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ToPay/SettingPlist/Info.plist";
@@ -2607,7 +2641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dyvault.ToPay;
+				PRODUCT_BUNDLE_IDENTIFIER = test.dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2620,7 +2654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JLAJ9329RS;
+				DEVELOPMENT_TEAM = SXV4N6YG2P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ToPay/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ToPay/SettingPlist/Info.plist";
@@ -2629,7 +2663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dyvault.ToPay;
+				PRODUCT_BUNDLE_IDENTIFIER = test.dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

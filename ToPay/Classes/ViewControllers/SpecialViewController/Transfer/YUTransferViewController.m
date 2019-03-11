@@ -13,6 +13,7 @@
 #import "TPTransView.h"
 #import "API_POST_Asset_Transaction.h"
 #import "NIMScannerViewController.h"
+#import "API_GET_Asset_inner.h"
 @interface YUTransferViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_scroll_top;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *addressTextView;
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet UILabel *feeLabel;
+@property (assign,nonatomic) BOOL isInnerUserAddr ;
 @end
 
 @implementation YUTransferViewController
@@ -48,9 +50,7 @@
     [self setInitData];
     [self setTextEvent];
     [self setNavEvent];
-    
 }
-
 #pragma mark - <private method>
 - (void)setNav {
     [self addNormalNavBar:@"转账"];
@@ -77,17 +77,9 @@
 - (void)setBaseInfoToView:(TransferBaseInfo *)info {
     self.canUsingCashNumberLabel.text = TPString(@"%.4f %@",yufloat_token(info.balance),self.assetTokenModel.tokenName);
     self.totalNumberTipLabel.text = self.assetTokenModel.tokenName;
- 
-    self.feeLabel.text = TPString(@"%.4f %@",yufloat_token(info.fee) ,info.feeTokenName);
+    self.feeLabel.text = TPString(@"%.6f %@",yufloat_fee(info.fee) ,info.feeTokenName);
 }
 
-- (void)pushTransferClick:(NSString *)address
-{
-//    TPChainTransferViewController *transferVC = [[TPChainTransferViewController alloc]init];
-//    transferVC.assetModel = self.assetModel;
-//    transferVC.address = address;
-   // [self.navigationController pushViewController:transferVC animated:YES];
-}
 #pragma mark - <event response>
 - (void) setNavEvent {
     yudef_weakSelf
@@ -105,6 +97,7 @@
     
 }
 - (void)setTextEvent {
+    yudef_weakSelf
     self.totalNumberTextView.onTextChange = ^(NSString * _Nonnull text) {
         NSString *tipStr = self.assetTokenModel.tokenName; // default
         UIColor *tipColor = [UIColor qmui_colorWithHexString:@"#555555"]; //// default
@@ -124,6 +117,27 @@
         self.confirmButton.enabled = isConfirmBtnVaild;
         [self.totalNumberTipLabel setFont:font];
     };
+    
+    self.addressTextView.onTextDidEndEditing = ^(UITextField * _Nonnull sender) {
+        NSString *addr = sender.text;
+        API_GET_Asset_inner *GET_Asset_inner = [[API_GET_Asset_inner alloc] init];
+        GET_Asset_inner.onSuccess = ^(id responseData) {
+           BOOL isInneAddr =  [responseData boolValue];
+            weakSelf.isInnerUserAddr = isInneAddr;
+           if (isInneAddr) {
+               weakSelf.feeLabel.text = TPString(@"%.6f %@",0.0 ,weakSelf.transferBaseInfo.feeTokenName);
+           }else {
+               weakSelf.feeLabel.text = TPString(@"%.6f %@",yufloat_fee(weakSelf.transferBaseInfo.fee) ,weakSelf.transferBaseInfo.feeTokenName);
+           }
+        };
+        GET_Asset_inner.onError = ^(NSString *reason, NSInteger code) {
+        
+        };
+        GET_Asset_inner.onEndConnection = ^{
+            
+        };
+        [GET_Asset_inner sendRequestWithAddress:addr];
+    };
 }
 - (IBAction)confirmTap:(id)sender {
     BOOL isVaildEmail =  [QuickJudge isVaildEmail:self.addressTextView.textField.text] ;
@@ -139,7 +153,8 @@
     transView.desc = @"转账金额";
     transView.Total = TPString(@"%.4f %@",yufloat_token(self.totalNumberTextView.textField.text.doubleValue) ,self.assetTokenModel.tokenName);
     transView.con1 = self.addressTextView.textField.text;
-    transView.con2 = TPString(@"%.4f %@",  yufloat_token(self.transferBaseInfo.fee),self.transferBaseInfo.feeTokenName);
+    CGFloat fee = self.isInnerUserAddr ?0.0:self.transferBaseInfo.fee;
+    transView.con2 = TPString(@"%.6f %@",  yufloat_fee(fee),self.transferBaseInfo.feeTokenName);
     [transView showMenuWithAlpha:YES];
     transView.pvc = self;
     __block TPTransView *TPTransV = transView;
@@ -151,7 +166,6 @@
              [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0];
              API_POST_Asset_Transaction *POST_Asset_Transaction = [[API_POST_Asset_Transaction alloc] init];
              POST_Asset_Transaction.onSuccess = ^(id responseData) {
-                 
                  [QMUITips showSucceed:@"转账成功！"];
                  [weakSelf.navigationController popViewControllerAnimated:YES];
              };

@@ -57,7 +57,10 @@
             
             [QMUITips showSucceed:@"注册成功"];
             [tabVc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
-            [self.navigationController pushViewController:tabVc animated:YES];
+            [self presentViewController:tabVc animated:YES completion:^{
+                
+            }];
+            
         }];
         
     };

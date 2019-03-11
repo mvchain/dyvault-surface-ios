@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *) encryptPwd:(NSString *)pwd salt:(NSString *)m_salt;
 + (NSString *) md5:(NSString *) input;
 + (NSString *) getBundleIdStr;
-+ (NSString *) getCurBuildVersion;
 + (CGFloat) makeFloatNumber:(CGFloat) num tailNum:(int)tailNum;
 + (NSString *)getUUID;
 + (NSString *)timeWithTimeIntervalString:(NSInteger)time;
@@ -24,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getNowTimeTimestamp;
 + (UIImage*)getImageByColor:(UIColor*)color;
 + (UIImage *)makeImageWithView:(UIView *)view withSize:(CGSize)size;
++ (NSInteger)getCurBuildVersion;
+
 @end
 
 NS_ASSUME_NONNULL_END

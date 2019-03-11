@@ -17,6 +17,8 @@
 #import "API_GET_Asset_Balance.h"
 #import "YUTransactionRecordViewController.h"
 #import "YUBuyTokenViewController.h"
+#import "API_GET_Message.h"
+#import "MessageItemModel.h"
 @interface YUAssetViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *servListView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
@@ -47,6 +49,8 @@
     if (!self.isFirstDisplayThisVC) {
         [self.servListView beginRefreshHeaderWithNoAnimate];
     }
+    [self updateNotificationApperance];
+    
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -74,7 +78,8 @@
     self.servListView.firstPageBlock = ^(block_page_complete  _Nonnull complete)
     {
         API_GET_Asset *GET_Asset = [[API_GET_Asset alloc] init];
-        GET_Asset.onSuccess = ^(id responseData) {
+        GET_Asset.onSuccess = ^(id responseData)
+        {
             NSMutableArray *listDatas = [[NSMutableArray alloc]init];
             weakSelf.assetItems = [[NSMutableArray <AssetTokenItemModel *> alloc] init];
             YUAssetHeaderInfoCellEntity *headerEntity = [[YUAssetHeaderInfoCellEntity alloc] init]; // first
@@ -82,13 +87,17 @@
             NSArray *arrs = (NSArray *)responseData;
             for (NSDictionary *dict in arrs) {
                 AssetTokenItemModel *tokenModel = [[AssetTokenItemModel alloc] initWithDictionary:dict];
-                YUAssetTokenItemCellEntity *tokenItemEn = [[YUAssetTokenItemCellEntity alloc] init];
-                tokenItemEn.data = tokenModel;
-                [weakSelf.assetItems addObject:tokenModel];
-                [listDatas addObject:tokenItemEn];
+                if ([[YUCurrencyManager shareInstance] isTokenVisable:tokenModel.tokenId]) {
+                    // this token is visiable
+                    YUAssetTokenItemCellEntity *tokenItemEn = [[YUAssetTokenItemCellEntity alloc] init];
+                    tokenItemEn.data = tokenModel;
+                    [weakSelf.assetItems addObject:tokenModel];
+                    [listDatas addObject:tokenItemEn];
+                }
             }
             API_GET_Asset_Balance *GET_Asset_Balance = [[API_GET_Asset_Balance alloc] init];
-            GET_Asset_Balance.onSuccess = ^(id responseData) {
+            GET_Asset_Balance.onSuccess = ^(id responseData)
+            {
                 NSNumber *res = (NSNumber *)responseData;
                 headerEntity.balance = [res doubleValue];
                 complete(listDatas);
@@ -111,7 +120,6 @@
         [GET_Asset sendRequest];
     };
     [QMUITips showLoadingInView:self.view];
- 
     [[YUCurrencyManager shareInstance] requestTokenListInfo:^(NSArray<AddNewTokenItemModel *> * _Nonnull models, BOOL isSucc) {
         [self.servListView beginRefreshHeader];
         [QMUITips hideAllTips];
@@ -120,25 +128,47 @@
 }
 
 - (void)showCurrencySelectionDialogViewController {
-    QMUIDialogSelectionViewController *dialogViewController = [[QMUIDialogSelectionViewController alloc] init];
-    dialogViewController.title = @"更改货币";
-    NSMutableArray *currencysTitles = [[NSMutableArray alloc] init];
+ 
+    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:@"选择法币单位" message:@"" preferredStyle:QMUIAlertControllerStyleActionSheet];
+    int itemIndex = 0 ;
     for (TPExchangeRate *exchangeRate in self.exchangeRates) {
-        [currencysTitles addObject:exchangeRate.name ];
+        QMUIAlertAction *action = [QMUIAlertAction actionWithTitle:exchangeRate.name style:QMUIAlertActionStyleDefault handler:^(QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+            [[YUCurrencyManager shareInstance] setNowLegalCurrency:self.exchangeRates[itemIndex]];
+            [self.servListView reloadData];
+        }];
+        itemIndex++;
+        // QMUIAlertActionStyleDefault
+        [alertController addAction:action];
     }
-    dialogViewController.items = currencysTitles;
-    dialogViewController.cellForItemBlock = ^(QMUIDialogSelectionViewController *aDialogViewController, QMUITableViewCell *cell, NSUInteger itemIndex) {
-        cell.accessoryType = UITableViewCellAccessoryNone;// 移除点击时默认加上右边的checkbox
+    QMUIAlertAction *action = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+        
+    }];
+    [alertController addAction:action];
+    [alertController showWithAnimated:YES];
+}
+
+- (void)updateNotificationApperance {
+    
+    API_GET_Message *GET_Message = [[API_GET_Message alloc] init];
+    GET_Message.onSuccess = ^(id responseData) {
+        NSArray *dicts = (NSArray *)responseData;
+        MessageItemModel *firstModel = [[MessageItemModel alloc] initWithDictionary:dicts.firstObject];
+        NSInteger mostRecentTime = [[YUAppManager shareInstance] mostRecentNewsTimeInLocal];
+        UIImageView *leftImageView = (UIImageView *)self.normalNavbar.leftButton.midView;;
+        if (firstModel.createdAt > mostRecentTime) {
+            [leftImageView setImage:UIImageMake(@"new_news")];
+        }else {
+            [leftImageView setImage:UIImageMake(@"news_black")];
+        }
     };
-    dialogViewController.heightForItemBlock = ^CGFloat (QMUIDialogSelectionViewController *aDialogViewController, NSUInteger itemIndex) {
-        return 54;
+    GET_Message.onError = ^(NSString *reason, NSInteger code) {
+        
     };
-    dialogViewController.didSelectItemBlock = ^(QMUIDialogSelectionViewController *aDialogViewController, NSUInteger itemIndex) {
-        [aDialogViewController hide];
-        [[YUCurrencyManager shareInstance] setNowLegalCurrency:self.exchangeRates[itemIndex]];
-        [self.servListView reloadData];
+    GET_Message.onEndConnection = ^{
+        
     };
-    [dialogViewController show];
+    NSString *nowTime = [QuickGet getNowTimeTimestamp];
+    [GET_Message sendReuqestWithPageSize:PAGE_LIST_SIZE timestamp:nowTime.integerValue *1000];
 }
 #pragma mark - <event response>
 - (void)setNavEvent {
