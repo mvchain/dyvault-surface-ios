@@ -133,7 +133,6 @@
 		DD7086132230C622006482FB /* API_POST_Asset_Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086052230C621006482FB /* API_POST_Asset_Transaction.m */; };
 		DD7086142230C622006482FB /* API_GET_Asset_Address.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7086082230C621006482FB /* API_GET_Asset_Address.m */; };
 		DD7086162230C622006482FB /* API_GET_Asset_Balance.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70860A2230C621006482FB /* API_GET_Asset_Balance.m */; };
-		DD7086172230C622006482FB /* API_GET_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70860D2230C622006482FB /* API_GET_Asset.m */; };
 		DD7086182230C622006482FB /* API_GET_Asset_Transactions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70860E2230C622006482FB /* API_GET_Asset_Transactions.m */; };
 		DD70861B2230C68F006482FB /* API_GET_Message.m in Sources */ = {isa = PBXBuildFile; fileRef = DD70861A2230C68F006482FB /* API_GET_Message.m */; };
 		DD7086222230CE05006482FB /* YUNoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD70861E2230CE04006482FB /* YUNoDataCell.xib */; };
@@ -209,6 +208,7 @@
 		DDEDB846222E25F3003F648E /* TPChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDEDB844222E25F3003F648E /* TPChangePassWordViewController.xib */; };
 		DDEDB84C222E260B003F648E /* TPChangePassWordViewModel_PayPassWd.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB849222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.m */; };
 		DDEDB84D222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEDB84B222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m */; };
+		DDEFE4AF223F801C003E3263 /* API_GET_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEFE4AE223F801C003E3263 /* API_GET_Asset.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -467,7 +467,6 @@
 		DD7086082230C621006482FB /* API_GET_Asset_Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Address.m; sourceTree = "<group>"; };
 		DD70860A2230C621006482FB /* API_GET_Asset_Balance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Balance.m; sourceTree = "<group>"; };
 		DD70860B2230C622006482FB /* API_GET_Asset_tokenId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_tokenId.h; sourceTree = "<group>"; };
-		DD70860D2230C622006482FB /* API_GET_Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API_GET_Asset.m; path = "../../../../../../../dyvault-surface-ios/ToPay/Classes/HttpService/API/AssetRelated/API_GET_Asset.m"; sourceTree = "<group>"; };
 		DD70860E2230C622006482FB /* API_GET_Asset_Transactions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset_Transactions.m; sourceTree = "<group>"; };
 		DD70860F2230C622006482FB /* API_GET_Asset_Transactions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Asset_Transactions.h; sourceTree = "<group>"; };
 		DD7086192230C68F006482FB /* API_GET_Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API_GET_Message.h; sourceTree = "<group>"; };
@@ -604,6 +603,7 @@
 		DDEDB849222E260A003F648E /* TPChangePassWordViewModel_PayPassWd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChangePassWordViewModel_PayPassWd.m; sourceTree = "<group>"; };
 		DDEDB84A222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPChangePassWordViewModel_LoginPassWd.h; sourceTree = "<group>"; };
 		DDEDB84B222E260B003F648E /* TPChangePassWordViewModel_LoginPassWd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPChangePassWordViewModel_LoginPassWd.m; sourceTree = "<group>"; };
+		DDEFE4AE223F801C003E3263 /* API_GET_Asset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = API_GET_Asset.m; sourceTree = "<group>"; };
 		F269B838F6F657FCAB75948A /* Pods-ToPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToPay/Pods-ToPay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1401,6 +1401,8 @@
 				DD7086082230C621006482FB /* API_GET_Asset_Address.m */,
 				DD7086032230C621006482FB /* API_GET_Asset_Balance.h */,
 				DD70860A2230C621006482FB /* API_GET_Asset_Balance.m */,
+				DDDDC331223648E8008BB491 /* API_GET_Asset_inner.h */,
+				DDDDC332223648E8008BB491 /* API_GET_Asset_inner.m */,
 				DD70860B2230C622006482FB /* API_GET_Asset_tokenId.h */,
 				DD7086012230C620006482FB /* API_GET_Asset_tokenId.m */,
 				DD7086022230C620006482FB /* API_GET_Asset_Transaction_id.h */,
@@ -1410,13 +1412,11 @@
 				DD70860F2230C622006482FB /* API_GET_Asset_Transactions.h */,
 				DD70860E2230C622006482FB /* API_GET_Asset_Transactions.m */,
 				DD4F0CD722293B1D003467CB /* API_GET_Asset.h */,
-				DD70860D2230C622006482FB /* API_GET_Asset.m */,
+				DDEFE4AE223F801C003E3263 /* API_GET_Asset.m */,
 				DD7086062230C621006482FB /* API_POST_Asset_Transaction.h */,
 				DD7086052230C621006482FB /* API_POST_Asset_Transaction.m */,
 				DD7085CE222E9651006482FB /* API_PUT_Asset.h */,
 				DD7085CF222E9651006482FB /* API_PUT_Asset.m */,
-				DDDDC331223648E8008BB491 /* API_GET_Asset_inner.h */,
-				DDDDC332223648E8008BB491 /* API_GET_Asset_inner.m */,
 			);
 			path = AssetRelated;
 			sourceTree = "<group>";
@@ -2353,6 +2353,7 @@
 				DD4F0C842227E5A8003467CB /* YUAssetViewController.m in Sources */,
 				DD70867A223216EA006482FB /* TransferBaseInfo.m in Sources */,
 				DD70869422324809006482FB /* NIMScanner.m in Sources */,
+				DDEFE4AF223F801C003E3263 /* API_GET_Asset.m in Sources */,
 				DD70869522324809006482FB /* NIMScannerMaskView.m in Sources */,
 				DD4F0CA022280677003467CB /* YUValidEmailViewController.m in Sources */,
 				DDDDC31422328280008BB491 /* API_GET_Channel.m in Sources */,
@@ -2451,7 +2452,6 @@
 				DD4F0CAC22281241003467CB /* YUResetPasswordViewController.m in Sources */,
 				DD70866C223137FE006482FB /* YUTransactionListViewController.m in Sources */,
 				DD21EC0B2226BAD70078E625 /* YURegisterViewController.m in Sources */,
-				DD7086172230C622006482FB /* API_GET_Asset.m in Sources */,
 				DD70865222310964006482FB /* UIView+SGPagingView.m in Sources */,
 				DD54BC40222D12380009E383 /* TPVerifyEmailViewModel.m in Sources */,
 				DD4F0C912227E7AE003467CB /* API_GET_User_Valid.m in Sources */,
@@ -2641,7 +2641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.dyvault.ToPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2663,7 +2663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.dyvault.ToPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dyvault.ToPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

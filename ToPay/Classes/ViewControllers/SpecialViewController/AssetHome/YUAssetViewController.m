@@ -128,7 +128,7 @@
 }
 
 - (void)showCurrencySelectionDialogViewController {
- 
+    
     QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:@"选择法币单位" message:@"" preferredStyle:QMUIAlertControllerStyleActionSheet];
     int itemIndex = 0 ;
     for (TPExchangeRate *exchangeRate in self.exchangeRates) {
