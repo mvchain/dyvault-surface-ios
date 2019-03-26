@@ -37,7 +37,7 @@
     [self setNav];
     NSAssert(self.viewModel !=nil, @"ViewModel 必须存在！");
     self.scrollView.contentInset = UIEdgeInsetsMake(self.normalNavbar.qmui_height, 0, 0, 0);
-    [_label setText:@"忘记原密码？"];
+    [_label setText:Localized(@"Forgot your original password?")];
     self.passWordTextView.textField.placeholder = self.viewModel.firstTextFieldPlaceholder;
     self.passWordTextView.textField.keyboardType = self.viewModel.textFieldKeyboardType;
     self.mnewPassWordTextView.textField.placeholder = self.viewModel.nextTextFieldPlaceholder;
@@ -45,6 +45,7 @@
     self.passWordTextView.textField.secureTextEntry = YES;
     self.mnewPassWordTextView.textField.secureTextEntry = YES;
     [self.nextStepButton yu_gradualBlueChangeStyle];
+    [self.nextStepButton setTitle:Localized(@"Confirm the changes") forState:UIControlStateNormal];
 }
 - (void)setNav {
     [self addNormalNavBar:self.viewModel.navBarTitle];
@@ -60,11 +61,11 @@
 - (IBAction)onConfirmChangeTap:(id)sender {
     
     if (self.passWordTextView.text.length == 0) {
-        [QMUITips showError:@"旧密码不能为空"];
+        [QMUITips showError:Localized(@"Old password cannot be empty")];
         return;
     }
     if (self.mnewPassWordTextView.text.length == 0) {
-        [QMUITips showError:@"新密码不能为空"];
+        [QMUITips showError:Localized(@"New password cannot be empty")];
         return;
     }
     [QMUITips showLoadingInView:self.view];
@@ -73,10 +74,12 @@
                                      complete:^(BOOL isSucc, NSString *info) {
                                          [QMUITips hideAllTips];
                                          if (isSucc) {
-                                             [QMUITips showSucceed:@"修改成功"];
+                                             [QMUITips showSucceed:Localized(@"Successfully modified")];
                                              [self.viewModel action_afterChangePwd:@{@"vc":self}];
                                          }else {
-                                             [QMUITips showError:TPString(@"修改失败:%@",info)];
+                                             
+                                             NSString *failStr = Localized(@"change Password failure");
+                                             [QMUITips showError:TPString(@"%@:%@",failStr,info)];
                                          }
                                          
     }];

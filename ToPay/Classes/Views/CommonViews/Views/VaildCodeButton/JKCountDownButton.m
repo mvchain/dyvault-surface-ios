@@ -108,9 +108,8 @@
                 }
                 else
                 {
-                    [self setTitle:@"重新获取" forState:UIControlStateNormal];
-                    [self setTitle:@"重新获取" forState:UIControlStateDisabled];
-
+                    [self setTitle:Localized(@"ReGetCode") forState:UIControlStateNormal];
+                    [self setTitle:Localized(@"ReGetCode")  forState:UIControlStateDisabled];
                 }
             }
         }

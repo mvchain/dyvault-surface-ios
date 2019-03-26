@@ -81,11 +81,10 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 {
     yudef_weakSelf;
     [self.tableView.mj_footer endRefreshing];
-    [self.tableView.mj_header endRefreshing];
     self.firstPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data) {
         [weakSelf priavte_initData];
         if (data==nil || data.count ==0) {
-            YUCellEntity *noDataEntity = [YUNoDataCellEntity quickInit:@"暂无数据"];
+            YUCellEntity *noDataEntity = [YUNoDataCellEntity quickInit:Localized(@"No data")];
             if (self.noDataEntity){
                 noDataEntity = self.noDataEntity();
             }
@@ -106,6 +105,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 - (void)nextPage
 {
     yudef_weakSelf;
+    [self.tableView.mj_footer endRefreshing];
     self.nextPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data)
     {
         [weakSelf.dataArrays addObjectsFromArray:data];
@@ -183,6 +183,10 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
     self.dataArrays = self.backUpDataArrays;
     self.backUpDataArrays = nil; 
     [self reloadData];
+}
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor:backgroundColor];
+    self.tableView.backgroundColor = backgroundColor;
 }
 #pragma mark - <tableView delegate >
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

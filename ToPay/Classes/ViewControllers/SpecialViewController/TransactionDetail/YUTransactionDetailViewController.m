@@ -39,7 +39,7 @@
 #pragma mark - <private method>
 - (void)setNav {
     yudef_weakSelf
-    [self addNormalNavBar:@"订单详情"];
+    [self addNormalNavBar:Localized(@"Order Detail")];
     [self.normalNavbar setLeftButtonAsReturnButton];
     [self.normalNavbar setRightButtonWithImage:UIImageMake(@"share")];
     self.atlt_icon_top.constant = self.normalNavbar.qmui_bottom + 20;
@@ -51,7 +51,6 @@
             
         }];
     };
-    
 }
 - (void)setData {
     [QMUITips showLoadingInView:self.view];
@@ -77,7 +76,7 @@
     self.pageListView.firstPageBlock = ^(block_page_complete  _Nonnull complete) {
         TransactionDetailModel *model =  weakSelf.transactionDetailModel ;
         YUTransactionDetailItemCellEntity *entity0 =[[YUTransactionDetailItemCellEntity alloc] init];
-        entity0.leftTitleStr = @"金额";
+        entity0.leftTitleStr = Localized(@"Amount");
         entity0.rightTitleStr = TPString(@"%.4f %@",yufloat_token(model.value),model.tokenName);
         entity0.rightFont = [UIFont systemFontOfSize:16];
         entity0.rightTextColor = [UIColor qmui_colorWithHexString:@"#666666"];
@@ -86,7 +85,7 @@
             // classify 0
            
             YUTransactionDetailItemCellEntity *entity1 =[[YUTransactionDetailItemCellEntity alloc] init];
-            entity1.leftTitleStr = @"交易手续费";
+            entity1.leftTitleStr = Localized(@"Handling fee");
             entity1.rightTitleStr = TPString(@"%.4f %@",yufloat_fee(model.fee),model.feeTokenType );
             entity1.rightFont = [UIFont systemFontOfSize:13.0];
             entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
@@ -98,16 +97,16 @@
             
             if (model.transactionType == 1) {
                 // in
-                entity2.leftTitleStr = @"来源地址";
+                entity2.leftTitleStr = Localized(@"From");
                 entity2.rightTitleStr = model.fromAddress;
             }else {
                 // out
-                entity2.leftTitleStr = @"目的地址";
+                entity2.leftTitleStr = Localized(@"To");
                 entity2.rightTitleStr = model.toAddress;
             }
     
             YUTransactionDetailItemCellEntity *entity3 =[[YUTransactionDetailItemCellEntity alloc] init];
-            entity3.leftTitleStr = @"交易哈希";
+            entity3.leftTitleStr = Localized(@"Hash");
             entity3.rightTitleStr = model.blockHash;
             entity3.rightFont = [UIFont systemFontOfSize:13.0];
             entity3.rightTextColor = [UIColor qmui_colorWithHexString:@"#7F95CF"];
@@ -124,7 +123,7 @@
         },^(void){
             // classify5
             YUTransactionDetailItemCellEntity *entity1 =[[YUTransactionDetailItemCellEntity alloc] init];
-            entity1.leftTitleStr = @"订单号";
+            entity1.leftTitleStr = Localized(@"Order Id");
             entity1.rightTitleStr = model.orderNumber;
             entity1.rightFont = [UIFont systemFontOfSize:13.0];
             entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
@@ -140,7 +139,7 @@
     NSArray<void_block> *classify_mapTo_Block = @[^(void){
         // classify equal 0,block transaction
         
-        NSArray *status_mapTo_Str = @[@"等待中",@"等待中",@"成功",@"",@"",@"",@"",@"",@"",@"失败"];
+        NSArray *status_mapTo_Str = @[Localized(@"Waiting"),Localized(@"Waiting"),Localized(@"Success"),@"",@"",@"",@"",@"",@"",Localized(@"Fail")];
         NSArray *status_mapTo_Image = @[@"waiting",@"waiting",@"success",@"",@"",@"",@"",@"",@"",@"failure"];
         NSString *statusStr = status_mapTo_Str[itemModel.status];
         NSString *statusImage = status_mapTo_Image[itemModel.status];
@@ -149,14 +148,14 @@
             // transType eq to 0
         },^(void){
             // !!! classify equal 0,transType eq to 1
-            [self.statusLabel setText:TPString(@"充值%@",statusStr)];
+            [self.statusLabel setText:TPString(@"%@%@",Localized(@"Recharge"),statusStr)];
         },^(void){
             // !!! classify equal 0,transType eq to 2
-            [self.statusLabel setText:TPString(@"提现%@",statusStr)];
+            [self.statusLabel setText:TPString(@"%@%@",Localized(@"Withdraw"),statusStr)];
         }];
         transtype_mapTo_Block[itemModel.transactionType]();
-        if ([statusStr isEqualToString:@"等待中"]) {
-            [self.statusLabel setText:@"等待中..."];
+        if ([statusStr isEqualToString:Localized(@"Waiting")]) {
+            [self.statusLabel setText:TPString(@"%@...",Localized(@"Waiting"))];
         }
     },^(void){
         // classify equal 1
@@ -176,12 +175,12 @@
         },^(void){
             // classify equal 5,transType eq to 1
 
-            NSString *titleInfo = TPString(@"收款：来自%@",itemModel.fromAddress);
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Receive:From"),itemModel.fromAddress);
             self.statusLabel.text = titleInfo;
         },^(void){
             // classify equal 5,transType eq to 2
          
-            NSString *titleInfo = TPString(@"转账：转到%@",itemModel.toAddress);
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Transfer:To"),itemModel.toAddress);
             self.statusLabel.text = titleInfo;
         }];
         transtype_mapTo_Block[itemModel.transactionType]();
@@ -192,7 +191,17 @@
 
 }
 #pragma mark - <event response>
-
+- (void)configListViewEvent {
+    yudef_weakSelf;
+    self.pageListView.yu_didSelectRowAtIndexPath = ^(NSIndexPath * _Nonnull indexPath) {
+        YUTransactionDetailItemCellEntity *entity = (YUTransactionDetailItemCellEntity *)weakSelf.pageListView.dataArrays[indexPath.row];
+        
+        if ([entity.leftTitleStr isEqualToString:Localized(@"Hash")]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:entity.rightTitleStr]];
+        }
+    };
+    
+}
 #pragma mark - <lazy load>
 
 @end

@@ -41,7 +41,7 @@
 }
 #pragma mark - <private method>
 - (void)setNav {
-    [self addNormalNavBar:@"添加币种"];
+    [self addNormalNavBar:Localized(@"add_coin")];
     [self.normalNavbar setLeftButtonAsReturnButton];
     [self.normalNavbar setRightButtonWithImage:UIImageMake(@"search")];
     [self setNavRightButtonEvent];
@@ -192,17 +192,17 @@
         }else {
             // when add delete btn
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
-                                                                                     message:TPString(@"确定移除%@?",tokenModel.tokenName)
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:Localized(@"friendly_tips")
+                                                                                     message:TPString(@"Remove%@?",tokenModel.tokenName)
                                                                               preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+            UIAlertAction *resetAction = [UIAlertAction actionWithTitle:Localized(@"confirm") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
                                           
             {
                 [QMUITips showLoadingInView:weakSelf.view hideAfterDelay:5.0 ];
                 [PUT_Asset sendRequestWithAddTokenIdArr:addTokenIdArr
                                        removeTokenIdArr:removeTokenIdArr];
             }];
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:Localized(@"cancel")
                                                                    style:UIAlertActionStyleCancel
                                                                  handler:nil];
             [alertController addAction:cancelAction];
@@ -217,7 +217,7 @@
 - (YUSearchBarView *)searchbar {
     if( !_searchbar ) {
         _searchbar = [YUSearchBarView xib_loadUsingClassName];
-        _searchbar.placeholder = @"搜索币种";
+        _searchbar.placeholder = Localized(@"Search Coin");
     }
     return _searchbar;
 }

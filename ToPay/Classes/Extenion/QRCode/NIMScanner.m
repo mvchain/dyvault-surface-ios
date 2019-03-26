@@ -99,6 +99,8 @@
         NSData*imageData =UIImagePNGRepresentation(image);
         CIImage*ciImage = [CIImage imageWithData:imageData];
         NSArray*features = [detector featuresInImage:ciImage];
+        if (features.count == 0) return ;
+        
         CIQRCodeFeature*feature = [features objectAtIndex:0];
         NSString*scannedResult = feature.messageString;
         dispatch_async(dispatch_get_main_queue(), ^{

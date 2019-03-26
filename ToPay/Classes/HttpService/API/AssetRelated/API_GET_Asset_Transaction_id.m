@@ -11,6 +11,9 @@
 @implementation API_GET_Asset_Transaction_id
 - (void)sendRequestWithID:(NSInteger)idField {
     self.apiPath = TPString(@"/asset/transaction/%@",@(idField));
+    NSString *apiPath = @"/asset/transaction/{blockId}";
+    
+    apiPath = [apiPath stringByReplacingOccurrencesOfString:@"" withString:@""];
     [self connectWithRquestMethod:HTTPMethodGET];
 }
 @end

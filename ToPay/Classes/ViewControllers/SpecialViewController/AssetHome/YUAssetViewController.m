@@ -19,6 +19,9 @@
 #import "YUBuyTokenViewController.h"
 #import "API_GET_Message.h"
 #import "MessageItemModel.h"
+#import "YUOneKeyBuyTokenListViewController.h"
+#import "YUBuyTokenViewController.h"
+
 @interface YUAssetViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *servListView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
@@ -129,7 +132,7 @@
 
 - (void)showCurrencySelectionDialogViewController {
     
-    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:@"选择法币单位" message:@"" preferredStyle:QMUIAlertControllerStyleActionSheet];
+    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:Localized(@"Select a legal currency unit") message:@"" preferredStyle:QMUIAlertControllerStyleActionSheet];
     int itemIndex = 0 ;
     for (TPExchangeRate *exchangeRate in self.exchangeRates) {
         QMUIAlertAction *action = [QMUIAlertAction actionWithTitle:exchangeRate.name style:QMUIAlertActionStyleDefault handler:^(QMUIAlertController *aAlertController, QMUIAlertAction *action) {
@@ -140,7 +143,7 @@
         // QMUIAlertActionStyleDefault
         [alertController addAction:action];
     }
-    QMUIAlertAction *action = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(QMUIAlertController *aAlertController, QMUIAlertAction *action) {
+    QMUIAlertAction *action = [QMUIAlertAction actionWithTitle:Localized(@"cancel") style:QMUIAlertActionStyleCancel handler:^(QMUIAlertController *aAlertController, QMUIAlertAction *action) {
         
     }];
     [alertController addAction:action];
@@ -194,17 +197,17 @@
         transAcationDetail.assetTokenModel = weakSelf.assetItems[indexPath.row-1];
         [weakSelf.navigationController pushViewController:transAcationDetail animated:YES];
     };
-    
     self.servListView.yu_eventProduceByInnerCellView = ^(NSString * _Nonnull idf, id  _Nonnull content, id  _Nonnull sender)
     {
         if ([idf isEqualToString:EVENT_ChangeLegalCurrency]) {
             [weakSelf showCurrencySelectionDialogViewController];
-            return ;
+            return;
         }
         if ([idf isEqualToString:EVENT_BuyCurrency]) {
-            YUBuyTokenViewController *buyTokenVC = [[YUBuyTokenViewController alloc]init];
+            // 一键买币
+            YUOneKeyBuyTokenListViewController *buyTokenVC = [[YUOneKeyBuyTokenListViewController alloc]init];
+            //YUBuyTokenViewController *buyTokenVC = [[YUBuyTokenViewController alloc]init];
             [weakSelf.navigationController pushViewController:buyTokenVC animated:YES];
-            
             return ;
         }
     };
@@ -216,6 +219,9 @@
         _exchangeRates = [YUCurrencyManager shareInstance].legalCurrencyListArrays;
     }
     return _exchangeRates;
+    
+}
+- (void)dealloc {
     
 }
 @end

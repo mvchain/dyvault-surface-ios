@@ -29,8 +29,8 @@
     [self.confirmButton yu_gradualBlueChangeStyle];
     [self.loginPasswordTextView yu_loginPassWordStyle];
     [self.payPasswordTextView yu_payPasswordStyle];
-    [self.loginPasswordTextView setPlaceHolder:@"登录密码"];
-    [self.payPasswordTextView setPlaceHolder:@"支付密码"];
+    [self.loginPasswordTextView setPlaceHolder:Localized(@"Login password")];
+    [self.payPasswordTextView setPlaceHolder:Localized(@"Payment Password")];
 }
 #pragma mark - <private method>
 
@@ -38,11 +38,11 @@
 #pragma mark - <event response>
 - (IBAction)confirmTap:(id)sender {
     if (self.loginPasswordTextView.text.length == 0) {
-        [QMUITips showError:@"登录不能为空"];
+        [QMUITips showError:Localized(@"Login Password must be filled")];
         return;
     }
     if (self.loginPasswordTextView.text.length == 0) {
-        [QMUITips showError:@"支付密码不能为空"];
+        [QMUITips showError:Localized(@"Payment Password must be filled")];
         return;
     }
     API_POST_Register *POST_Register = [[API_POST_Register alloc] init];
@@ -55,7 +55,7 @@
         
         [[YUCurrencyManager shareInstance] updateExchangeRate:^(BOOL isSucc) {
             
-            [QMUITips showSucceed:@"注册成功"];
+            [QMUITips showSucceed:Localized(@"Success")];
             [tabVc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
             [self presentViewController:tabVc animated:YES completion:^{
                 

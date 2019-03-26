@@ -25,3 +25,14 @@
 
 #define APP_SERVER_VERSION_KEY @"APP_SERVER_VERSION_KEY"
 
+// 已完成
+// 已取消
+// 已收款
+// 待收款
+typedef NS_ENUM(NSInteger, OneKeyBuyTokenStatus)
+{
+    OneKeyBuyTokenStatusAlreadyComplete,
+    OneKeyBuyTokenStatusAlreadyCancle,
+    OneKeyBuyTokenStatusAlreadyReceivables,
+    OneKeyBuyTokenStatusWaitingReceivables
+};

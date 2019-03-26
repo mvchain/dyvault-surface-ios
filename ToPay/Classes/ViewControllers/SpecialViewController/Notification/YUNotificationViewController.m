@@ -34,7 +34,7 @@
 
 #pragma mark - <private method>
 - (void)setNav {
-    [self addNormalNavBar:@"通知"];
+    [self addNormalNavBar:Localized(@"notification")];
     [self.normalNavbar setLeftButtonAsReturnButton];
 }
 

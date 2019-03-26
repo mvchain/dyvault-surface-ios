@@ -35,7 +35,7 @@
     self.timeLabel.text = [QuickGet timeWithTimeInterval_allNumberStyleString:itemModel.createdAt];
     NSArray<void_block> *classify_mapTo_Block = @[^(void){
         // classify equal 0,block transaction
-        NSArray *status_mapTo_Str = @[@"",@"等待中",@"成功",@"",@"",@"",@"",@"",@"",@"失败"];
+        NSArray *status_mapTo_Str = @[@"",Localized(@"Waiting"),Localized(@"Success"),@"",@"",@"",@"",@"",@"",Localized(@"Fail")];
         NSString *statusStr = status_mapTo_Str[itemModel.status];
         [self.statusLabel setHidden:NO];
         NSArray<void_block> *transtype_mapTo_Block = @[^(void){
@@ -43,21 +43,21 @@
         },^(void){
             // !!! classify equal 0,transType eq to 1
            [self.iconImageView setImage:[UIImage imageNamed:@"recharge"]];
-            NSString *titleInfo = TPString(@"充值：来自%@",itemModel.fromAddress);
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Recharge:From"),itemModel.fromAddress);
             self.titleInfoLabel.text = titleInfo;
             self.cashNumberLabel.text = TPString(@"+%.4f",yufloat_token(itemModel.value));
-            [self.statusLabel setText:TPString(@"充值%@",statusStr)];
+            [self.statusLabel setText:TPString(@"%@%@",Localized(@"Recharge"),statusStr)];
             
         },^(void){
             // !!! classify equal 0,transType eq to 2
             [self.iconImageView setImage:[UIImage imageNamed:@"withdraw"]];
-            NSString *titleInfo = TPString(@"提现：提到%@",itemModel.toAddress);
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Withdraw:To"),itemModel.toAddress);
             self.titleInfoLabel.text = titleInfo;
             self.cashNumberLabel.text = TPString(@"-%.4f",yufloat_token(itemModel.value));
-            [self.statusLabel setText:TPString(@"提现%@",statusStr)];
+            [self.statusLabel setText:TPString(@"%@%@",Localized(@"Withdraw"),statusStr)];
         }];
-        if ([statusStr isEqualToString:@"等待中"]) {
-            [self.statusLabel setText:@"等待中..."];
+        if ([statusStr isEqualToString:Localized(@"Waiting")]) {
+            [self.statusLabel setText:TPString(@"%@...",Localized(@"Waiting") )];
         }
         transtype_mapTo_Block[itemModel.transactionType]();
     },^(void){
@@ -76,13 +76,13 @@
         },^(void){
             // classify equal 5,transType eq to 1
             [self.iconImageView setImage:[UIImage imageNamed:@"receive"]];
-            NSString *titleInfo = TPString(@"收款：来自%@",itemModel.fromAddress);
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Receive:From"),itemModel.fromAddress);
             self.titleInfoLabel.text = titleInfo;
             self.cashNumberLabel.text = TPString(@"+%.4f",yufloat_token(itemModel.value));
         },^(void){
             // classify equal 5,transType eq to 2
             [self.iconImageView setImage:[UIImage imageNamed:@"transfer"]];
-            NSString *titleInfo = TPString(@"转账：转到%@",itemModel.toAddress);
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Transfer:To"),itemModel.toAddress);
             self.titleInfoLabel.text = titleInfo;
             self.cashNumberLabel.text = TPString(@"-%.4f",yufloat_token(itemModel.value));
         }];

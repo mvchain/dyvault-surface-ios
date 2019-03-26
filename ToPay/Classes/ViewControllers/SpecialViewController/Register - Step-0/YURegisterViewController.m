@@ -27,13 +27,15 @@
  #pragma mark - <event response>
  */
 @interface YURegisterViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
+@property (weak, nonatomic) IBOutlet UILabel *registerLabel;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *userNameTextView;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *emailAddrTextView;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *vaildCodeTextView;
 @property (weak, nonatomic) IBOutlet JKCountDownButton *sendVaildButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginNowButton;
+@property (weak, nonatomic) IBOutlet UILabel *alreadyAccount;
+@property (weak, nonatomic) IBOutlet UILabel *loginNowLabel;
 
 
 @end
@@ -45,16 +47,24 @@
 }
 #pragma mark - <public method>
 - (void)initSubviews {
+    [self addNormalNavBar:@""];
+    [self.normalNavbar setLeftButtonAsReturnButton];
     [super initSubviews];
     [self.normalNavbar setLeftButtonAsReturnButton];
     [self.nextStepButton yu_gradualBlueChangeStyle];
     [self.sendVaildButton yu_vaildButtonStyle];
-    [self.userNameTextView setPlaceHolder:@"用户名"];
-    [self.emailAddrTextView setPlaceHolder:@"邮箱地址"];
-    [self.vaildCodeTextView setPlaceHolder:@"验证码"];
+    [self.userNameTextView setPlaceHolder:Localized(@"Nickname")];
+    [self.emailAddrTextView setPlaceHolder:Localized(@"Email address")];
+    [self.vaildCodeTextView setPlaceHolder:Localized(@"Verification Code")];
+    [self.nextStepButton setTitle:Localized(@"next") forState:UIControlStateNormal];
+    [self.sendVaildButton setTitle:Localized(@"Get Code") forState:UIControlStateNormal];
     [self.userNameTextView yu_userNameStyle];
     [self.emailAddrTextView yu_emailStyle];
     [self.vaildCodeTextView yu_vaildCodeStyle];
+    [self.alreadyAccount setText:Localized(@"There are already accounts?")];
+    [self.loginNowLabel setText:Localized(@"Sign in now")];
+    [self.registerLabel setText:Localized(@"Sign up")];
+    
     [self.vaildCodeTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
         make.trailing.equalTo(self.vaildCodeTextView).with.offset(-140);
     }];
@@ -65,19 +75,19 @@
 - (IBAction)nextStepTap:(id)sender {
     yudef_weakSelf
     if (self.userNameTextView.text.length == 0) {
-        [QMUITips showError:@"用户名不能为空"];
+        [QMUITips showError:Localized(@"Nickname can not be empty")];
         return;
     }
     if (self.emailAddrTextView.text.length == 0) {
-        [QMUITips showError:@"邮箱不能为空"];
+        [QMUITips showError:Localized(@"Email can not be empty")];
         return;
     }
     if (self.vaildCodeTextView.text.length == 0) {
-        [QMUITips showError:@"验证码不能为空"];
+        [QMUITips showError:Localized(@"Verification code must be filled")];
         return;
     }
     if (![QuickJudge isVaildEmail:self.emailAddrTextView.text]) {
-        [QMUITips showError:@"邮箱格式不正确"];
+        [QMUITips showError:Localized(@"Email format is incorrect")];
         return;
     }
     [QMUITips showLoadingInView:self.view hideAfterDelay:5];
@@ -106,14 +116,14 @@
 }
 - (IBAction)sendVaildCodeTap:(id)sender {
     if (self.emailAddrTextView.text.length == 0) {
-        [QMUITips showError:@"邮箱地址不能为空"];
+        [QMUITips showError:Localized(@"Email address cannot be empty")];
         return;
     }
     [QMUITips showLoadingInView:self.view hideAfterDelay:5];
     API_GET_User_Email_Logout *GET_User_Email_Logout = [[API_GET_User_Email_Logout alloc] init];
     GET_User_Email_Logout.onSuccess = ^(id responseData) {
         [self.sendVaildButton startCountDownWithSecond:60];
-        [QMUITips showSucceed:@"发送成功"];
+        [QMUITips showSucceed:Localized(@"Sent successfully")];
     };
     GET_User_Email_Logout.onError = ^(NSString *reason, NSInteger code) {
         

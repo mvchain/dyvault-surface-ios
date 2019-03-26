@@ -52,11 +52,11 @@
 }
 - (void)addNew_Style {
     self.addOrDeleteBgView.backgroundColor = [UIColor whiteColor];
-    [self.addOrDeleteTextLabel setText:@"添加"];
+    [self.addOrDeleteTextLabel setText:Localized(@"add")];
 }
 - (void)delete_Style {
     self.addOrDeleteBgView.backgroundColor = [UIColor qmui_colorWithHexString:@"#FFD1D2DE"];
-    [self.addOrDeleteTextLabel setText:@"删除"];
+    [self.addOrDeleteTextLabel setText:Localized(@"delete")];
 }
 
 - (void)hideAddOrDeleteButton {

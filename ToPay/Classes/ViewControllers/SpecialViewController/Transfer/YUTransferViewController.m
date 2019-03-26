@@ -25,6 +25,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet UILabel *feeLabel;
 @property (assign,nonatomic) BOOL isInnerUserAddr ;
+@property (weak, nonatomic) IBOutlet UILabel *canUsingCacheTipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *feeTipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noFeeTipLabel;
+
 @end
 
 @implementation YUTransferViewController
@@ -39,8 +43,11 @@
 - (void)initSubviews {
     [super initSubviews];
     [self setNav];
-    self.totalNumberTextView.textField.placeholder = @"金额";
-    self.addressTextView.textField.placeholder = @"地址/用户名";
+    self.totalNumberTextView.textField.placeholder = Localized(@"Type Amount");
+    self.addressTextView.textField.placeholder = Localized(@"Type Address/User Email");
+    self.canUsingCacheTipLabel.text = Localized(@"Balance");
+    self.feeTipLabel.text = Localized(@"Handling fee");
+    self.noFeeTipLabel.text = Localized(@"There is no charge for transferring/receiving between ToPay users");
     self.totalNumberTextView.textField.keyboardType = UIKeyboardTypeDecimalPad;
     self.atly_scroll_top.constant = self.normalNavbar.qmui_bottom + 50;
     [self.totalNumberTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -53,7 +60,7 @@
 }
 #pragma mark - <private method>
 - (void)setNav {
-    [self addNormalNavBar:@"转账"];
+    [self addNormalNavBar:Localized(@"transfer")];
     [self.normalNavbar setLeftButtonAsReturnButton];
     [self.normalNavbar setRightButtonWithImage:UIImageMake(@"scan-qrcode")];
 }
@@ -144,14 +151,14 @@
     
     if(!isVaildEmail && ![QuickJudge isVaildAddrWithTokenId:@(self.assetTokenModel.tokenId).stringValue
                                        addr:self.addressTextView.textField.text] ) {
-
         [QMUITips showError:@"请输入正确的地址"];
         return;
     }
     TPTransView *transView = [TPTransView createTransferViewStyle:TPTransStyleTransfer];
-    transView.title = @"确认转账";
-    transView.desc = @"转账金额";
-    transView.Total = TPString(@"%.4f %@",yufloat_token(self.totalNumberTextView.textField.text.doubleValue) ,self.assetTokenModel.tokenName);
+    transView.title = Localized(@"Confirm Payment Password");
+    transView.desc = Localized(@"Transfer amount");
+    NSDecimalNumber *total = [[NSDecimalNumber alloc]initWithString:self.totalNumberTextView.textField.text];
+    transView.Total = TPString(@"%.4f %@",yufloat_token(total.doubleValue) ,self.assetTokenModel.tokenName);
     transView.con1 = self.addressTextView.textField.text;
     CGFloat fee = self.isInnerUserAddr ?0.0:self.transferBaseInfo.fee;
     transView.con2 = TPString(@"%.6f %@",  yufloat_fee(fee),self.transferBaseInfo.feeTokenName);

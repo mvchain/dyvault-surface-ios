@@ -39,12 +39,12 @@
     return UIKeyboardTypeNumberPad;
 }
 - (NSString *)firstTextFieldPlaceholder {
-    return @"原支付密码";
+    return Localized(@"Original payment password");
 }
 - (NSString *)nextTextFieldPlaceholder {
-    return @"新支付密码";
+    return Localized(@"New payment password");
 }
 - (NSString *)navBarTitle {
-    return @"修改支付密码";
+    return Localized(@"modify_payment_password");
 }
 @end

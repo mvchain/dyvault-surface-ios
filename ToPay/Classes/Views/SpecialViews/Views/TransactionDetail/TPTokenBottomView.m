@@ -50,7 +50,7 @@
     [transferBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [transferBtn.titleLabel setTextColor:[UIColor whiteColor]];
     [transferBtn addTarget:self action:@selector(transferClcik) forControlEvents:UIControlEventTouchUpInside];
-    [transferBtn setTitle:@"转账" forState:UIControlStateNormal];
+    [transferBtn setTitle:Localized(@"transfer") forState:UIControlStateNormal];
     [self addSubview:transferBtn];
     self.transferBtn = transferBtn;
     
@@ -58,7 +58,7 @@
     [receiptBtn yu_circleStyle];
     UIImage *ima2 = [QuickGet getImageByColor:[UIColor qmui_colorWithHexString:@"#FF6468F2"]];
     [receiptBtn setBackgroundImage:ima2 forState:UIControlStateNormal];
-    [receiptBtn setTitle:@"收款" forState:UIControlStateNormal];
+    [receiptBtn setTitle:Localized(@"receive") forState:UIControlStateNormal];
     [receiptBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [receiptBtn.titleLabel setTextColor:[UIColor whiteColor]];
     [receiptBtn addTarget:self action:@selector(receiptClcik) forControlEvents:UIControlEventTouchUpInside];

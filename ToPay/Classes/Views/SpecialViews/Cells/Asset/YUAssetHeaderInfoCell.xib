@@ -61,10 +61,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pou-ZH-qcO">
-                                <rect key="frame" x="377" y="318.5" width="55" height="28"/>
+                                <rect key="frame" x="381" y="318.5" width="51" height="28"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-dP-Beq">
-                                        <rect key="frame" x="12" y="5" width="31" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="买币" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-dP-Beq">
+                                        <rect key="frame" x="10" y="5" width="31" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -74,8 +74,9 @@
                                 <constraints>
                                     <constraint firstItem="qZF-dP-Beq" firstAttribute="centerY" secondItem="Pou-ZH-qcO" secondAttribute="centerY" id="1aK-IL-hHb"/>
                                     <constraint firstItem="qZF-dP-Beq" firstAttribute="centerX" secondItem="Pou-ZH-qcO" secondAttribute="centerX" id="FM3-wJ-3la"/>
-                                    <constraint firstAttribute="width" constant="55" id="eJA-Nu-Khk"/>
+                                    <constraint firstAttribute="trailing" secondItem="qZF-dP-Beq" secondAttribute="trailing" constant="10" id="pJT-tW-363"/>
                                     <constraint firstAttribute="height" constant="28" id="w3c-zU-a56"/>
+                                    <constraint firstItem="qZF-dP-Beq" firstAttribute="leading" secondItem="Pou-ZH-qcO" secondAttribute="leading" constant="10" id="xf5-BV-mdN"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-RG-zAX">
@@ -85,10 +86,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDJ-ES-0vu">
-                                <rect key="frame" x="372" y="300.5" width="70" height="55"/>
+                                <rect key="frame" x="361" y="300.5" width="81" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="6VT-hO-Sx1"/>
-                                    <constraint firstAttribute="width" constant="70" id="Pjf-CL-JQo"/>
                                 </constraints>
                                 <connections>
                                     <action selector="buyCurrencyTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IsU-1g-qvn"/>
@@ -98,6 +98,7 @@
                         <color key="backgroundColor" red="0.29803921570000003" green="0.4431372549" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TQl-RG-zAX" firstAttribute="centerY" secondItem="WRB-hm-Fq4" secondAttribute="centerY" id="2ep-YH-ObC"/>
+                            <constraint firstItem="PDJ-ES-0vu" firstAttribute="leading" secondItem="Pou-ZH-qcO" secondAttribute="leading" constant="-20" id="4vk-oy-2Dh"/>
                             <constraint firstItem="SaY-Uy-Wrf" firstAttribute="leading" secondItem="WRB-hm-Fq4" secondAttribute="leading" constant="11" id="9iK-Wx-LI5"/>
                             <constraint firstAttribute="trailing" secondItem="Pou-ZH-qcO" secondAttribute="trailing" constant="10" id="BC2-uG-gu3"/>
                             <constraint firstAttribute="trailing" secondItem="PDJ-ES-0vu" secondAttribute="trailing" id="N31-n8-kcg"/>
@@ -119,6 +120,7 @@
                 <outlet property="balanceLabel" destination="TQl-RG-zAX" id="Mbd-AV-9Gz"/>
                 <outlet property="bgView" destination="WRB-hm-Fq4" id="zLy-nn-ynF"/>
                 <outlet property="buyCurrencyBg" destination="Pou-ZH-qcO" id="3Nn-xO-KPP"/>
+                <outlet property="buyTokenLabel" destination="qZF-dP-Beq" id="9RV-It-nVd"/>
                 <outlet property="changeLegalCurrencyButton" destination="iJB-d9-8rl" id="dxt-3f-efo"/>
                 <outlet property="currencyBg" destination="SaY-Uy-Wrf" id="BNr-FI-xYc"/>
                 <outlet property="currencyLabel" destination="hJI-TY-ujl" id="rCR-eU-vjm"/>

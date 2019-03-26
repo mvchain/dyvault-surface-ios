@@ -20,7 +20,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
-    NSLog(@"\n\n------***----- enter into: \n\n %@  \n\n ----------***-------",NSStringFromClass(self.class));
+    NSLog(@"\n\n------😄----- enter into: \n\n %@  \n\n ----------***-------",NSStringFromClass(self.class));
     
 }
 
@@ -39,5 +39,8 @@
     if(_normalNavbar)return _normalNavbar;
     _normalNavbar = [YUCustomNavBarView normalNavBarView];
     return _normalNavbar;
+}
+- (void)dealloc {
+    NSLog(@"\n\n------💀----- dealloc: \n\n %@  \n\n ----------***-------",NSStringFromClass(self.class));
 }
 @end

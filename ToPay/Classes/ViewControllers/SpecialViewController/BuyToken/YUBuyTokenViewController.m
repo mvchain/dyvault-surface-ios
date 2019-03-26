@@ -37,10 +37,9 @@
 
 #pragma mark - <private method>
 - (void)setNav {
-    [self addNormalNavBar:@"买币"];
+    [self addNormalNavBar:Localized(@"buy_coin")];
     [self.normalNavbar setLeftButtonAsReturnButton];
     self.atly_top.constant = self.normalNavbar.qmui_bottom +10;
-    
 }
 - (void)configListPageView {
     yudef_weakSelf
@@ -96,14 +95,5 @@
 #pragma mark - <event response>
 
 #pragma mark - <lazy load>
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

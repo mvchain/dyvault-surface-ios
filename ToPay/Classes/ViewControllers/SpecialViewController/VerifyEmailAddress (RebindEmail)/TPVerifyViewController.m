@@ -22,6 +22,7 @@
 @property (strong, nonatomic) TPVerifyEmailViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_scrollrt_top;
+@property (weak, nonatomic) IBOutlet UILabel *originEmailTips;
 
 
 @end
@@ -41,16 +42,20 @@
     [self setUpNav];
     [self.nextStepButton yu_gradualBlueChangeStyle];
     [self.sendVaildButton yu_vaildButtonStyle];
-    [self.vaildCodeTextView setPlaceHolder:@"邮箱验证码"];
+    [self.nextStepButton setTitle:Localized(@"next") forState:UIControlStateNormal];
+    
+    [self.vaildCodeTextView setPlaceHolder:Localized(@"Verification Code")];
     self.vaildCodeTextView.textField.keyboardType = UIKeyboardTypeNumberPad;
     self.emailLabel.text = self.viewModel.currentEmail;
     self.atly_scrollrt_top.constant = self.normalNavbar.qmui_height;
     [self.vaildCodeTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
         make.trailing.equalTo(self.vaildCodeTextView).with.offset(-140);
     }];
+    self.originEmailTips.text = Localized(@"Please verify the original mailbox first.");
+    [self.sendVaildButton setTitle:Localized(@"Get Code") forState:UIControlStateNormal];
 }
 - (void)setUpNav {
-    [self addNormalNavBar:@"修改邮箱"];
+    [self addNormalNavBar:Localized(@"modify_email")];
     [self.normalNavbar setLeftButtonAsReturnButton];
 }
 #pragma mark local method

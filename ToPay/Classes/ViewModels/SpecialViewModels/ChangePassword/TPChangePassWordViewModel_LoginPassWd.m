@@ -40,13 +40,14 @@
     return UIKeyboardTypeAlphabet;
 }
 - (NSString *)firstTextFieldPlaceholder {
-    return @"原登录密码";
+    return Localized(@"Original login password");
 }
 - (NSString *)nextTextFieldPlaceholder {
-    return @"新登录密码";
+    return Localized(@"New login password");
+    
 }
 - (NSString *)navBarTitle {
-    return @"修改登录密码";
+    return Localized(@"modify_login_password");
 }
 
 @end

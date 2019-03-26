@@ -22,10 +22,10 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = TPF6Color;
-    NSString *title = [[YUAppManager shareInstance] isReleaseVersion]?@"关于":@"关于（Beta）";
+    
+    NSString *title = [[YUAppManager shareInstance] isReleaseVersion]?Localized(@"about_us"):TPString(@"%@ (Beta)",Localized(@"about_us"));
     [self addNormalNavBar:title];
     [self.normalNavbar setLeftButtonAsReturnButton];
-    
     [self setUpViews];
 }
 
@@ -41,7 +41,7 @@
         make.size.equalTo(@60);
     }];
     
-   UILabel *descLab = [YFactoryUI YLableWithText:@"当前版本1.0" color:TP59Color font:FONT(12)];
+    UILabel *descLab = [YFactoryUI YLableWithText:TPString(@"%@1.0",Localized(@"Current version")) color:TP59Color font:FONT(12)];
     [self.view addSubview:descLab];
     [descLab mas_makeConstraints:^(MASConstraintMaker *make)
      {
@@ -50,13 +50,13 @@
          make.height.equalTo(@16);
     }];
     UIButton *btn =[UIButton buttonWithType:UIButtonTypeSystem];
-    [btn setTitle:@"检查更新" forState:UIControlStateNormal];
+    [btn setTitle:Localized(@"Check for updates") forState:UIControlStateNormal];
     [btn.titleLabel setFont:[UIFont systemFontOfSize:13]];
     [self.view addSubview:btn];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.centerY.equalTo(self.view);
-        make.width.equalTo(@60);
+        make.width.equalTo(@200);
         make.height.equalTo(@44);
     }];
     [btn addTarget:self action:@selector(updateNew:) forControlEvents:UIControlEventTouchUpInside];
@@ -67,19 +67,19 @@
    
     [[YUAppManager shareInstance] isShouldUpdate:^(BOOL shouldUpdae, BOOL isNetOk) {
         if (!isNetOk) {
-            [QMUITips showError:@"网络错误"];
+            [QMUITips showError:Localized(@"network error")];
             return ;
         }
         if (shouldUpdae) {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
-                                                                                     message:@"发现有新版本，是否去更新？"
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:Localized(@"friendly_tips")
+                                                                                     message:Localized(@"New version found, do you want to update it?")
                                                                               preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+            UIAlertAction *resetAction = [UIAlertAction actionWithTitle:Localized(@"Update immediately") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
                                           
                                           {
                                              
                                           }];
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:Localized(@"cancel")
                                                                    style:UIAlertActionStyleCancel
                                                                  handler:nil];
             [alertController addAction:cancelAction];
@@ -88,7 +88,7 @@
                                animated:YES
                              completion:nil];
         }else {
-            [QMUITips showSucceed:@"已经是最新版本"];
+            [QMUITips showSucceed:Localized(@"Already the latest version")];
         }
     }];
 }

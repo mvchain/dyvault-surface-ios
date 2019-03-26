@@ -13,9 +13,12 @@
             <connections>
                 <outlet property="addressTextView" destination="daH-DA-bzI" id="H71-L7-ogM"/>
                 <outlet property="atly_scroll_top" destination="MMk-Ut-ddB" id="fgl-b0-9p2"/>
+                <outlet property="canUsingCacheTipLabel" destination="Sw5-Xi-n9L" id="XSz-pC-9ft"/>
                 <outlet property="canUsingCashNumberLabel" destination="fCJ-tR-8mV" id="fQ3-Mi-SAO"/>
                 <outlet property="confirmButton" destination="10N-Be-J1i" id="fTG-mC-dk9"/>
                 <outlet property="feeLabel" destination="gbI-Op-itk" id="OuL-FU-ySD"/>
+                <outlet property="feeTipLabel" destination="UtK-y5-kxp" id="hEB-nF-77a"/>
+                <outlet property="noFeeTipLabel" destination="T9B-Yq-tJa" id="Vcj-Sg-dU6"/>
                 <outlet property="scrollView" destination="QoC-Fe-IYx" id="hgn-GC-4c0"/>
                 <outlet property="totalNumberTextView" destination="uoP-iZ-H2T" id="Lce-dV-PWu"/>
                 <outlet property="totalNumberTipLabel" destination="S0P-ez-44G" id="Uut-8m-60j"/>
@@ -137,14 +140,15 @@
                                 <action selector="confirmTap:" destination="-1" eventType="touchUpInside" id="R4m-PZ-xOq"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToPay 用户之间转账/收款无需手续费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9B-Yq-tJa">
-                            <rect key="frame" x="79.5" y="293" width="216.5" height="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToPay 用户之间转账/收款无需手续费" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9B-Yq-tJa">
+                            <rect key="frame" x="20" y="293" width="335" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="T9B-Yq-tJa" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" constant="20" id="2TR-W5-GtK"/>
                         <constraint firstItem="T9B-Yq-tJa" firstAttribute="top" secondItem="FZq-U0-vqm" secondAttribute="bottom" constant="22" id="52l-GA-SeW"/>
                         <constraint firstItem="daH-DA-bzI" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" constant="20" id="6r4-N0-Bbe"/>
                         <constraint firstAttribute="trailing" secondItem="FZq-U0-vqm" secondAttribute="trailing" constant="20" id="88v-Au-Xv6"/>
@@ -154,6 +158,7 @@
                         <constraint firstItem="uoP-iZ-H2T" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" constant="20" id="DAG-y9-4NQ"/>
                         <constraint firstAttribute="trailing" secondItem="zXQ-Hl-M4g" secondAttribute="trailing" id="LgP-5L-bWq"/>
                         <constraint firstItem="zXQ-Hl-M4g" firstAttribute="top" secondItem="QoC-Fe-IYx" secondAttribute="top" id="PZa-oR-bva"/>
+                        <constraint firstAttribute="trailing" secondItem="T9B-Yq-tJa" secondAttribute="trailing" constant="20" id="QQB-q7-2BA"/>
                         <constraint firstItem="uoP-iZ-H2T" firstAttribute="top" secondItem="daH-DA-bzI" secondAttribute="bottom" constant="31" id="QfW-DQ-av0"/>
                         <constraint firstItem="zXQ-Hl-M4g" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" id="RBe-8y-No0"/>
                         <constraint firstItem="FZq-U0-vqm" firstAttribute="leading" secondItem="QoC-Fe-IYx" secondAttribute="leading" constant="20" id="RlN-6K-mTI"/>

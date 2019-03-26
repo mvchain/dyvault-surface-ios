@@ -13,8 +13,13 @@
             <connections>
                 <outlet property="emailAddrTextView" destination="7ok-wB-xRP" id="NIQ-EB-dUm"/>
                 <outlet property="forgetPassWdButton" destination="8Wu-hc-bnw" id="hLu-lh-dXy"/>
+                <outlet property="forgetPasswdButton" destination="8Wu-hc-bnw" id="l3c-Yx-jQ8"/>
+                <outlet property="forgetPasswdLabel" destination="cjV-l9-b0V" id="R1s-ec-TRh"/>
                 <outlet property="loginButton" destination="ETL-xy-LJT" id="XrW-e7-qYW"/>
+                <outlet property="loginLabel" destination="1vr-N6-i2g" id="bV9-eT-wHS"/>
+                <outlet property="noAccountYetLabel" destination="qQB-oR-sdk" id="tDH-jh-VPZ"/>
                 <outlet property="passWordTextView" destination="Z9r-zZ-VIg" id="ZVA-HL-nhs"/>
+                <outlet property="registerLabel" destination="dQa-ye-JJU" id="7bg-hH-OKx"/>
                 <outlet property="sendVaildButton" destination="OP5-8M-Ure" id="sUk-gd-M9l"/>
                 <outlet property="vaildCodeTextView" destination="DOw-gp-dF9" id="reL-aG-q2h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

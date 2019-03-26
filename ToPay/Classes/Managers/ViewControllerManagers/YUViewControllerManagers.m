@@ -12,7 +12,7 @@
 #import "YUMineViewController.h"
 #import "YULoginViewController.h"
 #import "YUNavigationViewController.h"
-
+#import "YUOTCHomeViewController.h"
 @interface YUViewControllerManagers()
 
 
@@ -53,20 +53,33 @@ static YUViewControllerManagers* _instance = nil;
     nav0.tabBarItem = [self tabBarItemWithTitle:Localized(@"capital")
                                           image:asset_un
                                   selectedImage:asset_selected tag:1];
+    
+//    /* OTC */
+//    //YUOTCHomeViewController
+//    /* mine */
+//    YUNavigationViewController *nav1 = [[YUNavigationViewController alloc]init];
+//    UIViewController *vc1= [[YUOTCHomeViewController alloc]init];
+//    nav1.viewControllers = @[vc1];
+//    UIImage *otc_un = [[UIImage imageNamed:@"mine_unselected_icon"]
+//                        imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UIImage *otc_selected = [[UIImage imageNamed:@"mine_selected_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    nav1.tabBarItem = [self tabBarItemWithTitle:Localized(@"mine")
+//                                          image:otc_un
+//                                  selectedImage:otc_selected tag:1];
     /* mine */
-    YUNavigationViewController *nav1 = [[YUNavigationViewController alloc]init];
-    UIViewController *vc1 = [[YUMineViewController alloc]init];
-    nav1.viewControllers = @[vc1];
+    YUNavigationViewController *nav2 = [[YUNavigationViewController alloc]init];
+    UIViewController *vc2= [[YUMineViewController alloc]init];
+    nav2.viewControllers = @[vc2];
     UIImage *mine_un = [[UIImage imageNamed:@"mine_unselected_icon"]
                         imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImage *mine_selected = [[UIImage imageNamed:@"mine_selected_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    nav1.tabBarItem = [self tabBarItemWithTitle:Localized(@"mine")
+    nav2.tabBarItem = [self tabBarItemWithTitle:Localized(@"mine")
                                           image:mine_un
                                   selectedImage:mine_selected tag:1];
    
     /* tab  */
     QMUITabBarViewController *tabVc = [[QMUITabBarViewController alloc] init];
-    tabVc.viewControllers = @[nav0,nav1];
+    tabVc.viewControllers = @[nav0,nav2];
     tabVc.tabBar.clipsToBounds = YES; // no line style
     [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -75,7 +88,7 @@ static YUViewControllerManagers* _instance = nil;
                                                object:nil];
     
     
-    _navgations = @[nav0,nav1];
+    _navgations = @[nav0,nav2];
     return tabVc;
 }
 

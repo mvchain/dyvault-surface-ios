@@ -177,9 +177,9 @@
 
 -(void) yu_smallCircleStyle{
         
-    self.layer.cornerRadius=5;
+    self.layer.cornerRadius = 7;
     
-    self.layer.masksToBounds=YES;//隐藏裁剪掉的部分
+    self.layer.masksToBounds = YES;//隐藏裁剪掉的部分
 }
 -(void) yu_smallCircleStyleWithRadius:(CGFloat)radius {
     self.layer.cornerRadius=radius;

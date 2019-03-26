@@ -44,10 +44,10 @@
                                        email:self.email];
 }
 - (NSString *)navBarTitleName {
-    return @"重新设置登录密码";
+    return Localized(@"Reset login password");
 }
 - (NSString *)textPlaceholder {
-    return @"新登录密码";
+    return Localized(@"New login password");
 }
 - (UIKeyboardType)passTextFieldkeyBoardType  {
     return UIKeyboardTypeAlphabet;

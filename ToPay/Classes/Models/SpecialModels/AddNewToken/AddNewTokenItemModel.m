@@ -22,10 +22,7 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 @end
 @implementation AddNewTokenItemModel
 
-
-
-
-/**
+/*
  * Instantiate the instance using the passed dictionary values to set the properties values
  */
 
@@ -53,18 +50,15 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	if(![dictionary[kAddNewTokenItemModelTokenType] isKindOfClass:[NSNull class]]){
 		self.tokenType = [dictionary[kAddNewTokenItemModelTokenType] integerValue];
 	}
-
 	if(![dictionary[kAddNewTokenItemModelVisible] isKindOfClass:[NSNull class]]){
 		self.visible = [dictionary[kAddNewTokenItemModelVisible] integerValue];
 	}
-
 	return self;
 }
-
-
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
+
 -(NSDictionary *)toDictionary
 {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
@@ -85,7 +79,6 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	dictionary[kAddNewTokenItemModelTokenType] = @(self.tokenType);
 	dictionary[kAddNewTokenItemModelVisible] = @(self.visible);
 	return dictionary;
-
 }
 
 /**
@@ -94,6 +87,7 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
+
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 	[aCoder encodeObject:@(self.timestamp) forKey:kAddNewTokenItemModelTimestamp];	if(self.tokenCnName != nil){
@@ -110,10 +104,10 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	}
 	[aCoder encodeObject:@(self.tokenType) forKey:kAddNewTokenItemModelTokenType];	[aCoder encodeObject:@(self.visible) forKey:kAddNewTokenItemModelVisible];
 }
-
 /**
  * Implementation of NSCoding initWithCoder: method
  */
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super init];
@@ -126,16 +120,17 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	self.tokenType = [[aDecoder decodeObjectForKey:kAddNewTokenItemModelTokenType] integerValue];
 	self.visible = [[aDecoder decodeObjectForKey:kAddNewTokenItemModelVisible] integerValue];
 	return self;
-
 }
+
 
 /**
  * Implementation of NSCopying copyWithZone: method
  */
+
+
 - (instancetype)copyWithZone:(NSZone *)zone
 {
 	AddNewTokenItemModel *copy = [AddNewTokenItemModel new];
-
 	copy.timestamp = self.timestamp;
 	copy.tokenCnName = [self.tokenCnName copy];
 	copy.tokenEnName = [self.tokenEnName copy];
@@ -144,7 +139,6 @@ NSString *const kAddNewTokenItemModelVisible = @"visible";
 	copy.tokenName = [self.tokenName copy];
 	copy.tokenType = self.tokenType;
 	copy.visible = self.visible;
-
 	return copy;
 }
 @end

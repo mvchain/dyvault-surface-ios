@@ -22,10 +22,11 @@
 @implementation YUMineViewController
 #pragma mark - <life cycle>
 - (void)viewDidLoad {
+    yudef_weakSelf;
     [super viewDidLoad];
     [[YUUserManagers shareInstance] updateUserInfo:^(BOOL isSucc) {
-        [self.userNickNamelabel setText:[YUUserManagers shareInstance].nowUserInfo.nickname];
-        [self.emialLabel setText:[YUUserManagers shareInstance].nowUserInfo.username];
+        [weakSelf.userNickNamelabel setText:[YUUserManagers shareInstance].nowUserInfo.nickname];
+        [weakSelf.emialLabel setText:[YUUserManagers shareInstance].nowUserInfo.username];
     }];
 }
 #pragma mark - <public method>
@@ -35,23 +36,27 @@
     [self configPageListView];
     [self configPageListViewEvent];
     CGFloat mostTop = [QuickJudge is_iPhoneX] ?62:42;
-    self.atly_top.constant =mostTop;
-    
-   
+    self.atly_top.constant = mostTop;
 }
 #pragma mark - <private method>
 - (void)setUpData {
+    YUMineItemCellEntity *identify = [[YUMineItemCellEntity alloc] init];
+    identify.data = @"身份认证";
+    YUMineItemCellEntity *receivables = [[YUMineItemCellEntity alloc] init];
+    receivables.data = @"收款方式";
     YUMineItemCellEntity *item0 = [[YUMineItemCellEntity alloc] init];
-    item0.data = @"账户安全";
+    item0.data = Localized(@"account_security");
     YUMineItemCellEntity *item1 = [[YUMineItemCellEntity alloc] init];
-    item1.data = @"语言";
+    item1.data = Localized(@"language");
     YUMineItemCellEntity *item2 = [[YUMineItemCellEntity alloc] init];
-    item2.data = @"关于ToPay";
+    item2.data = Localized(@"about_us");
     YUBlankCellEntity *blank = [[YUBlankCellEntity alloc] init];
-    blank.yu_cellHeight = 200;
+    blank.yu_cellHeight = 120;
     YUMineConfirmCellEntity *confirmEntity = [[YUMineConfirmCellEntity alloc] init];
-    confirmEntity.data = @"登出";
-    [self.dataArrs addObjectsFromArray:@[item0,
+    confirmEntity.data = Localized(@"log_out");
+    [self.dataArrs addObjectsFromArray:@[
+                                         
+                                         item0,
                                          item1,
                                          item2,
                                          blank,
@@ -76,7 +81,6 @@
             {
                 YUAccountSecurityViewController *accountVc = [[YUAccountSecurityViewController alloc] init];
                 [weakSelf.navigationController pushViewController:accountVc animated:YES];
-                
             }
                 break;
             case 1:
@@ -96,28 +100,34 @@
                 break;
         }
     };
+    
     self.dataArrs.lastObject.callBackByCell = ^(NSDictionary *info)
     {
-            // logout  button tap
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
-                                                                                 message:@"现在就退出吗？"
+            // logout  button tapfriendly_tips
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:Localized(@"friendly_tips")
+                                                                                 message:Localized(@"log_out_now_?")
                                                                           preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
+        UIAlertAction *resetAction = [UIAlertAction actionWithTitle:Localized(@"confirm") style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action)
                                       
                                       {
                                           [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
                                           
                                       }];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:Localized(@"cancel")
                                                                style:UIAlertActionStyleCancel
                                                              handler:nil];
         [alertController addAction:cancelAction];
         [alertController addAction:resetAction];
-        [self presentViewController:alertController
+        [weakSelf presentViewController:alertController
                            animated:YES
                          completion:nil];
         
     };
+}
+
+- (void)dealloc{
+    
+    
 }
 #pragma mark - <lazy load>
 yudef_lazyLoad(NSMutableArray <YUCellEntity *>, dataArrs, _dataArrs);

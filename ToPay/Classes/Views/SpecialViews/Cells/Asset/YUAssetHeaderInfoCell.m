@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *buyCurrencyBg;
 @property (weak, nonatomic) IBOutlet UILabel *currencyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *changeLegalCurrencyButton;
+@property (weak, nonatomic) IBOutlet UILabel *buyTokenLabel;
 
 
 @end
@@ -30,6 +31,7 @@
     [self.currencyBg yu_circleStyle];
     [self.buyCurrencyBg yu_circleStyle];
     [self.bgView yu_smallCircleStyle];
+    self.buyTokenLabel.text = Localized(@"buy_coin");
 }
 - (void)setEntity:(YUCellEntity *)entity {
     [super setEntity:entity];

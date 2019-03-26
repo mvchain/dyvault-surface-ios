@@ -33,11 +33,13 @@
 - (void)initSubviews {
     [super initSubviews];
     [self.nextStepButton yu_gradualBlueChangeStyle];
+    [self.nextStepButton setTitle:Localized(@"next") forState:UIControlStateNormal];
     [self.emailAddrTextView yu_emailStyle];
     [self.vaildCodeTextView yu_vaildCodeStyle];
     [self.sendValidCodeButton yu_vaildButtonStyle];
-    [self.emailAddrTextView setPlaceHolder:@"邮箱地址"];
-    [self.vaildCodeTextView setPlaceHolder:@"验证码"];
+    [self.emailAddrTextView setPlaceHolder:Localized(@"Email address")];
+    [self.vaildCodeTextView setPlaceHolder:Localized(@"Verification Code")];
+    [self.sendValidCodeButton setTitle:Localized(@"Get Code") forState:UIControlStateNormal];
     [self.vaildCodeTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
         make.trailing.equalTo(self.vaildCodeTextView).with.offset(-140);
     }];
@@ -45,7 +47,7 @@
 }
 
 - (void)setNav {
-    [self addNormalNavBar:@"验证邮箱"];
+    [self addNormalNavBar:Localized(@"Verify email")];
     [self.normalNavbar setLeftButtonAsReturnButton];
     self.atlt_scrollviewTop.constant = self.normalNavbar.qmui_bottom+36;
 }
@@ -54,15 +56,15 @@
     
     NSAssert(self.resetForgetPwdVM, @"### resetForgetPwdVM must be not null ");
     if (self.emailAddrTextView.text.length == 0) {
-        [QMUITips showError:@"邮箱不能为空"];
+        [QMUITips showError:Localized(@"Email can not be empty")];
         return;
     }
     if (self.vaildCodeTextView.text.length == 0) {
-        [QMUITips showError:@"验证码不能为空"];
+        [QMUITips showError:Localized(@"Verification code must be filled")];
         return;
     }
     if (![QuickJudge isVaildEmail:self.emailAddrTextView.text]) {
-        [QMUITips showError:@"邮箱格式不正确"];
+        [QMUITips showError:Localized(@"Email format is incorrect")];
         return;
     }
     [QMUITips showLoadingInView:self.view hideAfterDelay:5];
@@ -90,7 +92,7 @@
     API_GET_User_Email_Logout *GET_User_Email_Logout = [[API_GET_User_Email_Logout alloc] init];
     GET_User_Email_Logout.onSuccess = ^(id responseData) {
         [self.sendValidCodeButton startCountDownWithSecond:60];
-        [QMUITips showSucceed:@"发送成功"];
+        [QMUITips showSucceed:Localized(@"Sent successfully")];
     };
     GET_User_Email_Logout.onError = ^(NSString *reason, NSInteger code) {
         [QMUITips showError:reason];

@@ -11,9 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YURegisterViewController">
             <connections>
+                <outlet property="alreadyAccount" destination="hFc-Uk-51A" id="lbz-6x-Q41"/>
                 <outlet property="emailAddrTextView" destination="vdu-XN-JX1" id="ell-pJ-bUx"/>
-                <outlet property="loginLabel" destination="63J-FK-kfe" id="D4z-0v-B0e"/>
+                <outlet property="loginNowLabel" destination="msl-6q-8eA" id="Elb-RR-3Kp"/>
                 <outlet property="nextStepButton" destination="7YA-ai-tez" id="fMF-Ib-wBw"/>
+                <outlet property="registerLabel" destination="63J-FK-kfe" id="D7l-xZ-YRJ"/>
                 <outlet property="sendVaildButton" destination="QIF-Jz-1Jw" id="dv0-w2-apN"/>
                 <outlet property="userNameTextView" destination="N7v-2V-XDk" id="CSx-xg-YIf"/>
                 <outlet property="vaildCodeTextView" destination="G47-ZM-Ci9" id="v4n-fQ-TS9"/>

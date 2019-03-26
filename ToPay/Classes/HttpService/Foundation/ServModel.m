@@ -64,7 +64,7 @@
 - (void)updateHttpHeadTokenForEachAPI
 {
     NSString *authToken = [[YUUserManagers shareInstance] userIDCard_inDisk].token;
-    NSLog(@"%@",authToken);
+   
     if (!authToken) return; // no token exit
     YUNetworkManager *manager = [YUNetworkManager defaultManager];
     // token ,for every connect

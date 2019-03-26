@@ -41,17 +41,17 @@
     self.pageListView.firstPageBlock = ^(block_page_complete  _Nonnull complete)
     {
         YUMineItemCellEntity *item0 = [[YUMineItemCellEntity alloc] init];
-        item0.data = @"修改邮箱";
+        item0.data = Localized(@"modify_email");
         YUMineItemCellEntity *item1 = [[YUMineItemCellEntity alloc] init];
-        item1.data = @"修改登录密码";
+        item1.data = Localized(@"modify_login_password");
         YUMineItemCellEntity *item2 = [[YUMineItemCellEntity alloc] init];
-        item2.data = @"修改支付密码";
+        item2.data = Localized(@"modify_payment_password");
         complete(@[item0,item1,item2]);
     };
     [self.pageListView beginRefreshHeaderWithNoAnimate];
 }
 - (void)setNav {
-    [self addNormalNavBar:@"账户安全"];
+    [self addNormalNavBar:Localized(@"account_security")];
     [self.normalNavbar setLeftButtonAsReturnButton];
 }
 - (void)setData {

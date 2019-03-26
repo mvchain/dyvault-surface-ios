@@ -16,11 +16,16 @@
 #import "YUValidEmailViewController.h"
 #import "YUForgetLogin_ResetPasswordViewModel.h"
 @interface YULoginViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *registerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noAccountYetLabel;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPassWdButton;
 @property (weak, nonatomic) IBOutlet JKCountDownButton *sendVaildButton;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *emailAddrTextView;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *passWordTextView;
+@property (weak, nonatomic) IBOutlet UIButton *forgetPasswdButton;
+@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
+@property (weak, nonatomic) IBOutlet UILabel *forgetPasswdLabel;
 @property (weak, nonatomic) IBOutlet YUCircleTextView *vaildCodeTextView;
 @end
 
@@ -35,9 +40,15 @@
     [super initSubviews];
     [self.loginButton yu_gradualBlueChangeStyle];
     [self.vaildCodeTextView yu_vaildCodeStyle];
-    [self.emailAddrTextView setPlaceHolder:@"邮箱地址"];
-    [self.passWordTextView setPlaceHolder:@"登录密码"];
-    [self.vaildCodeTextView setPlaceHolder:@"验证码"];
+    [self.emailAddrTextView setPlaceHolder:Localized(@"Email address")];
+    [self.passWordTextView setPlaceHolder:Localized(@"Login password")];
+    [self.vaildCodeTextView setPlaceHolder:Localized(@"Verification Code")];
+    [self.sendVaildButton setTitle:Localized(@"Get Code") forState:UIControlStateNormal];
+    self.forgetPasswdLabel.text = Localized(@"Forget password?");
+    [self.noAccountYetLabel setText:Localized(@"No password yet?")];
+    [self.registerLabel setText:Localized(@"Sign up")];
+    [self.loginLabel setText:Localized(@"Login")];
+    [self.loginButton setTitle:Localized(@"Login") forState:UIControlStateNormal];
     [self.emailAddrTextView yu_emailStyle];
     [self.passWordTextView yu_loginPassWordStyle];
     [self.vaildCodeTextView yu_vaildCodeStyle];
@@ -45,7 +56,6 @@
     [self.vaildCodeTextView.textField mas_updateConstraints:^(MASConstraintMaker *make) {
         make.trailing.equalTo(self.vaildCodeTextView).with.offset(-140);
     }];
-    
 }
 
 #pragma mark - <public method>
@@ -56,19 +66,19 @@
 
 - (IBAction)loginButtonTap:(id)sender {
     if (self.emailAddrTextView.text.length == 0) {
-        [QMUITips showError:@"邮箱不能为空"];
+        [QMUITips showError:Localized(@"Email can not be empty")];
         return;
     }
     if (self.passWordTextView.text.length == 0) {
-        [QMUITips showError:@"密码不能为空"];
+        [QMUITips showError:Localized(@"Password must be filled")];
         return;
     }
     if (self.vaildCodeTextView.text.length == 0) {
-        [QMUITips showError:@"验证码不能为空"];
+        [QMUITips showError:Localized(@"Verification code must be filled")];
         return;
     }
     if (![QuickJudge isVaildEmail:self.emailAddrTextView.text]) {
-        [QMUITips showError:@"邮箱格式不正确"];
+        [QMUITips showError:Localized(@"Email format is incorrect")];
         return;
     }
     [QMUITips showLoadingInView:self.view hideAfterDelay:5];
@@ -111,7 +121,7 @@
     GET_User_Email_Logout.onSuccess = ^(id responseData) {
         [self.sendVaildButton startCountDownWithSecond:60];
        
-        [QMUITips showSucceed:@"发送成功"];
+        [QMUITips showSucceed:Localized(@"Sent successfully")];
     };
     GET_User_Email_Logout.onError = ^(NSString *reason, NSInteger code) {
        

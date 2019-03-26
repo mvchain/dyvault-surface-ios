@@ -44,7 +44,7 @@
     _emailTextView.textField.keyboardType = UIKeyboardTypeEmailAddress;
     _vaildCodeTextView.textField.keyboardType = UIKeyboardTypeNumberPad;
     NSArray<YUCircleTextView *> *viewArr = @[_emailTextView,_vaildCodeTextView];
-    NSArray *titles = @[@"新邮箱",@"邮箱验证码"];
+    NSArray *titles = @[Localized(@"new_email"),Localized(@"Verification Code")];
     NSInteger index = 0;
     for (NSString *title in titles) {
         viewArr[index].textField.placeholder = title;
@@ -56,7 +56,7 @@
     }];
 }
 - (void)setNav {
-    [self addNormalNavBar:@"绑定新邮箱"];
+    [self addNormalNavBar:Localized(@"rebind_new_email")];
     [self.normalNavbar setLeftButtonAsReturnButton];
 }
 - (void)startValidCodeButtonAnimate {
@@ -65,7 +65,7 @@
     [self.sendVaildCodeButton yu_vaildButtonStyle];
     [self.sendVaildCodeButton countDownFinished:^NSString *(JKCountDownButton *countDownButton, NSUInteger second) {
         self.sendVaildCodeButton.enabled = YES;
-        return @"发送验证码";
+        return Localized(@"Get Code");
     }];
 }
 #pragma mark event method
@@ -73,11 +73,11 @@
 - (IBAction)onSendVaildCodeTap:(id)sender {
     
     if (self.emailTextView.text == 0 ) {
-        [QMUITips showError:@"邮箱不能为空"];
+        [QMUITips showError:Localized(@"Email can not be empty")];
         return;
     }
     if (![QuickJudge isVaildEmail:self.emailTextView.text]) {
-        [QMUITips showError:@"邮箱格式不正确"];
+        [QMUITips showError:Localized(@"Email format is incorrect")];
         return;
     }
     [self startValidCodeButtonAnimate];
@@ -87,16 +87,16 @@
         [QMUITips hideAllTips];
                                     
         if (isSucc) {
-            [QMUITips showSucceed:@"发送成功"];
+            [QMUITips showSucceed:Localized(@"Sent successfully")];
         }else {
-            [QMUITips showError:@"发送失败"];
+            [QMUITips showError:Localized(@"Failed to send")];
         }
     }];
 }
 
 - (IBAction)onNextStep:(id)sender {
     if(self.vaildCodeTextView.text.length == 0) {
-        [QMUITips showError:@"验证码不能为空"];
+        [QMUITips showError:Localized(@"Verification code must be filled")];
         return;
     }
     [QMUITips showLoadingInView:self.view hideAfterDelay:5.0];
@@ -106,10 +106,10 @@
                        complete:^(BOOL isSucc, NSString *info) {
                            [QMUITips hideAllTips];
                            if (isSucc) {
-                               [QMUITips showSucceed:@"绑定成功"];
+                               [QMUITips showSucceed:Localized(@"Binding success")];
                                [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit];
                            }else {
-                               [QMUITips showError:@"绑定失败"];
+                               [QMUITips showError:Localized(@"Binding failed")];
                            }
     }];
 }

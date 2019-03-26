@@ -60,7 +60,6 @@
     [self setUpData];
 }
 
-
 #pragma mark - <private method>
 - (void)setUpData {
     NSAssert(self.assetTokenModel, @"### assetTokenModel must not be null ");
@@ -99,7 +98,7 @@
 
 - (void)setSwitchTitleView
 {
-    NSArray *titleArr = @[@"全部", @"支出",@"收入"];
+    NSArray *titleArr = @[Localized(@"All"), Localized(@"Transfer"),Localized(@"Receive")];
     SGPageTitleViewConfigure *configure = [SGPageTitleViewConfigure pageTitleViewConfigure];
     configure.indicatorStyle =  SGIndicatorStyleDefault;
     configure.indicatorColor = [UIColor qmui_colorWithHexString:@"#FF3E4751"];
@@ -124,8 +123,6 @@
         YUTransactionDetailViewController *detailVC = [[YUTransactionDetailViewController alloc]init];
         detailVC.transactionRecordModel = recordItemModel;
         [weakSelf.navigationController pushViewController:detailVC animated:YES];
-        
-        
     };
     YUTransactionListViewController *tableVc0 = [[YUTransactionListViewController alloc]init];
     tableVc0.transactionType  = 0;

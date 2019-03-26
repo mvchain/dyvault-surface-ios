@@ -16,10 +16,6 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
 @interface TransferBaseInfo ()
 @end
 @implementation TransferBaseInfo
-
-
-
-
 /**
  * Instantiate the instance using the passed dictionary values to set the properties values
  */
@@ -30,18 +26,14 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
     if(![dictionary[kTransferBaseInfoBalance] isKindOfClass:[NSNull class]]){
         self.balance = [dictionary[kTransferBaseInfoBalance] doubleValue];
     }
-    
     if(![dictionary[kTransferBaseInfoFee] isKindOfClass:[NSNull class]]){
         self.fee = [dictionary[kTransferBaseInfoFee] doubleValue];
     }
-    
     if(![dictionary[kTransferBaseInfoFeeTokenName] isKindOfClass:[NSNull class]]){
         self.feeTokenName = dictionary[kTransferBaseInfoFeeTokenName];
     }
     return self;
 }
-
-
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
@@ -54,7 +46,6 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
         dictionary[kTransferBaseInfoFeeTokenName] = self.feeTokenName;
     }
     return dictionary;
-    
 }
 
 /**
@@ -68,7 +59,6 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
     [aCoder encodeObject:@(self.balance) forKey:kTransferBaseInfoBalance];    [aCoder encodeObject:@(self.fee) forKey:kTransferBaseInfoFee];    if(self.feeTokenName != nil){
         [aCoder encodeObject:self.feeTokenName forKey:kTransferBaseInfoFeeTokenName];
     }
-    
 }
 
 /**
@@ -81,7 +71,6 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
     self.fee = [[aDecoder decodeObjectForKey:kTransferBaseInfoFee] doubleValue];
     self.feeTokenName = [aDecoder decodeObjectForKey:kTransferBaseInfoFeeTokenName];
     return self;
-    
 }
 
 /**
@@ -90,11 +79,9 @@ NSString *const kTransferBaseInfoFeeTokenName = @"feeTokenName";
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     TransferBaseInfo *copy = [TransferBaseInfo new];
-    
     copy.balance = self.balance;
     copy.fee = self.fee;
     copy.feeTokenName = [self.feeTokenName copy];
-    
     return copy;
 }
 @end

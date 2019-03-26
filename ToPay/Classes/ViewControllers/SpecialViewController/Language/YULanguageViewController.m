@@ -29,7 +29,6 @@
     [self setEvent];
     [self configPageListView];
     self.pageListView.tableView.contentInset = UIEdgeInsetsMake(self.normalNavbar.qmui_bottom+10, 0, 0, 0);
-    
 }
 
 #pragma mark - <private method>
@@ -67,12 +66,18 @@
             [[YULanguageManagers shareInstance] setCurrentLanguage_English];
             [QMUITips showInfo:@"Current Language:English" inView:weakSelf.view hideAfterDelay:1.5];
         }
+        UIWindow *win =  UIApplication.sharedApplication.keyWindow;
+        win.rootViewController = [[YUViewControllerManagers shareInstance] auto_windowsRootViewController];
         [weakSelf.pageListView beginRefreshHeaderWithNoAnimate];
         
     };
 }
 #pragma mark - <lazy load>
 
+
+- (void)dealloc {
+    
+}
 /*
 #pragma mark - Navigation
 

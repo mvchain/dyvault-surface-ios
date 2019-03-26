@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *navAddr = TPString(@"%@收款",self.assetModel.tokenName);
+    NSString *navAddr = TPString(@"%@ %@",self.assetModel.tokenName,Localized(@"Receipt"));
     [self addNormalNavBar:navAddr];
     [self.normalNavbar setRightButtonWithImage:UIImageMake(@"share_icon_black")
                                       withSize:CGSizeMake(44, 44) withRight: 1 withBottom:0];
@@ -94,7 +94,7 @@
         make.size.equalTo(@56);
     }];
     
-    UILabel *descLab = [YFactoryUI YLableWithText:TPString(@"%@收款地址",self.assetModel.tokenName) color:TP59Color font:FONT(14)];
+    UILabel *descLab = [YFactoryUI YLableWithText:TPString(@"%@ %@",self.assetModel.tokenName,Localized(@"Receipt address")) color:TP59Color font:FONT(14)];
     self.descLab = descLab;
     [self.view addSubview:descLab];
     [descLab mas_makeConstraints:^(MASConstraintMaker *make)
@@ -104,7 +104,7 @@
         make.height.equalTo(@19);
     }];
     
-    UIButton *addressBtn = [YFactoryUI YButtonWithTitle:@"获取中..." Titcolor:TP8EColor font:FONT(13) Image:nil target:self action:@selector(copyClick)];
+    UIButton *addressBtn = [YFactoryUI YButtonWithTitle:@"..." Titcolor:TP8EColor font:FONT(13) Image:nil target:self action:@selector(copyClick)];
     //[YFactoryUI YLableWithText:@"0x2051dd2b...a196ccc2448" color:TP8EColor font:FONT(13)];
     self.addressBtn = addressBtn;
     [self.view addSubview:addressBtn];
@@ -146,7 +146,7 @@
 {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     pasteboard.string = self.addressBtn.titleLabel.text;
-    [QMUITips showSucceed:@"已复制"];
+    [QMUITips showSucceed:Localized(@"Copied")];
     
 }
 

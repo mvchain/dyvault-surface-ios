@@ -40,12 +40,12 @@
 }
 
 - (nonnull NSString *)navBarTitleName {
-   return @"重新设置支付密码";
+   return Localized(@"Reset payment password");
 }
 
 
 - (nonnull NSString *)textPlaceholder {
-    return @"新支付密码";
+    return Localized(@"New payment password");
 }
 
 - (UIKeyboardType)passTextFieldkeyBoardType  {

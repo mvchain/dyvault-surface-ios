@@ -14,6 +14,7 @@
                 <outlet property="atly_scrollrt_top" destination="Pyv-Gj-ZGc" id="YPr-2B-W77"/>
                 <outlet property="emailLabel" destination="M3P-TY-yee" id="Dvn-La-CQe"/>
                 <outlet property="nextStepButton" destination="wHd-TX-ti6" id="gYm-Sf-mVa"/>
+                <outlet property="originEmailTips" destination="SNr-38-j9a" id="wI6-LC-MQE"/>
                 <outlet property="scrollView" destination="4xY-CD-hXZ" id="B9M-KU-bnM"/>
                 <outlet property="sendVaildButton" destination="xC9-nn-ZCj" id="hnH-dw-5dA"/>
                 <outlet property="vaildCodeTextView" destination="APQ-47-cI9" id="Xg4-pg-rfi"/>

@@ -33,4 +33,5 @@ typedef void(^errBlock)(NSString *reason ,NSInteger code  );
 @property (copy,nonatomic) void(^onEndConnection)(void);
 // default request
 - (void)connectWithRquestMethod:(HTTPMethod)rquestMethod;
+
 @end

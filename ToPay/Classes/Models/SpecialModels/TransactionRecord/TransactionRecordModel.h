@@ -8,7 +8,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TransactionRecordModel : NSObject
-
 @property (nonatomic, assign) NSInteger classify;
 @property (nonatomic, assign) NSInteger createdAt;
 @property (nonatomic, strong) NSString * fromAddress;

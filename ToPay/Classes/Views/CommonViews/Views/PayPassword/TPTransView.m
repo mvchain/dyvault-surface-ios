@@ -116,7 +116,7 @@
         }
             else if (style == TPTransStyleTransfer)
         {
-            titArray = @[@"收款地址",@"交易手续费"];
+            titArray = @[Localized(@"Receipt address"),Localized(@"fee")];
         }
             else if (style == TPTransStyleTakeOut)
         {

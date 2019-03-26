@@ -26,10 +26,6 @@ NSString *const kTransactionRecordModelValue = @"value";
 @interface TransactionRecordModel ()
 @end
 @implementation TransactionRecordModel
-
-
-
-
 /**
  * Instantiate the instance using the passed dictionary values to set the properties values
  */
@@ -88,7 +84,6 @@ NSString *const kTransactionRecordModelValue = @"value";
     return self;
 }
 
-
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
@@ -126,6 +121,7 @@ NSString *const kTransactionRecordModelValue = @"value";
 /**
  * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
  */
+
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:@(self.classify) forKey:kTransactionRecordModelClassify];    [aCoder encodeObject:@(self.createdAt) forKey:kTransactionRecordModelCreatedAt];    if(self.fromAddress != nil){

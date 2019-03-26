@@ -15,5 +15,4 @@
     NSString *pinyinString = (NSMutableString *)[mutableString stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:[NSLocale currentLocale]];
     return [pinyinString stringByReplacingOccurrencesOfString:@"'" withString:@""];
 }
-
 @end

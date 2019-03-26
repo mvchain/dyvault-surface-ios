@@ -14,6 +14,5 @@
 @property (nonatomic, strong) NSString * feeTokenName;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
-
 -(NSDictionary *)toDictionary;
 @end

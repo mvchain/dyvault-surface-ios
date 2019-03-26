@@ -116,7 +116,7 @@ static NSString * typeRoomID = @"evn:r:";
                         [self clickCloseButton];
                     }];
                 } else {
-                    self->tipLabel.text = @"没有识别到二维码，请选择其他照片";
+                    self->tipLabel.text = @"";
                     
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }
@@ -175,7 +175,7 @@ static NSString * typeRoomID = @"evn:r:";
     if( ![QuickJudge isVaildAddrWithTokenId:self.tokenid addr:stringValue] ) {
         
         
-        [QMUITips showError:@"无效地址"];
+        [QMUITips showError:@"Error address"];
         
         return NO ;
         
@@ -219,7 +219,7 @@ static NSString * typeRoomID = @"evn:r:";
 {
     // 1> 提示标签
     tipLabel = [[UILabel alloc] init];
-    tipLabel.text = @"将二维码置于取景框即可自动扫描";
+    tipLabel.text = Localized(@"Automatically scan the QR code by placing it in the viewfinder");
     tipLabel.font = [UIFont systemFontOfSize:14];
     tipLabel.textColor = [UIColor qmui_colorWithHexString:@"#b1b1bc"];//NIMKit_UIColorFromRGB(0xb1b1bc);
     tipLabel.textAlignment = NSTextAlignmentCenter;
@@ -235,7 +235,7 @@ static NSString * typeRoomID = @"evn:r:";
     bottomView.left = 0;
     bottomView.height = 62 + HOME_INDICATOR_HEIGHT;
     UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [photoBtn setTitle:@"从相册选择" forState:UIControlStateNormal];
+    [photoBtn setTitle:Localized(@"Choose from album") forState:UIControlStateNormal];
     [photoBtn setImage:[UIImage imageNamed:@"pohoto_icon"] forState:UIControlStateNormal];
     [photoBtn setTitleColor:[UIColor qmui_colorWithHexString:@"#AAAAAA"] forState:UIControlStateNormal];
     [photoBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
@@ -264,8 +264,7 @@ static NSString * typeRoomID = @"evn:r:";
 /// 准备导航栏
 - (void)prepareNavigationBar
 {
-    
-    [self addNormalNavBar:@"扫码转账"];
+    [self addNormalNavBar:Localized(@"Scan code transfer")];
     [self.normalNavbar setLeftButtonAsReturnButton];
     [self.normalNavbar setLeftButtonWithImage:UIImageMake(@"cancel") withSize:CGSizeMake(13, 13)];
     
@@ -275,13 +274,10 @@ static NSString * typeRoomID = @"evn:r:";
         [wsf dismissViewControllerAnimated:YES completion:^{
         }];
     };
-   
 }
 
 - (BOOL)navigationShouldPopOnBackButton
 {
-    //    [[[UIAlertView alloc] initWithTitle:@"提示" message:@"确定返回上一界面?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil] show];
-    
     [self.navigationController popToRootViewControllerAnimated:YES];
     return NO;
 }
