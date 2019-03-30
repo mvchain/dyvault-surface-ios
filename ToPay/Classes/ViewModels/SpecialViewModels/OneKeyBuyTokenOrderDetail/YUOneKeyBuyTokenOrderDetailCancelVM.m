@@ -11,6 +11,9 @@
 #import "YUUpCricleCellEntity.h"
 #import "YUDownCircleCellEntity.h"
 #import "YUUnderlineCellEntity.h"
+#import "API_GET_Business_Id.h"
+#import "OneKeyBuyTokenDetailModel.h"
+#import "YUBlueButtonCellEntity.h"
 @implementation YUOneKeyBuyTokenOrderDetailCancelVM
 - (void)fetchListEntitys:(void(^)(NSMutableArray * entitys,BOOL isSucc,NSString *errInfo))complete {
     
@@ -18,7 +21,6 @@
     [sellStatus alreadyCancelsStyle];
     sellStatus.leftString = @"出售USDT";
     sellStatus.rightString = @"已取消";
-    
     
     YUOneKeyBuyTokenListItemCellEntity *orderNumber = [[YUOneKeyBuyTokenListItemCellEntity alloc] init];
     [orderNumber orderCashNumberStyle];
@@ -47,9 +49,12 @@
     
     YUOneKeyBuyTokenListItemCellEntity *orderTime = [[YUOneKeyBuyTokenListItemCellEntity alloc] init];
     [orderTime smallGrayItemStyle];
-    orderTime.leftString = @"数量";
+    orderTime.leftString = @"下单时间";
     orderTime.rightString = @"27028.00";
     
+    YUBlueButtonCellEntity *buttonEntity = [[YUBlueButtonCellEntity alloc] init];
+    buttonEntity.isDisable = YES;
+    buttonEntity.title = @"交易已取消";
     NSMutableArray *results = [[NSMutableArray alloc] init];
     [results addObject:[self newBlank]];
     [results addObject:[self newUpCircle]];
@@ -64,8 +69,28 @@
     [results addObject:count];
     [results addObject:orderTime];
     [results addObject:[self newDownCircle]];
-    complete(results,YES,nil);
+    [results addObject:[self newBlankWithHeight:169.0]];
+    [results addObject:buttonEntity];
     
+    API_GET_Business_Id *getBusiness = [[API_GET_Business_Id alloc] init];
+    getBusiness.onSuccess = ^(id responseData) {
+        NSDictionary *dict = (NSDictionary *)responseData;
+        OneKeyBuyTokenDetailModel *detailModel = [[OneKeyBuyTokenDetailModel alloc] initWithDictionary:dict];
+        orderNumber.rightString = TPString(@"%.4f %@",yufloat_token(detailModel.amount),detailModel.tokenName);
+        orderID.rightString = TPString(@"%@",detailModel.orderNumber);
+        buyer.rightString = TPString(@"%@",detailModel.buyUsername);
+        unitPrice.rightString = TPString(@"%.4f",yufloat_token(detailModel.price));
+        count.rightString = TPString(@"%.4f",yufloat_token(detailModel.tokenValue));
+        orderTime.rightString = [QuickGet timeWithTimeInterval_allNumberStyleString:detailModel.createdAt];
+        complete(results,YES,nil); // reload tableview
+    };
+    getBusiness.onError = ^(NSString *reason, NSInteger code) {
+        
+    };
+    getBusiness.onEndConnection = ^{
+        
+    };
+    [getBusiness sendRequestWithIdField:@(self.idfield.integerValue)];
     
 }
 - (YUBlankCellEntity *)newBlank {
@@ -75,11 +100,17 @@
     return blank;
 }
 
+- (YUBlankCellEntity *)newBlankWithHeight:(CGFloat)height  {
+    YUBlankCellEntity *blank =  [[YUBlankCellEntity alloc]init];
+    blank.bgColor = [UIColor qmui_colorWithHexString:@"#F8F8F8"];
+    blank.yu_cellHeight = height;
+    return blank;
+}
 - (YUCellEntity *)newUpCircle {
     YUUpCricleCellEntity *upCircle = [[YUUpCricleCellEntity alloc] init];
     return upCircle;
-    
 }
+
 - (YUCellEntity *)newDownCircle {
     YUDownCircleCellEntity *downCircle = [[YUDownCircleCellEntity alloc] init];
     return downCircle;

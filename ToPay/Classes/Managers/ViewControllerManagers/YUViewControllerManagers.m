@@ -54,18 +54,7 @@ static YUViewControllerManagers* _instance = nil;
                                           image:asset_un
                                   selectedImage:asset_selected tag:1];
     
-//    /* OTC */
-//    //YUOTCHomeViewController
-//    /* mine */
-//    YUNavigationViewController *nav1 = [[YUNavigationViewController alloc]init];
-//    UIViewController *vc1= [[YUOTCHomeViewController alloc]init];
-//    nav1.viewControllers = @[vc1];
-//    UIImage *otc_un = [[UIImage imageNamed:@"mine_unselected_icon"]
-//                        imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    UIImage *otc_selected = [[UIImage imageNamed:@"mine_selected_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    nav1.tabBarItem = [self tabBarItemWithTitle:Localized(@"mine")
-//                                          image:otc_un
-//                                  selectedImage:otc_selected tag:1];
+
     /* mine */
     YUNavigationViewController *nav2 = [[YUNavigationViewController alloc]init];
     UIViewController *vc2= [[YUMineViewController alloc]init];

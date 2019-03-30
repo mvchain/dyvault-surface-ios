@@ -14,6 +14,7 @@
 @interface YUOneKeyButTokenListChildViewController ()
 @property (weak, nonatomic) IBOutlet YUPageListView *pageListView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
+@property (assign,nonatomic) BOOL isFirst;
 @end
 
 @implementation YUOneKeyButTokenListChildViewController
@@ -26,6 +27,14 @@
     [self.pageListView beginRefreshHeader];
     self.view.backgroundColor = [UIColor qmui_colorWithHexString:@"#F8F8F8"];
     self.pageListView.backgroundColor = [UIColor qmui_colorWithHexString:@"#F8F8F8"];
+    self.isFirst = YES;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!self.isFirst) {
+        [self refreshData];
+    }
+    self.isFirst = NO;
 }
 #pragma mark - <private method>
 - (void)configPageListView {

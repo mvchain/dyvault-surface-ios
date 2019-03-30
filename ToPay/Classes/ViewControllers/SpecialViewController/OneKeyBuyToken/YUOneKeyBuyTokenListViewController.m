@@ -12,8 +12,10 @@
 #import "YUOneKeyBuyTokenOrderDetailViewController.h"
 #import "YUOneKeyBuyTokenListCellEntity.h"
 #import "YUOneKeyBuyTokenOrderDetailCancelVM.h"
-#import "YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM.h"
+#import "YUOneKeyBuyTokenOrderDetailConfirmReceiptlVM.h"
 #import "YUOneKeyBuyTokenOrderDetailWaitingVM.h"
+#import "YUOneKeyBuyTokenOrderDetailAlreadyCompletelVM.h"
+#import "OneKeyBuyTokenListItem.h"
 @interface YUOneKeyBuyTokenListViewController ()<SGPageTitleViewDelegate,SGPageContentScrollViewDelegate>
 @property (strong, nonatomic) SGPageTitleView *pageTitleView;
 @property (nonatomic, strong) SGPageContentScrollView *pageContentScrollView;
@@ -95,6 +97,8 @@
             YUOneKeyBuyTokenListCellEntity *itemEntity = (YUOneKeyBuyTokenListCellEntity*)itemModel;
             YUOneKeyBuyTokenOrderDetailViewController *detail = [[YUOneKeyBuyTokenOrderDetailViewController alloc] init];
             id<YUOneKeyBuyTokenOrderDetailViewControllerVMDelegate> viewModel;
+            OneKeyBuyTokenListItem *item = (OneKeyBuyTokenListItem *)itemEntity.data;
+            
             switch (itemEntity.status) {
                 case OneKeyBuyTokenStatusAlreadyCancle:
                 {
@@ -103,12 +107,12 @@
                     break;
                 case OneKeyBuyTokenStatusAlreadyComplete:
                 {
-                    viewModel = [[YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM alloc] init];
+                    viewModel = [[YUOneKeyBuyTokenOrderDetailAlreadyCompletelVM alloc] init];
                 }
                     break;
                 case OneKeyBuyTokenStatusAlreadyReceivables:
                 {
-                    viewModel = [[YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM alloc] init];
+                    viewModel = [[YUOneKeyBuyTokenOrderDetailConfirmReceiptlVM alloc] init];
                 }
                     break;
                 case OneKeyBuyTokenStatusWaitingReceivables:
@@ -119,14 +123,16 @@
                 default:
                     break;
             }
+            viewModel.idfield = @(item.idField).stringValue;
+            
             detail.viewModel = viewModel;
             [weakSelf.navigationController pushViewController:detail animated:YES];
-            
             NSLog(@"select");
         };
     }];
 }
 #pragma mark - <lazy load>
+
 
 #pragma mark pageDelegate
 - (void)pageTitleView:(SGPageTitleView *)pageTitleView selectedIndex:(NSInteger)selectedIndex

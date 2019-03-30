@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)smallGrayItemStyle;
 - (void)orderCashNumberStyle;
 - (void)remainReceiptTimeStyle;
+- (void)alreadyComplete;
 
 
 

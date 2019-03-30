@@ -26,7 +26,6 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
 }
 - (void)configPageListView {
     self.pageListView.pageSize = PAGE_LIST_SIZE;
@@ -89,8 +88,6 @@
         [listDatas addObject:entity];
     }
     return listDatas;
-    
 }
-
 
 @end

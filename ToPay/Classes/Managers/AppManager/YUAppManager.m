@@ -66,14 +66,13 @@ static YUAppManager* _instance = nil;
 
 - (BOOL)isReleaseVersion {
 
-    return  ([[QuickGet getBundleIdStr] isEqualToString:@"com.dyvault.ToPay"]);
+    return  ([[QuickGet getBundleIdStr] isEqualToString:@"release.dyvault.ToPay"]);
 }
 - (NSString *)appDomainUrl {
+    
     NSString *test =  @"http://47.110.144.216/api/app";
     NSString *production = @"http://54.238.152.0/api/app";
     return [self isReleaseVersion]?production:test;
-    
-    
 }
 - (NSInteger)mostRecentNewsTimeInLocal {
     //@"MOST_RECENT_MSG_TIME"

@@ -10,7 +10,8 @@
 #import "YUOneKeyBuyTokenOrderDetailViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM : NSObject<YUOneKeyBuyTokenOrderDetailViewControllerVMDelegate>
+@interface YUOneKeyBuyTokenOrderDetailConfirmReceiptlVM : NSObject<YUOneKeyBuyTokenOrderDetailViewControllerVMDelegate>
+@property (copy,nonatomic) NSString *idfield;
 
 @end
 

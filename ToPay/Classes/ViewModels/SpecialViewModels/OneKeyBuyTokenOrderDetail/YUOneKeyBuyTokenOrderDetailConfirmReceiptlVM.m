@@ -6,12 +6,16 @@
 //  Copyright © 2019年 MVC. All rights reserved.
 //
 
-#import "YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM.h"
+#import "YUOneKeyBuyTokenOrderDetailConfirmReceiptlVM.h"
 #import "YUOneKeyBuyTokenListItemCellEntity.h"
 #import "YUUpCricleCellEntity.h"
 #import "YUDownCircleCellEntity.h"
 #import "YUUnderlineCellEntity.h"
-@implementation YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM
+#import "API_GET_Business_Id.h"
+#import "OneKeyBuyTokenDetailModel.h"
+#import "YUBlueButtonCellEntity.h"
+#import "API_PUT_Business_Id.h"
+@implementation YUOneKeyBuyTokenOrderDetailConfirmReceiptlVM
 - (void)fetchListEntitys:(void(^)(NSMutableArray * entitys,BOOL isSucc,NSString *errInfo))complete {
     
     YUOneKeyBuyTokenListItemCellEntity *sellStatus = [[YUOneKeyBuyTokenListItemCellEntity alloc] init];
@@ -59,7 +63,11 @@
     [payAccount smallGrayItemStyle];
     payAccount.leftString = @"买家付款账户";
     payAccount.rightString = @"6220 11502 123";
-
+    
+    YUBlueButtonCellEntity *buttonEntity = [[YUBlueButtonCellEntity alloc] init];
+    buttonEntity.isDisable = NO;
+    buttonEntity.title = @"确认收款";
+    
     NSMutableArray *results = [[NSMutableArray alloc] init];
     [results addObject:[self newBlank]];
     [results addObject:[self newUpCircle]];
@@ -77,7 +85,49 @@
     [results addObject:payWay];
     [results addObject:payAccount];
     [results addObject:[self newDownCircle]];
-    complete(results,YES,nil);
+    [results addObject:[self newBlankWithHeight:72.0]];
+    [results addObject:buttonEntity];
+    API_GET_Business_Id *getBusiness = [[API_GET_Business_Id alloc] init];
+    getBusiness.onSuccess = ^(id responseData) {
+        NSDictionary *dict = (NSDictionary *)responseData;
+        OneKeyBuyTokenDetailModel *detailModel = [[OneKeyBuyTokenDetailModel alloc] initWithDictionary:dict];
+        orderNumber.rightString = TPString(@"%.4f %@",yufloat_token(detailModel.amount),detailModel.tokenName);
+        orderID.rightString = TPString(@"%@",detailModel.orderNumber);
+        buyer.rightString = TPString(@"%@",detailModel.buyUsername);
+        unitPrice.rightString = TPString(@"%.4f",yufloat_token(detailModel.price));
+        count.rightString = TPString(@"%.4f",yufloat_token(detailModel.tokenValue));
+        orderTime.rightString = [QuickGet timeWithTimeInterval_allNumberStyleString:detailModel.createdAt];
+        payWay.rightString = @[@"",@"银行卡",@"支付宝",@"微信"][detailModel.payType];
+        payAccount.rightString = detailModel.payAccount;
+        
+        //1 credit card; 2 Alipay 3 WeChat
+        
+        
+        complete(results,YES,nil); // reload tableview
+    };
+    getBusiness.onError = ^(NSString *reason, NSInteger code) {
+        
+    };
+    getBusiness.onEndConnection = ^{
+        
+    };
+    [getBusiness sendRequestWithIdField:@(self.idfield.integerValue)];
+    
+}
+
+- (void)buttonTap:(void (^)(BOOL))complete {
+    API_PUT_Business_Id *business = [[API_PUT_Business_Id alloc] init];
+    business.onSuccess = ^(id responseData) {
+        complete(YES);
+    };
+    business.onError = ^(NSString *reason, NSInteger code) {
+        complete(NO);
+    };
+    business.onEndConnection = ^{
+        
+    };
+    [business sendRequestWithIdField:@(self.idfield.integerValue)];
+    
 }
 - (YUBlankCellEntity *)newBlank {
     YUBlankCellEntity *blank =  [[YUBlankCellEntity alloc]init];
@@ -86,20 +136,23 @@
     return blank;
 }
 
+- (YUBlankCellEntity *)newBlankWithHeight:(CGFloat)height  {
+    YUBlankCellEntity *blank =  [[YUBlankCellEntity alloc]init];
+    blank.yu_cellHeight = height;
+    blank.bgColor = [UIColor qmui_colorWithHexString:@"#F8F8F8"];
+    return blank;
+}
 - (YUCellEntity *)newUpCircle {
     YUUpCricleCellEntity *upCircle = [[YUUpCricleCellEntity alloc] init];
     return upCircle;
-    
 }
 - (YUCellEntity *)newDownCircle {
     YUDownCircleCellEntity *downCircle = [[YUDownCircleCellEntity alloc] init];
     return downCircle;
 }
-
 - (YUCellEntity *)newUnderLine {
     YUUnderlineCellEntity *underLine = [[YUUnderlineCellEntity alloc] init];
     return underLine;
-    
 }
 
 @end

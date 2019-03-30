@@ -20,6 +20,14 @@
     return self;
 }
 
+- (void)alreadyComplete {
+    //555555
+    self.leftFont = [UIFont systemFontOfSize:13];
+    self.leftColor = [UIColor qmui_colorWithHexString:@"#8E8E9E"];
+    self.rightFont = [UIFont systemFontOfSize:17];
+    self.rightColor = [UIColor qmui_colorWithHexString:@"#555555"];
+}
+
 - (void)alreadyReceivablesStyle {
     self.leftFont = [UIFont systemFontOfSize:13];
     self.leftColor = [UIColor qmui_colorWithHexString:@"#8E8E9E"];

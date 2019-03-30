@@ -12,11 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol YUOneKeyBuyTokenOrderDetailViewControllerVMDelegate <NSObject>
 @required
 - (void)fetchListEntitys:(void(^)(NSMutableArray * entitys,BOOL isSucc,NSString *errInfo))complete;
+- (NSString *)idfield;
 
 
+- (void)setIdfield:(NSString *)idfield;
+@optional
+
+- (void)buttonTap:(void(^)(BOOL isSuccess))complete;
 @end
 @interface YUOneKeyBuyTokenOrderDetailViewController : YUBaseViewController
 @property (strong,nonatomic) id<YUOneKeyBuyTokenOrderDetailViewControllerVMDelegate>viewModel;
+@property (copy,nonatomic) NSString *idfield;
 
 @end
 

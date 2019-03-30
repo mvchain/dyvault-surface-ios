@@ -8,7 +8,7 @@
 
 #import "YUOneKeyBuyTokenOrderDetailViewController.h"
 #import "YUOneKeyBuyTokenOrderDetailCancelVM.h"
-#import "YUOneKeyBuyTokenOrderDetailAlreadyReceiptlVM.h"
+#import "YUOneKeyBuyTokenOrderDetailConfirmReceiptlVM.h"
 #import "YUOneKeyBuyTokenOrderDetailWaitingVM.h"
 @interface YUOneKeyBuyTokenOrderDetailViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *atly_top;
@@ -55,6 +55,22 @@
         }];
         
     };
+    
+    self.pageListView.yu_eventProduceByInnerCellView = ^(NSString * _Nonnull idf, id  _Nonnull content, id  _Nonnull sender)
+    {
+        if (![weakSelf.viewModel respondsToSelector:@selector(buttonTap:)]) return ;
+        [weakSelf.viewModel buttonTap:^(BOOL isSuccess) {
+            if (isSuccess) {
+                [QMUITips showSucceed:@"确认成功"];
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+                
+            }else {
+                [QMUITips showSucceed:@"确认失败"];
+            }
+        }];
+        
+    };
+    
     
 }
 

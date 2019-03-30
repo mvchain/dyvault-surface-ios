@@ -105,7 +105,7 @@ yudef_lazyLoad(UITableView, tableView, _tableView);
 - (void)nextPage
 {
     yudef_weakSelf;
-    [self.tableView.mj_footer endRefreshing];
+    [self.tableView.mj_header endRefreshing];
     self.nextPageBlock(^(NSArray<YUCellEntity *> * _Nonnull data)
     {
         [weakSelf.dataArrays addObjectsFromArray:data];
