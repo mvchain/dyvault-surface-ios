@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AdminInfo.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface testVC : UIViewController
+- (void)setAdminInfo:(AdminInfo *)adminInfo;
 
 @end
 

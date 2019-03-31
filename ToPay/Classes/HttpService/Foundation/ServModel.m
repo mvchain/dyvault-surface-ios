@@ -24,40 +24,41 @@
     NSAssert(self.onSuccess, @" ### onSuccess must not be null ~ @@@@");
     NSAssert(self.onError, @" ### onError must not be null ~ @@@@");
     NSAssert(self.onEndConnection, @" ### onEndConnection must not be null ~ @@@@");
-    [[YUNetworkManager defaultManager] sendRequestMethod:rquestMethod
-                                               serverUrl:self.apiDomainUrl
-                                                 apiPath:self.apiPath
-                                              parameters:self.requestDict progress:^(NSProgress * _Nullable progress) {
-    }
-                                                 success:^(BOOL isSuccess, id  _Nullable responseObject) {
-        NSDictionary *dict = (NSDictionary*)responseObject;
-        if([dict[@"code"] intValue] == 200) {
-            self.onSuccess(dict[@"data"]);
-        }else {
-            self.onError(dict[@"message"],[dict[@"code"] integerValue]);
-        }
-        self.onEndConnection();
-    } failure:^(NSString * _Nullable errorMessage, NSInteger responseCode) {
-        if (responseCode == 401) {
-            [self refreshToken:^(BOOL isRefreshSucc, BOOL isNetOK) {
-                if (!isNetOK) return ; // net err ,exit
-                if (!isRefreshSucc) {
-                    // refresh error ,exit
-                    [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit] ; // exit
-                    return;
-                }
-                if (![[YUUserManagers shareInstance] isLogined]) {
-                    return;
-                }
-                // refresh succ
-                [self connectWithRquestMethod:rquestMethod];
-            }];
-            return ;
-        }
-        // not 401
-        self.onError(errorMessage,responseCode);
-        self.onEndConnection();
-    }];
+    NSURLSessionDataTask * _Nullable extractedExpr = [[YUNetworkManager defaultManager] sendRequestMethod:rquestMethod
+                                                                                                serverUrl:self.apiDomainUrl
+                                                                                                  apiPath:self.apiPath
+                                                                                               parameters:self.requestDict progress:^(NSProgress * _Nullable progress) {
+                                                                                               }
+                                                                                                  success:^(BOOL isSuccess, id  _Nullable responseObject) {
+                                                                                                      NSDictionary *dict = (NSDictionary*)responseObject;
+                                                                                                      if([dict[@"code"] intValue] == 200) {
+                                                                                                          self.onSuccess(dict[@"data"]);
+                                                                                                      }else {
+                                                                                                          self.onError(dict[@"message"],[dict[@"code"] integerValue]);
+                                                                                                      }
+                                                                                                      self.onEndConnection();
+                                                                                                  } failure:^(NSString * _Nullable errorMessage, NSInteger responseCode) {
+                                                                                                      if (responseCode == 401) {
+                                                                                                          [self refreshToken:^(BOOL isRefreshSucc, BOOL isNetOK) {
+                                                                                                              if (!isNetOK) return ; // net err ,exit
+                                                                                                              if (!isRefreshSucc) {
+                                                                                                                  // refresh error ,exit
+                                                                                                                  [[YUViewControllerManagers shareInstance] clearUserInfo_AndExit] ; // exit
+                                                                                                                  return;
+                                                                                                              }
+                                                                                                              if (![[YUUserManagers shareInstance] isLogined]) {
+                                                                                                                  return;
+                                                                                                              }
+                                                                                                              // refresh succ
+                                                                                                              [self connectWithRquestMethod:rquestMethod];
+                                                                                                          }];
+                                                                                                          return ;
+                                                                                                      }
+                                                                                                      // not 401
+                                                                                                      self.onError(errorMessage,responseCode);
+                                                                                                      self.onEndConnection();
+                                                                                                  }];
+    extractedExpr;
 }
 
 /* set newst token  */

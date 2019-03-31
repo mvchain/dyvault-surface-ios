@@ -4,7 +4,8 @@
 #import "API_GET_Order.h"
 @implementation API_GET_Order
 - (void)sendRequestWithUid:(NSString *)uid {
-  NSString *apiPath = @"/order";
+  NSString *apiPath = @"/simulation/order";
+  self.apiDomainUrl = @"http://47.110.144.216/api";
   self.requestDict[@"uid"] = uid; //uid
   self.apiPath  = apiPath;
   [self connectWithRquestMethod:HTTPMethodGET];

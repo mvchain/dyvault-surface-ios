@@ -4,7 +4,8 @@
 #import "API_POST_Order.h"
 @implementation API_POST_Order
 - (void)sendRequestWithCny:(NSNumber *)cny uid:(NSString *)uid {
-  NSString *apiPath = @"/order";
+  NSString *apiPath = @"/simulation/order";
+  self.apiDomainUrl = @"http://47.110.144.216/api";
   self.requestDict[@"cny"] = cny; //(null)
   self.requestDict[@"uid"] = uid; //(null)
   self.apiPath  = apiPath;
