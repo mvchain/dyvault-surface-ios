@@ -128,6 +128,14 @@
             entity1.rightFont = [UIFont systemFontOfSize:13.0];
             entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
             complete(@[entity0,entity1]);
+        },^(void) {
+            YUTransactionDetailItemCellEntity *entity1 =[[YUTransactionDetailItemCellEntity alloc] init];
+            entity1.leftTitleStr = Localized(@"Order Id");
+            entity1.rightTitleStr = model.orderNumber;
+            entity1.rightFont = [UIFont systemFontOfSize:13.0];
+            entity1.rightTextColor = [UIColor qmui_colorWithHexString:@"#B9B9B9"];
+            complete(@[entity0,entity1]);
+            
         }];
         classify_mapTo_Block[self.transactionRecordModel.classify]();
     };
@@ -181,6 +189,21 @@
             // classify equal 5,transType eq to 2
          
             NSString *titleInfo = TPString(@"%@%@",Localized(@"Transfer:To"),itemModel.toAddress);
+            self.statusLabel.text = titleInfo;
+        }];
+        transtype_mapTo_Block[itemModel.transactionType]();
+    },^(void) {
+        [self.iconImageView setImage:[UIImage imageNamed:@"success"]];
+        
+        NSArray<void_block> *transtype_mapTo_Block = @[^(void){
+            // transType eq to 0
+        },^(void){
+            // classify equal 5,transType eq to 1
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Receive:From"),itemModel.fromAddress);
+            self.statusLabel.text = titleInfo;
+        },^(void){
+            // classify equal 5,transType eq to 2
+            NSString *titleInfo = TPString(@"%@%@",@"支付：给",itemModel.toAddress);
             self.statusLabel.text = titleInfo;
         }];
         transtype_mapTo_Block[itemModel.transactionType]();

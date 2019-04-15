@@ -64,7 +64,6 @@
 - (void)setUpData {
     NSAssert(self.assetTokenModel, @"### assetTokenModel must not be null ");
     [self.currencyNameLabel setText:[YUCurrencyManager shareInstance].nowLegalCurrencyName];
-    
 }
 
 - (void)updateHeaderViewInfo {

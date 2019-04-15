@@ -18,7 +18,8 @@ target 'ToPay' do
   pod 'QMUIKit'
   pod 'CYLTabBarController', '~> 1.17.22'
   pod 'MJExtension'
- 
+  pod 'UMCCommon'
+  pod 'UMCSecurityPlugins'
   target 'ToPayTests' do
     inherit! :search_paths
     # Pods for testing

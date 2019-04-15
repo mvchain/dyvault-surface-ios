@@ -13,14 +13,12 @@
 @interface testVC ()<UIWebViewDelegate>
 @property (strong,nonatomic) UIWebView *webView;
 @property (strong,nonatomic) AdminInfo *adminInfo ;
-
 @end
 
 @implementation testVC
 - (AdminInfo *)adminInfo {
     if (!_adminInfo) {
         _adminInfo = [[AdminInfo alloc] init];
-        
     }
     return _adminInfo;
 }
@@ -74,19 +72,23 @@
     NSString *js = @"window.mvc = {};mvc.getAdmin = function (){ alert(1) ;return \"#\"};";
     return  [js stringByReplacingOccurrencesOfString:@"#" withString:json_res];
 }
+
 - (NSString *)setToken_jsMethod {
     NSString *js = @"mvc.setToken = function (obj){ objc_setToken_bridge(obj)};";
     return js;
 }
+
 - (NSString *)objc_setToken_bridge_JsMethod {
     NSString *js = @"function objc_setToken_bridge(x){alert(33);alert(x)}";
     return js;
 }
+
 - ( void)setToken:(NSString *)token
           refreshToken:(NSString *)refreshToken {
     self.adminInfo.refreshToken = refreshToken;
     self.adminInfo.token = token;
 }
+
 - (NSString*)dictionaryToJson:(NSDictionary *)dic
 {
     NSError *parseError = nil;

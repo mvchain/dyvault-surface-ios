@@ -248,6 +248,16 @@ THE SOFTWARE.
 
 
 
+## UMCCommon
+
+Copyright 2011 - 2018 umeng.com. All rights reserved.
+
+
+## UMCSecurityPlugins
+
+Copyright 2011 - 2018 umeng.com. All rights reserved.
+
+
 ## YYCache
 
 The MIT License (MIT)

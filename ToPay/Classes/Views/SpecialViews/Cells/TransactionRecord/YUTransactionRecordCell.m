@@ -87,6 +87,26 @@
             self.cashNumberLabel.text = TPString(@"-%.4f",yufloat_token(itemModel.value));
         }];
         transtype_mapTo_Block[itemModel.transactionType]();
+    },^(void){
+        
+        // classify eq 6
+        [self.statusLabel setHidden:YES];
+        NSArray<void_block> *transtype_mapTo_Block = @[^(void){
+            // transType eq to 0
+        },^(void){
+            // classify equal 5,transType eq to 1
+            [self.iconImageView setImage:[UIImage imageNamed:@"receive"]];
+            NSString *titleInfo = TPString(@"%@%@",Localized(@"Receive:From"),itemModel.fromAddress);
+            self.titleInfoLabel.text = titleInfo;
+            self.cashNumberLabel.text = TPString(@"+%.4f",yufloat_token(itemModel.value));
+        },^(void){
+            [self.iconImageView setImage:[UIImage imageNamed:@"pay"]];
+            NSString *titleInfo = TPString(@"%@%@",@"支付给：",itemModel.toAddress);
+            self.titleInfoLabel.text = titleInfo;
+            self.cashNumberLabel.text = TPString(@"+%.4f",yufloat_token(itemModel.value));
+        }];
+        transtype_mapTo_Block[itemModel.transactionType]();
+        
     }];
     classify_mapTo_Block[itemModel.classify]();
 }

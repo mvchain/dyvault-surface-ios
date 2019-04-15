@@ -17,11 +17,10 @@
 #pragma mark private method
 - (void)setUpWindow {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    UINavigationController *nav = [[UINavigationController alloc] init];
-//    nav.viewControllers = @[[[YUWelcomeViewController alloc] init]];
-//    nav.navigationBar.hidden = YES;
-//    self.window.rootViewController = [[YUViewControllerManagers shareInstance] auto_windowsRootViewController];
-    self.window.rootViewController = [[testVC alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] init];
+    nav.viewControllers = @[[[YUWelcomeViewController alloc] init]];
+    nav.navigationBar.hidden = YES;
+    self.window.rootViewController = [[YUViewControllerManagers shareInstance] auto_windowsRootViewController];
     [self.window makeKeyAndVisible];
 }
 
